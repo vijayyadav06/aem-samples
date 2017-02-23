@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" name="com.medtronic.com.msm.workflow.UpdateComment">
+    <implementation class="com.medtronic.com.msm.workflow.UpdateComment"/>
+    <service servicefactory="false">
+        <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
+    </service>
+    <property name="service.description" value="Process that will update the comment for next process"/>
+    <property name="service.vendor" value="Medtronic"/>
+    <property name="process.label" value="Medtronic Update Comment Workflow Process"/>
+    <property name="service.pid" value="com.medtronic.com.msm.workflow.UpdateComment"/>
+    <reference name="msmUserService" interface="com.medtronic.com.msm.service.MSMUserService" cardinality="1..1" policy="static" bind="bindMsmUserService" unbind="unbindMsmUserService"/>
+    <reference name="msmService" interface="com.medtronic.com.msm.service.MSMService" cardinality="1..1" policy="static" bind="bindMsmService" unbind="unbindMsmService"/>
+</scr:component>

@@ -1,0 +1,1098 @@
+04/06/16 16:26	[01.01.004-k30] deploy<br/>
+04/06/16 14:47	[01.01.004-k29] RM: Fix for MDT-2722<br/>
+04/05/16 20:18	[01.01.004-k28] RM: Triggering build<br/>
+04/05/16 16:53	[01.01.004-k27] Fix subtemplate bug from R1 prod release<br/>
+04/05/16 16:30	[01.01.004-k26] RM: Triggering build<br/>
+04/05/16 16:22	[01.01.004-k25] Fixing DNT errors. <br/>
+04/05/16 14:37	[01.01.004-k24] Fixing MDT-2697<br/>
+04/05/16 14:12	[01.01.004-k23] Had to comment mock dependencies in MSM bundle as well. <br/>
+04/05/16 14:03	[01.01.004-k22] Fixing build by commenting out mock dependencies. <br/>
+04/05/16 12:04	[01.01.004-k21] Forgot to update build version<br/>
+04/05/16 10:12	[01.01.004-k20] Fixing my Do Not Translate components. <br/>
+04/04/16 21:34	[01.01.004-k19] RM: Triggering build<br/>
+04/04/16 20:40	[01.01.004-k18] Triggering Build.<br/>
+04/04/16 20:27	[01.01.004-k17] RM: Removing globallinks.js and upadting similar content.  Slight tweak to language util for null check.<br/>
+04/04/16 14:39	[01.01.004-k16] Updating filters to ignore i18n dictionaries.<br/>
+04/01/16 16:08	[01.01.004-k15] MDT-2216 - application root - DNT. Kicking off build<br/>
+04/01/16 13:27	[01.01.004-k14] RM: MDT-2611 (real) - Updating search to display tags by localized title.<br/>
+04/01/16 13:04	[01.01.004-k13] RM: Updating country-select list to sort countries by 2-letter code instead of displayed label.<br/>
+03/30/16 18:27	[01.01.004-k12] RM: MDT-2620 changes for MSM in dialog.  Also removed duplicate translation tab.<br/>
+03/29/16 14:15	[01.01.004-k11] RM: Applying patch for Acknowledgement work: MDT-2181<br/>
+03/29/16 10:11	[01.01.004-k10] Fix build.xml to add in msm project<br/>
+03/29/16 09:51	[01.01.004-k09] Add ignores for the msm bundle and build<br/>
+03/28/16 18:28	[01.01.004-k08] MDT-2633: Fix an xss vulnerability in the search functionality.<br/>
+03/28/16 09:42	[01.01.004-k07] Changing prod gsaHostUrl to "http://gsearch.medtronic.com/<br/>
+03/28/16 09:20	[01.01.004-k06] Servers were pointing to http://10.63.80.45/ because the run mode configs had a syntax error in them. Changed gsaSearchUrl to gsaHostUrl.<br/>
+03/22/16 13:27	[01.01.004-k05] RM: Zach's changes for MDT-2576.<br/>
+03/22/16 09:58	[01.01.004-k04] RM: Analytics changes for paul.<br/>
+03/21/16 17:35	[01.01.004-k03] RM: Zach's changes   MDT-2572<br/>
+03/18/16 16:20	[01.01.004-k02] RM: MDT-2468 - adding fix for text only testimonial hero.<br/>
+03/15/16 16:51	[01.01.004-k01] RM: Tweak to language dropdown list.<br/>
+03/15/16 14:20	[01.01.004-j99] MDT-2521- Had to add more to the refactoring. The filters are now built propertly <br/>
+03/15/16 14:02	[01.01.004-j98] RM: MDT-2530: Modifying some languages spelling.<br/>
+03/15/16 13:00	[01.01.004-j97] MDT-2521- Removed a check in an if statement that was always returning false and causing the filter portion of the gsa search url to be off. <br/>
+03/14/16 16:58	[01.01.004-j96] RM: Triggering build.<br/>
+03/14/16 14:37	[01.01.004-j95] RM: Fix for edit properties in sites.html for composite multifield.<br/>
+03/14/16 14:27	[01.01.004-j94] MDT-2517: build last  change<br/>
+03/10/16 16:38	[01.01.004-j93] RM: Tweaks for disclaimer.<br/>
+03/10/16 15:29	[01.01.004-j92] RM: Fixing an issue where keyvalue always returned the key.<br/>
+03/10/16 14:18	[01.01.004-j91] RM: MDT-2500 changes (  minor change to isi script)<br/>
+03/10/16 13:07	[01.01.004-j90] RM: MDT-2494: Removing class to hide original ISI in mobile.<br/>
+03/10/16 12:15	[01.01.004-j89] RM: Reversed order for cloning the MDT-2494 ISW warning.<br/>
+03/10/16 11:44	[01.01.004-j88] RM: MDT-2495 changes.<br/>
+03/10/16 11:08	[01.01.004-j87] MDT-2470: fix to accordion linking for items within an accordion<br/>
+03/09/16 17:50	[01.01.004-j86] RM: MDT-2493: Removing validation for emanual urls (bandaid fix).<br/>
+03/09/16 16:07	[01.01.004-j85] RM: Adding fix for ISI warnings in TWI component.<br/>
+03/09/16 14:52	[01.01.004-j84] RM: Minor issue with redirect.<br/>
+03/09/16 14:14	[01.01.004-j83] Build last change<br/>
+03/08/16 14:49	[01.01.004-j81] RM: MDT-2484 - Changes to hide in nav label.<br/>
+03/08/16 14:31	[01.01.004-j80] RM: MDT-2484 - Changes to allow hiding in nav.<br/>
+03/08/16 10:13	[01.01.004-j79] RM: Triggering build.<br/>
+03/07/16 12:32	[01.01.004-j78] RM: MDT-2454 changes<br/>
+03/07/16 09:04	[01.01.004-j77] Build last<br/>
+03/04/16 16:34	[01.01.004-j76] RM: MDT-2451 implement codereview suggestions<br/>
+03/04/16 15:59	[01.01.004-j75] RM: MDT-2454,2466,2453<br/>
+03/03/16 19:41	[01.01.004-j74] RM: MDT-1169,2446,2439 changes.<br/>
+03/02/16 16:12	[01.01.004-j73] Triggering build<br/>
+03/02/16 11:20	[01.01.004-j72] RM: Real responsive table commit, now.<br/>
+03/02/16 11:16	[01.01.004-j70] RM: Reverting accidental acknowledgement commit.<br/>
+03/02/16 11:09	[01.01.004-j71] RM: Adding Responsive Table Enhancements.<br/>
+03/01/16 12:05	[01.01.004-j70] RM: Triggering Build<br/>
+02/29/16 14:56	[01.01.004-j69] MDT-2434. Search will now add the selected term to the search field and submit the form. Acts like Google.com now. <br/>
+02/29/16 13:45	[01.01.004-j68] RM: MDT-2184: Updates to image wrapped text component<br/>
+02/26/16 17:49	[01.01.004-j67] RM: MDT-1703: AddThis fix and clientlib cleanup.<br/>
+02/26/16 14:17	[01.01.004-j66] Fixing issue with footer accordions on search results. <br/>
+02/25/16 17:35	[01.01.004-j65] Fixing display table. <br/>
+02/25/16 17:02	[01.01.004-j64] Fixing table-layout in display-table class for search elements. <br/>
+02/25/16 16:36	[01.01.004-j63] Triggering build.<br/>
+02/25/16 15:52	[01.01.004-j62] Prevent System.err messages by Rhino<br/>
+02/25/16 15:23	[01.01.004-j61] RM: Adding search updates.<br/>
+02/25/16 15:13	[01.01.004-j60] Triggering Build<br/>
+02/25/16 15:05	[01.01.004-j59] Fix annotations on the header, footer and the press release header components, in addition to inherited header/footer allowing annotations when it shouldn't.<br/>
+02/25/16 09:22	[01.01.004-j58] MDT-2420: replace libraries.html template.include to template.includeLibrary<br/>
+02/24/16 19:10	[01.01.004-j57] RM: Adding Zach's latest.  Commenting out majority of video-duration.js (more on this tomorrow).<br/>
+02/24/16 17:18	[01.01.004-j56] Fix a head.js npe when using the page api to traverse the parents of a page.<br/>
+02/24/16 09:46	[01.01.004-j55] Fixing bug MDT-2415<br/>
+02/24/16 01:27	[01.01.004-j54] revert <br/>
+02/24/16 00:12	[01.01.004-j53] triggering to test powermock dependencies<br/>
+02/23/16 23:54	[01.01.004-j52] Added missing dependencies for power mockito. <br/>
+02/23/16 19:47	[01.01.004-j51] RM: Adding groovy script to find/replace strings within properties in a given component.<br/>
+02/23/16 15:47	[01.01.004-j50] Fixing blocker for when a user searches and no results are returned. <br/>
+02/23/16 12:10	[01.01.004-j49] RM: MDT-2409: Fix for NPE in RR Contact Us.<br/>
+02/22/16 17:38	[01.01.004-j48] Removing commented out code. <br/>
+02/22/16 17:32	[01.01.004-j47] RM: Updated groovy script for related links<br/>
+02/22/16 17:27	[01.01.004-j46] Resetting the total results limitation to 1000 again after a conversation with Aruna<br/>
+02/22/16 16:14	[01.01.004-j45] Build<br/>
+02/22/16 16:07	[01.01.004-j43] Fixing the encoding issue for queried values being send to gsa. Was double encoding/decoding them. <br/>
+02/22/16 15:34	[01.01.004-j42] RM: MDT-2405: Fixing .html extension for Manual related links, adding missing lanugaeg/country (Argentina).<br/>
+02/22/16 14:11	[01.01.004-j41] RM: MDT-2374: Zach's video updates.<br/>
+02/22/16 12:10	[01.01.004-j40] RM: MDT-2403: Fix for open in new tab in related links.<br/>
+02/22/16 11:26	[01.01.004-j39] Making the filters clear button an inline-block so that it won't wrap and instead go to a new line. <br/>
+02/22/16 10:19	[01.01.004-j38] Fix data layer for search<br/>
+02/22/16 09:31	[01.01.004-j37] Update data-layer and add a couple groovy scripts<br/>
+02/22/16 01:15	[01.01.004-j356] Added missing dependencies for power mockito. But commented, as they are currently not added in repository.<br/>
+02/19/16 17:19	[01.01.004-j35] Clear filters link now goes to a new line in mobile. <br/>
+02/19/16 17:08	[01.01.004-j34] RM: Changes for MDT-2390 and 2391<br/>
+02/19/16 15:42	[01.01.004-j33] RM: MDT-2375,MDT-2382: Updated Manual Related Links and Breadcrumb.<br/>
+02/19/16 14:56	[01.01.004-j32] Adding no wrap and a z-index to pagination so you can select them when text overlaps. <br/>
+02/19/16 14:31	[01.01.004-j31] Removing inline-block from the search dropdown for bug MDT-2381<br/>
+02/19/16 14:11	[01.01.004-j30] Forgot to check against the length of the value when preventing a search. <br/>
+02/19/16 13:31	[01.01.004-j29] Added javascript to stop not active pagination links from running in IE. Resolved issue with pagination and total results. Pushing what Jennifer did to resolve SVG pagination issue in IE<br/>
+02/19/16 11:01	[01.01.004-j28] Resolving MDT-2380<br/>
+02/19/16 04:15	[01.01.004-j27] MDT-2258 : changed brand element to brand frame<br/>
+02/18/16 16:38	[01.01.004-j26] Updating search.html for bug MDT-2364<br/>
+02/18/16 16:26	[01.01.004-j25] Pushing new gsa hosts for prod and staging<br/>
+02/18/16 16:11	[01.01.004-j24] Setting new gsa host for dev. <br/>
+02/18/16 15:06	[01.01.004-j23] Resolving two dialog descriptions missing 's' and primary filter not being required. <br/>
+02/18/16 13:59	[01.01.004-j22] Resolving issue where white at end of query was causing it to break. Resolved issue where pagination was still showing when under 10 results were returned. <br/>
+02/18/16 13:35	[01.01.004-j21] Resolving issues in bug MDT-2373<br/>
+02/18/16 11:09	[01.01.004-j20] Resolving bug MDT-2340 where doc type files weren't being displayed in the previewer. <br/>
+02/17/16 16:49	[01.01.004-j19] RM: Triggering build<br/>
+02/17/16 15:57	[01.01.004-j18] Appending the primary filter to the secondary filters. <br/>
+02/17/16 15:32	[01.01.004-j17] Changing it to getName() so the parent folders aren't passed into the url<br/>
+02/17/16 14:50	[01.01.004-j16] Updated  css for search and bugfixes<br/>
+02/17/16 14:31	[01.01.004-j15] Fixing submission of searches not working. <br/>
+02/17/16 13:42	[01.01.004-j14] sharebar.js update   css update<br/>
+02/17/16 13:36	[01.01.004-j13] Resolving bugs MDT-2370, MDT-2366, MDT-2359<br/>
+02/17/16 13:10	[01.01.004-j12] Resolved bugs MDT-2365, MDT-2364, MDT-2361, MDT-2363 and the bug where powerpoints weren't working with the previewer. <br/>
+02/17/16 12:28	[01.01.004-j11] test junit dependencies<br/>
+02/17/16 12:22	[01.01.004-j10] Update the number of GSA keymatches coming back.<br/>
+02/17/16 11:33	[01.01.004-j9] MDT-2262 : junit for socialMediaService<br/>
+02/17/16 11:20	[01.01.004-j8] triggering to test powermock dependencies<br/>
+02/17/16 06:30	[01.01.004-j7] MDT-2352: Bug - Helper Text Missing for Page Creation Basic Tab<br/>
+02/17/16 00:38	[01.01.004-j6] revert - triggering to test powermock dependencies<br/>
+02/16/16 23:55	[01.01.004-j5] triggering to test powermock dependencies<br/>
+02/16/16 17:02	[01.01.004-j4] Resolving bug MDT-2305<br/>
+02/16/16 16:00	[01.01.004-j3] Search data-layer update for filters<br/>
+02/16/16 15:09	[01.01.004-j2] Adding Gsa Host Configurations. <br/>
+02/16/16 14:38	[01.01.004-i99] RM: Removing the requirement that users cannot delete the responsive table from page.<br/>
+02/16/16 14:32	[01.01.004-i98] RM: MDT-2175: Fix for tag name prefix's.<br/>
+02/16/16 14:14	[01.01.004-i97] Fix the mapped cookie path for the SITEPATH variable<br/>
+02/16/16 14:05	[01.01.004-i96] Commenting out powermock so that the build will pass<br/>
+02/16/16 13:04	[01.01.004-i95] RM: Zach's changes.  Trying again.<br/>
+02/16/16 12:20	[01.01.004-i94] Resolving MDT-2346<br/>
+02/16/16 11:23	[01.01.004-i93] triggering to test powermock dependencies<br/>
+02/16/16 11:11	[01.01.004-i92] Finished development for MDT-1151 (filters). Resolved bug MDT-2335 (duplicate pagination on results less than 50). Added filters to Paul's search data layer. <br/>
+02/16/16 11:06	[01.01.004-i91] corrected error in tag<br/>
+02/16/16 10:56	[01.01.004-i90] Added powermock core dependency<br/>
+02/16/16 07:19	[01.01.004-i89] MDT-2321 : removed max character count<br/>
+02/16/16 05:17	[01.01.004-i88] Merged revision(s)  from medtronic-com_01.01/trunk/medtronic-com-services/src/test/java/com/medtronic/com/services/SocialMediaServiceTest.java:<br/>
+02/16/16 05:10	[01.01.004-i87] Reverting changes due to build failure.<br/>
+02/16/16 03:10	[01.01.004-i86] Added powermock core dependency<br/>
+02/16/16 02:38	[01.01.004-i85] MDT-2262 : junit for socialMediaService<br/>
+02/16/16 00:55	[01.01.004-i84] Updating build version.<br/>
+02/15/16 23:03	[01.01.004-i83] MDT-2262 : Powermockito dependency  - added<br/>
+02/15/16 19:21	[01.01.004-i82] Search Data Layer, found the underlying issue, fixed<br/>
+02/15/16 18:52	[01.01.004-i81] Search Data Layer, fixit<br/>
+02/15/16 18:40	[01.01.004-i80] Search Data Layer, almost done<br/>
+02/15/16 17:11	[01.01.004-i79] Data layer changes for business unit and audience tag sets<br/>
+02/15/16 17:06	[01.01.004-i78] Resolving MDT-2313<br/>
+02/15/16 16:38	[01.01.004-i77] Making a push to build<br/>
+02/15/16 15:46	[01.01.004-i76] RM: Fix for 2324<br/>
+02/15/16 15:31	[01.01.004-i75] Video and download analytics changes   bonus stop default aem js from cq.foundation-main from being loaded in the publisher when not necessary.<br/>
+02/15/16 13:25	[01.01.004-i74] Remove console.log from set-tracking-cookie.js, add cookies.js to ie clientlib, Data-layer add nav data-nav-id<br/>
+02/15/16 12:49	[01.01.004-i73] RM: Applying updated Language list<br/>
+02/15/16 11:27	[01.01.004-i72] Removed some margin from the disclaimer. Updated search-results.js to fix bugs. Fixed the title of key matches not displaying. Added jautodoc to JsonUtil.java. Added a fix to SearchAuthoring.js to resolve any issues with<br/>
+02/15/16 10:40	[01.01.004-i71] MDT-2230_MDT-1985_MDT-1774: super duper copy paster error<br/>
+02/15/16 10:24	[01.01.004-i70] Build last change<br/>
+02/15/16 06:28	[01.01.004-i69] MDT-2301 : updated accordian allowed components list and added sectionPath parsys to all accordian section<br/>
+02/15/16 06:10	[01.01.004-i68] Updated build version<br/>
+02/14/16 17:40	[01.01.004-i67] Something of mine was accidentally overwritten<br/>
+02/14/16 16:34	[01.01.004-i66] RM: Triggering build for Zch's changes<br/>
+02/13/16 18:06	[01.01.004-i65] RM: Merging in Zach's changes<br/>
+02/13/16 17:45	[01.01.004-i64] Pushing fix that should resolve styling issue Madan has been seeing in publish<br/>
+02/13/16 16:46	[01.01.004-i63] RM: MDT-2194: Adding utilities.js reference.<br/>
+02/13/16 11:04	[01.01.004-i62] Reverted changes for MDT-2265, 2266, 2267, 2268<br/>
+02/13/16 11:00	[01.01.004-i61] MDT-2258: Added additional property frame type to hero par MDT-2249: Added condition to href to check if secondary link checkbox is selected or notMDT-2262 : Powermockito dependency - removed<br/>
+02/13/16 10:58	[01.01.004-i60] Reverted changes for MDT-2265, 2266, 2267, 2268<br/>
+02/13/16 10:42	[01.01.004-i61] MDT-2267: j-unit test for Product Detail component <br/>
+02/13/16 10:31	[01.01.004-i60] MDT-2262 : Powermockito dependency<br/>
+02/12/16 17:44	[01.01.004-i59] Added warning to tag manager to account for null filters. Created a GsaPredictiveAndSuggestiveResults object. Mapped it through to the front end<br/>
+02/12/16 17:04	[01.01.004-i58] Recomitting change to search button for right to left pages<br/>
+02/12/16 15:11	[01.01.004-i57] MDT-2230_MDT-1985_MDT-1774: Updates for outdated browser <br/>
+02/12/16 14:17	[01.01.004-i56] Resolved: MDT-2279. Fixed alignment of search button in right to left languages and padding missing as well. <br/>
+02/12/16 13:43	[01.01.004-i55] Resolving bugs - MDT-2284, MDT-2283, MDT-2282. Pagination should now work as expected<br/>
+02/12/16 10:31	[01.01.004-i54] MDT-2281 : changed the disabled attribute value<br/>
+02/12/16 06:49	[01.01.004-i53] MDT-MDT-1746: 404/Error Page: As per code review comments from Ryan<br/>
+02/12/16 06:29	[01.01.004-i52] MDT-547: Updated the validation as per Code Review comments from Ryan.<br/>
+02/11/16 19:54	[01.01.004-i51] RM: MDT-2259 changes.<br/>
+02/11/16 17:39	[01.01.004-i50] Added checkstyle and findbug changes to search backend code. Moved search from servlet to backend javascript. Fixed issue with being able to click previewer image. <br/>
+02/11/16 17:08	[01.01.004-i49] Cookies <br/>
+02/11/16 13:41	[01.01.004-i48] RM: MDT-2269: Issue with Accordion component after removal of section.  Other misc fixes.<br/>
+02/11/16 11:02	[01.01.004-i47] Data layer promo updates: fix the decorative element<br/>
+02/11/16 01:13	[01.01.004-i46] Data layer promo updates<br/>
+02/10/16 22:08	[01.01.004-i45] MDT-2230, MDT-1985, MDT-1774: Various fixes for cookie warnings, dtm cookies, and outdated browser<br/>
+02/10/16 15:24	[01.01.004-i44] RM: Updated outdated browser to display below cookie warning(implicit).<br/>
+02/10/16 14:42	[01.01.004-i43] RM: Applying Zach's latest.<br/>
+02/10/16 11:44	[01.01.004-i42] RM: Fat fingers fix.<br/>
+02/10/16 10:31	[01.01.004-i41] Refactored some gsa backend work. Added site and client to the predictive and search urls (removed them from hard code urls). Added them as hidden fields to the front end. <br/>
+02/10/16 03:38	[01.01.004-i40] MDT-547: Updated the validation for tags so as to pick corporate business unit tags and improved the error messages.<br/>
+02/09/16 19:40	[01.01.004-i39] RM: MDT-29: Addressing Sergio's code review.<br/>
+02/09/16 18:55	[01.01.004-i38] RM: MDT-2250: Modifying languages display to include native tongue for country and language fields.<br/>
+02/09/16 17:06	[01.01.004-i37] Build last change<br/>
+02/09/16 16:53	[01.01.004-i36] RM: MDT-2197: Adding class to markup<br/>
+02/09/16 16:31	[01.01.004-i35] Split up constant file into SeviceConstants and ServletConstants. Redid authoring dialogs to match requirements. Added javascript to initpage() if the components have been created on the page. <br/>
+02/09/16 15:40	[01.01.004-i34] RM: MDT-2215: Adding style to hide button until select2 is loaded.<br/>
+02/09/16 11:12	[01.01.004-i33] Created an empty share.html for the search template<br/>
+02/09/16 10:34	[01.01.004-i32] Updated filters with Zach's latest javascript. Moved the refactoring of the preivewData from the front end to the backend. <br/>
+02/09/16 05:24	[01.01.004-i31] MDT-2083: Enhanced Error Text implementation to display both the Helper text and Error Message.<br/>
+02/09/16 05:14	[01.01.004-i30] MDT-1636 : Added vert-space class to add padding above the componentMDT-2219: Changed component group to medtronic-com from .hidden<br/>
+02/09/16 05:05	[01.01.004-i29] MDT-547: Tag sets validation for L3 tag sets<br/>
+02/09/16 01:01	[01.01.004-i28] MDT-1749: Overhaul of workflow, catching multiple edge cases and handling nearly the same as if you typed them into the tags tool in AEM. Initial purpose of this rework: to change how the tag names are generated.<br/>
+02/08/16 14:56	[01.01.004-i27] Incrementing build version. <br/>
+02/08/16 14:33	[01.01.004-i26] MDT-2077, MDT-2052: Conditionally wrap static includes of resource to ensure the overlays are "scoped" properly. This does not affect publish mode rendering.<br/>
+02/08/16 13:47	[01.01.004-i25] MDT-2231: remove share from error pages.<br/>
+02/08/16 11:55	[01.01.004-i24] MDT-2202: Add redirect functionality to all pages which set redirectTarget<br/>
+02/08/16 10:55	[01.01.004-i23] MDT-2225: Added reference-footnote component to col 1 region 3 of product detail template.<br/>
+02/08/16 09:24	[01.01.004-i22] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/08/16 09:12	[01.01.004-i21] Build last change<br/>
+02/08/16 07:03	[01.01.004-i20] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/08/16 06:46	[01.01.004-i19] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/08/16 06:04	[01.01.004-i18] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/08/16 05:34	[01.01.004-i17] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/08/16 04:40	[01.01.004-i16] MDT-1746: 404/Error Page: Changes to add {requestURL}<br/>
+02/05/16 16:17	[01.01.004-i15] RM: Fixing issue with ValidateTags.js, removing relative paths from CSS.<br/>
+02/05/16 09:48	[01.01.004-i14] MDT-1749: Tag Import Workflow implementation updated to include base tags folder for dynamic creation.<br/>
+02/04/16 21:32	[01.01.004-i13] RM: Moving 'listeners.js' to more appropriate name/location.<br/>
+02/04/16 16:54	[01.01.004-i12] Adding an activate method to gsa predictive suggestive servlet<br/>
+02/04/16 16:41	[01.01.004-i11] Fixing logger in search/predictive dropdown servlet. <br/>
+02/04/16 16:32	[01.01.004-i10] MDT- 2208 - Included Link Validation<br/>
+02/04/16 16:24	[01.01.004-i09] Adding logs to predictive and suggestive search for the search dropdown. <br/>
+02/04/16 16:18	[01.01.004-i08] Reverting: MDT-547: Validation for Tags. It is breaking page authoring as the validation logic is incorrect.<br/>
+02/04/16 15:41	[01.01.004-i07] No search results button was of type 'button' and not 'submit'<br/>
+02/04/16 15:22	[01.01.004-i06] Will fix MDT-2132, MDT-2170, and MDT-2193. Committing some backend code review. <br/>
+02/04/16 15:17	[01.01.004-i05] Fixing language select issue<br/>
+02/04/16 11:46	[01.01.004-i04] RM: MDT-83: Fixing issue for L2/L3 pages showing language when there is only one type.<br/>
+02/04/16 11:19	[01.01.004-i03] To test OOM issue in dev server.<br/>
+02/04/16 10:05	[01.01.004-i02] MDT-1749: Code Review comments incorporated.<br/>
+02/04/16 09:11	[01.01.004-i01] MDT-547: Validation for Tags.<br/>
+02/04/16 08:43	[01.01.004-h99] Removed width of button search again. Lynette cannot resolve MDT-2132 if this keeps getting committed. <br/>
+02/04/16 08:37	[01.01.004-h98] MDT-171 : Added log statements to identify if any of the country is selected in the country list<br/>
+02/04/16 02:21	[01.01.004-h97] MDT-2207: fix the issue that there is no clear function for label picker<br/>
+02/03/16 22:57	[01.01.004-h96] MDT-2100:fixed bug of Menu Landing Page label tab<br/>
+02/03/16 22:52	[01.01.004-h95] MDT-2180: social media date format update<br/>
+02/03/16 22:39	[01.01.004-h94] MDT-2180: social media feed date format update<br/>
+02/03/16 17:49	[01.01.004-h93] RM: MDT-2199: Adding Responsive Table to Menu Landing Page.<br/>
+02/03/16 17:35	[01.01.004-h92] MDT-1355, MDT-1299: Ok, it better stay fixed.<br/>
+02/03/16 17:27	[01.01.004-h91] MDT-1355, MDT-1299: Third time's the charm for fixing this issue.<br/>
+02/03/16 17:18	[01.01.004-h90] MDT-1355, MDT-1299: Forgot a log message last time, new forced build with a log message.<br/>
+02/03/16 14:30	[01.01.004-h88] Fixed dropdown not going away on nav button click. Fixed MDT-2193 and MDT-2170<br/>
+02/03/16 11:42	[01.01.004-h87] MDT-1734 : added timeout for focus to resolve ie11 specific issue<br/>
+02/03/16 10:50	[01.01.004-h86] MDT-1355, MDT-1299: Fixes for initial problems with Java objects in the JSON model object. Added additional error handling and diagnostic code to partially address the issue.<br/>
+02/03/16 08:35	[01.01.004-h85] MDT-2190 : Search Button and Search Results URL are required fields.<br/>
+02/03/16 02:02	[01.01.004-h84] MDT-1355, MDT-1299: Huge changes for click tracking (first pass) plus some data layer additions<br/>
+02/03/16 00:23	[01.01.004-h83] Update main-ltr.css <br/>
+02/03/16 00:02	[01.01.004-h82] for build<br/>
+02/02/16 23:27	[01.01.004-h81] Update main-ltr.css <br/>
+02/02/16 23:19	[01.01.004-h80] Update main-ltr.css <br/>
+02/02/16 22:09	[01.01.004-h79] RM: Fix for Language/Country Selecter NPE.<br/>
+02/02/16 21:15	[01.01.004-h78] RM: MDT-2079: Adding Responsive Table to Condition Detail and Therapy templates (Col 1)<br/>
+02/02/16 20:36	[01.01.004-h77] RM: MDT-83: Country Select updates based on Paul's comments.<br/>
+02/02/16 13:03	[01.01.004-h76] Most updated stable version of search. search.html is no longer hard coded. Dropdown services are now combined into one. <br/>
+02/02/16 12:49	[01.01.004-h75] MDT-72 - Increase the dialog height<br/>
+02/02/16 11:40	[01.01.004-h74] MDT-72 - Making the Navigation Menu component available to the parsys<br/>
+02/02/16 07:34	[01.01.004-h73] MDT-2171 : Bug - Global Header - Section header is not the same as the one mentioned in requirement<br/>
+02/02/16 04:01	[01.01.004-h72] MDT-2066: fix a UI issue, cause by the new style<br/>
+02/02/16 00:04	[01.01.004-h71] MDT-171 Language selector changes<br/>
+02/01/16 23:58	[01.01.004-h70] MDT-156, MDT-1030: fix bug MDT-2066<br/>
+02/01/16 22:59	[01.01.004-h69] CSS <br/>
+02/01/16 13:59	[01.01.004-h68] MDT-2123 - Including a edit action to remove the delete icon from the placeholder dialog.<br/>
+02/01/16 11:53	[01.01.004-h67] Fixing bug where if a gsa result didn't have a meta description, the system would return an error. <br/>
+02/01/16 09:42	[01.01.004-h66] MDT-1746|MDT-1082: 404/Error Page - Modified allowedPaths for this template.<br/>
+02/01/16 09:36	[01.01.004-h65] MDMDT-1749: Tag Import Workflow - Implementation<br/>
+02/01/16 09:29	[01.01.004-h64] Committing what I have for search. Mostly updates to dropdown and visuals. Meta description is now mapped. <br/>
+02/01/16 08:11	[01.01.004-h63] MDT-1749: Tag Import Workflow - Pom entries<br/>
+02/01/16 06:49	[01.01.004-h62] MDT-171 Language selector changes<br/>
+01/31/16 23:54	[01.01.004-h61] MDT-3133: Bug - Global Header - Renamed the field to 'Search Field Text'<br/>
+01/31/16 22:20	[01.01.004-h60] MDT-2053:fixed bug of Press Release Header<br/>
+01/29/16 18:45	[01.01.004-h59] Committing what I have done on Friday. <br/>
+01/29/16 15:59	[01.01.004-h58] RM: MDT-2015: Updating outdatedbrowser.css<br/>
+01/29/16 11:15	[01.01.004-h57] Added no search as a component of search.html. Revamped javascript to work with no search results as a component and no it's own template. <br/>
+01/29/16 10:30	[01.01.004-h56] MDT-72 Navigation Menu. Updating the default disabled status of linkUrl<br/>
+01/29/16 08:54	[01.01.004-h55] Removing forgotten references to http client<br/>
+01/29/16 08:43	[01.01.004-h54] Removing http client dependency as it's breaking the build. <br/>
+01/29/16 08:25	[01.01.004-h53] Removing .btn__search of 164. Adding apache httpclient to pom. MDT-2132<br/>
+01/29/16 05:46	[01.01.004-h52] MDT-1746: 404/Error Page - Removed header and footer. Modified allowedPaths for this template.<br/>
+01/28/16 23:28	[01.01.004-h51] MDT-2119:Fixed bug of Hero Component<br/>
+01/28/16 22:36	[01.01.004-h50] according to XD Team's update, merged latest html of Manuals Related Links Component<br/>
+01/28/16 20:25	[01.01.004-h49] MDT-2095:Added the Reference component in the Home Page template<br/>
+01/28/16 20:13	[01.01.004-h48] MDT-83: removed inline styles<br/>
+01/28/16 19:34	[01.01.004-h47] Redid backend of search, predictive, and previewer to cover for spaces in queries. Dropdown now appears in search results. Dropdown and search work with queries with spaces. <br/>
+01/28/16 18:42	[01.01.004-h46] RM: Updating with Zach's latest<br/>
+01/28/16 18:23	[01.01.004-h45] RM: MDT-2125: Adding ErrorPages configuration for site-root template as required field.<br/>
+01/28/16 17:27	[01.01.004-h44] MDT-91: Using 2.7.0-rc1, since that's what's in ivy<br/>
+01/28/16 17:09	[01.01.004-h43] MDT-91: Adding depemdencies for search<br/>
+01/28/16 16:51	[01.01.004-h42] Updated jackson dependcy versions in pom.  <br/>
+01/28/16 16:15	[01.01.004-h41] MDT-72  - Navigation Menu<br/>
+01/28/16 15:42	[01.01.004-h40] MDT-325, MDT-283, MDT-1151, MDT-282, MDT-91Search overlay and search results. Front end and back end. It's finished but stable and working. Doesn't break anything. <br/>
+01/28/16 06:27	[01.01.004-h39] MDT-1749 - Removed files to avoid build failure<br/>
+01/28/16 06:17	[01.01.004-h38] Reverting pom entries to avoid build failure<br/>
+01/28/16 04:43	[01.01.004-h37] Updating build version.<br/>
+01/28/16 04:30	[01.01.004-h38] MDT-1749: Tag Import Workflow<br/>
+01/28/16 02:56	[01.01.004-h37] MDT-2065: update the js and template<br/>
+01/28/16 02:03	[01.01.004-h36] MDT-1476: modified multifield position, removed useless js code in listener.js(site root page)<br/>
+01/28/16 01:29	[01.01.004-h35] MDT-2065: update the function<br/>
+01/28/16 00:49	[01.01.004-h34] MDT-2076: implemented canonical url for pages<br/>
+01/27/16 23:35	[01.01.004-h33] MDT-2065: fix the duration issue in mobile<br/>
+01/27/16 23:16	[01.01.004-h32] MDT-2076: modified LinkTransformer.java<br/>
+01/27/16 22:10	[01.01.004-h31] MDT-2076: using ResourceResovler's map method to create mapped URL<br/>
+01/27/16 19:57	[01.01.004-h30] MDT-2052: Update cq:actions for some components<br/>
+01/27/16 07:02	[01.01.004-h29] MDT-2065: revert the code, because will cause other issue<br/>
+01/27/16 05:13	[01.01.004-h28] MDT-2065: update js<br/>
+01/27/16 04:34	[01.01.004-h27] MDT-2076 Canonical url implementation backend code updated<br/>
+01/27/16 04:23	[01.01.004-h26] MDT-2065: update the template<br/>
+01/27/16 04:07	[01.01.004-h25] MDT-2065: update the video-templates.html<br/>
+01/27/16 03:20	[01.01.004-h24] MDT-2076 Canonical url implementation defect fixing for OpenGraph Page Properties user story - build deployment<br/>
+01/27/16 02:53	[01.01.004-h23] MDT-2065: update the getDuration function<br/>
+01/27/16 02:40	[01.01.004-h22] MDT-83: implement country selector component<br/>
+01/27/16 02:28	[01.01.004-h21] MDT-1750: make "labels" to "Labels" in the path<br/>
+01/27/16 02:15	[01.01.004-h20] MDT-991: Updated regular expression for folder name l1-l2-hero.<br/>
+01/27/16 01:15	[01.01.004-h19] MDT-1750: import the labels<br/>
+01/27/16 00:14	[01.01.004-h18] MDT-1731:change contacts component name<br/>
+01/26/16 23:44	[01.01.004-h17] MDT-1476:modified authoring dialog according to latest Requirements<br/>
+01/26/16 23:20	[01.01.004-h16] MDT-1731:Fixed bug of Placeholder text<br/>
+01/26/16 18:14	[01.01.004-h15] RM: MDT-1612: Adding exception for WOL links within the WOL Modal.<br/>
+01/26/16 16:15	[01.01.004-h14] RM:MDT-1634: Updating target value to be _self if nothing is specified.<br/>
+01/26/16 15:04	[01.01.004-h13] RM: MDT-1773: Fixing implicit 'flicker' when accepted the implicit cookie warning already.<br/>
+01/26/16 11:16	[01.01.004-h12] MDT-2080 - Updated the Image field label <br/>
+01/26/16 10:11	[01.01.004-h11] MDT-1476: Missed the parameter in quote.js when converting Page.getLanguage(boolean) to LanguageUseUtil.getPageLanguage()<br/>
+01/25/16 23:36	[01.01.004-h10] MDT-2065: fix duration display error in mobile devices<br/>
+01/25/16 10:50	[01.01.004-h9] MDT-1746: 404/Error Page Template<br/>
+01/25/16 10:37	[01.01.004-h8] MDT-1970: Added Reference component to One Column and Column 1 of Two Column General Detail component<br/>
+01/25/16 10:31	[01.01.004-h7] MDT-2017: Bug - Image Renditions - The renditions are not generated<br/>
+01/25/16 02:13	[01.01.004-h6] MDT-2057: add social feed - mini and slender/squat to sub-templates<br/>
+01/24/16 23:36	[01.01.004-h5] Reverting - MDT-8: Updated the search results url for the Search Button.<br/>
+01/24/16 21:33	[01.01.004-h4] MDT-8: Upodated the search results url for the Search Button.<br/>
+01/24/16 19:52	[01.01.004-h3] MDT-2067 <br/>
+01/22/16 18:04	[01.01.004-h2] MDT-2052: One more modification<br/>
+01/22/16 17:59	[01.01.004-h1] Fix build-version.txt: remove newline and after 'g' comes 'h'...not 'f'.<br/>
+01/22/16 17:01	[01.01.004-f21] Moved search overlay to it's own component. Moved search-results.js to it's own folder and out of extensions. Updated search-overlay so that the button, search field placeholder, and advanced search tip text and url auth<br/>
+01/22/16 15:20	[01.01.004-f20] RM: Adding Zachs CSS/JS changes.<br/>
+01/22/16 09:54	[01.01.004-f19] MDT-2022: Added default value for Safety Link Text<br/>
+01/22/16 09:02	[01.01.004-f18] Updated build version.<br/>
+01/21/16 22:56	[01.01.004-f17] modified allowed path<br/>
+01/21/16 21:38	[01.01.004-f16] MDT-2009: fix the label optional issue<br/>
+01/21/16 21:32	[01.01.004-f15] MDT-83:reverted<br/>
+01/21/16 21:04	[01.01.004-f14] merged latest CSS and HTML files according to XD Team's update<br/>
+01/21/16 20:59	[01.01.004-f13] MDT-2024:Update placeholder text to read 'Placeholder for Authorable Text - Quote'<br/>
+01/21/16 20:30	[01.01.004-f12] RM: MDT-1982/MDT-1476: Adding function to retrieve list of countrySelect dropdown values to languageuse class.<br/>
+01/21/16 19:50	[01.01.004-f11] MDT-2038:fixed defect.<br/>
+01/21/16 15:58	[01.01.004-f10] MDT-1501 Site-root-page Enhancement to include url capability in the page properties for Michelson Tab<br/>
+01/21/16 12:50	[01.01.004-f9] RM: MDT-1497: Fixing issue where ID is null, preventing page authoring.<br/>
+01/21/16 03:37	[01.01.004-f8] MDT-1958: fix a IE11 issue on Responsive Table component<br/>
+01/21/16 03:18	[01.01.004-f7] MDT-83:fixed bugs.<br/>
+01/21/16 03:00	[01.01.004-f6] MDT-83:implemented Country Selector Component<br/>
+01/21/16 01:17	[01.01.004-f5] MDT-1911:ENHANCEMENT - Helper Text for Video Component - Slender/Squat<br/>
+01/21/16 01:00	[01.01.004-f4] MDT-1497: Changes for Classic UI to read the page properties.<br/>
+01/21/16 00:31	[01.01.004-f3] MDT-1878:ENHANCEMENT - Helper Text for Video Component - Mini<br/>
+01/20/16 21:14	[01.01.004-f2] MDT-1476:modified touch-ui-widgets js file's location<br/>
+01/20/16 19:06	[01.01.004-f1] RM: Removing /etc/map folders and filter additions, updating migration tab so it functions correctly (MDT-1497).<br/>
+01/20/16 15:34	[01.01.004-g99] MDT-72: initial nav commit for basic component structure and override styles for edit mode.<br/>
+01/20/16 15:29	[01.01.004-g98] MDT - 1827 - Made Press Release Template available for US and OUS sites<br/>
+01/20/16 14:29	[01.01.004-g97] MDT-120: Fix vertical margin for rte.<br/>
+01/20/16 04:33	[01.01.004-g96] MDT-648: update the date format<br/>
+01/20/16 03:15	[01.01.004-g95] MDT-48: add the social media feed - slender/squat component<br/>
+01/20/16 02:11	[01.01.004-g94] MDT-1856:added required symbol for heading text field<br/>
+01/20/16 01:12	[01.01.004-g93] MDT-1856:finished enhancement<br/>
+01/20/16 00:14	[01.01.004-g92] MDT-1497: Changes to make the Migrated Content tab visible On page create<br/>
+01/20/16 00:04	[01.01.004-g91] MDT-1807:finished enhancement<br/>
+01/19/16 23:43	[01.01.004-g90] MDT-1512: Build dev same as before upload content mapping<br/>
+01/19/16 21:27	[01.01.004-g89] MDT-1512:Delete content mapping code<br/>
+01/19/16 21:17	[01.01.004-g88] RM: MDT-1982: Adding support for custom languages and associated dialog/use functions.<br/>
+01/19/16 21:07	[01.01.004-g87] RM: MDT-1982: Adding support for custom languages and associated dialog/use functions.<br/>
+01/19/16 20:08	[01.01.004-g86] merged latest CSS and JS files according to XD Team's update<br/>
+01/19/16 19:58	[01.01.004-g85] MDT-1990:fixed defect.<br/>
+01/19/16 17:07	[01.01.004-g84] RM: One last update to Responsive table helper text: MDT-1974<br/>
+01/19/16 17:01	[01.01.004-g83] RM: MDT-1975, MDT-1988: Updating helper text for responsive table<br/>
+01/19/16 15:40	[01.01.004-g82] Hopefully fixing the some handlebars issues, by removing them from the library.<br/>
+01/19/16 09:55	[01.01.004-g81] Fix search JS problem   fix analytics js problem<br/>
+01/19/16 09:24	[01.01.004-g80] MDT-1501 Site-root-page Enhancement to include url capability in the page properties for Michelson Tab<br/>
+01/19/16 09:19	[01.01.004-g79] MDT-1295: Fix the download files file extension text.<br/>
+01/19/16 07:05	[01.01.004-g78] MDT-648: update the html<br/>
+01/19/16 06:54	[01.01.004-g77] MDT-648: update the getAccountName method<br/>
+01/19/16 05:38	[01.01.004-g76] MDT-1810: Changes to increment the Line index in Heading text for Headline with ISI component.<br/>
+01/19/16 03:40	[01.01.004-g75] MDT-648: update the url regex<br/>
+01/19/16 01:54	[01.01.004-g74] MDT-1512:Modify the filter.xml<br/>
+01/19/16 01:33	[01.01.004-g73] MDT-1496: OpenGraph Page Properties: Implemented the changes for the updated requirements to remove the canonical URL field.<br/>
+01/19/16 01:23	[01.01.004-g72] MDT-1512:Upload Content mapping<br/>
+01/19/16 01:17	[01.01.004-g71] MDT-1476:added url validation<br/>
+01/19/16 01:09	[01.01.004-g70] MDT-1496: OpenGraph Page Properties: Updated the name to property in the meta tag.<br/>
+01/19/16 01:04	[01.01.004-g69] MDT-1476:implemented Application Root Template<br/>
+01/19/16 00:55	[01.01.004-g68] MDT-648: update the component according to the demo feedback<br/>
+01/18/16 23:45	[01.01.004-g67] MDT-1790:Enhancement - Hero Component no longer allowed in 2-column General Detail Template<br/>
+01/18/16 23:34	[01.01.004-g66] MDT-1641: Fixing the phone number to be an tel: link instead of plain text.<br/>
+01/18/16 19:22	[01.01.004-g65] RM: MDT-1871: Modifying dialog values based on Tea's comments.<br/>
+01/18/16 19:05	[01.01.004-g64] MDT-1773: Adding updated CSS/JS from Zach, modifying HTML to go with updated JS.<br/>
+01/18/16 15:15	[01.01.004-g63] MDT-1859 replacing Press Release Hero with Press Release Header component <br/>
+01/18/16 11:06	[01.01.004-g62] MDT-1496: OpenGraph Page Properties - 1. Updated the changes to the OG Canonical URL.<br/>
+01/18/16 10:08	[01.01.004-g61] MDT-1791: Changes to remove the fieldDescription for the Open Graph Canonical URL field.<br/>
+01/18/16 10:03	[01.01.004-g60] MDT-1496: OpenGraph Page Properties - 1. Updated the changes to the OG Canonical URL. 2. JS changes to make the fields type and url readonly in classic ui. 3. Changes to read the locale in the meta tag of head.html<br/>
+01/18/16 06:45	[01.01.004-g59] MDT-1496: OpenGraph Page Properties: Changes to update the og:locale field from the meta tag.<br/>
+01/18/16 04:59	[01.01.004-g58] MDT-1497: Migration Page Properties. Added the radio buttons 1,2 and 3 into a radio group.<br/>
+01/18/16 02:35	[01.01.004-g57] MDT-648: a new way to format the date<br/>
+01/18/16 02:30	[01.01.004-g56] MDT-1845:ENHANCEMENT-Helper Text for Authorable Text Component - Headline (with label)<br/>
+01/18/16 01:07	[01.01.004-g55] MDT-648: add the time zone<br/>
+01/17/16 23:21	[01.01.004-g54] MDT-1868:ENHANCEMENT-Helper Text for Testimonial Hero<br/>
+01/17/16 21:00	[01.01.004-g53] MDT-14:Modify the code as Breadcrumb'scode review<br/>
+01/17/16 20:23	[01.01.004-g52] added jquery.imageCover.js(deleted for misunderstanding)<br/>
+01/17/16 20:00	[01.01.004-g51] MDT-1684: update the placeholder and component title<br/>
+01/17/16 19:54	[01.01.004-g50] merged latest CSS and JS files according to XD Team's update<br/>
+01/16/16 00:15	[01.01.004-g49] MDT-1476: modified authoring dialog<br/>
+01/15/16 16:28	[01.01.004-g48] RM: MDT-1475: Adding i18n to accordion component for 'expand all' and 'collapse all' text.<br/>
+01/15/16 07:16	[01.01.004-g47] MDT-1476: uploaded Application Root Template<br/>
+01/15/16 04:30	[01.01.004-g46] MDT-648: new way to format date<br/>
+01/15/16 03:48	[01.01.004-g45] MDT-648: update the html<br/>
+01/15/16 02:52	[01.01.004-g44] MDT-648: add target attribute the a link of account name, revert the date re-format function of facebook feed<br/>
+01/15/16 02:28	[01.01.004-g43] MDT-1794:ENHANCEMENT - Helper Text for Authorable Text Component - Quote<br/>
+01/15/16 01:58	[01.01.004-g42] MDT-648: update the facebook feed set id, linkedin feed accountName<br/>
+01/15/16 00:56	[01.01.004-g41] MDT-648: remove an extra statement<br/>
+01/15/16 00:43	[01.01.004-g40] MDT-648: update the backing code, and the html<br/>
+01/15/16 00:00	[01.01.004-g39] MDT-1654:Enhancement - Remove 3 options from the Right Rail Subtemplate color dropdown and define variable height components<br/>
+01/14/16 20:19	[01.01.004-g38] MDT-1852:ENHANCEMENT-Helper Text for Share Component<br/>
+01/14/16 18:30	[01.01.004-g37] RM: MDT-1787 - Warn on Leave and Cookie Warning RTE fields remain required when hidden (and invalid).<br/>
+01/14/16 14:52	[01.01.004-g36] MDT-1355 - Fix a bug with the data layer, missed a java string conversion<br/>
+01/14/16 14:13	[01.01.004-g35] MDT-1355 - First of the datalayer commits. The majority is implemented, but needs a few more tweaks/enhancements<br/>
+01/14/16 12:02	[01.01.004-g34] Build last change<br/>
+01/14/16 10:42	[01.01.004-g33] More clientlib changes to support IE-specific clientlibs, also ensuring our clientlibs are wrapped wth the appropriate IE conditional comment escape hatch.<br/>
+01/14/16 09:02	[01.01.004-g32] Removing search js from js.txt, it is referencing some missing properties.<br/>
+01/14/16 08:43	[01.01.004-g31] Fix the JS ordering problem, deferring the rendering of the clientlib include until after the body.<br/>
+01/14/16 08:17	[01.01.004-g30] MDT-1613 : loaded newly created client lib for ie < 8 browsers ; Craeted new clientlib ielte8 and moved outdatedbrowser.css along with added new ie6 css.<br/>
+01/14/16 08:13	[01.01.004-g29] MDT-1613 : loaded newly created client lib for ie < 8 browsers ; Craeted new clientlib ielte8 and moved outdatedbrowser.css along with added new ie6 css.<br/>
+01/14/16 04:04	[01.01.004-g28] MDT-1497: Updated to read locale from server side.<br/>
+01/14/16 03:22	[01.01.004-g27] MDT-8: Updated the HTML for Search Overlay.MDT-1497: Updated to read locale from server side.<br/>
+01/14/16 00:44	[01.01.004-g26] MDT-648: update the SocialMedia.java<br/>
+01/13/16 23:54	[01.01.004-g25] MDT-648: update the SocialMedia.java to fit current social media component<br/>
+01/13/16 23:11	[01.01.004-g24] MDT-1780:ENHANCEMENT-Helper Text for Manual Related Links<br/>
+01/13/16 17:21	[01.01.004-g23] RM: Adding support to gather social media account information.<br/>
+01/13/16 12:39	[01.01.004-g22] Forgot to update build-version. Whoops.<br/>
+01/13/16 02:52	[01.01.004-g21] MDT-8: Updated the dialog and cq-dialog with the new fields. Updated the html for the Search button.<br/>
+01/13/16 02:32	[01.01.004-g20] remove the console command from imageCover.js<br/>
+01/13/16 02:15	[01.01.004-g19] add console to imageCover.js to see the length of data-image-cover element's length<br/>
+01/12/16 22:42	[01.01.004-g18] Pom entriy for power mockito.<br/>
+01/12/16 21:29	[01.01.004-g17] MDT-147: fix MDT-820, add a missing attribute "data-image-cover"<br/>
+01/12/16 19:57	[01.01.004-g16] merged latest CSS<br/>
+01/12/16 12:36	[01.01.004-g15] RM: Adding Zach's recent CSS changes.<br/>
+01/12/16 06:28	[01.01.004-g14] MDT-8: Updated the HTML to read the expanded and collapsed text from the page properties for Menu and Search.<br/>
+01/12/16 05:07	[01.01.004-g13] MDT-1728: Single select dropdown field label changed from 'Cookie Warning' to 'Cookie Type'.<br/>
+01/12/16 00:00	[01.01.004-g12] MDT-156, MDT-1013: fix bug MDT-1661 Bug - [Mobile] Video is not opening/playing in mobile devices<br/>
+01/11/16 22:46	[01.01.004-g11] MDT-1735:fixed defect.<br/>
+01/11/16 19:41	[01.01.004-g10] MDT-1694:ENHANCEMENT-Helper Text for Text Wrapped Image Component Name change<br/>
+01/11/16 13:32	[01.01.004-g09] Build last change<br/>
+01/11/16 10:28	[01.01.004-g08] MDT-1658 - Fixing Place holder overlap for pressrelease component<br/>
+01/11/16 07:37	[01.01.004-g07] MDT-1496: Added the meta tags for the opengraph fields.<br/>
+01/11/16 02:57	[01.01.004-g06] MDT-991: changed the path to workflow as per JIRA<br/>
+01/11/16 01:53	[01.01.004-g05] MDT-83:uploaded Country Selector<br/>
+01/11/16 00:56	[01.01.004-g04] MDT-1691: change the name of the tab<br/>
+01/11/16 00:47	[01.01.004-g03] MDT-1691: changed the placeholder of the component<br/>
+01/10/16 22:49	[01.01.004-g02] merged latest CSS<br/>
+01/10/16 21:16	[01.01.004-g01] MDT-1684: ENHANCEMENT-Helper Text for Authorable Text Component - Inspirational<br/>
+01/10/16 20:08	[01.01.004-f99] MDT-1492:changed validate selector<br/>
+01/10/16 19:40	[01.01.004-f98] test for build<br/>
+01/10/16 11:31	[01.01.004-f97] Reverting test class as power mock dependency is yet to be added to pom. Also deleted the power mock dependency from pom.<br/>
+01/10/16 10:44	[01.01.004-f96] to test powermock dependencies<br/>
+01/10/16 10:30	[01.01.004-f95] Added mockito dependencies<br/>
+01/10/16 03:42	[01.01.004-f94] MDT-1725 : removed pattern builder and modified pattern using simple date format<br/>
+01/09/16 11:56	[01.01.004-f93] MDT-1725 : Added pattern builder to change the short pattern to include full year<br/>
+01/08/16 10:08	[01.01.004-f92] Undo search commit<br/>
+01/08/16 09:49	[01.01.004-f91] Forgot to build<br/>
+01/08/16 08:10	[01.01.004-f90] Put in some temporary labels for a demo.<br/>
+01/08/16 07:33	[01.01.004-f89] MDT-1681: modified helper text for component name, section label, title, url and descriptive text. Added field description to publication dateMDT-991: Added hero-rendition workflow and launcherMDT-888 : Added Reference c<br/>
+01/08/16 03:03	[01.01.004-f88] MDT-1492:added click event for rich text dialog cancel button<br/>
+01/08/16 01:52	[01.01.004-f87] MDT-1704: BUG-Right Rail Subtemplate checkbox<br/>
+01/08/16 01:16	[01.01.004-f86] MDT-1671:ENHANCEMENT-Helper text for Rich Text Editor<br/>
+01/08/16 01:08	[01.01.004-f85] MDT-1691: change the title of the component<br/>
+01/08/16 00:54	[01.01.004-f84] MDT-1671:ENHANCEMENT-Helper text for Rich Text Editor<br/>
+01/08/16 00:43	[01.01.004-f83] MDT-1691: ENHANCEMENT-Helper Text for Reference/Footnote Component<br/>
+01/08/16 00:35	[01.01.004-f84] MDT-45:modified browser dialog height<br/>
+01/08/16 00:21	[01.01.004-f83] MDT-1694:ENHANCEMENT-Helper Text for Text Wrapped Image Component<br/>
+01/07/16 23:42	[01.01.004-f82] MDT-1700:finished enhancement for Biography Hero Component<br/>
+01/07/16 23:07	[01.01.004-f81] MDT-14:Modify the Breadcrumb.java<br/>
+01/07/16 22:50	[01.01.004-f80] MDT-45:modified Medtronic.Authoring.Footer.js<br/>
+01/07/16 22:43	[01.01.004-f79] MDT-14:revert to 5589<br/>
+01/07/16 21:25	[01.01.004-f78] MDT-1672:ENHANCEMENT-Helper Text for Title, Text, Asset<br/>
+01/07/16 20:10	[01.01.004-f77] MDT-45:modified code according to code review and jira's requirements update<br/>
+01/07/16 16:50	[01.01.004-f76] RM: Adding fixes (already applied to pre-stage branch) to resolve client-library dependency<br/>
+01/07/16 10:32	[01.01.004-f74] Try to force a build.<br/>
+01/07/16 10:28	[01.01.004-f73] MDT-1497: Migration Properties- Have hidden the Migration properties in the L0 and Authorable template.MDT-1496: OpenGraph Properties - Have added to base page template.MDT-328: Changed spelling of defaultValue for the p<br/>
+01/07/16 10:24	[01.01.004-f72] MDT-14:Modify the breadcrumb.java<br/>
+01/07/16 10:20	[01.01.004-f71] Reverting the pom entries for mockito and power mockito.<br/>
+01/07/16 10:15	[01.01.004-f70] Pom entries for mockito and power mockito.<br/>
+01/07/16 10:11	[01.01.004-f69] MDT-886 : Added Max value to date <br/>
+01/07/16 10:06	[01.01.004-f68] MDT-45: modified code according to code review<br/>
+01/07/16 10:02	[01.01.004-f67] MDT-14:Modify breadcrumb.html<br/>
+01/07/16 09:58	[01.01.004-f66] building DEV <br/>
+01/07/16 09:54	[01.01.004-f65] Reverting the pom entries for mockito and power mockito.<br/>
+01/07/16 09:49	[01.01.004-f64] Added the pom entries for mockito and power mockito.<br/>
+01/07/16 09:45	[01.01.004-f63] MDT-1476: uploaded Application Root Template<br/>
+01/07/16 09:41	[01.01.004-f62] MDT-14:Modify the html <br/>
+01/07/16 09:37	[01.01.004-f75] MDT-1371 Fixing the button url to handle external url<br/>
+01/07/16 09:33	[01.01.004-f61] merged latest css and js files according to Zach's email with subject "Sprint 8 Code Drop (Defect Fixes) - Release Notes"<br/>
+01/07/16 09:29	[01.01.004-f60] RM: Adding changes from Zach for Responsive Table issue MDT-1646.  Making cookie logic not load in edit mode.<br/>
+01/05/16 17:15	[01.01.004-f59] MDT-1371 Fixing the button url to handle external url<br/>
+01/05/16 14:11	[01.01.004-f58] RM: Set Site-Root tabs to be hidden on create.  Updated the site-root template to contain defaults.  Updated the outdated browser tab to contain default values.  Fixed defect MDT-1273<br/>
+01/05/16 13:47	[01.01.004-f57] MDT-1371 Fixing the button url to handle external url<br/>
+01/05/16 04:12	[01.01.004-f56] MDT-1614: Changed the par names appropriately to fix the inconsistent allowed components list.MDT-1615: Fixed the allowedcomponents for par-slender and par-squat for L1 subtemplates in the Homepage template.<br/>
+01/05/16 02:55	[01.01.004-f55] MDT-1013: update code according to code review<br/>
+01/04/16 23:45	[01.01.004-f54] MDT-14:Modify the Breadcrumb.java code<br/>
+01/04/16 19:57	[01.01.004-f53] MDT-45: uploaded latest Footer Component<br/>
+01/04/16 17:01	[01.01.004-f52] MDT-1609 Updated the dialog Default Value<br/>
+01/04/16 06:24	[01.01.004-f51] MDT-1411: Removed the Featured Image text component from the mini-par for the L3 pages.<br/>
+01/04/16 02:45	[01.01.004-f50] MDT-613:add accordin limit component in column1<br/>
+01/04/16 02:24	[01.01.004-f49] MDT-45: footer links default one group<br/>
+01/04/16 02:19	[01.01.004-f48] MDT-45: social channel "Open in new tab" selected by default <br/>
+01/04/16 02:04	[01.01.004-f47] MDT-45: solve default value problem<br/>
+01/04/16 01:56	[01.01.004-f46] MDT-1514: update<br/>
+01/04/16 01:35	[01.01.004-f45] MDT-1514: remove the unnecessary code<br/>
+01/04/16 00:55	[01.01.004-f44] MDT-45: implemented Footer Component<br/>
+01/04/16 00:13	[01.01.004-f43] MDT-14:Upload Breadcrumb Component<br/>
+01/03/16 20:30	[01.01.004-f42] MDT-1494: defect fix<br/>
+12/31/15 18:13	[01.01.004-f41] RM: Fixes for MDT:1603, MDT-1601<br/>
+12/31/15 05:25	[01.01.004-f40] MDT-1514: fix a video duration display bug<br/>
+12/31/15 04:20	[01.01.004-f39] MDT-1509: fix file from dam asset warn on leave bug<br/>
+12/31/15 03:56	[01.01.004-f38] MDT-1502 : Fix for  disabling manual entry in label field<br/>
+12/31/15 03:10	[01.01.004-f37] MDT-1494: fix bug and revert code<br/>
+12/31/15 03:06	[01.01.004-f36] MDT-45: modified authoring dialog<br/>
+12/31/15 03:01	[01.01.004-f35] MDT-1494: FIX<br/>
+12/31/15 01:44	[01.01.004-f34] MDT-1492: fixed defect.<br/>
+12/30/15 23:49	[01.01.004-f33] MDT-1494: fix Bug - Warn on leave logic - The Descriptive text field should be required<br/>
+12/30/15 23:40	[01.01.004-f32] MDT-1490: fixed defect.<br/>
+12/30/15 23:31	[01.01.004-f31] MDT-1506: Removed subsuperscript features from the rtePlugins for Headline with ISI component; also part of the Featured Image/Text component.<br/>
+12/30/15 21:22	[01.01.004-f30] MDT-1507, MDT-1490: fixed defects.<br/>
+12/30/15 19:43	[01.01.004-f29] MDT-1508: Force to build, fixed defect<br/>
+12/30/15 06:55	[01.01.004-f28] MDT-1115 : Added frame buster for avoiding click jacking only in publish env<br/>
+12/30/15 05:56	[01.01.004-f27] MDT-1115 : Added frame buster for avoiding click jacking <br/>
+12/30/15 03:40	[01.01.004-f26] MDT-156, MDT-1013: update the code to fix a issue that the .flv type video's duration can't display on time<br/>
+12/30/15 02:24	[01.01.004-f25] MDT-1487: Fixed defect.<br/>
+12/30/15 00:45	[01.01.004-f24] MDT-156: update the video url validation<br/>
+12/30/15 00:13	[01.01.004-f23] MDT-1375, MDT-1449: Fixed defects.<br/>
+12/30/15 00:01	[01.01.004-f22] MDT-1013: fix a section title display issue<br/>
+12/29/15 23:46	[01.01.004-f21] MDT-1419: Added the Reference Footnote component as part of the Allowed Components and removed it as the default component from the template.MDT-1480: EManual URL validation modified to accept uppercase characters.<br/>
+12/29/15 21:25	[01.01.004-f20] MDT-45: modified dialog according to Jira's update<br/>
+12/29/15 19:39	[01.01.004-f19] MDT-1447, MDT-1477, MDT-1481: fixed defects<br/>
+12/29/15 18:38	[01.01.004-f18] RM: Adding in some cookie warning and WOL fixes.<br/>
+12/29/15 06:39	[01.01.004-f17] MDT-8: Global Header - Added a tab in the Site Root Page for the Global header.htmlMDT-1098: Implement common RTE configuration - Replaced the rtePlugins in the components to the common rte configuration in 15 occurrence<br/>
+12/29/15 05:24	[01.01.004-f16] MDT-1391: update the country validation<br/>
+12/29/15 03:02	[01.01.004-f15] fix a potential bug, because the hostname and url will be changed to the final user<br/>
+12/29/15 02:02	[01.01.004-f14] MDT-1391: revert the warn on leave.js<br/>
+12/29/15 01:11	[01.01.004-f13] MDT-1394: modify a field label<br/>
+12/29/15 00:55	[01.01.004-f12] MDT-45: modified authoring dialog<br/>
+12/29/15 00:37	[01.01.004-f11] MDT-1391: update the external link judgment<br/>
+12/29/15 00:23	[01.01.004-f10] MDT-1391: update the external link judgment<br/>
+12/29/15 00:14	[01.01.004-f09] MDT-120/MDT-613:modify the Condition/Therapy Detail Page<br/>
+12/29/15 00:10	[01.01.004-f08] MDT-1442, MDT-1421: update the restriction component<br/>
+12/28/15 23:30	[01.01.004-f07] MDT-120/MDT-613:modify the Condition/Therapy Detail Page <br/>
+12/28/15 22:07	[01.01.004-f06] MDT-156, MDT-1013: update the youtube url transform<br/>
+12/28/15 21:26	[01.01.004-f05] MDT-1447: fixed defect.<br/>
+12/28/15 20:35	[01.01.004-f04] MDT-1326:fixed MDT-1448<br/>
+12/28/15 20:30	[01.01.004-f03] uploaded latest css and js files<br/>
+12/28/15 20:25	[01.01.004-f02] MDT-1346:fix MDT-1446<br/>
+12/28/15 20:20	[01.01.004-f1] Try to force another build<br/>
+12/28/15 20:16	[01.01.004-d83] Force a build<br/>
+12/28/15 20:11	[01.01.004-d82] MDT-1432 : Fix for  disabling manual entry in label field<br/>
+12/28/15 20:07	[01.01.004-d81] MDT-45: uploaded Footer related java code, modified footer.html and icons.html(add icons)<br/>
+12/28/15 20:03	[01.01.004-d80] MDT-156, MDT-1013, MDT-650: revert the .m3u8 file validation back<br/>
+12/28/15 19:57	[01.01.004-d79] Changed the path to Video-mini component for the allowedComponents property in the required subtemplates.<br/>
+12/28/15 19:53	[01.01.004-d78] MDT-1420: Bug - Allowed components are not available in L2 SubtemplateMDT-1419: Bug - Reference component should be available by default to drag/drop or Add for authorsMDT-1418: Bug - Authored text-Headline with ISI shou<br/>
+12/28/15 19:48	[01.01.004-d77] MDT-45: uploaded Global Footer Component<br/>
+12/28/15 19:44	[01.01.004-d76] MDT-1391: fix WOL Does not display when changing countries<br/>
+12/28/15 19:39	[01.01.004-d75] MDT-82:Fixed MDT-1424<br/>
+12/24/15 22:56	[01.01.004-d74] MDT-156, MDT-1013: update the backing code<br/>
+12/24/15 22:48	[01.01.004-d73] MDT-1321: fixed L1 Subtemplate and Side Rail Subtemplate' defect<br/>
+12/24/15 22:13	[01.01.004-d72] MDT-156, MDT-1013: improve the video type validation<br/>
+12/24/15 21:07	[01.01.004-d71] MDT-156, MDT-1013: update the video format validation, and remove the youtube Icon information in the 2, 3, 4 video <br/>
+12/24/15 18:21	[01.01.004-d70] RM: Adding cookie warning logic, implicit/explicit<br/>
+12/24/15 13:44	[01.01.004-d69] RM: Updating site-root client libs.  rename outdated-browser for extjs dialog.<br/>
+12/24/15 04:17	[01.01.004-d68] MDT-1369: renamed the parsys name to par-biggie for Subtemplate 1 / L2 subtemplates.Pushed to dev.<br/>
+12/24/15 02:53	[01.01.004-d67] MDT-120:Modify Condition Detail Page (L3 Template)<br/>
+12/24/15 02:24	[01.01.004-d66] MDT-156: update the dialog<br/>
+12/24/15 02:19	[01.01.004-d65] MDT-613:Upload Therapy Detail Page (L3 Template)<br/>
+12/24/15 01:42	[01.01.004-d64] MDT-156, MDT-1013: add a class to make the component fit the whole container<br/>
+12/24/15 00:33	[01.01.004-d63] uploaded latest footer and header HTML<br/>
+12/23/15 23:53	[01.01.004-d62] uploaded latest css and js files according to XD Team's update<br/>
+12/23/15 23:36	[01.01.004-d61] MDT-1353: enhancement for original right rail subtemplate<br/>
+12/23/15 22:14	[01.01.004-d60] DMT-156: fix a file extension verify issue<br/>
+12/23/15 20:40	[01.01.004-d59] Reverting changes made for Unit tests due to Build failure in Dev.<br/>
+12/23/15 19:43	[01.01.004-d58] for rebuild<br/>
+12/23/15 19:04	[01.01.004-d57] MDT-1013: update the backing js<br/>
+12/23/15 06:20	[01.01.004-d56] 1. MDT-328: Removed the default text for CTA button.2. Unit test implemented for Download<br/>
+12/23/15 02:23	[01.01.004-d55] MDT-92:Fixed MDT-1392<br/>
+12/23/15 02:17	[01.01.004-d54] MDT-156, MDT-1013, MDT-650: add a parameter to hide the title in youtube video plugin<br/>
+12/23/15 00:48	[01.01.004-d53] MDT-92:Fixed MDT-1392<br/>
+12/22/15 22:50	[01.01.004-d52] MDT-92:Fixed MDT-1392<br/>
+12/22/15 22:10	[01.01.004-d51] MDT-156, MDT-1013: improve the backing code<br/>
+12/22/15 21:00	[01.01.004-d50] MDT-156, MDT-1013: add a url validation to allow .m3u8, .ogg, .flv, .mp4, .webm only<br/>
+12/22/15 16:23	[01.01.004-d49] RM: Fixing pageLevel issue in templates, modifying responsive table descriptive text radio field to be checkbox.<br/>
+12/22/15 14:07	[01.01.004-d48] MDT-1345 Adding validation error for image path<br/>
+12/22/15 05:50	[01.01.004-d47] MDT-1363: Height of the Page Properties for Touch UI has been increased.MDT-328: Highlight the tab and invalid field during Submit in the Site Root Page.Pushed to dev.<br/>
+12/22/15 01:29	[01.01.004-d46] Updated data-image-cover. Pushed to dev.<br/>
+12/22/15 00:31	[01.01.004-d45] MDT-156: add ogv as a video type<br/>
+12/22/15 00:19	[01.01.004-d44] MDT-156, MDT-1013: update the type<br/>
+12/22/15 00:05	[01.01.004-d43] MDT-156: change the flv type to video/flashMDT-1013: remove the youtube Icon and cta content from the html, and change the flv type to video/flash<br/>
+12/21/15 22:53	[01.01.004-d42] uploaded latest css and js checked out from GitLab<br/>
+12/21/15 19:58	[01.01.004-d41] MDT-156: update the code format<br/>
+12/21/15 19:47	[01.01.004-d40] MDT-15:Modify the share component<br/>
+12/21/15 19:43	[01.01.004-d38] MDT-1318: modified validation property in some tab_basic.xml files<br/>
+12/21/15 19:35	[01.01.004-d37] RM: Fixed issue with page properties in classic, adding responsive table summary.<br/>
+12/21/15 16:11	[01.01.004-d36] RM: Fixes for warnOnLeave and default placeholder.<br/>
+12/21/15 13:53	[01.01.004-d35] RM: Fixes to warn on leave when there is no href tag.<br/>
+12/21/15 13:42	[01.01.004-d34] MDT-1337 - Adding class "pad" to resolve the padding issue in mobile view<br/>
+12/21/15 11:58	[01.01.004-d33] MDT-1333 Renaming the component from contact-us-cta TO right-rail-contact-us and also some enhancement to the helper text and labels<br/>
+12/21/15 04:56	[01.01.004-d32] Changes:1. MDT-1348 - Helper Text for L1 Subtemplates.2. Pushed to dev.<br/>
+12/21/15 01:28	[01.01.004-d31] MDT-156, MDT-1013: revert the a tag attribute<br/>
+12/21/15 01:04	[01.01.004-d30] MDT-156, MDT-1013: update the a tag which has data-target<br/>
+12/21/15 00:57	[01.01.004-d29] MDT-1351 : L2 subtemplate - Changes to helper text and titleMDT-1344 : download attachment : Added root path<br/>
+12/21/15 00:17	[01.01.004-d28] MDT-1013: update the dialog<br/>
+12/21/15 00:08	[01.01.004-d27] MDT-15:Modify the Share Component<br/>
+12/20/15 23:54	[01.01.004-d26] MDT-313 : headline.js -  corrected missed function call<br/>
+12/20/15 23:17	[01.01.004-d25] MFY-313: linkhelper - Added null check before calling slice function<br/>
+12/20/15 23:12	[01.01.004-d24] MDT-15:Update Share Component<br/>
+12/20/15 20:41	[01.01.004-d23] MDT-1346:modify Helper Text for Title,Text,List Component(MDT-194)<br/>
+12/20/15 19:47	[01.01.004-d22] RM:MDT-92: WarnOnLeave updates, newest JS and CSS from Zach.<br/>
+12/18/15 06:39	[01.01.004-d21] MDT-1324: Enhancement - Helper Text for Call to Action compoennt.Pushed to dev.<br/>
+12/17/15 20:58	[01.01.004-d20] MDT-1326:Update Title,Text Component<br/>
+12/17/15 20:16	[01.01.004-d19] MDT-1328: modified helper text<br/>
+12/17/15 13:53	[01.01.004-d18] MDT-1319 - Hero Component - Including the default value in the dialog<br/>
+12/17/15 10:16	[01.01.004-d17] RM:MDT-1322: Adding emanuals validation to image url.<br/>
+12/17/15 09:22	[01.01.004-d16] MDT-1023 for MDT-20 Contact Us Cta - cleaned up based on code review<br/>
+12/17/15 07:22	[01.01.004-d15] Updated customfooterlibs.html. Pushed to dev.<br/>
+12/17/15 06:29	[01.01.004-d14] Pushed to dev. Updated to load js only when below IE 10<br/>
+12/17/15 05:00	[01.01.004-d13] add a new image, and change the url in ltr.css<br/>
+12/17/15 03:52	[01.01.004-d12] MDT-1013: add an extra class 'video-container'<br/>
+12/17/15 03:21	[01.01.004-d11] MDT-1013: integrate the UI<br/>
+12/17/15 01:58	[01.01.004-d10] MDT-650: fix a ui issue<br/>
+12/17/15 01:05	[01.01.004-d09] MDT-1013: update UI<br/>
+12/17/15 00:20	[01.01.004-d08] update the new CSS styleMDT-156, MDT-1013: merge the new UI<br/>
+12/17/15 00:16	[01.01.004-d07] MDT-1318: implemented customized validation<br/>
+12/16/15 21:06	[01.01.004-d6] MDT-9:fixed MDT-1116<br/>
+12/16/15 19:45	[01.01.004-d5] MDT-1315: update the reference refer<br/>
+12/16/15 19:37	[01.01.004-d4] MDT-1317: fixed defect<br/>
+12/16/15 14:33	[01.01.004-d3] as always - forgot to update the build-version.txt<br/>
+12/16/15 13:25	[01.01.004-d2] MDT-1265 - removed featured image as a available component from few templates<br/>
+12/16/15 09:15	[01.01.004-d1] Updating build version<br/>
+12/16/15 06:16	[01.01.004-e74] Changes:1. MDT-1302: Updated the outdated browser based on the js and changed, for it to function below IE11.2. MDT-1297: Swapped the background colors for Mini 2 and 3 in L2 sub-template 4.3. Pushed to dev.<br/>
+12/16/15 03:22	[01.01.004-e73] MDT-1013: add a hidden node to fix an known issue in IE11<br/>
+12/16/15 02:55	[01.01.004-e72] MDT-1013: update the use js<br/>
+12/16/15 01:58	[01.01.004-e71] MDT-15:Modify the Share Component<br/>
+12/16/15 01:53	[01.01.004-e70] MDT-1270 : title-text comp : renamed the class accordian_hidden to generic ie11_multifield <br/>
+12/16/15 01:39	[01.01.004-e69] MDT-1013: integrate UI<br/>
+12/16/15 01:27	[01.01.004-e68] MDT-1270 : download attachment comp : Added hidden element to fix the multifield issue in ie11<br/>
+12/15/15 23:17	[01.01.004-e67] MDT-15:move author-clientlibs folder to site-root-page<br/>
+12/15/15 20:34	[01.01.004-e66] MDT-15:add validate js<br/>
+12/15/15 19:02	[01.01.004-e65] MDT-16: update the pre-determined component<br/>
+12/15/15 16:04	[01.01.004-e64] MDT-20 Contact us CTA. Updating the field label from 'Include CTA' to 'Inlcude Website'<br/>
+12/15/15 14:38	[01.01.004-e63] MDT-1281 Including default text for ISI Graphic.<br/>
+12/15/15 10:40	[01.01.004-e62] MDT-20 contactUs Cta - Updated to include the label text and also included a section to inlcude/exclude the cta<br/>
+12/15/15 08:31	[01.01.004-e61] MDT-823 : Added hero component to home page parsys<br/>
+12/15/15 08:11	[01.01.004-e60] MDT-823 : Added hero component to home page parsys<br/>
+12/15/15 07:27	[01.01.004-e59] Changes for outdated browser.Pushed to dev.<br/>
+12/15/15 06:11	[01.01.004-e58] MDT-313 : disabling the label functionality for quote<br/>
+12/15/15 05:46	[01.01.004-e57] Removed dialog and editDialog for Outdated Browser. Pushed to dev.<br/>
+12/15/15 04:51	[01.01.004-e56] Outdated Browser to be displayed in all the pages.Pushed to dev.<br/>
+12/15/15 03:07	[01.01.004-e55] MDT-1013: add the Video Component - Slender/Squat<br/>
+12/14/15 23:26	[01.01.004-e54] MDT-15:add share.html in the page template<br/>
+12/14/15 21:24	[01.01.004-e53] MDT-1167 <br/>
+12/14/15 19:32	[01.01.004-e52] MDT-650: make the title in modal to bg-white<br/>
+12/14/15 09:41	[01.01.004-e51] MDT-313: Temporarily remove label functionality, the current implementation does not work on a publisher<br/>
+12/14/15 03:09	[01.01.004-e50] MDT-15:Modify the Share Component<br/>
+12/14/15 02:57	[01.01.004-e49] MDT-313 : Enhancement label functionality <br/>
+12/14/15 01:55	[01.01.004-e48] MDT-15:Modify the Share component<br/>
+12/13/15 23:21	[01.01.004-e47] MDT-156: dialog border to light grey<br/>
+12/13/15 22:22	[01.01.004-e46] MDT-156: move the transcript and cta related fields to a light grey box<br/>
+12/13/15 20:46	[01.01.004-e45] MDT-1239: fixed defect<br/>
+12/11/15 08:54	[01.01.004-e44] MDT - 1259 , MDT - 1260 Removing few components from the available list of the components to the template.<br/>
+12/11/15 06:20	[01.01.004-e43] Changes:1. Moved the outdated browser notification as a tab in the Site Root Page properties.2. Added Granite validation for URL.3. Pushed to dev.<br/>
+12/11/15 03:01	[01.01.004-e42] update the latest CSS<br/>
+12/11/15 02:21	[01.01.004-e41] MDT-648: modified component group name<br/>
+12/11/15 02:05	[01.01.004-e40] MDT-614 <br/>
+12/11/15 01:40	[01.01.004-e39] update the regex in authorable page template duo to the site structure changed<br/>
+12/11/15 01:30	[01.01.004-e38] MDT-200:fixed MDT-1113<br/>
+12/11/15 01:11	[01.01.004-e37] add the missing CSS styleMDT-156?\239?\188?\154 move the component to subtemplate-slots<br/>
+12/10/15 22:14	[01.01.004-e36] MDT-313 : Enhancement label functionality : Inspirational and quote components<br/>
+12/10/15 19:19	[01.01.004-e35] Fix an obscure bug with the reference component (multiple references on one page pointing to the same paragraph<br/>
+12/10/15 18:08	[01.01.004-e34] RM:MDT-25, MDT-1174: Adding in site root template (same properties as previous homepage) and modifying homepage to have a different(default) dialog. Modified allowed paths accordingly.<br/>
+12/10/15 12:17	[01.01.004-e33] RM: MDT-143: Updates to Responsive Table based on Tea's comments.<br/>
+12/10/15 09:43	[01.01.004-e32] 1. Added Outdated Browser Notification component.2. Pushed to dev.<br/>
+12/10/15 01:42	[01.01.004-e31] MDT-15:completed merge UI<br/>
+12/10/15 01:07	[01.01.004-e30] MDT-156, 650: update the template<br/>
+12/09/15 23:35	[01.01.004-e29] MDT-194:fixed the MDT-1153<br/>
+12/09/15 23:19	[01.01.004-e28] deploy<br/>
+12/09/15 22:40	[01.01.004-e27] MDT-156: update the video-duration.js<br/>
+12/09/15 19:59	[01.01.004-e26] MDT-156: update the .html<br/>
+12/09/15 19:43	[01.01.004-e25] RM: Splitting out plugins.js and extensions.js into embedded client libraries. (Zachs changes continued)<br/>
+12/09/15 15:46	[01.01.004-e24] MDT-1245 Contact Us Cta component added to different available list of components.<br/>
+12/09/15 12:08	[01.01.004-e23] MDT-1177 creating a line break after each address line<br/>
+12/09/15 04:32	[01.01.004-e22] MDT-921 : download attachment component<br/>
+12/09/15 03:52	[01.01.004-e21] MDT-156,650: upload the final version<br/>
+12/09/15 01:44	[01.01.004-e20] MDT-15:merge Share component UI<br/>
+12/08/15 22:32	[01.01.004-e19] MDT-116: fix a dialog issue in IE11<br/>
+12/08/15 19:40	[01.01.004-e18] RM: Forgot to add some files into last ci<br/>
+12/08/15 19:34	[01.01.004-e17] RM: Updating Client Libraries, bug fixes for section tag on homepage, bug fixes for responsive-table.<br/>
+12/08/15 13:54	[01.01.004-e16] MDT-20 Adding New Component Contact Us Cta to the repository<br/>
+12/08/15 04:39	[01.01.004-e15] MDT-650: update the template<br/>
+12/08/15 02:33	[01.01.004-e14] MDT-921 : Changed to mdtmultifieldpanel<br/>
+12/08/15 02:18	[01.01.004-e13] MDT-648: add html tag, fixed style issue<br/>
+12/08/15 01:46	[01.01.004-e12] MDT-1145 and MDT-1146 defect fixes<br/>
+12/08/15 00:23	[01.01.004-e11] Build and Deployment for defect fixing: MDT-834, MDT-844 - No components available by default for 1-column/2-column general detail template.<br/>
+12/07/15 18:05	[01.01.004-e10] RM: MDT-883: Updating HTML to match Zachs recent updates to resolve iPhone6 Bug.<br/>
+12/07/15 11:46	[01.01.004-e09] MDT-665 : download attachment component - Incorporated review comments<br/>
+12/07/15 03:10	[01.01.004-e08] MDT-156: improve the listeners<br/>
+12/07/15 03:00	[01.01.004-e07] MDT-15:Upload Share Component<br/>
+12/07/15 02:46	[01.01.004-e10] MDT-156: add afteredit listener<br/>
+12/07/15 02:28	[01.01.004-e09] MDT-974: modified Download.java<br/>
+12/07/15 01:47	[01.01.004-e08] MDT-156: add a js to write the duration field<br/>
+12/07/15 00:47	[01.01.004-e07] MDT-974: fixed defect<br/>
+12/06/15 23:49	[01.01.004-e06] MDT-653:Fixed MDT-1094:Left Alignment/Indentation off<br/>
+12/06/15 23:44	[01.01.004-e05] MDT-973: fixed "incorrect date display" defect<br/>
+12/06/15 21:26	[01.01.004-e04] MDT-972: fixed defect<br/>
+12/06/15 21:09	[01.01.004-e03] MDT-1008: fix the label is not displaying issue<br/>
+12/06/15 20:40	[01.01.004-e02] MDT-1005: fixed defect<br/>
+12/06/15 20:35	[01.01.004-e1] RM: Adding section tag to press release to fix MDT-922<br/>
+12/04/15 12:39	[01.01.004-e] RM: Forgot to update build-version.<br/>
+12/04/15 10:49	[01.01.004-d87] MDT 929 - Updated when selected none, the url to be disabled.<br/>
+12/04/15 02:04	[01.01.004-d86] MDT-648: uploaded social media feed component<br/>
+12/03/15 23:34	[01.01.004-d85] MDT-194:fixed bug MDT-1099<br/>
+12/03/15 21:14	[01.01.004-d84] MDT-614: added featured image component in right rail component<br/>
+12/03/15 20:32	[01.01.004-d83] MDT-614 <br/>
+12/03/15 20:26	[01.01.004-d82] MDT-653:Add disclaimer type in the reference dialog preview<br/>
+12/03/15 11:07	[01.01.004-d81] Fixing a couple problems with the CTA component.<br/>
+12/03/15 06:27	[01.01.004-d80] MDT-28: revert the html duo to some UI issue<br/>
+12/03/15 01:28	[01.01.004-d79] MDT-99: reduce the 'select path' dialog's height, to allow OK/Cancel button to show<br/>
+12/03/15 00:37	[01.01.004-d78] MDT-99: remove the cq:actions property<br/>
+12/03/15 00:23	[01.01.004-d77] MDT-99: remove the afteredit listener<br/>
+12/02/15 23:41	[01.01.004-d76] MDT-99: change the use template root<br/>
+12/02/15 23:19	[01.01.004-d75] MDT-16: change OOTB reference component to MDT reference<br/>
+12/02/15 23:08	[01.01.004-d74] MDT-99: update the dialog<br/>
+12/02/15 22:50	[01.01.004-d73] MDT-614: modified pre-determined list for column 2<br/>
+12/02/15 22:39	[01.01.004-d72] merged latest main-ltr.css and main-rtl.css<br/>
+12/02/15 21:00	[01.01.004-d71] MDT-614: changed OOTB Reference Component to modified Reference Component<br/>
+12/02/15 20:51	[01.01.004-d70] MDT-653:Modify the disclaimer component<br/>
+12/02/15 20:39	[01.01.004-d69] MDT-16: update the misspelled 'hero' in the path name<br/>
+12/02/15 20:30	[01.01.004-d68] Update the TTA component due to the CTA changes<br/>
+12/02/15 13:26	[01.01.004-d67] Updating the field name -  taking out all prh from the fieldnames from Press Release Hero Component<br/>
+12/02/15 12:01	[01.01.004-d66] Reverting a change for the side rail subtemplate color class (to be fixed by css later) and building<br/>
+12/02/15 11:56	[01.01.004-d65] MDT 989 including validator to check if there is more than one <p> in the rte of press release hero.<br/>
+12/02/15 09:22	[01.01.004-d64] Move the background color class to the parent div, not the content div<br/>
+12/02/15 08:45	[01.01.004-d63] Build.<br/>
+12/02/15 02:34	[01.01.004-d62] MDT-99: add helper text for image alt text<br/>
+12/02/15 02:30	[01.01.004-d61] MDT-614: added Testimonial Hero component in Column 1 Region 1<br/>
+12/02/15 00:39	[01.01.004-d60] MDT-99: add Testimonial Hero Component<br/>
+12/01/15 23:28	[01.01.004-d59] MDT-977: move the redirect code to server side<br/>
+12/01/15 22:58	[01.01.004-d58] Converting the reference component into sightly as a (nearly equivalent) replacement for the JSP version<br/>
+12/01/15 22:25	[01.01.004-d57] MDT-653:As best solution , change disclaimer component<br/>
+12/01/15 13:43	[01.01.004-d56] MDT 130 - Included default components to the page<br/>
+12/01/15 12:53	[01.01.004-d55] Resolve subtemplate placeholder issues.<br/>
+12/01/15 11:10	[01.01.004-d54] MDT 130 - Included default components to the page<br/>
+12/01/15 09:55	[01.01.004-d53] Fixing L1/L2 subtemplate placeholders when they are first dropped in.<br/>
+12/01/15 03:02	[01.01.004-d52] Changed the placeholder text for Authored Image/Text component.<br/>
+12/01/15 02:26	[01.01.004-d51] Updated the name of the component from Featured Image/Text to Authored Image/Text<br/>
+12/01/15 02:22	[01.01.004-d50] MDT-980: Added the listener for setting default values in dialog.<br/>
+12/01/15 00:58	[01.01.004-d49] MDT-653:Add refresh page listener after edit dialog <br/>
+12/01/15 00:19	[01.01.004-d48] MDT-614: uploaded Testimonial Template related code<br/>
+11/30/15 23:54	[01.01.004-d47] MDT-653:modify the disclaimer component according to meeting<br/>
+11/30/15 19:21	[01.01.004-d46] MDT-654: add authorable page template<br/>
+11/30/15 19:10	[01.01.004-d45] Patch for mdtmultifieldpanel for datefields - need to use the raw value instead of the normalized when storing to JSON<br/>
+11/30/15 16:23	[01.01.004-d44] MDT 925 - Corrected the format of the Product Name<br/>
+11/30/15 14:49	[01.01.004-d43] MDT 924 Updated spelling errors<br/>
+11/30/15 10:29	[01.01.004-d42] Updated the code based on code review. Include xtype mdtmultifieldpanel for image<br/>
+11/30/15 09:28	[01.01.004-d41] Building the changes.<br/>
+11/27/15 06:05	[01.01.004-d40] Changed default headline component to headline(with ISI). pushed to dev.<br/>
+11/27/15 01:25	[01.01.004-d39] MDT-643 : Added condition to shoe michelson checkbox in create page dialog<br/>
+11/27/15 01:14	[01.01.004-d38] MDT-189: Updated the classname for cq:html tag. Pushed to dev.<br/>
+11/27/15 00:52	[01.01.004-d37] MDT-189: Changes to width and height of dialog for featured image/text. changes for added HTML tag. pushed to dev.<br/>
+11/26/15 00:47	[01.01.004-d36] MDT-653:add js file to change node name<br/>
+11/25/15 21:44	[01.01.004-d35] MDT-820 Bug - build and deploy to Dev for testing.<br/>
+11/25/15 21:07	[01.01.004-d34] MDT-152:Fix cta URl bug<br/>
+11/25/15 20:11	[01.01.004-d33] MDT-16: add some components to the pre-determined parMDT-839: update the code according to zach's adviceMDT-881: update the css files<br/>
+11/25/15 19:56	[01.01.004-d32] MDT-65: add restriction for right-rail region in Biographies Template<br/>
+11/25/15 17:27	[01.01.004-d31] RM: Fix for page creation (required dropdown) and dialog.xml<br/>
+11/25/15 08:46	[01.01.004-d30] Added Image/Text to slender and squat of L1 and L2 subtemplates. Pushed to dev.<br/>
+11/25/15 06:42	[01.01.004-d29] Removed a sly tag<br/>
+11/25/15 06:29	[01.01.004-d28] Removed a sly tag<br/>
+11/25/15 04:40	[01.01.004-d27] Following changes are pushed to dev:1. Replaced HTML for image/text component.2. Changes to HTML for featured image component.<br/>
+11/24/15 23:41	[01.01.004-d26] MDT-152:As Paul's code review , modify the html code.<br/>
+11/24/15 22:46	[01.01.004-d25] MDT-16: add press release hero component<br/>
+11/24/15 21:06	[01.01.004-d24] MDT-65: modified restrictions<br/>
+11/24/15 15:45	[01.01.004-d23] Adding press-release-hero component to the code base<br/>
+11/24/15 05:18	[01.01.004-d22] Pushing changes to dev.<br/>
+11/24/15 01:03	[01.01.004-d21] MDT-16: update the template<br/>
+11/24/15 00:51	[01.01.004-d20] MDT-65: set Biography Hero Component can not be removed in Biographies Template<br/>
+11/24/15 00:27	[01.01.004-d19] add a style, for some pre-determined component cannot be removed from the page<br/>
+11/23/15 23:14	[01.01.004-d17] MDT-338: update biography hero's cq:actionMDT-16: improve the allowedPaths regex<br/>
+11/23/15 22:40	[01.01.004-d16] MDT-677: modified java code according to code review<br/>
+11/23/15 22:32	[01.01.004-d15] removed in-line javascript<br/>
+11/23/15 21:22	[01.01.004-d14] MDT-65: add social share component related javascript<br/>
+11/23/15 19:48	[01.01.004-d13] MDT-65: add limitation for column 1 in Biographies Template<br/>
+11/23/15 09:32	[01.01.004-d12] Pulling in some changes from the design team.<br/>
+11/23/15 02:36	[01.01.004-d11] MDT-653:Modify the Disclaimer Component<br/>
+11/23/15 02:12	[01.01.004-d10] MDT-16: add pre-determined components<br/>
+11/23/15 02:08	[01.01.004-d09] MDT-16: add Press Release Template<br/>
+11/23/15 01:50	[01.01.004-d08] MDT-26: Added render listener to date<br/>
+11/23/15 01:36	[01.01.004-d07] MDT-26: Incorporated comments form Tea<br/>
+11/23/15 00:03	[01.01.004-d06] MDT-653:Upload Disclaimer Component<br/>
+11/22/15 23:56	[01.01.004-d05] uploaded latest main-ltr.css and main-rtl.css<br/>
+11/22/15 23:37	[01.01.004-d04] MDT-65: uploaded Biographies template<br/>
+11/22/15 21:14	[01.01.004-d03] MDT-574: add "White" option in dropdown list<br/>
+11/20/15 15:44	[01.01.004-d02] MDT-573: Variable height option for side-rail-subtemplate, plus a couple misc cleanups<br/>
+11/20/15 13:12	[01.01.004-d01] moving product-detail-v2 to product-detail component<br/>
+11/20/15 10:27	[01.01.004-c99] updated/cleaned up code based on code review<br/>
+11/20/15 08:05	[01.01.004-c98] MDT-26: Download attachment component initial commit<br/>
+11/20/15 07:36	[01.01.004-c97] MDT-783: Fix for the displaced component in last grid of subtemplate 4 in L2 subtemplates. pushed to dev.<br/>
+11/20/15 05:27	[01.01.004-c96] Create image-text component. code review comments incorporated for featured image component. pushed to dev.<br/>
+11/20/15 01:38	[01.01.004-c95] MDT-28: update dialog selection text<br/>
+11/20/15 00:27	[01.01.004-c94] Build  DEV<br/>
+11/19/15 23:27	[01.01.004-c93] MDT-28: add afterinsert listener<br/>
+11/19/15 19:54	[01.01.004-c92] MDT-574: disabled the "open in a new tab" checkbox when the "None" option is selected.<br/>
+11/19/15 19:48	[01.01.004-c91] MDT-152:add image position helper text in the dialog<br/>
+11/19/15 19:41	[01.01.004-c90] MDT-574: change the placeholder<br/>
+11/19/15 13:48	[01.01.004-c89] Update css from xD. Fix design for home page template (broke nend tag). Fixing <h*> tags to fit in what was modified by the design team.<br/>
+11/19/15 12:51	[01.01.004-c88] Build placeholder fixes<br/>
+11/19/15 08:33	[01.01.004-c87] MDT-708 <br/>
+11/19/15 07:52	[01.01.004-c86] Renamed general-detail to two-column-general-detail template<br/>
+11/19/15 02:38	[01.01.004-c85] MDT-28: add afteredit listener<br/>
+11/19/15 01:34	[01.01.004-c84] MDT-152:remove RTE's label in the dialog (according MDT-781)<br/>
+11/19/15 01:10	[01.01.004-c83] MDT-152:fixed issues in the jira comment<br/>
+11/19/15 00:25	[01.01.004-c82] MDT-574: set "ISI text and URL" required; modified css style<br/>
+11/18/15 21:58	[01.01.004-c81] Fix the title-text-list when the list item has no hyperlink<br/>
+11/18/15 19:54	[01.01.004-c80] MDT-574: changed placeholder text to help text(Rich Text Editor)<br/>
+11/18/15 15:28	[01.01.004-c79] Fixing a bunch of bugs caused by incremental changes throughout:* e-manual check not correctly allowing for chars between manuals.medtronic and /manuals/search* Adding a link-fixer for .html and http* Fixing title-text-l<br/>
+11/18/15 12:30	[01.01.004-c78] build version increased to 01.01.004-c78<br/>
+11/18/15 03:02	[01.01.004-c77] Updated the placeholder text and pushing to dev.<br/>
+11/18/15 02:22	[01.01.004-c76] fix the overlap issue<br/>
+11/18/15 01:50	[01.01.004-c75] MDT-574: remove "p" tag of rte plugins<br/>
+11/18/15 01:46	[01.01.004-c74] Pushing Featured Image component to dev.<br/>
+11/18/15 00:44	[01.01.004-c73] MDT-574: modified code according to code review<br/>
+11/18/15 00:17	[01.01.004-c72] MDT-612 trigger build for new template (One column general detail template) deployed<br/>
+11/17/15 21:27	[01.01.004-c71] MDT-152:Upload title text asset component (Right rail)<br/>
+11/17/15 13:36	[01.01.004-c70] Pull in h* fixes. Prework for icon implementation. Fix accordion  /- icons. Fix label > icons.<br/>
+11/17/15 07:47	[01.01.004-c69] Pushing General Detail Page (L3 Template) to dev.<br/>
+11/17/15 00:04	[01.01.004-c68] MDT-448: implemented Horizontal Rule Line Component<br/>
+11/16/15 23:54	[01.01.004-c67] Force a build to undo the hero changes I committed in error<br/>
+11/16/15 23:51	[01.01.004-c66] MDT-573: Updating the side rail subtemplate to have proper labels <br/>
+11/16/15 23:35	[01.01.004-c65] MDT-152:Merge title text asset component UI<br/>
+11/16/15 22:49	[01.01.004-c64] Fix the mdtselection xtype to validate properly<br/>
+11/16/15 20:52	[01.01.004-c63] Fix edit mode double click on component list in touch ui<br/>
+11/16/15 20:48	[01.01.004-c62] Fix Text Title List <br/>
+11/16/15 20:44	[01.01.004-c61] More XD changes, for JS<br/>
+11/16/15 19:23	[01.01.004-c60] MDT-28: code review<br/>
+11/16/15 17:56	[01.01.004-c59] Fixing RTL text alignment<br/>
+11/16/15 13:26	[01.01.004-c58] Adding sprint 5 css   rearranging the clientlibs to support LTR vs RTL css<br/>
+11/16/15 09:36	[01.01.004-c57] Pushing to Dev for Featured Image component<br/>
+11/16/15 02:39	[01.01.004-c56] MDT-574: modified textfield's width in dialogue<br/>
+11/16/15 02:20	[01.01.004-c55] MDT-574: modified dialog(add, modify help text)<br/>
+11/16/15 01:55	[01.01.004-c54] MDT-574: fixed some bugs<br/>
+11/16/15 01:16	[01.01.004-c53] MDT-574: modified dialog(disable other options in rte plugins), modified css style<br/>
+11/15/15 21:24	[01.01.004-c52] MDT-574: merged latest UI<br/>
+11/15/15 21:08	[01.01.004-c51] MDT-152:Modify title text asset component's dialog<br/>
+11/15/15 20:54	[01.01.004-c50] MDT-152:Update Title Text Asset Component<br/>
+11/15/15 20:49	[01.01.004-c49] MDT-338: add backing js to convert content in rte<br/>
+11/15/15 20:46	[01.01.004-c48] MDT-574: renamed component to "Authored Text Component - Headline (With ISI)", modified HeadlineWithISI.java and html<br/>
+11/15/15 20:02	[01.01.004-c47] MDT-338: add biography hero component<br/>
+11/13/15 10:42	[01.01.004-c46] Fix richtext manuals url validation. Added manuals url validation to all link pathfields <br/>
+11/13/15 05:44	[01.01.004-c45] MDT-25 : parsys changes<br/>
+11/13/15 03:01	[01.01.004-c44] MDT-152:Upload title text asset component<br/>
+11/12/15 11:31	[01.01.004-c43] MDT-402: Code review changes. Pushed to dev.<br/>
+11/12/15 10:41	[01.01.004-c42] MDT-29: Changes to the template to have just one parsys. Pushed to dev<br/>
+11/11/15 23:25	[01.01.004-c41] MDT-485: according to code review, modified Manual Related Links Component related code<br/>
+11/11/15 21:30	[01.01.004-c40] MDT-200:Modify the code according Paul's comments<br/>
+11/11/15 18:11	[01.01.004-c39] Message for previous commit: Fix CTA drag field visibility, Fix multiple droppable slot components, Force page refresh when component dropped in single item parsys<br/>
+11/09/15 22:53	[01.01.004-c28] MDT-28: ui issue<br/>
+11/09/15 22:38	[01.01.004-c27] MDT-28:  a ui issue fix<br/>
+11/09/15 21:21	[01.01.004-c26] update main.css<br/>
+11/09/15 21:17	[01.01.004-c25] MDT-28: remove options<br/>
+11/09/15 21:11	[01.01.004-c24] MDT-200:Modify the component html<br/>
+11/09/15 20:58	[01.01.004-c23] Actually fixed the default header/footer content for the home template...forgot the jctr:primaryType property for a few nodes<br/>
+11/09/15 20:25	[01.01.004-c22] Force a build to get the header/footer default content in the home page template working<br/>
+11/09/15 19:47	[01.01.004-c21] Fix default content for home page header/footer.<br/>
+11/09/15 19:44	[01.01.004-c20] MDT-144: add logo URLMDT-84: add field description for link text within dialogue<br/>
+11/09/15 19:30	[01.01.004-c19] MDT-84: add "break tags" related code in manual-related-links.html<br/>
+11/09/15 19:13	[01.01.004-c18] Build<br/>
+11/09/15 16:15	[01.01.004-c17] Updating build-version.txt after modifying brand element - Hero<br/>
+11/09/15 15:21	[01.01.004-c16] Hero<br/>
+11/09/15 05:04	[01.01.004-c15] MDT-29: Created the Topic Page Template.<br/>
+11/09/15 04:41	[01.01.004-c14] MDT-25 : Modified home page template to match the requirement here.MDT-410 : Renamed the parsys names to match the subtemplate names.<br/>
+11/08/15 22:33	[01.01.004-c13] MDT-28: add all components to the responsive column<br/>
+11/08/15 21:11	[01.01.004-c12] MDT-28: add component to l3(product detail template) limitation, and modify code<br/>
+11/08/15 19:36	[01.01.004-c11] MDT-28: change resourceSuperTyle<br/>
+11/08/15 19:26	[01.01.004-c10] MDT-28: change resourceSuperType<br/>
+11/08/15 19:13	[01.01.004-c09] rebuild<br/>
+11/06/15 02:57	[01.01.004-c04] MDT-200:upload Title text Component<br/>
+11/06/15 01:35	[01.01.004-c03] MDT-28: update component<br/>
+11/06/15 01:14	[01.01.004-c02] MDT-402: Change the color for subtemplate 7 based on the updated requirements in JIRA<br/>
+11/06/15 00:32	[01.01.004-c01] MDT-84: removed additional text<br/>
+11/05/15 23:32	[01.01.004-b99] MDT-410 reordering of L2 subtemplates<br/>
+11/05/15 22:45	[01.01.004-b98] MDT-604: fix a bug the links cann't be opened in a new tab<br/>
+11/05/15 20:01	[01.01.004-b97] MDT-326:add component title and set phone number optional<br/>
+11/05/15 19:52	[01.01.004-b96] MDT-84: modified manual-related-links.html<br/>
+11/05/15 12:55	[01.01.004-b95] Build the last change<br/>
+11/05/15 12:14	[01.01.004-b94] Updating build-version.txt<br/>
+11/05/15 03:30	[01.01.004-b93] Updated build-version for deployment.<br/>
+11/05/15 02:57	[01.01.004-b92] MDT-144: bake in Michelson Seal Component to home page foot-par region<br/>
+11/05/15 01:30	[01.01.004-b91] MDT-326:change code by checkStyle<br/>
+11/05/15 00:00	[01.01.004-b90] MDT-130:fix bug about MDT-564<br/>
+11/04/15 23:47	[01.01.004-b89] Trigger build-version.txt for build and deployment.<br/>
+11/04/15 19:51	[01.01.004-b88] MDT-569: fixed "bgColor incorrect" defect<br/>
+11/04/15 14:02	[01.01.004-b87] Updating build-version.txt<br/>
+11/04/15 12:32	[01.01.004-b86] Updating hero.js<br/>
+11/04/15 12:07	[01.01.004-b85] MDT-394 Hero Enhancement<br/>
+11/04/15 10:22	[01.01.004-b84] Force a build<br/>
+11/03/15 22:50	[01.01.004-b83] fix the pathfield issue<br/>
+11/03/15 22:37	[01.01.004-b82] MDT-326:Change code according MDT-510<br/>
+11/03/15 20:16	[01.01.004-b81] MDT-327: update dialog<br/>
+11/03/15 17:55	[01.01.004-b80] MDT-181: pull in changes for fixing decorative elements.<br/>
+11/03/15 17:01	[01.01.004-b79] Build<br/>
+11/03/15 02:12	[01.01.004-b78] MDT-326:remove "console" in the js code<br/>
+11/03/15 01:29	[01.01.004-b77] MDT-326: Modify the code by MDT-510<br/>
+11/03/15 01:17	[01.01.004-b76] MDT-28: convert jsp to sightly<br/>
+11/03/15 00:35	[01.01.004-b75] MDT-326:Modify the code by MDT-510<br/>
+11/03/15 00:09	[01.01.004-b74] MDT-327: update dialog<br/>
+11/02/15 23:54	[01.01.004-b73] fixed some issue, display error message when dialog is submitted with default value fields<br/>
+11/02/15 23:40	[01.01.004-b72] MDT-549: fixed defect<br/>
+11/02/15 21:28	[01.01.004-b71] modified filter.xml under medtronic-com-ui<br/>
+11/02/15 13:47	[01.01.004-b70] Updating .js and .css<br/>
+10/30/15 15:54	[01.01.004-b69] MDT-181, MDT-63: Fixing a couple styles for the authorable text, fixing the dialog for the decorative element<br/>
+10/30/15 11:14	[01.01.004-b68] MDT-181, MDT-63: Fix the subtemplate slot component styles, when they are not a subtemplate<br/>
+10/30/15 09:51	[01.01.004-b67] Build<br/>
+10/30/15 01:12	[01.01.004-b66] MDT-326:Modify the Contacts Component<br/>
+10/30/15 01:09	[01.01.004-b65] MDT-327: update rteMDT-28: add existing component and refactor the listeners code<br/>
+10/30/15 00:59	[01.01.004-b64] MDT-195: integrate with latest RTE plugin<br/>
+10/30/15 00:36	[01.01.004-b63] MDT-144: uploaded Michelson Seal Component<br/>
+10/29/15 22:01	[01.01.004-b62] update "image field" to "image"<br/>
+10/29/15 21:31	[01.01.004-b61] add Special Characters into rte  plugin<br/>
+10/29/15 03:54	[01.01.004-b60] MDT-28: add Responsive Column Component<br/>
+10/29/15 02:09	[01.01.004-b59] MDT-84: modified dialog<br/>
+10/29/15 01:10	[01.01.004-b58] MDT-84: modified multifield label<br/>
+10/29/15 00:33	[01.01.004-b57] MDT-181:Modify the css<br/>
+10/28/15 23:57	[01.01.004-b56] Authorabletext fixes<br/>
+10/28/15 23:39	[01.01.004-b55] MDT-181:fix MDT-418 bug<br/>
+10/28/15 23:27	[01.01.004-b54] MDT-181:fix MDT-418 bug<br/>
+10/28/15 23:19	[01.01.004-b53] MDT-181:fixed MDT-418 issue<br/>
+10/28/15 21:49	[01.01.004-b52] fix some issue   rte:add outdent   text wrapped: change the fieldlabel order    similar-content:fix the js code<br/>
+10/28/15 21:40	[01.01.004-b51] MDT-84: before submit add 2 links at least<br/>
+10/28/15 21:08	[01.01.004-b50] MDT-327: update dialog rte part<br/>
+10/28/15 15:22	[01.01.004-b49] Updating build-version.txt<br/>
+10/28/15 14:16	[01.01.004-b48] Updating build-version.txt<br/>
+10/28/15 13:58	[01.01.004-b47] Updating build-version.txt<br/>
+10/28/15 04:07	[01.01.004-b46] MDT-327: fix a style issue<br/>
+10/28/15 03:17	[01.01.004-b45] MDT-326:Modify the contacts component<br/>
+10/28/15 02:40	[01.01.004-b44] MDT-195 <br/>
+10/28/15 02:14	[01.01.004-b43] MDT-326:Modify the contact component<br/>
+10/28/15 01:10	[01.01.004-b42] MDT-491: fixed defect<br/>
+10/28/15 00:34	[01.01.004-b41] MDT-195: added margin-bottom for help text in dialog<br/>
+10/27/15 23:04	[01.01.004-b40] MDT-327: update dialog<br/>
+10/27/15 22:21	[01.01.004-b39] add rte component<br/>
+10/27/15 22:08	[01.01.004-b38] MDT-195: fixed warn link related issueMDT-84: fixed link text at one line and display 1 section and 2 links at least<br/>
+10/27/15 21:25	[01.01.004-b37] MDT-326:Build cq folder in AEM<br/>
+10/27/15 21:06	[01.01.004-b39] MDT-195: added "display 2 groups by default for list items"<br/>
+10/27/15 21:02	[01.01.004-b38] MDT-327: update dialog and modified html<br/>
+10/27/15 20:33	[01.01.004-b37] MDT-195: merged latest product-overview.js<br/>
+10/27/15 19:00	[01.01.004-b36] Authorable-Text Component<br/>
+10/27/15 17:47	[01.01.004-b35] Updating build-version.txt<br/>
+10/27/15 10:29	[01.01.004-b34] Build the previous changes<br/>
+10/27/15 04:43	[01.01.004-b33] merge the html <br/>
+10/27/15 04:39	[01.01.004-b32] MDT-326:Modify contacts component ,add cq folder recognize "tel"<br/>
+10/27/15 04:36	[01.01.004-b31] MDT-482: fixed defect<br/>
+10/27/15 02:19	[01.01.004-b30] MDT-195: fixed issue<br/>
+10/27/15 01:46	[01.01.004-b29] MDT-181:fixed MDT-422 touch UI issue<br/>
+10/27/15 01:36	[01.01.004-b28] MDT-84: deleted js code, add java code<br/>
+10/27/15 01:02	[01.01.004-b27] MDT-195: modified css style<br/>
+10/27/15 00:23	[01.01.004-b26] MDT-327: update dialog listeners<br/>
+10/26/15 23:58	[01.01.004-b25] MDT-327: update dialog<br/>
+10/26/15 23:36	[01.01.004-b24] MDT-195: modified dialog<br/>
+10/26/15 22:17	[01.01.004-b23] finish the rich text editor<br/>
+10/26/15 21:22	[01.01.004-b22] MDT-195: fixed thumbnail image related issue<br/>
+10/26/15 21:06	[01.01.004-b21] Fix author-clientlibs for components<br/>
+10/26/15 08:36	[01.01.004-b20] Kick off a build<br/>
+10/26/15 04:36	[01.01.004-b19] work on Text Wrapped Image Component<br/>
+10/26/15 04:31	[01.01.004-b18] MDT-326:modify the Contacts Component<br/>
+10/26/15 04:15	[01.01.004-b17] MDT-327: update References/Footnotes Component<br/>
+10/26/15 03:47	[01.01.004-b16] MDT-84: uploaded the latest code<br/>
+10/26/15 01:40	[01.01.004-b15] MDT-195: fixed dialog style related issue<br/>
+10/23/15 10:45	[01.01.004-b14] Updating build-version.txt<br/>
+10/23/15 09:46	[01.01.004-b13] Hero<br/>
+10/23/15 04:17	[01.01.004-b12] MDT-84: upload Manual Related Links Component<br/>
+10/23/15 04:14	[01.01.004-b11] MDT-327: add References/Footnotes Component<br/>
+10/23/15 04:09	[01.01.004-b10] MDT-326:Upload the Contacts Component<br/>
+10/22/15 22:03	[01.01.004-b9] MDT-116: make par content move with section<br/>
+10/22/15 21:59	[01.01.004-b8] MDT-181:modify the component UI<br/>
+10/22/15 21:38	[01.01.004-b7] fix some issue<br/>
+10/22/15 20:55	[01.01.004-b6] MDT-116: update dialog listeners<br/>
+10/22/15 15:27	[01.01.004-b5] Moving some files around and preparing for getting code up to standards.<br/>
+10/22/15 09:20	[01.01.004-b4] Remove the newline and kick off a build<br/>
+10/22/15 04:13	[01.01.004-b3] MDt-181:fixed MDT-422<br/>
+10/22/15 01:53	[01.01.004-b2] fix some issue of the similar content component<br/>
+10/22/15 00:52	[01.01.004-b1] MDT-116: remove some listeners in cq_editConfig node<br/>
+10/22/15 00:41	[01.01.004-a100] update build-version.txt<br/>
+10/21/15 23:36	[01.01.004-a99] MDT-195: merge latest UI<br/>
+10/21/15 22:31	[01.01.004-a98] merge the html and css code about the similar content component<br/>
+10/21/15 21:39	[01.01.004-a97] upload latest plugins.js and fonts<br/>
+10/21/15 21:24	[01.01.004-a96] upload latest css<br/>
+10/21/15 16:29	[01.01.004-a95] Updating build-version.txt<br/>
+10/21/15 16:28	[01.01.004-a94] Modifying Hero Listeners and Updating build-version.txt<br/>
+10/21/15 16:26	[01.01.004-a93] Kick off a build for testing<br/>
+10/21/15 16:25	[01.01.004-a92] fixed list item index related issue<br/>
+10/21/15 16:23	[01.01.004-a91] update plugins.js<br/>
+10/21/15 16:22	[01.01.004-a90] fixed list item related issue<br/>
+10/21/15 16:20	[01.01.004-a89] rebuild<br/>
+10/21/15 16:19	[01.01.004-a88] MDT-181:revert to fix publish issue before<br/>
+10/21/15 16:17	[01.01.004-a87] MDT-116: fix accordion content display issue<br/>
+10/21/15 16:16	[01.01.004-a86] Updating build-version.txt<br/>
+10/21/15 16:13	[01.01.004-a85] fix some issue about the Similar Content Component<br/>
+10/21/15 16:10	[01.01.004-a84] MDT-181:Fix UI display issue<br/>
+10/21/15 16:07	[01.01.004-a83] MDT-195: fixed some issues<br/>
+10/21/15 16:04	[01.01.004-a82] MDT-116: update accordion.js<br/>
+10/21/15 16:02	[01.01.004-a81] MDT-181:Fix component display issue<br/>
+10/21/15 15:59	[01.01.004-a80] MDT-195: modified cq:editConfig (add cq:actions property)<br/>
+10/20/15 02:11	[01.01.004-a79] MDT-116: add help text and fix UI issues<br/>
+10/20/15 01:07	[01.01.004-a78] MDT-195: fixed few issues<br/>
+10/20/15 00:51	[01.01.004-a77] MDT-181:fixed bug about component show new line in the publish  <br/>
+10/19/15 21:50	[01.01.004-a76] MDT-195: fixed dialog related issue<br/>
+10/19/15 04:39	[01.01.004-a75] MDT-195: fixed dialog style issue<br/>
+10/19/15 04:13	[01.01.004-a74] MDT-195: fixed dialog style issue<br/>
+10/19/15 03:57	[01.01.004-a73] MDT-116: change single-item-parsys to foundation parsys, and improve the related js file<br/>
+10/19/15 03:05	[01.01.004-a72] MDT-195: fixed css issue<br/>
+10/19/15 02:34	[01.01.004-a71] MDT-116: update the accordion.js<br/>
+10/19/15 02:00	[01.01.004-a70] MDT-116: adjust the height of inner component<br/>
+10/19/15 01:28	[01.01.004-a69] MDT-181:fixed two bugs in the Jira<br/>
+10/19/15 00:55	[01.01.004-a68] MDT-195: modified main.css, add bullet points for list items<br/>
+10/18/15 22:29	[01.01.004-a67] MDT-195: modified dialog and html, fixed the issues which are raised in jira<br/>
+10/18/15 22:18	[01.01.004-a66] MDT-116: add beforesubmit listeners to Accordion Component<br/>
+10/18/15 22:06	[01.01.004-a65] MDT-116: update the UI<br/>
+10/16/15 05:15	[01.01.004-a64] MDT-195: modified productDetail.js<br/>
+10/16/15 04:59	[01.01.004-a63] MDT-195: fixed some issues<br/>
+10/16/15 04:27	[01.01.004-a62] MDT-194:Update title text list component<br/>
+10/16/15 04:20	[01.01.004-a61] MDT-116: update the limitation component of Accordion Componnet<br/>
+10/16/15 03:58	[01.01.004-a60] MDT-195: uploaded latest code<br/>
+10/16/15 03:44	[01.01.004-a59] add wcmmode edit test in the Similar Content Component<br/>
+10/16/15 03:16	[01.01.004-a58] MDT-195: modified dialog, when checkbox is de-selected, the related fields will be non-editable.<br/>
+10/16/15 03:07	[01.01.004-a57] MDT-130:Update the product detail template<br/>
+10/16/15 03:04	[01.01.004-a56] MDT-195: modified dialog and productDetail.js<br/>
+10/16/15 02:38	[01.01.004-a55] MDT-195: fixed dialog related issue<br/>
+10/16/15 00:02	[01.01.004-a54] complete the Similar Content Component<br/>
+10/15/15 20:51	[01.01.004-a53] MDT-130:Modify the product detail template<br/>
+10/15/15 04:46	[01.01.004-a52] MDT-116: update the removeItem function js<br/>
+10/15/15 04:23	[01.01.004-a51] MDT-195: modified dialog<br/>
+10/15/15 04:20	[01.01.004-a50] MDT-194:modify the title text list component<br/>
+10/15/15 04:10	[01.01.004-a49] MDT-195: modified dialog<br/>
+10/15/15 01:58	[01.01.004-a48] designing the Similar Content Component<br/>
+10/15/15 00:41	[01.01.004-a47] MDT-130:Update product detail template<br/>
+10/14/15 23:35	[01.01.004-a46] Hero Fixes<br/>
+10/14/15 22:07	[01.01.004-a45] MDT-130:Update product detail template<br/>
+10/14/15 21:30	[01.01.004-a44] make the Simialr Content Component <br/>
+10/14/15 14:48	[01.01.004-a43] Updating build-version.txt<br/>
+10/14/15 10:14	[01.01.004-a42] CTA bug fixed - Hero<br/>
+10/14/15 04:07	[01.01.004-a41] MDT-195: add target<br/>
+10/14/15 03:44	[01.01.004-a40] MDT-194:Modify the Title Text List Component<br/>
+10/14/15 01:48	[01.01.004-a39] MDT-195: modified dialog<br/>
+10/14/15 01:05	[01.01.004-a38] MDT-63: fix the issue 9 raised in document<br/>
+10/14/15 00:54	[01.01.004-a37] MDT-195: fixed some issues<br/>
+10/14/15 00:44	[01.01.004-a36] MDT-195: modified dialog, updated html<br/>
+10/13/15 21:29	[01.01.004-a35] MDT-130:Update Product Detail Template<br/>
+10/13/15 04:13	[01.01.004-a34] MDT-194:Modify the Title Text List Component<br/>
+10/13/15 03:29	[01.01.004-a33] MDT-68: hide the placeholer in publish instance<br/>
+10/13/15 02:38	[01.01.004-a32] MDT-195: modified dialog<br/>
+10/13/15 02:11	[01.01.004-a31] MDT-130:added pre-determined component and modify <sly/> <br/>
+10/13/15 01:50	[01.01.004-a30] MDT-68: modify the style of the headline text <br/>
+10/12/15 23:34	[01.01.004-a29] Bug Fixes_Hero<br/>
+10/12/15 13:32	[01.01.004-a28] Forgot to force the build.<br/>
+10/12/15 12:10	[01.01.004-a27] Image Upload from the dialog, drag and drop functionality removed!<br/>
+10/12/15 07:32	[01.01.004-a26] just a rebuild<br/>
+10/12/15 07:01	[ 01.01.004-a25] just a rebuild<br/>
+10/12/15 04:18	[ 01.01.004-a24] MDT-116: add a js function to toggle down the accordion for touch ui edit mode<br/>
+10/12/15 03:08	[ 01.01.004-a23] fixed "submit default type, display error" related bug<br/>
+10/12/15 01:22	[ 01.01.004-a22] 1) MDT-341: fixed defect2) modified ProductDetail.java<br/>
+10/11/15 21:29	[01.01.004-a21] MDT-343: fixed defect<br/>
+10/11/15 20:39	[01.01.004-a20] MDT-116: remove the authorable biggie component from the specific component list<br/>
+10/10/15 07:11	[01.01.004-a19] MDT-116: remove the dir folders and add the specific component in accordion component function<br/>
+10/10/15 04:40	[01.01.004-a18] MDT-194:Modify Title Text List Component <br/>
+10/10/15 04:17	[01.01.004-a17] MDT-116: update the java code to make the path dynamically<br/>
+10/10/15 04:06	[01.01.004-a16] MDT-194:Upload title text list component<br/>
+10/10/15 02:58	[01.01.004-a15] MDT-116: merge UI for accordion component<br/>
+10/09/15 15:21	[01.01.004-a14] Updating build-version.txt<br/>
+10/09/15 12:16	[01.01.004-a13] Updating build-version.txt<br/>
+10/09/15 05:10	[01.01.004-a12] MDT-195: modified product detail component's dialog<br/>
+10/09/15 04:43	[01.01.004-a11] MDT-116: merge UI for accordion component<br/>
+10/09/15 04:02	[01.01.004-a10] MDT116: add the js file<br/>
+10/09/15 03:13	[01.01.004-a9] MDT-116: add the accordion component<br/>
+10/08/15 11:29	[01.01.004-a8] Updating build-version.txt<br/>
+10/07/15 15:59	[01.01.004-a7] Remove svn conflict files<br/>
+10/05/15 12:29	[01.01.004-a6] just a rebuild<br/>
+10/05/15 12:20	[01.01.004-a5] just a rebuild<br/>
+10/05/15 11:50	[01.01.004-a4] just a rebuild<br/>
+09/30/15 13:56	[01.01.004-a3] Forgot to Commit Build Version<br/>
+09/20/15 11:57	[01.01.003-a3] add BuildVersionServlet<br/>
+09/20/15 11:44	[01.01.003-a2] add BuildVersionServlet<br/>
+09/18/15 12:21	[01.01.003-a] add BuildVersionServlet<br/>
+09/17/15 13:02	[01.01.002-b2] switch to mdt-ivy-repo<br/>
+09/17/15 12:50	[01.01.002-b] switch to mdt-ivy-repo<br/>
+09/17/15 12:10	[01.01.002-a] switch to mdt-ivy-repo<br/>
+09/14/15 14:42	[01.01.001-l] reload<br/>
+09/14/15 12:00	[01.01.001-k] build<br/>
+09/11/15 23:10	[01.01.001-i] refactor build.xml to new structure<br/>
+09/11/15 15:35	[01.01.001-h] refactor build.xml to new structure<br/>
+09/11/15 15:32	[01.01.001-g] refactor build.xml to new structure<br/>
+09/11/15 15:29	[01.01.001-f] first build<br/>
+09/11/15 14:52	[01.01.001-e] refactor build.xml to new structure<br/>
+09/11/15 09:48	[01.01.001-d] refactor build.xml to new structure<br/>
+09/11/15 09:45	[01.01.001-c] refactor build.xml to new structure<br/>
+09/11/15 09:26	[01.01.001-b] Initial Test for build.<br/>
+09/10/15 18:02	[01.01.001-a] Adding initial skeleton project structure.<br/>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Product Detail"
+    width="{Long}900"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <productName
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Product Name"
+                        height="{Long}75"
+                        name="./productName"
+                        removeSingleParagraphContainer="{Boolean}true"
+                        xtype="richtext">
+                        <htmlRules jcr:primaryType="nt:unstructured">
+                            <docType jcr:primaryType="nt:unstructured">
+                                <typeConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    useSemanticMarkup="{Boolean}true">
+                                    <semanticMarkupMap
+                                        jcr:primaryType="nt:unstructured"
+                                        p=""/>
+                                </typeConfig>
+                            </docType>
+                        </htmlRules>
+                        <rtePlugins jcr:primaryType="nt:unstructured"
+                        path="/apps/medtronic-com/components/common/richtext-configurations/superScriptSpecialChars/rtePlugins.infinity.json"
+                        xtype="cqinclude">
+                        </rtePlugins>
+                    </productName>
+                    <productSubTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Subheadline"
+                        name="./productSubTitle"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Product">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <modelSKU
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Model"
+                        fieldDescription=""
+                        fieldLabel="Reference Type"
+                        name="./modelSku"
+                        type="radio"
+                        Value="Model"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <model
+                                jcr:primaryType="nt:unstructured"
+                                text="Model Number"
+                                value="Model"/>
+                            <sku
+                                jcr:primaryType="nt:unstructured"
+                                text="SKU Number"
+                                value="SKU"/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="none"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){productDetailDisplayISWText(box, value, './number', 'none', false);}"/>
+                    </modelSKU>
+                    <number
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter product identification code (Model number or SKU number)"
+                        fieldLabel="Number"
+                        name="./number"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image1
+                        jcr:primaryType="cq:Widget"
+                        addItemLabel="Add Additional Image"
+                        border="{Boolean}true"
+                        hideLabel="{Boolean}true"
+                        minItems="{Long}1"
+                        name="./image"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}true"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <imagePath
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    border="{Boolean}false"
+                                    fieldDescription=""
+                                    fieldLabel="Image"
+                                    itemCls="helpText"
+                                    key="path"
+                                    labelStyle="display:block;width:130px;padding:5px 0px;"
+                                    rootPath="/content/dam"
+                                    width="{Long}400"
+                                    xtype="pathfield"/>
+                                <imageAltText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    border="{Boolean}false"
+                                    fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                    fieldLabel="Image Alt Text"
+                                    itemCls="helpText"
+                                    key="altText"
+                                    labelStyle="display:block;width:130px;padding:5px 0px;"
+                                    width="{Long}400"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </image1>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="ISI Graphic/Text">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <iswGraphic
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Safety Info Display"
+                        name="./iswGraphic"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <textGraphic
+                                jcr:primaryType="nt:unstructured"
+                                text="Icon and Text"
+                                value="alternateText"/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="none"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            afterrender=""
+                            selectionchanged="function(box,value){productDetailDisplayISWText(box, value, './iswText' ,'alternateText', true);}"/>
+                    </iswGraphic>
+                    <iswText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Important Safety Information"
+                        fieldDescription="Important Safety Information"
+                        fieldLabel="Safety Link Text"
+                        hidden="{Boolean}true"
+                        name="./iswText"
+                        xtype="textfield"/>
+                    <iswURL
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter a web address or find the desired webpage."
+                        fieldLabel="Safety Link URL"
+                        name="./iswURL"
+                        validator="function() {                           return Medtronic.Authoring.validateEManualUrl(this);                         }"
+                        xtype="pathfield"/>
+                    <newtab
+                        jcr:primaryType="nt:unstructured"
+                        defaultValue="{Boolean}true"
+                        fieldDescription=""
+                        fieldLabel="Open in a New Tab"
+                        name="./newtab"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab4>
+            <tab5
+                jcr:primaryType="cq:Panel"
+                title="Overview">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Product Overview"
+                        fieldLabel="Headline"
+                        name="./title"
+                        width="{Long}300"
+                        xtype="textfield"/>
+                    <descriptiveText1
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Body Text"
+                        name="./overviewText"
+                        xtype="richtext">
+                         <rtePlugins jcr:primaryType="nt:unstructured"
+                        path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                        xtype="cqinclude">
+                        </rtePlugins>
+                    </descriptiveText1>
+                </items>
+            </tab5>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforehide="function(dialog){productDetail_resetValue();}"
+        loadcontent="function(dialog){productDetail_displayDefault(dialog);}"/>
+</jcr:root>

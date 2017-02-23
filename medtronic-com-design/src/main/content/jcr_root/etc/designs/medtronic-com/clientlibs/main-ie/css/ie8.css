@@ -1,0 +1,9 @@
+.header__logo { position: relative; text-decoration: none; }
+.header__logo img { width: 0; height: 0; }
+.header__logo:after { content: "Medtronic"; color: #004B87; font-size: 24px; font-weight: bold; position: absolute; left: 0; background-color: #fff; }
+
+.nav-bar { margin-top: 30px; }
+
+.sr-only, .nav-bar__btn-menu, .btn__search-text.hidden, .nav-items__back-link, #modalCookie, #cookieBar { display: none !important; }
+
+/*# sourceMappingURL=ie8.css.map */

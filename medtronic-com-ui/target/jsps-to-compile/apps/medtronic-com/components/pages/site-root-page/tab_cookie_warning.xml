@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Cookie Waring">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <warningType
+            jcr:primaryType="cq:Widget"
+            defaultValue="none"
+            fieldLabel="Cookie Type"
+            id="cookieWarning_type"
+            name="./cookieWarning_type"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <none
+                    jcr:primaryType="nt:unstructured"
+                    text="None"
+                    value="none"/>
+                <explicit
+                    jcr:primaryType="nt:unstructured"
+                    text="Explicit"
+                    value="explicit"/>
+                <implicit
+                    jcr:primaryType="nt:unstructured"
+                    text="Implicit"
+                    value="implicit"/>
+            </options>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(box) { Medtronic.Authoring.CookieWarning.showDetails.loadContent(box);                             }"
+                selectionchanged="function(box, value, isChecked) { Medtronic.Authoring.CookieWarning.showDetails.selectionChanged(box, value);                             }"/>
+        </warningType>
+        <textDetails
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}false"
+            itemId="textDetails"
+            layout="form"
+            padding="5px 5px 5px 5px"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="Cookie Statement"
+                    emptyText="Enter a value for the 'Warn on Leave' title"
+                    fieldLabel="Headline"
+                    name="./cookieWarning_title"
+                    width="280"
+                    xtype="textfield"/>
+                <descriptiveText
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="&lt;p>THIS SITE USES COOKIES. Medtronic uses Google Analytics and Adobe Analytics,                         online statistics services that use cookies to analyze the behavior of visitors to its website.                         Google and Adobe Analytics do not include or report any personal data that may be associated with an                         IP address of an individual user. &lt;/p>                         &lt;p>For more information, see our &lt;a href='#' target='_blank'>policy on the use of cookies&lt;/a>.                         Indicate whether you want to accept or reject cookies.&lt;/p>"
+                    fieldLabel="Body Text"
+                    name="./cookieWarning_description"
+                    width="280"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured"
+                    path="/apps/medtronic-com/components/common/richtext-configurations/linksFormatOnly/rtePlugins.infinity.json"
+                    xtype="cqinclude">
+                    </rtePlugins>
+                </descriptiveText>
+            </items>
+        </textDetails>
+        <buttonDetails
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}false"
+            itemId="buttonDetails"
+            layout="form"
+            padding="5px 5px 5px 5px"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <buttonOne
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="Reject"
+                    fieldLabel="Reject Button"
+                    name="./cookieWarning_button1"
+                    width="280"
+                    xtype="textfield"/>
+                <buttonTwo
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="Accept"
+                    fieldLabel="Accept Button"
+                    name="./cookieWarning_button2"
+                    width="280"
+                    xtype="textfield"/>
+            </items>
+        </buttonDetails>
+    </items>
+</jcr:root>

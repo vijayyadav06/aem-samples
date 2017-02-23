@@ -1,0 +1,10 @@
+<nav class="nav-menu" role="navigation">
+  <div class="nav-items__wrapper nav-items__level-1">
+    <div data-sly-test="${!wcmmode.disabled}">
+      Author Note: If you do not see the Secondary or Tertiary Nav Items available to add into the Nav, refresh the page.
+    </div>
+    <ul class="unstyled nav-items nav-items__level-1--list">
+      <sly data-sly-resource="${'primary-nav-items' @ resourceType='medtronic-com/components/content/nav/parsys'}" />
+    </ul>
+  </div>
+</nav>

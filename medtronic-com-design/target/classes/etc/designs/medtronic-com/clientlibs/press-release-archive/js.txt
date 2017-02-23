@@ -1,0 +1,2 @@
+#base=js
+press-release-archive.js

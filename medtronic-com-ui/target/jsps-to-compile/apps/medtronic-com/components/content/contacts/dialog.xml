@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Contacts Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <componentTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Contacts"
+                        fieldLabel="Headline"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <contact
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        fieldLabel="Contacts*"
+                        hideLabel="{Boolean}true"
+                        minItems="{Long}1"
+                        name="./contact"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <name
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Person, location or department name."
+                                    fieldLabel="Name"
+                                    key="name"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Role or job title."
+                                    fieldLabel="Title"
+                                    key="title"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <phoneNumber
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="+1-763-514-4000"
+                                    fieldDescription="Include country code."
+                                    fieldLabel="Phone Number"
+                                    key="phone"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <emailAddress
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="example@medtronic.com"
+                                    fieldLabel="Email Address"
+                                    fName="email"
+                                    key="email"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </contact>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){return Medtronic.Authoring.Contacts.dialog.validateEmail(dialog);}"
+        loadcontent="function(dialog){Medtronic.Authoring.Contacts.dialog.displayDefault(dialog);}"/>
+</jcr:root>

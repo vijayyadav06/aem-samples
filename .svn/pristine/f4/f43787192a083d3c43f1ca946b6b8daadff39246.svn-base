@@ -1,0 +1,23 @@
+<sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"/>
+<div class="cq-placeholder" data-sly-test="${!properties.navigationText && !wcmmode.disabled}">Placeholder for Secondary</div>
+<sly data-sly-test = "${properties.navigationText}">
+<a aria-expanded="false" class="nav-items__level-2--link"
+  data-sly-use.nav= "/apps/medtronic-com/components/content/nav/navigation-link.js"
+  data-sly-use.dataNavId= "${'/apps/medtronic-com/components/content/nav/data-nav-id.js' @ type='secondary'}"
+  data-nav-id="${dataNavId}"
+  href="${properties.submenu?'#': nav.navigationUrl || '#'}">
+  ${properties.navigationText} <sly data-sly-call="${icons.chevronRight}" />
+</a>
+</sly>
+<sly data-sly-test = "${properties.submenu}">
+<div class="nav-items__wrapper nav-items__level-3">
+  <ul class="unstyled nav-items nav-items__level-3--list">
+    <li class="nav-items__back-link">
+      <a href="#secondary-nav-item-back-link">
+        <sly data-sly-call="${icons.chevronLeft}" />${properties.backLink}
+      </a>
+    </li>
+    <sly data-sly-resource="${'tertiary-nav-items' @ resourceType='medtronic-com/components/content/nav/parsys'}"/>
+  </ul>
+</div>
+</sly>

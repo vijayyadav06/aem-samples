@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2016-03-21T22:10:16.448-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Medtronic Review Translation Workflow"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <dynamic_participant
+                jcr:created="{Date}2016-03-13T19:31:20.872-05:00"
+                jcr:createdBy="admin"
+                jcr:description="Content translated and ready for reviewing"
+                jcr:lastModified="{Date}2016-03-13T19:31:38.606-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Content translated and ready for reviewing"
+                sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DO_NOTIFY="true"
+                    DYNAMIC_PARTICIPANT="com.medtronic.com.msm.workflow.ParticipantStepChooserProcess"
+                    PROCESS_ARGS="TRANSLATION_REVIEW"/>
+            </dynamic_participant>
+            <or
+                jcr:created="{Date}2016-03-14T13:53:05.694-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-03-14T13:53:05.694-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <noopprocess
+                        jcr:created="{Date}2016-03-14T13:53:12.620-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Accept Translation"
+                        jcr:lastModified="{Date}2016-03-14T13:53:25.492-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Accept Translation"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                        PROCESS_AUTO_ADVANCE="true">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/etc/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess>
+                    <process
+                        jcr:created="{Date}2016-03-14T13:53:38.639-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Update comment with translated page name"
+                        jcr:lastModified="{Date}2016-03-14T13:53:59.098-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Update comment with translated page name"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.medtronic.com.msm.workflow.UpdateComment"
+                            PROCESS_ARGS="TRANSLATED_URL"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process>
+                    <process_1516169800
+                        jcr:created="{Date}2016-03-14T13:54:05.570-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Start URL Translation Workflow"
+                        jcr:lastModified="{Date}2016-03-14T13:54:38.394-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Start URL Translation Workflow"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.medtronic.com.msm.workflow.StartWorkflowProcess"
+                            PROCESS_ARGS="/etc/workflow/models/medtronic-com/mdt-content-translation-url/jcr:content/model"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process_1516169800>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <noopprocess
+                        jcr:created="{Date}2016-03-14T13:53:15.319-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Update the translation, then use the Update TM function"
+                        jcr:lastModified="{Date}2016-03-14T13:55:33.433-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reject Translation"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                        PROCESS_AUTO_ADVANCE="true">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/etc/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess>
+                    <dynamic_participant
+                        jcr:created="{Date}2016-03-21T22:09:27.960-06:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Please revise translation."
+                        jcr:lastModified="{Date}2016-03-21T22:09:55.694-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Revise Translation"
+                        sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            DO_NOTIFY="true"
+                            DYNAMIC_PARTICIPANT="com.medtronic.com.msm.workflow.ParticipantStepChooserProcess"
+                            PROCESS_ARGS="TRANSLATION_REVIEW"/>
+                    </dynamic_participant>
+                    <noopprocess_1045190357
+                        jcr:created="{Date}2016-03-21T22:10:01.820-06:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Revisions Completed"
+                        jcr:lastModified="{Date}2016-03-21T22:10:16.440-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Revisions Completed"
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                        PROCESS_AUTO_ADVANCE="true">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="/etc/workflow/scripts/noop.ecma"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </noopprocess_1045190357>
+                    <goto
+                        jcr:created="{Date}2016-03-14T14:09:26.125-05:00"
+                        jcr:createdBy="admin"
+                        jcr:description="Goto Step"
+                        jcr:lastModified="{Date}2016-03-21T22:08:46.833-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Goto Step"
+                        sling:resourceType="cq/workflow/components/model/goto"
+                        PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                        PROCESS_AUTO_ADVANCE="false">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                            PROCESS_AUTO_ADVANCE="false"
+                            script="function check() {&#xa;    return true;&#xa;}"
+                            TARGET_NODE_PATH="/etc/workflow/models/medtronic-com/mdt-content-translation-review/jcr:content/flow/dynamic_participant"/>
+                    </goto>
+                </_x0032_>
+            </or>
+        </flow>
+        <model/>
+    </jcr:content>
+</jcr:root>

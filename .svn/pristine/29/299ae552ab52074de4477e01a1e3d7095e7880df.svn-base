@@ -1,0 +1,31 @@
+var dependencies = ["video-mini.js", "/apps/medtronic-com/components/common/DataLayer.js",
+    "/apps/medtronic-com/components/common/data-layer-position-id.js",
+    "/apps/medtronic-com/components/common/JavaHelper.js"];
+
+use(dependencies, function(videoMini, dataLayer, positionId, JavaHelper) {
+
+  var linkId = "";
+  linkId = properties.get("sling:resourceType");
+
+  // linkId = linkId + "|" + resource.getPath();
+    //empty string for label, since it doesn't exist
+  linkId = linkId + "||" + properties.get("textDisplay", "");
+  linkId = linkId + "|" + properties.get("transcriptLink", "");
+  linkId = linkId + "|" + videoMini.isFlowplayer ? "FlowPlayer" : "YouTube";
+  linkId = linkId + "|" + videoMini.isFlowplayer ? properties.get("videoURL", "") : videoMini.videoId;
+  linkId = linkId + "|" + properties.get("thumbnailImage", "");
+  linkId = linkId + "|" + properties.get("imageAltText", "");
+
+  var position = request.getAttribute(positionId.ATTR_POSITION_ID)
+  if (dataLayer && dataLayer.promos) {
+    dataLayer.promos.push({
+      "id": JavaHelper.toJSString(linkId),
+      "position": JavaHelper.toJSString(position)
+    });
+  }
+
+  return {
+    id: linkId,
+    position: position
+  };
+});

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Translation">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <translateUrl
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Translate URL"
+            name="./translateUrl"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <letUserChoose
+                        jcr:primaryType="nt:unstructured"
+                        text="Let User Decide"
+                        value="choose"/>
+                <true
+                    jcr:primaryType="nt:unstructured"
+                    text="Translate"
+                    value="translate"/>
+                <false
+                    jcr:primaryType="nt:unstructured"
+                    text="Do Not Translate"
+                    value="donottranslate"/>
+            </options>
+        </translateUrl>
+    </items>
+</jcr:root>

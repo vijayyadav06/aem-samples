@@ -1,0 +1,43 @@
+var dependencies = ["/apps/medtronic-com/components/content/subtemplate-slots/featured-image/featured-image.js",
+    "/apps/medtronic-com/components/common/DataLayer.js",
+    "/apps/medtronic-com/components/common/data-layer-position-id.js",
+    "/apps/medtronic-com/components/common/JavaHelper.js", "/apps/medtronic-com/components/common/Labels.js"];
+
+use(dependencies, function(featuredImage, dataLayer, positionId, JavaHelper, Labels) {
+
+  var linkId = "";
+  linkId = properties.get("sling:resourceType");
+
+  // linkId = linkId + "|" + resource.getPath();
+
+    linkId = linkId + "|"
+            + Labels.getLabelTextFor(pageProperties.get("pageLevel", "L3"), properties.get("labelHyperlink"));
+
+  linkId = linkId + "|" + featuredImage.image;
+  linkId = linkId + "|" + featuredImage.imageAltText;
+
+  var headlines = JavaHelper.toJSArray(this.headlineWithIsi.getHeadlines());
+
+  headlines.forEach(function(headline) {
+    linkId = linkId + "|" + headline.headingText;
+  });
+
+  // Strip out markup from the text
+  var description = JavaHelper.toJSString(properties.get("description"));
+  description = description.replace(/(<([^>]+)>)/igm, "");
+
+  linkId = linkId + "|" + description;
+
+  var position = request.getAttribute(positionId.ATTR_POSITION_ID)
+  if (dataLayer && dataLayer.promos) {
+    dataLayer.promos.push({
+      "id": JavaHelper.toJSString(linkId),
+      "position": JavaHelper.toJSString(position)
+    });
+  }
+
+  return {
+    id: linkId,
+    position: position
+  };
+});

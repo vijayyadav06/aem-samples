@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.5.4</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="outfile"/>
+      <type name="product_detail_parent_tab"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="outputfile" type-name="outfile"/>
+      <typed-variable name="product_detail_parent_tab" type-name="product_detail_parent_tab"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="outputfile"/>
+    </global-variables>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">outputfile</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">outfile</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">tempProductName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">subPageLink</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">pageName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="1">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">fileName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">fileLocation</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">c:\temp\</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="2">kapow.robot.plugin.common.domain.TextAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">folderValue</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">jcr_root\content\medtronic-com\us-en\products\</property>
+            <property name="lastKnownAttributeType" idref="2"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">contentFileName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">dirName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">c:\temp\</property>
+            <property name="lastKnownAttributeType" idref="2"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">mainLink</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">tempPageName</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">temp_title</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">temp_link</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">P_ParentTab_Links</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">LinkText_G</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">product_detail_parent_tab</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">product_detail_parent_tab</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="3"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="0" id="4">
+        <property name="name" class="String">Set Attribute section</property>
+        <property name="stepAction" class="SetAttribute">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">section</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.manual_related_links</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="5">false</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="6">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">tempPageName</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders" id="7"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="8">true</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="9">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String"> "&amp;quot;{\\\\&amp;quot;linkText\\\\&amp;quot;:\\\\&amp;quot; Overview \\\\&amp;quot;\\,\\\\&amp;quot;linkURL\\\\&amp;quot;:\\\\&amp;quot;" + "/content/medtronic-com/us-en/healthcare-professionals/products/"+futurestateURL.subcategory+ "/"+futurestateURL.mainpage + "\\\\&amp;quot;\\,\\\\&amp;quot;newTab\\\\&amp;quot;\:[]}&amp;quot;,"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LinkText_G</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="10">
+        <property name="name" class="String">SKIPIFNULL</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="11">
+        <property name="name" class="String" id="12">Sub PL Query Database</property>
+        <property name="stepAction" class="QueryDatabase2" serializationversion="1">
+          <property name="databaseName" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
+            <property name="value" class="kapow.util.db.DBName">
+              <property name="name" class="String">medtronic</property>
+            </property>
+          </property>
+          <property name="sql" class="String">"SELECT link,title ,SUBSTRING_INDEX(SUBSTRING_INDEX(link,'/',-2),'/',1) as pageName FROM medtronic.product_detail_parent_tab where url='" + product_detail.url + "'"</property>
+          <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">link</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">temp_link</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">title</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">temp_title</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="13">
+        <property name="name" class="String" id="14">SKIPCATNULL</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="15">
+        <property name="name" class="String">Extract Subcategory and Subpage</property>
+        <property name="stepAction" class="QueryDatabase2" serializationversion="1">
+          <property name="databaseName" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
+            <property name="value" class="kapow.util.db.DBName">
+              <property name="name" class="String">medtronic</property>
+            </property>
+          </property>
+          <property name="sql" class="String">"select distinct(url),target_location,
+substring_index(substring_index(target_location,'/',7),'/',-1) as subcategory,
+substring_index(substring_index(target_location,'/',8),'/',-1) as mainpage, 
+substring_index(substring_index(target_location,'/',9),'/',-1) as subpage1, 
+substring_index(substring_index(target_location,'/',10),'/',-1) as subpage2
+from content where url ='" + temp_link + "' order by subcategory"</property>
+          <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">url</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.url</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">target_location</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.target_location</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">subcategory</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.subcategory</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">mainpage</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.mainpage</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">subpage1</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">subpage2</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="14"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="16">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">product_detail.product_name</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="ConvertToLowerCase"/>
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String"> </property>
+                  <property name="replacementText" class="String">-</property>
+                </element>
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String">--</property>
+                  <property name="replacementText" class="String">-</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">product_detail.product_name</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subcategory</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String">.html</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subcategory</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.mainpage</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String">.html</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.mainpage</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String">.html</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="ReplaceText">
+                  <property name="textToReplace" class="String">.html</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="17">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">subFutureStateURL.subpage1 == subFutureStateURL.subpage2 ? "" :  subFutureStateURL.subpage2</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">subFutureStateURL.mainpage == subFutureStateURL.subpage1 ? "" :  subFutureStateURL.subpage1</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="18">
+        <property name="name" class="String">skiplink</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="19">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">(link == temp_link)</property>
+          </property>
+          <property name="mode" class="Integer">1</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">skiplink</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="20">
+        <property name="name" class="String" id="21">NOSUBPAGE</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="22">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String"> trim(subFutureStateURL.subpage1).length() &gt; 0</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String" id="23">reportingViaAPI</element>
+            <element class="String" id="24">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="21"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="25">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"/content/medtronic-com/us-en/healthcare-professionals/products/"+subFutureStateURL.subcategory+"/" +subFutureStateURL.mainpage + "/" + subFutureStateURL.subpage1</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">temp_link</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="26">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">LinkText_G + "&amp;quot;{\\\\&amp;quot;linkText\\\\&amp;quot;:\\\\&amp;quot;" +temp_title +  "\\\\&amp;quot;\\,\\\\&amp;quot;linkURL\\\\&amp;quot;:\\\\&amp;quot;" + temp_link + "\\\\&amp;quot;\\,\\\\&amp;quot;newTab\\\\&amp;quot;\:[]}&amp;quot;,"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LinkText_G</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="27">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">LinkText_G</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="AdvancedExtract2">
+                  <property name="outputExpression" class="String">"\\{&amp;quot;sectionHeading&amp;quot;:&amp;quot; &amp;quot;,&amp;quot;sectionLinks&amp;quot;:[" +substring($0,0,length($0)-1) +"]}"</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">P_ParentTab_Links</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="28">
+        <property name="name" class="String">Set Attribute section</property>
+        <property name="stepAction" class="SetAttribute">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">section</property>
+          </property>
+          <property name="value" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">P_ParentTab_Links</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.manual_related_links</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="29">
+        <property name="name" class="String">Next</property>
+        <property name="stepAction" class="Next"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextIteration">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="12"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="30">
+        <property name="name" class="String">SKIPDELETEMRT</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="31">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">trim(LinkText_G).length()==0</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">SKIPDELETEMRT</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="32">
+        <property name="name" class="String">Remove Tag</property>
+        <property name="stepAction" class="RemoveTagStepAction"/>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.manual_related_links</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$IgnoreAndContinue"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="33">
+        <property name="name" class="String">Create Page</property>
+        <property name="stepAction" class="CreatePage2">
+          <property name="contents" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">P_ParentTab_Links</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="20">
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="34">
+        <property name="name" class="String" id="35">LEVELUP</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="36">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String"> trim(subFutureStateURL.subpage2).length() == 0</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="35"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="37">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"/content/medtronic-com/us-en/healthcare-professionals/products/"+futurestateURL.subcategory+"/"+ subFutureStateURL.mainpage</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">temp_link</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="38">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"/content/medtronic-com/us-en/healthcare-professionals/products/"+futurestateURL.subcategory+"/"+ subFutureStateURL.mainpage + "/" + subFutureStateURL.subpage1  + "/" + subFutureStateURL.subpage2</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">temp_link</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="39">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage1</property>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">tempPageName</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="40">
+        <property name="name" class="String">LEVELUP</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="41">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String"> trim(subFutureStateURL.subpage2).length() == 0</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element class="String">reportingViaAPI</element>
+            <element class="String">reportingViaLog</element>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">LEVELUP</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Try" id="42">
+        <property name="name" class="String" id="43">LEVELDOWN</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="44">
+        <property name="name" class="String">Test Value</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">length(trim(subFutureStateURL.subpage1))&gt;0</property>
+          </property>
+        </property>
+        <property name="elementFinders" idref="7"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="changedProperties" class="java.util.HashSet">
+            <element idref="23"/>
+            <element idref="24"/>
+          </property>
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" idref="43"/>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="45">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String" id="46">leveldown</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">1 == 1</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" idref="46"/>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.mainpage</property>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">tempPageName</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="47">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String" id="48">levelup</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="EvaluateExpression" serializationversion="0">
+                  <property name="expression" class="String">1 == 1</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" idref="48"/>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">subFutureStateURL.subpage2</property>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">tempPageName</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">futurestateURL.subpage1</property>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">middlePage</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="8"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="49"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="30"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="15"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="15"/>
+        <to idref="16"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="16"/>
+        <to idref="17"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="17"/>
+        <to idref="18"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="18"/>
+        <to idref="19"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="18"/>
+        <to idref="39"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="19"/>
+        <to idref="20"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="20"/>
+        <to idref="22"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="20"/>
+        <to idref="34"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="22"/>
+        <to idref="25"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="25"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="26"/>
+        <to idref="27"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="28"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="28"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="29"/>
+        <to idref="30"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="31"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="33"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="31"/>
+        <to idref="32"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="32"/>
+        <to idref="33"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="33"/>
+        <to idref="49"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="34"/>
+        <to idref="36"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="34"/>
+        <to idref="38"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="36"/>
+        <to idref="37"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="37"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="38"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="39"/>
+        <to idref="40"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="40"/>
+        <to idref="41"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="40"/>
+        <to idref="47"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="41"/>
+        <to idref="42"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="42"/>
+        <to idref="44"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="42"/>
+        <to idref="45"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="44"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="45"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="47"/>
+        <to idref="29"/>
+      </object>
+    </edges>
+  </body>
+</object>

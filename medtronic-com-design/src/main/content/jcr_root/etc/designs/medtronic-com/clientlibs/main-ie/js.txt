@@ -1,0 +1,3 @@
+#base=js
+/etc/designs/medtronic-com/clientlibs/extensions/js/cookies.js
+/etc/designs/medtronic-com/clientlibs/extensions/js/set-tracking-cookie-function.js

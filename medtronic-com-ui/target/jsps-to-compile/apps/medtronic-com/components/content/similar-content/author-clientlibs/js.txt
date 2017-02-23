@@ -1,0 +1,2 @@
+##TODO: Apply namespace Medtronic.Authoring.SimilarContent and rename accordingly
+similarContent.js

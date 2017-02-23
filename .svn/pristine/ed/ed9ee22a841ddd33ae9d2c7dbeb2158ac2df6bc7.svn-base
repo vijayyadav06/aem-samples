@@ -1,0 +1,202 @@
+results:{  
+   "time":"0.051836",
+   "query":"diabetes",
+   "params":[  
+      {  
+         "name":"q",
+         "value":"diabetes",
+         "originalValue":"diabetes"
+      },
+      {  
+         "name":"btnG",
+         "value":"Google Search",
+         "originalValue":"Google+Search"
+      },
+      {  
+         "name":"access",
+         "value":"p",
+         "originalValue":"p"
+      },
+      {  
+         "name":"client",
+         "value":"default_frontend",
+         "originalValue":"default_frontend"
+      },
+      {  
+         "name":"output",
+         "value":"xml_no_dtd",
+         "originalValue":"xml_no_dtd+"
+      },
+      {  
+         "name":"sort",
+         "value":"date:D:L:d1",
+         "originalValue":"date:D:L:d1"
+      },
+      {  
+         "name":"wc",
+         "value":"200",
+         "originalValue":"200"
+      },
+      {  
+         "name":"wc_mc",
+         "value":"1",
+         "originalValue":"1"
+      },
+      {  
+         "name":"oe",
+         "value":"UTF-8",
+         "originalValue":"UTF-8"
+      },
+      {  
+         "name":"ie",
+         "value":"UTF-8",
+         "originalValue":"UTF-8"
+      },
+      {  
+         "name":"ud",
+         "value":"1",
+         "originalValue":"1"
+      },
+      {  
+         "name":"exclude_apps",
+         "value":"1",
+         "originalValue":"1"
+      },
+      {  
+         "name":"site",
+         "value":"default_collection",
+         "originalValue":"default_collection"
+      },
+      {  
+         "name":"ulang",
+         "value":"en",
+         "originalValue":"en"
+      },
+      {  
+         "name":"ip",
+         "value":"10.49.228.14",
+         "originalValue":"10.49.228.14"
+      },
+      {  
+         "name":"entqr",
+         "value":"3",
+         "originalValue":"3"
+      },
+      {  
+         "name":"entqrm",
+         "value":"0",
+         "originalValue":"0"
+      }
+   ],
+   "results":{  
+      "startNumber":"1",
+      "endNumber":"10",
+      "totalResults":"1630",
+      "gsaUrls":{  
+         "nextUrl":"/search?q=diabetes&site=default_collection&lr=&ie=UTF-8&oe=UTF-8&client=default_frontend&access=p&sort=date:D:L:d1&start=10&sa=N",
+         "prevUrl":null
+      },
+      "gsaResult":[  
+         {  
+            "resultNumber":"1",
+            "url":"http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes-pro/index.htm",
+            "title":"<b>Diabetes</b> Management |\n\t\t\t\t<b>Diabetes</b> Therapy Products from\n\t\t\t\t<b>...</b>",
+            "relevancy":"10",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"Glucose monitors and insulin pumps for <b>diabetes</b>\n\t\t\t\ttherapy. <b>...</b><b>\n\t\t\t\tDiabetes</b><br> Management Software (CareLink), �.\n\t\t\t\tProduct and Packaging Disposition. <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"2",
+            "url":"http://www-test.medtronic.com/corporate-governance/principles-and-ethics/medtronic-charitable-donations-registry/donation-request-forms/diabetes/index.htm",
+            "title":"<b>Diabetes</b>",
+            "relevancy":"10",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"Skip to main content; Skip to section navigation; Access Keys.\n\t\t\t\tReturn<br> to the Medtronic.com home page. Loading.\n\t\t\t\tInnovation; <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"3",
+            "url":"http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/diabetes-management-software/index.htm",
+            "title":"<b>Diabetes</b> Therapy Management Software |Medtronic\n\t\t\t\tCareLink <b>...</b>",
+            "relevancy":"10",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"<b>Diabetes</b> management with CareLink Pro software\n\t\t\t\tfrom Medtronic. <b>...</b> For<br> Healthcare\n\t\t\t\tProfessionals. <b>Diabetes</b> Management Software.\n\t\t\t\tProducts. <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"4",
+            "url":"http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/diabetes-management-software/careLink-pro-diabetes-therapy-management-software/coverage-reimbursement/index.htm",
+            "title":"Coverage and Reimbursement: CareLink� Pro from\n\t\t\t\t<b>...</b>",
+            "relevancy":"10",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"<b>...</b> CareLink Pro. <b>Diabetes</b>\n\t\t\t\tTherapy Management Software. <b>...</b> The list below\n\t\t\t\tincludes<br> common ICD-9 diagnosis codes for\n\t\t\t\t<b>Diabetes</b> Mellitus.*. <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"5",
+            "url":"http://www-test.medtronic.com/ca-en/newsroom-6/insulin-pump.html",
+            "title":"Outcomes With Insulin Pumps - Type 2 <b>Diabetes</b> |\n\t\t\t\tMedtronic",
+            "relevancy":"10",
+            "crawldate":null,
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"People with Type 2 <b>Diabetes</b> Achieve Superior\n\t\t\t\tOutcomes with Insulin Pumps<br> vs. <b>...</b>\n\t\t\t\tAbout the <b>Diabetes</b> Business at Medtronic of\n\t\t\t\tCanada. <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"6",
+            "url":"http://www-test.medtronic.com/us-en/about-3/medtronic-ibm-watson-health.html?intcmp=mdt_plc_2015_US_home_FTBrand_launch_Oct2015_MDTNews_MDT_IBM_Watson_Partner_TackleDiabetes_t8_cta_learn_more_link",
+            "title":"Health Data Analytics for <b>Diabetes</b> � IBM Watson\n\t\t\t\t| Medtronic",
+            "relevancy":"10",
+            "crawldate":null,
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"A unique partnership between Medtronic and IBM Watson aims to\n\t\t\t\tchange<br> prevention and treatment for\n\t\t\t\t<b>diabetes</b>. Learn more. <b>...</b> ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"7",
+            "url":"http://www-test.medtronic.com/patients/diabetes/index.htm",
+            "title":"Redirect",
+            "relevancy":"10",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"You are being redirected to <b>Diabetes</b>. ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"8",
+            "url":"http://www-test.medtronic.com/patients/diabetes/device/insulin-pumps/index.htm",
+            "title":"Redirect",
+            "relevancy":"9",
+            "crawldate":"2 Dec 2015",
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"You are being redirected to Our <b>Diabetes</b>\n\t\t\t\tManagement Products. ",
+            "language":"en"
+         },
+         {  
+            "resultNumber":"9",
+            "url":"http://www-test.medtronic.com/de-de/presse-6/minimed.html",
+            "title":"Medtronic bringt MiniMed 640G ...",
+            "relevancy":"9",
+            "crawldate":null,
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"<b>...</b> Neuartige Insulinpumpe mit SmartGuard�\n\t\t\t\tTechnologie f�r erweiterten<br> Hypoglyk�mieschutz ab sofort\n\t\t\t\tf�r Menschen mit <b>Diabetes</b> in Deutschland\n\t\t\t\t<b>...</b> ",
+            "language":"de"
+         },
+         {  
+            "resultNumber":"10",
+            "url":"http://www-test.medtronic.com/de-de/presse-6/ich-bin-ich.html",
+            "title":"Medtronic bringt MiniMed 640G ...",
+            "relevancy":"9",
+            "crawldate":null,
+            "applicationId":"T5-B7R6T5TZWM2VR",
+            "description":"<b>...</b><b> Diabetes</b> ist nichts,\n\t\t\t\twof�r man sich sch�men m�sste!� Warum sich<br> die Powerfrau\n\t\t\t\tso engagiert f�r das Thema? �Ich will <b>...</b> ",
+            "language":"de"
+         }
+      ]
+   }
+}

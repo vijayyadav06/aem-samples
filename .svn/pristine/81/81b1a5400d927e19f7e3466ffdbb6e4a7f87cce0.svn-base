@@ -1,0 +1,33 @@
+var dependencies = ["inspirational.js", "/apps/medtronic-com/components/common/DataLayer.js",
+    "/apps/medtronic-com/components/common/data-layer-position-id.js",
+    "/apps/medtronic-com/components/common/JavaHelper.js", "/apps/medtronic-com/components/common/Labels.js"];
+
+use(dependencies, function(inspirational, dataLayer, positionId, JavaHelper, Labels) {
+
+  var linkId = "";
+  linkId = properties.get("sling:resourceType");
+
+  // linkId = linkId + "|" + resource.getPath();
+
+  var showLabel = JavaHelper.toJSBoolean(inspirational.showLabel);
+
+    linkId = linkId + "|"
+            + Labels.getLabelTextFor(pageProperties.get("pageLevel", "L3"), properties.get("labelHyperlink"));
+
+  inspirational.headings.forEach(function(heading) {
+    linkId = linkId + "|" + heading.text;
+  });
+  
+  var position = request.getAttribute(positionId.ATTR_POSITION_ID)
+  if (dataLayer && dataLayer.promos) {
+    dataLayer.promos.push({
+      "id": JavaHelper.toJSString(linkId),
+      "position": JavaHelper.toJSString(position)
+    });
+  }
+
+  return {
+    id: linkId,
+    position: position
+  };
+});

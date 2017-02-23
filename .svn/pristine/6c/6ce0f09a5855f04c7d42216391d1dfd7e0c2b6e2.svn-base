@@ -1,0 +1,18 @@
+<div data-sly-test="${!properties.headings && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Authorable Text - Inspirational</div>
+<sly class="tta tta__inspirational" data-sly-use.inspirational="inspirational.js"
+     data-sly-use.dataLinkId="data-link-id.js"
+     data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html" data-sly-test="${!inspirational.isPlaceholder || !wcmmode.disabled}">
+     <sly data-sly-test="${inspirational.showLabel}" data-sly-use.label="${'/apps/medtronic-com/components/common/Labels.js' @ pageLevel=pageProperties.pageLevel, labelHyperlink= properties.labelHyperlink, dataLinkId=dataLinkId}"
+         data-sly-call="${templates.label @ url=inspirational.labelHyperlink, openInNewTab=inspirational.labelNewTab, text=label.labelText, dataLinkId=dataLinkId}" /> 
+    <div class="display-table" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+        <div class="display-table-cell ${inspirational.isPlaceholder ? 'cq-placeholder' : ''}">
+            <h2 data-sly-list.heading="${inspirational.headings}">
+                <span class="${heading._DNT_textColor} ${heading._DNT_textWeight}">
+                    ${heading.text}
+                </span>
+            </h2>
+            <sly data-sly-test="${inspirational.showCta}"
+                 data-sly-call="${templates.ctaButton @ url=inspirational.ctaUrl, openInNewTab=inspirational.ctaOpenInNewTab, text=inspirational.ctaText}" />
+        </div>
+    </div>
+</sly>

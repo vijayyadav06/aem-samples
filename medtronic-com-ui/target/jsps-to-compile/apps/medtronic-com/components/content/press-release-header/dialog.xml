@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Press Release Header"
+    width="{Long}900"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <imageText
+                        jcr:primaryType="cq:Widget"
+                        border="false"
+                        fieldLabel="Secondary Logo(s)"
+                        name="./secondaryLogos"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <image
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="true"
+                                    key="image"
+                                    fieldLabel="Image Path"
+                                    rootPath="/content/dam"
+                                    width="350"
+                                    xtype="pathfield"/>
+                                <text
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="true"
+                                    key="text"
+                                    fieldLabel="Alt Text"
+                                    width="350"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </imageText>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Headline"
+                        height="{Long}100"
+                        name="./title"
+                        removeSingleParagraphContainer="{Boolean}true"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/superScriptSpecialChars/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </title>
+                    <subTitle
+                        jcr:primaryType="cq:Widget"
+                        emptyText=""
+                        fieldLabel="Subheadline"
+                        name="./subTitle"
+                        xtype="textfield"/>
+                    <location
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldDescription="Enter location of press release origin"
+                        fieldLabel="Location"
+                        name="./location"
+                        xtype="textfield"/>
+                    <date
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        editable="{Boolean}true"
+                        fieldDescription="Date of publication or last update"
+                        fieldLabel="Publication Date"
+                        format="F d, Y"
+                        name="./date"
+                        xtype="datefield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            render="function(box) {                               Medtronic.Authoring.PressReleaseHeader.date.render(box);                             }"/>
+                    </date>
+                    <rte
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Body Text"
+                        name="./rte"
+                        removeSingleParagraphContainer="{Boolean}true"
+                        validator="function() { return Medtronic.Authoring.validateEManualUrl(this); } "
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </rte>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

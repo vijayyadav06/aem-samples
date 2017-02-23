@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Labels"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false" />
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <pagesL1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                    fieldLabel="L1 Pages"
+                    cq:showOnCreate="{Boolean}true"
+                    cq-msm-lockable="pagesL1"
+                    name="./pagesL1"
+                    translateOptions="{Boolean}true"
+                    class="page-properties-label"
+                    pickerTitle="Select a Label"
+                    rootPath="/etc/tags/medtronic-com/labels"
+                    icon="icon-tags"/>
+                <pagesL2L3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                    fieldLabel="L2/L3 Pages"
+                    cq:showOnCreate="{Boolean}true"
+                    cq-msm-lockable="pagesL2L3"
+                    name="./pagesL2L3"
+                    translateOptions="{Boolean}true"
+                    class="page-properties-label"
+                    icon="icon-tags"
+                    pickerTitle="Select a label"
+                    rootPath="/etc/tags/medtronic-com/labels"/>
+            </items>
+        </column>
+    </items>
+</jcr:root>

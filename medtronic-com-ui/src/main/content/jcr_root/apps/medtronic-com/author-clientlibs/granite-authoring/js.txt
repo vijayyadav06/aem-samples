@@ -1,0 +1,17 @@
+#base=js
+Medtronic.Granite.js
+Medtronic.Granite.Authoring.js
+Medtronic.Granite.Validation.SelectRequired.js
+Medtronic.Granite.Validation.ValidateEManualUrl.js
+Medtronic.Granite.Validation.ValidateName.js
+Medtronic.Granite.Validation.ValidateHostname.js
+Medtronic.Granite.Validation.ValidateTags.js
+Medtronic.Granite.Authoring.WarnOnLeave.js
+Medtronic.Granite.Authoring.CookieWarning.js
+Medtronic.Granite.Authoring.Migration.js
+Medtronic.Granite.Authoring.CompositeMultifield.js
+Medtronic.Granite.Authoring.Label.js
+Medtronic.Granite.Validation.ValidateRTE.js
+Medtronic.Granite.Validation.EnhancedErrorText.js
+Medtronic.Granite.Authoring.Acknowledgement.js
+fix-rte.js

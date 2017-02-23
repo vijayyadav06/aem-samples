@@ -1,0 +1,25 @@
+<div data-sly-test="${!properties.headline && !wcmmode.disabled}"
+    class="cq-placeholder">Placeholder for Authorable Text - Headline (with ISI)</div>
+<sly data-sly-test="${properties.headline}" class="tta tta__headline"
+  data-sly-use.headlineWithISI="com.medtronic.com.app.HeadlineWithISI"
+  data-sly-use.dataLinkId="${'data-link-id.js' @ headlineWithIsi=headlineWithISI}">
+  <div class="display-table" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+    <div class="display-table-cell"
+    	data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html">
+      <h2 data-sly-list.headlines="${headlineWithISI.headlines}">
+        <span class="${headlines._DNT_fontWeight} ${headlines._DNT_fontColor} headline-isi">${headlines.headingText @context='html'}</span>
+      </h2>
+      <p>${properties.description}</p>
+      <sly data-sly-test="${properties.showCta}"
+         data-sly-call="${templates.ctaButton @ url=headlineWithISI.ctaURL, openInNewTab=properties.ctaOpenInNewTab, text=properties.ctaText}" />
+      <div data-sly-test="${properties.isiType != 'none'}">
+        <a class="safety-info" href="${headlineWithISI.isiURL || '#'}" style="margin-top: 10px;"
+            target="${properties.isiNewTab == 'true' ? '_blank':'_self'}">
+            <sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+              data-sly-call="${icons.iconWithFallback @ icon=icons.warning, fallbackText='Alert'}" />
+            ${properties.isiText || 'Important Safety Information'}
+        </a>
+      </div>
+    </div>
+  </div>
+</sly>

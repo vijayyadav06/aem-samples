@@ -1,0 +1,78 @@
+/* JS For Social media */
+
+$(document).ready(function () {
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    // format the date for Facebook and Twitter
+    $(".social_media_postTime_FBorTT").each(function(){
+        var parseDate = $(this).val();
+        if(parseDate.indexOf("-") != -1){
+            parseDate = parseDate.replace(/-/g, "\/").replace("T", " ");
+        }
+        parseDate = parseDate.replace("+0000", " GMT");
+
+        var postTime = new Date(Date.parse(parseDate));
+
+        var date = formatNum(postTime.getDate(), 2);
+        var month = months[postTime.getMonth()];
+        var year = formatNum(postTime.getYear(), 2);
+        var postTime_par = $(this).next();
+        $(postTime_par).text(date + " " + month + " " + year);
+        $(this).remove();
+    });
+    
+    // format the date for Linkedin
+    $(".social_media_postTime_LI").each(function(){
+        var postTime = new Date(Number($(this).val()));
+        var date = formatNum(postTime.getDate(), 2);
+        var month = months[postTime.getMonth()];
+        var year = formatNum(postTime.getYear(), 2);
+        var postTime_par = $(this).next();
+        $(postTime_par).text(date + " " + month + " " + year);
+        $(this).remove();
+    });
+    var t = /(\b(http|https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim, 
+        i = /(^|[^\/])(www\.[\S]+(\b|$))/gim, 
+        a = /(([a-zA-Z0-9\-\_\.])+@[a-zA-Z\_]+?(\.[a-zA-Z]{2,6})+)/gim;
+    
+    // get the post content from a hidden input
+    $(".social_media_post").each(function(){
+        var post = $(this).val();
+        var post_par = $(this).next();
+        // get the link match result before character limitation
+        var matchResult_t_beforeLimit = post.match(t),
+            matchResult_i_beforeLimit = post.match(i),
+            matchResult_a_beforeLimit = post.match(a);
+        
+        var post_text;
+        
+        if(post.length>140){
+            post_text = post.substring(0,140) + "...";
+        }else{
+            post_text = post; 
+        }
+        var target = $(this).attr("data-tab");
+        // get the link match result after character limitation
+        var matchResult_t_afterLimit = post_text.match(t),
+            matchResult_i_afterLimit = post_text.match(i),
+            matchResult_a_afterLimit = post_text.match(a);
+        
+        // parse the url text to url link (use the previous link)
+        $(matchResult_t_afterLimit).each(function(index){
+            var link = $(this.link(matchResult_t_beforeLimit[index])).attr("target", target);
+            post_text = post_text.replace(this,link[0].outerHTML);
+        });
+        
+        $(matchResult_i_afterLimit).each(function(index){
+            var link = $(this.link(matchResult_i_beforeLimit[index])).attr("target", target);
+            post_text = post_text.replace(this,link[0].outerHTML);
+        });
+        
+        $(matchResult_a_afterLimit).each(function(index){
+            var link = $(this.link(matchResult_a_beforeLimit[index])).attr("target", target);
+            post_text = post_text.replace(this,link[0].outerHTML);
+        });
+        $(post_par).html(post_text);
+        $(this).remove();
+    });
+    
+});

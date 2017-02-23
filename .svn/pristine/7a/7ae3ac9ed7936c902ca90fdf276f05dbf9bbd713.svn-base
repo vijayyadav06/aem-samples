@@ -1,0 +1,10 @@
+<sly data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+     data-sly-call="${libraries.includeLibrary @ categories='medtronic-com.cookie-implicit', mode='js', collection='footer'}"/>
+<div id="cookieBar" class="alert alert-top alert-dismissible bg-navy-blue white hide" role="alert">
+    <button onClick="addCookie()" class="close btn icon-fallback-text" data-dismiss="alert" aria-label="Close">
+        <i class="icon shape-mdt-close" aria-hidden="true"></i>
+        <span class="text">Close</span>
+    </button>
+    <h4 class="yellow">${inheritedPageProperties.cookieWarning_title}</h4>
+    ${inheritedPageProperties.cookieWarning_implicit_description @ context='html'}
+</div>

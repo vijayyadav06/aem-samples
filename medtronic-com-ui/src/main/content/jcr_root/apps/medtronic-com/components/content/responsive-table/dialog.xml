@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Responsive Table"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <showSortHidden jcr:primaryType="cq:Widget"
+                        name="./showSort"
+                        defaultValue="{Boolean}true"
+                        xtype="hidden"/>
+                    <showModeHidden jcr:primaryType="cq:Widget"
+                        name="./showMode"
+                        defaultValue="{Boolean}true"
+                        xtype="hidden"/>
+                    <showDescriptionHidden jcr:primaryType="cq:Widget"
+                       name="./showDescription"
+                       defaultValue="{Boolean}true"
+                       xtype="hidden"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Provide a name for the table."
+                        fieldLabel="Headline"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter a short description for the table."
+                        fieldLabel="Body Text"
+                        allowBlank="{Boolean}false"
+                        name="./description"
+                        xtype="textfield"/>
+                    <showDescriptionCheckbox
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display Body Text to the End User"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.changeHiddenToggle(field,'./showDescription',value);}"
+                            loadcontent="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.initHiddenToggle(field,'./showDescription');}"/>
+                    </showDescriptionCheckbox>
+                    <initialDisplay
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="columntoggle"
+                        fieldLabel="Column Sort Style"
+                        name="./display"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                text="Toggle"
+                                value="columntoggle"/>
+                            <option2
+                                jcr:primaryType="nt:unstructured"
+                                text="Stack"
+                                value="stack"/>
+                            <option3
+                                jcr:primaryType="nt:unstructured"
+                                text="Swipe"
+                                value="swipe"/>
+                        </options>
+                    </initialDisplay>
+                    <showModeCheckbox
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display Column Mode Control"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners jcr:primaryType="nt:unstructured"
+                           selectionchanged="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.changeHiddenToggle(field,'./showMode',value);}"
+                           loadcontent="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.initHiddenToggle(field,'./showMode');}"/>
+                    </showModeCheckbox>
+                    <showSortCheckbox
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display Column Sort Control"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners jcr:primaryType="nt:unstructured"
+                           selectionchanged="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.changeHiddenToggle(field,'./showSort',value);}"
+                           loadcontent="function(field,rec,value){Medtronic.Authoring.ResponsiveTable.initHiddenToggle(field,'./showSort');}"/>
+                    </showSortCheckbox>
+                    <numColumns
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Number of Columns"
+                        name="./numColumns"
+                        maxValue="9"
+                        minValue="1"
+                        allowDecimals="{Boolean}false"
+                        xtype="numberfield"/>
+                    <numRows
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Number of Rows"
+                        name="./numRows"
+                        minValue="1"
+                        allowDecimals="{Boolean}false"
+                        xtype="numberfield"/>
+                    <firstColHeader
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="First Column is Headers"
+                        name="./isFirstHeader"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Column Order">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <colOrder
+                        jcr:primaryType="cq:Widget"
+                        xtype="multifield"
+                        id="colOrder"
+                        fieldLabel="Column Order"
+                        readOnly="{Boolean}true"
+                        name="./colOrder">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            optionsProvider="function(path,rec){return Medtronic.Authoring.ResponsiveTable.ColumnOrderFunctions.getHeaderCols(path);}"
+                            type="select"
+                            xtype="selection">
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                selectionchanged="function(field,rec,path){Medtronic.Authoring.ResponsiveTable.ColumnOrderFunctions.validateColOrder(field.findParentByType('multifield'));}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,rec,path){Medtronic.Authoring.ResponsiveTable.ColumnOrderFunctions.loadContent(field,rec,path);}"/>
+                    </colOrder>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Row Order">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <rowOrder
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifield"
+                            id="rowOrder"
+                            fieldLabel="Row Order"
+                            readOnly="{Boolean}true"
+                            name="./rowOrder">
+                        <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                optionsProvider="function(path,rec){return Medtronic.Authoring.ResponsiveTable.RowOrderFunctions.getRows(path);}"
+                                type="select"
+                                xtype="selection">
+                            <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(field,rec,path){Medtronic.Authoring.ResponsiveTable.RowOrderFunctions.validateRowOrder(field.findParentByType('multifield'));}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,rec,path){Medtronic.Authoring.ResponsiveTable.RowOrderFunctions.loadContent(field,rec,path);}"/>
+                    </rowOrder>
+                </items>
+            </tab3>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){return  Medtronic.Authoring.ResponsiveTable.Dialog.validate(dialog); }"/>
+</jcr:root>

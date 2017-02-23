@@ -1,0 +1,25 @@
+<sly data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+     data-sly-call="${libraries.includeLibrary @ categories='medtronic-com.cookie-explicit', mode='js', collection='footer'}"/>
+<!-- Modal Top Positioned -->
+<div id="modalCookie" class="modal modal-top" tabindex="-1" role="dialog" aria-labelledby="">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <a href="#" data-dismiss="modal" class="icon-fallback-text">
+                    <i class="icon shape-mdt-close" aria-hidden="true"></i>
+                    <span class="text">Close</span>
+                </a>
+                <h3 class="modal-title yellow" id="modalHeading">${inheritedPageProperties.cookieWarning_title}</h3>
+            </div>
+            <div class="modal-body">
+                ${inheritedPageProperties.cookieWarning_explicit_description @ context='html'}
+            </div>
+            <div class="modal-footer">
+                <div class="btn-row">
+                    <button onclick="cookieChoice(false)" class="btn" type="button">${inheritedPageProperties.cookieWarning_button1}</button>
+                    <button onclick="cookieChoice(true)" class="btn" type="button">${inheritedPageProperties.cookieWarning_button2}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

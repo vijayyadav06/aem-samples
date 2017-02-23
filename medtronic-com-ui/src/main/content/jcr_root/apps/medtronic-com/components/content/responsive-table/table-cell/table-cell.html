@@ -1,0 +1,5 @@
+<img data-sly-test="${properties.image}" src="${properties.image}" alt="${properties.imageAlt}" data-image-cover/>
+<div data-sly-test="${!properties.richText && !wcmmode.disabled}" class="cq-placeholder">
+    Enter text and / or image here
+</div>
+${properties.richText @context='html'}

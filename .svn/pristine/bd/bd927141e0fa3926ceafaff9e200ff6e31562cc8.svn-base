@@ -1,0 +1,70 @@
+
+package com.medtronic.com.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.commons.json.JSONException;
+import org.apache.sling.commons.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.cq.sightly.WCMUse;
+
+/**
+ * @author change.chen
+ */
+public class Accordion extends WCMUse {
+
+    private static final Logger LOG = LoggerFactory.getLogger(Accordion.class);
+    private ValueMap properties;
+    private String[] sections;
+
+    @Override
+    public void activate() throws Exception {
+        properties = this.getProperties();
+    }
+
+    /**
+     * Returns the list of {@link AccordionSection AccordionSections} for this component.
+     * 
+     * @return the list of sections
+     */
+    public List<AccordionSection> getSectionList() {
+        final List<AccordionSection> sectionList = new ArrayList<AccordionSection>();
+        sections = properties.get("sections", new String[] {});
+        try {
+            for (int sectionIndex = 0; sectionIndex < sections.length; sectionIndex++) {
+                final JSONObject jsonObject = new JSONObject(sections[sectionIndex]);
+                final String title = jsonObject.getString("title");
+                String anchor = null;
+                
+                if (jsonObject.has("anchor")) {
+                    anchor = jsonObject.getString("anchor");
+                }
+                
+                final String columns = jsonObject.getString("_DNT_columns");
+                final String sectionPath = jsonObject.getString("sectionPath");
+                final List<String> pathList = this.getSectionPath(columns, sectionPath);
+                final AccordionSection section = new AccordionSection(title, anchor, columns, pathList);
+                sectionList.add(section);
+            }
+        } catch (JSONException e) {
+            LOG.error("Get Json Error: ", e);
+        }
+        return sectionList;
+    }
+
+    private List<String> getSectionPath(final String columns,
+                                        final String sectionPath) {
+        final List<String> pathList = new ArrayList<String>();
+        if ("two".equals(columns)) {
+            pathList.add(sectionPath + "_leftpar");
+            pathList.add(sectionPath + "_rightpar");
+        } else {
+            pathList.add(sectionPath + "_row");
+        }
+        return pathList;
+    }
+}

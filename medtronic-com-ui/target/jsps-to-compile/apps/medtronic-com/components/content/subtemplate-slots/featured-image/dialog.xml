@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    title="Featured Image"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Featured Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Category Label"
+                        name="./showLabel"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box) {   return Medtronic.Authoring.enableLabelFields(box)     }"/>
+                    </label>
+                    <labelHyperlink
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Label URL"
+                        name="./labelHyperlink"
+                        validator="function() {  return Medtronic.Authoring.validateExternalLinks(this);    }"
+                        xtype="pathfield"/>
+                    <labelNewTab
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in a New Tab"
+                        name="./labelNewTab"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Image"
+                        name="./image"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <alttext
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                        fieldLabel="Image Alt Text"
+                        name="./alttext"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) {            return Medtronic.Authoring.featuredImage.dialog.loadContent(dialog);         }"/>
+</jcr:root>

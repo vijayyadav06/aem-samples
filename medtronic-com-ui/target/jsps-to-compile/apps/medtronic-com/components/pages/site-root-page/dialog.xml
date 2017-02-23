@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    stateful="false"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_basic.infinity.json"
+                    xtype="cqinclude"/>
+                <advanced
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_advanced.infinity.json"
+                    xtype="cqinclude"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <cloudservices
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+                <audienceLabel
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_audience.infinity.json"
+                    xtype="cqinclude"/>
+                <michelsonSeal
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_michelson_seal.infinity.json"
+                    xtype="cqinclude"/>
+                <translation
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_translation.infinity.json"
+                    xtype="cqinclude"/>    
+                <outdated_browser
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_outdated_browser.infinity.json"
+                    xtype="cqinclude"/>
+                <share
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_share.infinity.json"
+                    xtype="cqinclude"/>
+                <warn_on_leave
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_warn_on_leave.infinity.json"
+                    xtype="cqinclude"/>
+                <cookie_warning
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_cookie_warning.infinity.json"
+                    xtype="cqinclude"/>
+                <acknowledgement
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/medtronic-com/components/pages/site-root-page/tab_acknowledgement.infinity.json"
+                        xtype="cqinclude"/>
+                <global_header
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/pages/site-root-page/tab_global_header.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

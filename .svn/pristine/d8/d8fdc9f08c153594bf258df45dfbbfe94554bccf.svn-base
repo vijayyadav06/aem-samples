@@ -1,0 +1,12 @@
+<!--/*
+  Copyright [TODO]
+  
+  Modified from the /libs/wcm/foundation/components/page component
+  to remove the design css
+*/-->
+<template data-sly-template.headlibs="${@ designPath}"
+  data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+  data-sly-use.head="${'headlibs.js' @ designPath=designPath}">
+  <!--/* commenting out below because we aren't using built in functionality (yet) and should not need foundation-main */-->
+  <!-- <sly data-sly-call="${clientLib.all @ categories='cq.foundation-main'}" /> -->
+</template>

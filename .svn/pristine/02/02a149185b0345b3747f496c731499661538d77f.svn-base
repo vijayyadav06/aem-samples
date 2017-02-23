@@ -1,0 +1,3 @@
+MAVEN_HOME=/export/home1/bea/mdt/projects/bin/apache-maven-3.2.5
+JAVA_HOME=/opt/java/jdk1.7.0_72
+newenvironment=true

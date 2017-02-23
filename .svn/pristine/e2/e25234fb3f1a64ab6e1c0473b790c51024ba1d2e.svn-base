@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Country/Language Selectors">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <countries
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}true"
+            name="./countries"
+            xtype="multifield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                xtype="mdtmultifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <languageName
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Country/Language or Region"
+                        key="_DNT_languageName"
+                        type="select"
+                        xtype="mdtselection"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="URL"
+                        key="url"
+                        width="100%"
+                        xtype="pathfield"/>
+                </items>
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    added="function(panel){Medtronic.Authoring.ApplicationRoot.countries.added(panel);}"/>
+            </fieldConfig>
+        </countries>
+    </items>
+</jcr:root>

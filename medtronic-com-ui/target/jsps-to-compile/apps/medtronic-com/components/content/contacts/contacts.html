@@ -1,0 +1,18 @@
+<div data-sly-test="${!properties.contact && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Contacts</div>
+<div data-sly-test="${properties.contact}" class="press-release__contacts"
+	data-sly-use.contacts="com.medtronic.com.app.Contacts">
+	<h2 data-sly-test="${properties.headline}">${properties.headline}</h2>
+	<div class="row" data-sly-list.contact="${contacts.contacts}">
+		<div class="col-xs-12 col-sm-6 col-md-4 contact-list-item">
+			<!-- Contact Entry -->
+			<div class="contact">
+				<p class="contact__name">${contact.name}</p>
+				<ul class="unstyled">
+					<li class="contact__title">${contact.title}</li>
+					<li class="contact__tel"><a href="tel:${contact.phone}">${contact.phone}</a></li>
+					<li class="contact__email"><a href="mailto:${contact.email}">${contact.email}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

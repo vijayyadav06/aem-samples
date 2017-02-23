@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Site Root Page (L0 Template) for the Medtronic.com site"
+    jcr:primaryType="cq:Template"
+    jcr:title="Medtronic.com Site Root Page"
+    allowedPaths="[/content/medtronic-com]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="medtronic-com/components/pages/site-root-page"
+        warnOnLeave_enabled="{Boolean}true"
+        warnOnLeave_title="You Are Leaving the Medtronic &lt;COUNTRY&gt; Site"
+        warnOnLeave_description="&lt;p&gt;You just clicked a link to go to another website. If you continue, you will leave this site and go to a site run by someone else.&lt;/p&gt;
+                                 &lt;p&gt;Medtronic does not review or control the content on the other website, and we are not responsible for any business dealings or transactions you have there. Your use of the other site is subject to the terms of use and privacy statement on that site. &lt;/p&gt;
+                                 &lt;p&gt;It is possible that some of the products on the other site are not approved in the &amp;lt;COUNTRY&amp;gt;.&lt;/p&gt;"
+        warnOnLeave_button1="Continue"
+        warnOnLeave_button2="Cancel"
+        cookieWarning_type="none"
+        outdatedBrowser_buttonUrl="http://www.outdatebrowser.com"
+        outdatedBrowser_title="Your browser is out of date"
+        outdatedBrowser_errorMessage="With an updated browser, you will have a better Medtronic web site experience."
+        outdatedBrowser_buttonText="Update my browser now."
+        patients="Patients"
+        healthCareAdministrators="Healthcare Administrators"
+        healthCareProfessionals="Healthcare Professionals"
+        pageLevel="L0">
+        <header-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/header" />
+        </header-par>
+        <footer-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/footer"/>
+        </footer-par>
+        <home-content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <hero
+                jcr:created="{Date}2015-11-13T11:46:30.647+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-13T11:47:36.205+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/hero"
+                contentType="imagetext"
+                styleOption="brandframe"/>
+            <level_1_subtemplate
+                jcr:created="{Date}2015-11-13T11:46:43.696+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-13T11:46:43.696+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/subtemplates/level-1-subtemplate"/>
+        </home-content-par>
+    </jcr:content>
+</jcr:root>

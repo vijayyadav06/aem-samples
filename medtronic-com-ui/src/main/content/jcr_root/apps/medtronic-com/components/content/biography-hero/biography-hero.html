@@ -1,0 +1,27 @@
+<div data-sly-test="${!properties.image && !wcmmode.disabled}"  class="cq-placeholder">Placeholder for Biography Hero</div>
+<sly data-sly-test=${properties.image}>
+	<div class="row hero bio__details">
+		<!-- figure and figcaption -->
+		<div class="col-sm-6 one-by-one hero--media">
+			<div class="content">
+				<figure>
+					<img src="${properties.image}" alt="${properties.imageAltText}" data-image-cover>
+				</figure>
+			</div>
+		</div>
+	
+		<div class="col-sm-6 one-by-one hero--text">
+			<div class="content">
+				<div class="display-table">
+					<div class="display-table-cell">
+						<figcaption>
+							<h1>${properties.headline @ context='html'}</h1>
+							<span>${properties.subheading @ context='html'}</span>
+							 ${properties.additionalText @ context='html'}
+						</figcaption>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</sly>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root jcr:primaryType="cq:Dialog"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    title="Contacts Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="HTML">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <name
+                        jcr:primaryType="cq:Widget"
+                        grow="{Boolean}true"
+                        fieldDescription="Migrated HTML Markup. Take care when modifying this content."
+                        hideLabel="{Boolean}true"
+                        name="./html"
+                        xtype="textarea" />
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

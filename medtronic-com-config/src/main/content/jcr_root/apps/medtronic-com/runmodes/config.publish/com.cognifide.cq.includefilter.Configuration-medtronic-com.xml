@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    include-filter.config.enabled="{Boolean}true"
+    include-filter.config.path="/content"
+    include-filter.config.resource-types="[medtronic-com/components/content/subtemplate-slots/social-media-feed-mini,medtronic-com/components/content/subtemplate-slots/social-media-feed-slender-squat]"
+    include-filter.config.include-type="JSI"
+    include-filter.config.add_comment="{Boolean}true"
+    include-filter.config.selector="nocache"
+    include-filter.config.required_header="Accept"
+    include-filter.config.ignoreUrlParams="[cmpid,intcmp,utm_source,utm_medium,utm_campaign]"/>

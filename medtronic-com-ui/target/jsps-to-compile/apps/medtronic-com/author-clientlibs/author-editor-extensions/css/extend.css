@@ -1,0 +1,47 @@
+/* This style will hide the DELETE button, for some pre-determined cannot be removed from the page */
+[data-path*='pre-press-release-hero-par'][data-action='DELETE']{
+	display:none;
+}
+/* This style is used to remove the delete button on the menu-landing-page
+
+[data-path$='menu-content-par/responsive-table'][data-action='DELETE']{
+	display:none;
+}
+*/
+/* This style is used for implementing "Biography Hero Component can not be removed in Biographies Template" function */
+button[data-path*='biographies-content-par/biography_hero'][data-action='DELETE'] {
+    display: none;
+}
+
+/* This style is used for implementing "Hero/RTE Component can not be removed in Condition/Therapy Detail Template" function */
+button[data-path*='condition-hero/hero'][data-action='DELETE'] {
+    display: none;
+}
+
+/*
+
+MDT-2469 - Allow authors to delete RTE in Therapy/Condition Templates
+button[data-path*='condition-content-par/rich-text-editor'][data-action='DELETE'] {
+    display: none;
+}
+
+button[data-path*='therapy-content-par/rich-text-editor'][data-action='DELETE'] {
+    display: none;
+}
+*/
+button[data-path*='therapy-hero/hero'][data-action='DELETE'] {
+    display: none;
+}
+
+button[data-path*='condition-content-par/rich-text-editor'][data-action='MOVE'] {
+    display: none;
+}
+
+button[data-path*='therapy-content-par/rich-text-editor'][data-action='MOVE'] {
+    display: none;
+}
+
+/* This style is used for implementing "Global Footer Component can not be removed in Site Root Template" function */
+button[data-path*='footer-par/footer'][data-action='DELETE'] {
+    display: none;
+}

@@ -1,0 +1,14 @@
+<div data-sly-test="${!properties.displayType && !wcmmode.disabled}" class="cq-placeholder">Placeholder for References or Footnotes</div>
+<sly data-sly-test="${properties.displayType}">
+	<section class="article__references">
+		<hr>
+		<h3 data-sly-test="${properties.title}">${properties.title}</h3>
+    	<sly data-sly-use.referencesFootnotes="reference-footnote.js">
+			<sly data-sly-list.ref="${referencesFootnotes}">
+				<div class="reference">
+    				<sup>${ref.sup @ context='html'}</sup>${ref.content @ context='html'}
+				</div>
+			</sly>
+		</sly>
+	</section>
+</sly>

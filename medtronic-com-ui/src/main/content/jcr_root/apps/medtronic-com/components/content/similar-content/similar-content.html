@@ -1,0 +1,40 @@
+
+<div data-sly-test="${!properties.title && !wcmmode.disabled}" class="cq-placeholder">
+  Placeholder for Similar Content Carousel
+</div>
+
+<sly data-sly-test="${properties.title}">
+  <div class="product__similar-devices">
+    <h2 data-sly-test="${properties.title}">${properties.title}</h2>
+    <div class="newtab">${properties.newTab}</div>
+    <div class="carousel-wrap">
+      <!-- Carousel -->
+      <div class="carousel carousel--similar-devices">
+        <sly data-sly-use.similarContent="com.medtronic.com.app.SimilarContent">
+          <ul class="carousel__list unstyled" data-sly-list.similarList="${SimilarContent.similarList}">
+            <li class="carousel__item">
+              <a href="${similarList.link}" class="image-list__title">
+                <div class="one-by-one">
+                  <div class="content bg-white">
+                    <img class="image-list__thumb" src="${similarList.image}" alt="${similarList.text}" data-image-cover/>
+                  </div>
+                </div>
+                ${similarList.name}
+              </a>
+            </li>
+          </ul>
+        </sly>
+      </div>
+
+      <!-- Carousel Controls -->
+      <a class="carousel-control carousel-control--previous" href="#" data-jcarouselcontrol="true">
+        <sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+          data-sly-call="${icons.iconWithFallback @ icon=icons.chevronLeft, fallbackText='Previous'}" />
+      </a>
+      <a class="carousel-control carousel-control--next" href="#" data-jcarouselcontrol="true">
+        <sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+          data-sly-call="${icons.iconWithFallback @ icon=icons.chevronRight, fallbackText='Next'}" />
+      </a>
+    </div>
+  </div>
+</sly>

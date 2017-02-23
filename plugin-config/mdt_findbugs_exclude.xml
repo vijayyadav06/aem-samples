@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<FindBugsFilter>
+    <!-- Exclude all priority 3 violations -->
+    <Match>
+        <Priority value="3"/>
+    </Match>
+    <!-- Exclude all STSTYLE,MT_CORRECTNESS,MALICIOUS_CODE,EXPERIMENTAL,DODGY priority 2 violations  -->
+    <Match>
+        <Priority value="2"/>
+        <Bug category="STYLE,MT_CORRECTNESS,MALICIOUS_CODE,EXPERIMENTAL,DODGY"/>
+    </Match>
+</FindBugsFilter>

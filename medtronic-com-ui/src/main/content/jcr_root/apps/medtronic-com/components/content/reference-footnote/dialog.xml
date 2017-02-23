@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="References or Footnotes"
+    width="650"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="References or Footnotes">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <hidden
+                        jcr:primaryType="cq:Widget"
+                        xtype="hidden"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        emptyText="Example: &quot;References&quot;"
+                        fieldLabel="Headline"
+                        name="./title"
+                        xtype="textfield"/>
+                    <displayType
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="references"
+                        fieldLabel="Style"
+                        layout="hbox"
+                        name="./displayType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <references
+                                jcr:primaryType="nt:unstructured"
+                                text="References"
+                                value="references"/>
+                            <footnotes
+                                jcr:primaryType="nt:unstructured"
+                                text="Footnotes"
+                                value="footnotes"/>
+                        </options>
+                        <optionsConfig
+                            jcr:primaryType="nt:unstructured"
+                            width="100"/>
+                    </displayType>
+                    <data
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        border="{Boolean}false"
+                        cls="reference-footnote-container"
+                        hideLabel="{Boolean}true"
+                        minItems="1"
+                        name="./data"
+                        value="&quot; &quot;"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}true"
+                            fieldLabel="item"
+                            layout="form"
+                            padding="5px"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <content
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    ctCls="reference-footnote-data"
+                                    fieldSubLabel="Add only one reference or footnote per List Item box."
+                                    key="content"
+                                    labelStyle="display:block;width:500px;"
+                                    validator="function() {                               return Medtronic.Authoring.validateEManualUrl(this);                             }"
+                                    xtype="richtext">
+                                    <rtePlugins
+                                        jcr:primaryType="nt:unstructured"
+                                        path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                                        xtype="cqinclude"/>
+                                </content>
+                            </items>
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                added="function(panel,container,index){Medtronic.Authoring.ReferenceFootnote.data.added(panel,index);}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            removeditem="function(field){Medtronic.Authoring.ReferenceFootnote.data.removedItem(field);}"/>
+                    </data>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) { return  Medtronic.Authoring.addMinimumMultifieldItems(dialog);   }"/>
+</jcr:root>

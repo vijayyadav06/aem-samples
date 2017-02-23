@@ -1,0 +1,22 @@
+<div data-sly-test="${!properties.platform && !wcmmode.disabled}" class="cq-placeholder">
+    Placeholder for Social Media Feed - Slender/Squat</div>
+<sly data-sly-test="${properties.platform}"
+  data-sly-use.template="/apps/medtronic-com/components/common/social-media-templates.html"
+  data-sly-use.dataLinkId="data-link-id.js">
+  <div class="row social-component height-fix">
+	<div class="col-xs-12 one-by-one"> 
+    	<div class="content">
+			<div class="social">
+				<sly data-sly-call="${template.feedDisplay @ platform=properties.platform, accountName=properties.accountName1, count=1, newTab=properties.newTab1, dataLinkId=dataLinkId}"></sly>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 one-by-one"> 
+    	<div class="content">
+			<div class="social">
+        		<sly data-sly-call="${template.feedDisplay @ platform=properties.platform, accountName=properties.accountName2 ? properties.accountName2 : properties.accountName1, count=properties.accountName2 ? 1 : 2, newTab=properties.accountName2 ? properties.newTab2 : properties.newTab1, dataLinkId=dataLinkId}"></sly>
+			</div>
+		</div>
+	</div>
+  </div>
+</sly>

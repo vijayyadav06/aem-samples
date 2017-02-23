@@ -1,0 +1,22 @@
+use(["/apps/medtronic-com/components/common/JavaHelper.js", "/apps/medtronic-com/components/common/LinkHelper.js"], function(JavaHelper, LinkHelper) {
+  "use strict";
+
+  function getListItems() {
+    var listJsonArray = properties.get("listItems1", JavaHelper.getEmptyArray(java.lang.String));
+    return listJsonArray.map(function(listItemJson) {
+      var listItem = JSON.parse(listItemJson);
+
+      return {
+        "text": listItem.listItem,
+        "linkUrl": LinkHelper.fixLink(listItem.hyperlink || ""),
+        "newTab": listItem.newTab
+      };
+    });
+  }
+
+  return {
+    "title": properties.get("title"),
+    "descriptiveText": properties.get("descriptiveText"),
+    "list": getListItems()
+  }
+});

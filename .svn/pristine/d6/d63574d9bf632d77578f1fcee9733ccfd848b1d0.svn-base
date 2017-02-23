@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    gsaHostUrl="http://10.63.80.45/"
+    connectionTimeout="7001" 
+    readTimeout="7000"/>

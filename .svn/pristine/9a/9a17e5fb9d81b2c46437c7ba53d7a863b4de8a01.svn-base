@@ -1,0 +1,88 @@
+<template data-sly-template.feedDisplay="${ @ platform, accountName, count, newTab, dataLinkId}">
+    <sly data-sly-use.socialMedia="${ 'com.medtronic.com.app.SocialMedia' @accountName=accountName, accountType=platform}">
+	    <sly data-sly-list.post="${socialMedia.posts}">
+            <sly data-sly-test="${postList.count == count}">
+			    <b class="social__link--top-right" 
+			        data-sly-use.icons="/apps/medtronic-com/components/common/icons.html">
+			        <span class="icon-fallback-text">
+				        <sly data-sly-test="${platform == 'facebook'}">
+				            <sly data-sly-call="${icons.facebook}" />
+				        </sly>
+				        <sly data-sly-test="${platform == 'twitter'}">
+				            <sly data-sly-call="${icons.twitter}" />
+				        </sly>
+				        <sly data-sly-test="${platform == 'linkedin'}">
+				            <sly data-sly-call="${icons.linkedin}" />
+				        </sly>
+			        </span>
+			    </b>
+
+			    <div class="display-table" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+			        <div class="display-table-cell">
+						<!-- Begin Feed Content -->
+    					<h2>${post.poster}</h2>
+                        <input data-sly-test="${platform != 'linkedin'}" type="hidden" value="${post.postTime}" class="social_media_postTime_FBorTT"/>
+                        <input data-sly-test="${platform == 'linkedin'}" type="hidden" value="${post.postTime}" class="social_media_postTime_LI"/>
+                        <p></p>
+    					<sly data-sly-test="${platform == 'facebook'}">
+							<a class="social__account" data-sly-attribute.target="${newTab ? '_blank' : ''}" href="https://www.facebook.com/${socialMedia.accountName}">${accountName}</a>
+    					</sly>
+						<sly data-sly-test="${platform == 'twitter'}">
+							<a class="social__account" data-sly-attribute.target="${newTab ? '_blank' : ''}" href="https://twitter.com/${socialMedia.accountName}">@${accountName}</a>
+    					</sly>
+    					<sly data-sly-test="${platform == 'linkedin'}">
+							<a class="social__account" data-sly-attribute.target="${newTab ? '_blank' : ''}" href="https://www.linkedin.com/company/${socialMedia.accountName}">${accountName}</a>
+    					</sly>
+                        <input type="hidden" value="${post.message}" class="social_media_post" data-tab="${newTab ? '_blank' : '_self'}">
+						<p></p>
+                        <div class="utility-buttons">
+    						<sly data-sly-test="${platform == 'facebook'}">
+                                <a href="https://www.facebook.com/${socialMedia.accountName}/posts/${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.like, fallbackText='Like'}" />
+                                </a>
+                                <a href="https://www.facebook.com/${socialMedia.accountName}/posts/${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.comment, fallbackText='Comment'}" />
+                                </a>
+                                <a href="https://www.facebook.com/${socialMedia.accountName}/posts/${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.reply, fallbackText='Reply'}" />
+                                </a>
+                            </sly>
+    						<sly data-sly-test="${platform == 'twitter'}">
+                                <a href="https://twitter.com/intent/tweet?in_reply_to=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.back, fallbackText='Reply'}" />
+                                </a>
+                                <a href="https://twitter.com/intent/retweet?tweet_id=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.retweet, fallbackText='Retweet'}" />
+                                </a>
+                                <a href="https://twitter.com/intent/favorite?tweet_id=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.favorite, fallbackText='Favorite'}" />
+                                </a>
+                            </sly>
+    						<sly data-sly-test="${platform == 'linkedin'}">
+    							<a href="https://www.linkedin.com/nhome/updates?topic=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.like, fallbackText='Like'}" />
+                                </a>
+                                <a href="https://www.linkedin.com/nhome/updates?topic=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.comment, fallbackText='Comment'}" />
+                                </a>
+                                <a href="https://www.linkedin.com/nhome/updates?topic=${post.iD}" 
+                                    data-sly-attribute.target="${newTab ? '_blank' : ''}">
+                                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.reply, fallbackText='Reply'}" />
+                                </a>
+                            </sly>
+                        </div>
+                    <!-- End Feed Content -->
+            		</div>
+	    		</div>
+	        </sly>
+        </sly>
+    </sly>
+</template>

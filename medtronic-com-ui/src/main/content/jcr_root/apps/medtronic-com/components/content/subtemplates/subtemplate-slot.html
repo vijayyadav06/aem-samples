@@ -1,0 +1,6 @@
+<template data-sly-template.slotInclude="${@ sequence, type, name, color}"
+  data-sly-use.slotInfo="${'/apps/medtronic-com/components/content/subtemplates/slot-info.js' @ sequence=sequence, type=type, name=name}">
+  <div class="content ${color}">
+    <sly data-sly-resource="${ name @ resourceType='medtronic-com/components/system/single-item-parsys'}" />
+  </div>
+</template>

@@ -1,0 +1,52 @@
+<div class="cq-placeholder"
+  data-sly-use.headlineWithISI="com.medtronic.com.app.HeadlineWithISI"
+  data-sly-use.featuredImage="../featured-image/featured-image.js"
+  data-sly-use.dataLinkId="${'data-link-id.js' @ headlineWithIsi=headlineWithISI}"
+  data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html"
+  data-sly-test="${!properties.image && !properties.headline && !wcmmode.disabled}">
+  Placeholder for Authored Image and Text</div>
+<div class="col-sm-6 one-by-one grid--reverse" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+  <sly data-sly-test="${properties.image}">
+    <div class="content tta--gradient">
+      <div class="tta tta__graphic">
+        <sly data-sly-test="${featuredImage.showLabel}" data-sly-use.label="${'/apps/medtronic-com/components/common/Labels.js' @ pageLevel=pageProperties.pageLevel, labelHyperlink= properties.labelHyperlink}"
+           data-sly-call="${templates.label @ url=featuredImage.labelHyperlink, openInNewTab=featuredImage.labelNewTab, text=label.labelText, dataLinkId=dataLinkId}" /> 
+        <figure>
+          <img src="${featuredImage.image}"
+            alt="${featuredImage.imageAltText}" data-image-cover>
+        </figure>
+      </div>
+    </div>
+  </sly>
+</div>
+<div class="col-sm-6 one-by-one" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+  <div class="content">
+    <sly data-sly-test="${properties.headline}">
+      <div class="tta tta__headline">
+        <div class="display-table">
+          <div class="display-table-cell">
+            <h2 data-sly-list.headlines="${headlineWithISI.headlines}">
+              <span
+                class="${headlines.fontWeight} ${headlines.fontColor} headline-isi">${headlines.headingText
+                @context='html'}</span>
+            </h2>
+            <p>${properties.description}</p>
+            <sly data-sly-test="${properties.showCta}"
+              data-sly-call="${templates.ctaButton @ url=headlineWithISI.ctaURL, openInNewTab=properties.ctaOpenInNewTab, text=properties.ctaText}" />
+            <div data-sly-test="${properties.isiType != 'none'}">
+              <a class="safety-info"
+                href="${headlineWithISI.isiURL || '#'}"
+                style="margin-top: 10px;"
+                target="${properties.isiNewTab == 'true' ? '_blank':'_self'}">
+                <sly
+                  data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+                  data-sly-call="${icons.iconWithFallback @ icon=icons.warning, fallbackText='Alert'}" />
+                ${properties.isiText || 'Important Safety Information'}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sly>
+  </div>
+</div>

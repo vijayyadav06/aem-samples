@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Social Media Elements"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+            <section1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="OpenGraph elements appear when a link to the page is added to an email or shared via social media (Facebook, LinkedIn, etc.)."
+                    class="social-media-font-description"
+                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <pageTitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="OpenGraph Page Title"
+                            fieldDescription="Input a headline to promote the page when shared in social media or by email. (Maximum=85 characters)"
+                            name="./og_title"
+                            cq-msm-lockable="og_title"
+                            validation = "Medtronic.Granite.Validation.EnhancedErrorText"
+                            cq:showOnCreate="{Boolean}true"/>
+                        <description
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="OpenGraph Description"
+                            fieldDescription="Use 200 characters or fewer to entice readers to view the full post."
+                            name="./og_description"
+                            cq-msm-lockable="og_description"
+                            validation = "Medtronic.Granite.Validation.EnhancedErrorText"
+                            cq:showOnCreate="{Boolean}true"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                            fieldLabel="OpenGraph Image"
+                            fieldDescription="Select the content’s designated social share image from the Digital Assets Manager (DAM)."
+                            name="./og_image"
+                            cq-msm-lockable="og_image"
+                            validation = "Medtronic.Granite.Validation.EnhancedErrorText"
+                            cq:showOnCreate="{Boolean}true"
+                            rootPath="/content/dam"/>
+                    </items>
+                </section1>
+            </items>
+        </column>
+    </items>
+</jcr:root>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    cq:showOnCreate="{Boolean}false"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Warn on Leave"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <enableWOLCheckBox
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    id="WOL_Checkbox"
+                    text="Display Warn on Leave"
+                    value="{Boolean}true"
+                    fieldDescription="Enables the popup displaying when users click a link outside medtronic.com."/>
+                <enableWOLHidden
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                    text="Display Warn on Leave"
+                    value="{Boolean}true"
+                    cq-msm-lockable="warnOnLeave_enabled"
+                    name="./warnOnLeave_enabled"/>
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="Title"
+                    required="{Boolean}true"
+                    value="You Are Leaving the Medtronic &lt;COUNTRY&gt; Site"
+                    cq-msm-lockable="warnOnLeave_title"
+                    name="./warnOnLeave_title"/>
+                <descriptiveText
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Descriptive Text"
+                    required="{Boolean}true"
+                    value="&lt;p&gt;You just clicked a link to go to another website. If you continue, you will leave this site and go to a site run by someone else.&lt;/p&gt;
+                           &lt;p&gt;Medtronic does not review or control the content on the other website, and we are not responsible for any business dealings or transactions you have there. Your use of the other site is subject to the terms of use and privacy statement on that site. &lt;/p&gt;
+                           &lt;p&gt;It is possible that some of the products on the other site are not approved in the &amp;lt;COUNTRY&amp;gt;.&lt;/p&gt;"
+                    cq-msm-lockable="warnOnLeave_description"
+                    name="./warnOnLeave_description"/>
+                <buttonOne
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="CTA Display Button 1"
+                    emptyText="Continue"
+                    cq-msm-lockable="warnOnLeave_button1"
+                    name="./warnOnLeave_button1"
+                    required="{Boolean}true"
+                    value="Continue"/>
+                <buttonTwo
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    required="{Boolean}true"
+                    fieldLabel="CTA Display Button 2"
+                    emptyText="Cancel"
+                    value="Cancel"
+                    cq-msm-lockable="warnOnLeave_button2"
+                    name="./warnOnLeave_button2"/>
+                <exclusions
+                    jcr:primaryType="nt:unstructured"
+                    cq:showOnCreate="{Boolean}true"
+                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                    cq-msm-lockable="warnOnLeave_exceptions"
+                    fieldLabel="Warn On Leave Whitelist">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        validation="Medtronic.Granite.Validation.ValidateHostname"
+                        name="./warnOnLeave_exceptions"
+                        required="{Boolean}true"/>
+                </exclusions>
+            </items>
+        </column>
+    </items>
+</jcr:root>

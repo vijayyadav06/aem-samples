@@ -1,0 +1,36 @@
+<!--/* Adds the given library categories, with the given mode, to the given collection (for rendering later) */-->
+<template data-sly-template.includeLibrary="${@ categories='Client Library categories', mode='Client Library mode', collection='The collection name for the library'}">
+    <sly data-sly-use="${'/apps/medtronic-com/components/common/libraries/Libraries.js' @ categories=categories, mode=mode, collection=collection}"/>
+</template>
+
+<!--/*
+  Renders libraries in a given collection. The render modes (js/css/all) are held in the library entry
+  itself from when the library was added to the collection (see include above).
+*/-->
+<template data-sly-template.render="${@ collection='The collection name for the library'}">
+  <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+       data-sly-use.libraries="${'/apps/medtronic-com/components/common/libraries/Libraries.js' @ collection=collection}"
+       data-sly-list.library="${libraries}">
+       <sly data-sly-test="${library.mode == 'js'}" data-sly-call="${clientLib.js @ categories=library.categories}"/>
+       <sly data-sly-test="${library.mode == 'css'}" data-sly-call="${clientLib.css @ categories=library.categories}"/>
+       <sly data-sly-test="${library.mode == 'all'}" data-sly-call="${clientLib.all @ categories=library.categories}"/>
+  </sly>
+</template>
+
+<!--/*
+  the version condition should be identical to the conditional comments version condition. For example: 'lte IE 8'
+*/-->
+<template data-sly-template.renderWithIEConditional="${@ collection='The collection name for the library', ieCondition='the IE version condition to use'}">
+  <sly data-sly-use.libraries="${'/apps/medtronic-com/components/common/libraries/Libraries.js' @ collection=collection}"
+       data-sly-list.library="${libraries}">
+    <sly data-sly-call="${renderIEConditionalLibrary @ categories=library.categories, mode=library.mode, ieCondition=ieCondition}"/>
+  </sly>
+</template>
+
+<template data-sly-template.renderIEConditionalLibrary="${@ categories='Client Library categories', mode='Client Library mode', ieCondition='the IE version condition to use'}">
+  <sly data-sly-use.clientlib="${'libs.granite.sightly.templates.ClientLibUseObject' @ categories=categories, mode=mode}">
+    <!--[if ${ieCondition}]>
+      ${clientlib.include @ context='unsafe'}
+    <![endif] -->
+  </sly>
+</template>

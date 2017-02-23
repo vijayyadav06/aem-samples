@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description=" Press Release (L3 Template) for the Medtronic.com site."
+    jcr:primaryType="cq:Template"
+    jcr:title="Medtronic.com Press Release"
+    allowedPaths="[/content/medtronic-com(/[^/]+)+]"
+    ranking="{Long}1">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="medtronic-com/components/pages/press-release"
+        pageLevel="L3">
+        <pre-press-release-hero-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="medtronic-com/components/system/single-item-parsys">
+            <press-release-hreo
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/press-release-header"/>
+        </pre-press-release-hero-par>
+        <pre-determined-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <ootb-reference1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/reference"/>
+            <ootb-reference2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/reference"/>
+            <mdt-reference
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/reference-footnote"/>
+            <contacts
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/contacts"/>
+        </pre-determined-par>
+    </jcr:content>
+</jcr:root>

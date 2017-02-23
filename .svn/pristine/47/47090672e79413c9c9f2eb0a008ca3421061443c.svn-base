@@ -1,0 +1,21 @@
+<div data-sly-test="${!properties.headings && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Authorable Text - Headline with label</div>
+<sly class="tta tta__headline" data-sly-use.headline="headline.js"
+  data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html"
+  data-sly-use.dataLinkId="data-link-id.js"
+  data-sly-test="${!headline.isPlaceholder || !wcmmode.disabled}">
+  <sly data-sly-test="${headline.showLabel}"
+    data-sly-use.label="${'/apps/medtronic-com/components/common/Labels.js' @ pageLevel=pageProperties.pageLevel, labelHyperlink= properties.labelHyperlink}"
+    data-sly-call="${templates.label @ url=headline.labelHyperlink, openInNewTab=headline.labelNewTab, text=label.labelText, dataLinkId=dataLinkId}" />
+  <div class="display-table" data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+    <div
+      class="display-table-cell ${headline.isPlaceholder ? 'cq-placeholder' : ''}">
+      <h2 data-sly-list.heading="${headline.headings}">
+        <span class="${heading._DNT_textColor} ${heading._DNT_textWeight}">
+          ${heading.text} </span>
+      </h2>
+      <p>${headline.descriptionText}</p>
+      <sly data-sly-test="${headline.showCta}"
+        data-sly-call="${templates.ctaButton @ url=headline.ctaUrl, openInNewTab=headline.ctaOpenInNewTab, text=headline.ctaText}" />
+    </div>
+  </div>
+</sly>

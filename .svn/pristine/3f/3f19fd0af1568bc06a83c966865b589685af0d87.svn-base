@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Headline, Text, Image Component"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <imagePosition
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Select image position"
+                        fieldDescription="Do not select 'Image on left' when authoring component in the right rail."
+                        fieldLabel="Image position"
+                        name="./imagePosition"
+                        type="select"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <top
+                                jcr:primaryType="nt:unstructured"
+                                text="On Top"
+                                value="top"/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="On Left"
+                                value="left"/>
+                        </options>
+                    </imagePosition>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Image"
+                        name="./image"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <altText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                        fieldLabel="Image Alt Text"
+                        name="./altText"
+                        xtype="textfield"/>
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Headline"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <rte
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Body Text"
+                        name="./rte"
+                        validator="function() {                           return Medtronic.Authoring.validateEManualUrl(this);                         }"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </rte>
+                    <showCta
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Call to Action Button"
+                        name="./showCta"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(box) {                               Medtronic.Authoring.TitleTextAsset.showCta.loadContent(box);                             }"
+                            selectionchanged="function(box, value, isChecked) {                               Medtronic.Authoring.TitleTextAsset.showCta.selectionChanged(box, isChecked);                             }"/>
+                    </showCta>
+                    <ctaDetails
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        itemId="ctaDetails"
+                        layout="form"
+                        padding="5px 5px 5px 5px"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <buttonText
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                disabled="{Boolean}true"
+                                emptyText="Example:''View Treatments&quot;"
+                                fieldLabel="Button Text"
+                                name="./ctaText"
+                                width="300"
+                                xtype="textfield"/>
+                            <buttonUrl
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                disabled="{Boolean}true"
+                                fieldDescription="Enter a web address or find the desired webpage."
+                                fieldLabel="Link URL"
+                                name="./ctaUrl"
+                                validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                width="300"
+                                xtype="pathfield"/>
+                            <newTab
+                                jcr:primaryType="cq:Widget"
+                                disabled="{Boolean}true"
+                                fieldLabel="Open in a New Tab"
+                                name="./newTab"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </ctaDetails>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

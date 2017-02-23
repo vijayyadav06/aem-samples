@@ -1,0 +1,7 @@
+<div class="cq-placeholder" data-sly-test="${!properties.ctaLabel && !wcmmode.disabled}">Placeholder for Call to Action Button</div>
+<div class="row" data-sly-test="${properties.ctaLabel}" data-sly-use.cta="call-to-action.js">
+	<div class="col-xs-12">
+      <sly data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html" 
+        data-sly-call="${templates.ctaButton @ url=cta.url, openInNewTab=cta.newTab, text=cta.text}" />
+   	</div>
+</div>

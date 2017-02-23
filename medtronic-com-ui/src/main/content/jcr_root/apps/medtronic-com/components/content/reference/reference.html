@@ -1,0 +1,13 @@
+<sly data-sly-use.reference="reference.js">
+  <sly data-sly-test="${!reference.path && !wcmmode.disabled}">
+    <p data-sly-test="${!reference.isTouch}" id="cq-gen143">
+      <img src="/libs/cq/ui/resources/0.gif" class="cq-reference-placeholder cq-dd-paragraph" alt="" id="cq-gen146">
+    </p>
+    <div data-sly-test="${reference.isTouch}" class="cq-placeholder cq-dd-paragraph" data-emptytext="Reference"></div>
+  </sly>
+  <p data-sly-test="${reference.error}">${reference.error}</p>
+  <div data-sly-test="${!reference.error && reference.path}" class="${reference.ddClassName}"
+       data-sly-resource="${reference.path @ wcmmode='disabled'}">
+  </div>
+</sly>
+<sly data-sly-test="${!reference.error}" data-sly-use.reference="after-reference.js">

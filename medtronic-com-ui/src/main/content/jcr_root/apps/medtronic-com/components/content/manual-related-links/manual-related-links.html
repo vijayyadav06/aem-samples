@@ -1,0 +1,17 @@
+<div data-sly-use.relatedLinks="com.medtronic.com.app.ManualRelatedLinks" data-sly-test="${!relatedLinks.sectionLinks && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Right Rail Related Links</div>
+<div data-sly-test="${relatedLinks.sectionLinks}" class="row">
+    <div class="col-sm-12 height-variable bg-lighter-gray">
+        <div class="content">
+            <div class="related-links">
+            	<h4 data-sly-test="${relatedLinks.componentHeading}">${relatedLinks.componentHeading}</h4>
+                <h5 data-sly-test="${relatedLinks.sectionHeading}">${relatedLinks.sectionHeading}</h5>
+                <ul data-sly-list.sectionLinks="${relatedLinks.sectionLinks}">
+                    <li data-sly-use.linkHelper="${'/apps/medtronic-com/components/common/LinkHelper.js' @url=sectionLinks.linkURL}">
+                        <a href="${linkHelper.inlineFixLink}" target="${sectionLinks._DNT_newTab == '[]' ? '_self':'_blank'}">
+                            ${sectionLinks.linkText @context='html'}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

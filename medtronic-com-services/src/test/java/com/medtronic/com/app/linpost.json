@@ -1,0 +1,29 @@
+{
+	"updateKey": "UPDATE-1A3-4CD7",
+    "timestamp": 1313045029,
+    "from": {
+	    	 "name": "Tom Brady", 
+	    	 "id": "X12"
+         	},
+    "updateComments": {
+               			"name": "Comment",
+               			"link": "http://www.facebook.com/X999/posts/Y999"
+            		  },
+            
+	"numLikes":10,
+	"updateContent":{
+		"company":{
+         		"name":"ABC Company"	
+         	},
+         	"companyStatusUpdate":{
+         		"share": {
+         			"comment":"linked in comment message",
+         			"content":{
+         				"description":"linked in share description",
+         				"title":"linked in share title",
+         				"thumbnailURL":"http://linkedIn.com/thumbnail"
+         			}
+         		}         	
+        }                 
+      } 
+}

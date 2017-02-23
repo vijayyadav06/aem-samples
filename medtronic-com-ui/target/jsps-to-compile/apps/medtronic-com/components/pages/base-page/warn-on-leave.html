@@ -1,0 +1,29 @@
+<!--/* Modal Center Positioned */-->
+<div class="modal" id="modalWarn" tabindex="-1" role="dialog" aria-labelledby="" data-sly-attribute.data-exceptions="${inheritedPageProperties.warnOnLeave_exceptions}">
+<!--googleoff: all-->
+    <!--/* Including the WOL js */-->
+    <sly data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+         data-sly-call="${libraries.includeLibrary @ categories='medtronic-com.warn-on-leave', mode='js', collection='footer'}"/>
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <a href="#" data-dismiss="modal" class="icon-fallback-text">
+                    <i class="icon shape-mdt-close" aria-hidden="true"></i>
+                    <span class="text">Close</span>
+                </a>
+                <h3 class="modal-title yellow" id="modalHeading">${inheritedPageProperties.warnOnLeave_title}</h3>
+            </div>
+            <div class="modal-body">
+                ${inheritedPageProperties.warnOnLeave_description @ context='html'}
+            </div>
+            <div class="modal-footer">
+                <div class="btn-row">
+                    <a href="#" class="btn" data-dismiss="modal" role="button">${inheritedPageProperties.warnOnLeave_button2}</a>
+                    <a id="url_link" href="" class="btn" role="button" rel="external" target="_blank">${inheritedPageProperties.warnOnLeave_button1}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--googleon: all-->
+</div>

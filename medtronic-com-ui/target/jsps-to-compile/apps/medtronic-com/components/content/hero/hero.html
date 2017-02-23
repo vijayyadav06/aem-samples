@@ -1,0 +1,61 @@
+<sly data-sly-use.hero="hero.js">
+
+  <!--/* no frame*/-->
+  <div class="row hero ${hero.cssClass}" data-sly-test="${hero.frame.type == 'no-frame'}">
+    <sly data-sly-call="${contentItems @ hero=hero}"/>
+  </div>
+  
+  <!--/* brand frame*/-->
+  <div class="row hero ${hero.cssClass} hero__frame ${hero.frame.color}" data-sly-test="${hero.frame.type == 'brand-frame'}">
+    <sly data-sly-call="${contentItems @ hero=hero}"/>
+  </div>
+  
+  <!--/* brand plus*/-->
+  <div class="row hero ${hero.cssClass}" data-sly-test="${hero.frame.type == 'brand-plus'}">
+    <div class="icon__plus ${hero.frame.color}"></div>
+    <sly data-sly-call="${contentItems @ hero=hero}"/>
+  </div>
+  
+  <!--/* placeholder */-->
+  <div class="row hero ${hero.cssClass}" data-sly-test="${!hero.frame.type && !wcmmode.disabled}" cq-placeholder>
+    <sly data-sly-call="${contentItems @ hero=hero}"/>
+  </div>
+</sly>
+
+<!--/* list of content items */-->
+<template data-sly-template.contentItems="${@ hero}">
+  <sly data-sly-list.item="${hero.items}">
+    <sly data-sly-test="${item.type == 'image'}" data-sly-call="${imageContentItem @ size=size, item=item}"/>
+    <sly data-sly-test="${item.type == 'text'}" data-sly-call="${textContentItem @ size=size, item=item}"/>
+  </sly>
+</template>
+
+<!--/* image item */-->
+<template data-sly-template.imageContentItem="${@ size, item}">
+  <div class="${item.size} hero--media ${item.reverse}">
+    <div class="content">
+      <figure>
+        <img src="${item.imageUrl}" alt="${item.altText}" data-image-cover>
+      </figure>
+    </div>
+  </div>
+</template>
+
+<!--/* text item */-->
+<template data-sly-template.textContentItem="${@ size, item}">
+  <div class="${item.size} hero--text ${item.backgroundColor}">
+    <div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+          <h2 data-sly-list.heading="${item.headings}">
+             <span class="${heading._DNT_textColor} ${heading._DNT_textWeight}">${heading.text}</span>
+          </h2>
+          <p>${item.description}</p>
+          <sly data-sly-test="${item.cta.showCta}" data-sly-use.cta="hero.js"
+               data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html"
+               data-sly-call="${templates.ctaButton @ url=item.cta.url, openInNewTab=item.cta.openInNewTab, text=item.cta.text}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

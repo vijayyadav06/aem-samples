@@ -1,0 +1,9 @@
+<!--/*
+  Copyright [TODO]
+  
+  Custom js clientlibs
+*/-->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientLib.js @ categories='medtronic-com.gsa'}"/>
+<sly data-sly-call="${clientLib.js @ categories='medtronic-com.search'}"/>
+<sly data-sly-include="/apps/medtronic-com/components/pages/base-page/customfooterlibs.html" />

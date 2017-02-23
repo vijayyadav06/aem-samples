@@ -1,0 +1,34 @@
+<template data-sly-template.flowplayervideo="${ @ id, text, url, type}">
+	<div class="modal fade modal__video first_load" id="${id}" tabindex="-1" role="dialog" aria-labelledby="title_of_video">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-white">
+	                <a href="#" data-dismiss="modal">
+	                    <sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html" data-sly-call="${icons.iconWithFallback @ icon=icons.close, fallbackText='Close'}" />
+	                </a>
+	                <h4 class="modal-title" id="title_of_video">${text}</h4>
+	            </div>
+	            <div class="modal-body">
+                    <div class="videoplayer" data-video-url="${url}" data-video-type="${type}"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</template>
+<template data-sly-template.youtubevideo="${ @ id, text, videoId}">
+	<div class="modal fade modal__video first_load" id="${id}" tabindex="-1" role="dialog" aria-labelledby="title_of_video2" style="display: none;">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-white">
+	                <a href="#" data-dismiss="modal">
+	          	        <sly data-sly-use.icons="/apps/medtronic-com/components/common/icons.html" data-sly-call="${icons.iconWithFallback @ icon=icons.close, fallbackText='Close'}" />
+	                </a>
+	                <h4 class="modal-title" id="title_of_video2">${text}</h4>
+	            </div>
+		        <div class="embed-container">
+		            <iframe id="iframe_${id}" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen=""></iframe>
+		        </div>
+	        </div>
+	    </div>
+	</div>
+</template>

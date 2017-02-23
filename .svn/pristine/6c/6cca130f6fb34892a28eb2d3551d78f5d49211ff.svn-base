@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    stateful="false"
+	height="{Long}500"
+	title="Authored Image and Text"
+	width="{Long}800"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <featured-image
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/content/subtemplate-slots/featured-image/dialog/items/items/tab1.infinity.json"
+                    xtype="cqinclude"/>
+                <headline-with-isi
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/medtronic-com/components/content/subtemplate-slots/headline-with-isi/dialog/items/items/tab1.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) {Medtronic.Authoring.featuredImage.dialog.loadContent(dialog); return Medtronic.Authoring.HeadlineWithISI.dialog.loadContent(dialog);}"/>
+</jcr:root>

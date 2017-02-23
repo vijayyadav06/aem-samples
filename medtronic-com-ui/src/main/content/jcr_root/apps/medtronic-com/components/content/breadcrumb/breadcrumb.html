@@ -1,0 +1,14 @@
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs"
+  data-sly-use.templates="/apps/medtronic-com/components/common/icons.html"
+  data-sly-use.breadcrumb="com.medtronic.com.app.Breadcrumb">
+  <p data-sly-list.listItems="${breadcrumb.items}">
+    <sly data-sly-test="${!listItemsList.first}"
+      data-sly-call="${templates.divider}" />
+    <a data-sly-test="${!listItemsList.last}"
+      href="${listItems.path}.html">${listItems.properties.navTitle
+      || listItems.pageTitle || listItems.title}</a> <span
+      data-sly-test="${listItemsList.last}" class="active">${listItems.properties.navTitle
+      || listItems.pageTitle || listItems.title}</span>
+  </p>
+</nav>

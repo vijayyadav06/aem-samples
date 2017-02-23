@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Warn on Leave">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <enableWOLCheckBox
+            jcr:primaryType="nt:unstructured"
+            defaultValue="true"
+            fieldDescription="Enables the popup displaying when users click a link outside medtronic.com."
+            fieldLabel="Display Warn on Leave"
+            id="WOL_Checkbox"
+            name="./warnOnLeave_enabled"
+            type="checkbox"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(box) {                               Medtronic.Authoring.WarnOnLeave.showWol.loadContent(box);                             }"
+                selectionchanged="function(box, value, isChecked) {                               Medtronic.Authoring.WarnOnLeave.showWol.selectionChanged(box, isChecked);                             }"/>
+        </enableWOLCheckBox>
+        <wolDetails
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}false"
+            itemId="wolDetails"
+            layout="form"
+            padding="5px 5px 5px 5px"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="You Are Leaving the Medtronic &lt;COUNTRY> Site"
+                    disabled="{Boolean}true"
+                    emptyText="Enter a value for the 'Warn on Leave' title"
+                    fieldLabel="Title"
+                    name="./warnOnLeave_title"
+                    width="280"
+                    xtype="textfield"/>
+                <descriptiveText
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="false"
+                    defaultValue="&lt;p>You just clicked a link to go to another website. If you continue, you will leave this site and go to a site run by someone else.&lt;/p>                            &lt;p>Medtronic does not review or control the content on the other website, and we are not responsible for any business dealings or transactions you have there. Your use of the other site is subject to the terms of use and privacy statement on that site. &lt;/p>                            &lt;p>It is possible that some of the products on the other site are not approved in the &amp;lt;COUNTRY&amp;gt;.&lt;/p>"
+                    disabled="{Boolean}true"
+                    fieldLabel="Descriptive Text"
+                    name="./warnOnLeave_description"
+                    validator="function() {                           return Medtronic.Authoring.validateEManualUrl(this);                         }"
+                    width="280"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured"
+                    path="/apps/medtronic-com/components/common/richtext-configurations/linksFormatOnly/rtePlugins.infinity.json"
+                    xtype="cqinclude">
+                    </rtePlugins>
+                </descriptiveText>
+                <buttonOne
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="Continue"
+                    disabled="{Boolean}true"
+                    emptyText="Continue"
+                    fieldLabel="CTA Display Button 1"
+                    name="./warnOnLeave_button1"
+                    width="280"
+                    xtype="textfield"/>
+                <buttonTwo
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    defaultValue="Cancel"
+                    disabled="{Boolean}true"
+                    emptyText="Cancel"
+                    fieldLabel="CTA Display Button 2"
+                    name="./warnOnLeave_button2"
+                    width="280"
+                    xtype="textfield"/>
+                <exclusions
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Warn On Leave Whitelist"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        layout="form"
+                        xtype="mdtmultifieldpanel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                hideLabel="{Boolean}true"
+                                key="warnOnLeave_exceptions"
+                                validation="Medtronic.Granite.Validation.ValidateHostname"
+                                width="200"
+                                xtype="textfield"/>
+                        </items>
+                    </fieldConfig>
+                </exclusions>
+            </items>
+        </wolDetails>
+    </items>
+</jcr:root>

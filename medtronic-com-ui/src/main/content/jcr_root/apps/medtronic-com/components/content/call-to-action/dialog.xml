@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}480"
+    title="Call to Action Component"
+    width="{Long}640"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="CTA">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        emptyText="Example:&quot;View Treatments&quot;"
+                        fieldDescription="Enter a call to action to display on the button."
+                        fieldLabel="Link Text"
+                        name="./ctaLabel"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter a web address or find the desired webpage."
+                        fieldLabel="Link URL"
+                        name="./ctaUrl"
+                        validator="function() {                                  return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                        xtype="pathfield"/>
+                    <newtab
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Open in a New Tab"
+                        name="./newTab"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

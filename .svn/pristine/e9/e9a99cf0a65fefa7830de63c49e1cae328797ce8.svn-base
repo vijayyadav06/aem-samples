@@ -1,0 +1,31 @@
+<div data-sly-test="${!properties.location && !wcmmode.disabled}">Placeholder
+  for Press Release Header</div>
+
+<article class="pad">
+
+  <section class="article__header">
+    <img src="/etc/designs/medtronic-com/images/logo-medtronic-blue.png" alt="Medtronic">
+    <sly data-sly-use.pressReleaseHeader="com.medtronic.com.app.PressReleaseHeader">
+        <sly data-sly-list.secondaryLogo="${pressReleaseHeader.secondaryLogoList}">
+            <img src="${secondaryLogo.image}" alt="${secondaryLogo.text}" style="margin-left: 20px;" width="150">
+        </sly>
+    </sly>
+    <h1 class="thin" data-sly-test="${!properties.title}">${pageProperties.jcr:title}</h1>
+    <h1 class="thin" data-sly-test="${properties.title}">${properties.title @context='html'}</h1>
+
+    <p class="subtitle">
+      <em>${properties.subTitle}</em>
+    </p>
+  </section>
+  <hr>
+
+  <section class="article__body">
+    <p class="press-release__location-date">
+      <strong data-sly-test="${properties.location}">${properties.location} - </strong><strong data-sly-test="${properties.date}">${properties.date} - </strong>
+    </p>
+      ${properties.rte @context='html'}
+  </section>
+
+</article>
+
+

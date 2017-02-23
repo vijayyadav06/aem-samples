@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Social Media Feed"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Social Media Feed - Mini">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <platform
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Select a social media platform"
+                        fieldLabel="Social media platform"
+                        name="./platform"
+                        type="select"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <facebook
+                                jcr:primaryType="nt:unstructured"
+                                text="Facebook"
+                                value="facebook"/>
+                            <twitter
+                                jcr:primaryType="nt:unstructured"
+                                text="Twitter"
+                                value="twitter"/>
+                            <linkedin
+                                jcr:primaryType="nt:unstructured"
+                                text="LinkedIn"
+                                value="linkedin"/>
+                        </options>
+                    </platform>
+                    <accountName
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Account name"
+                        name="./accountName"
+                        xtype="textfield"/>
+                    <newTab
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in a New Tab"
+                        name="./newTab"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

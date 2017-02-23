@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    width="730"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <video-slender-squat
+                jcr:primaryType="cq:Panel"
+                title="Video - Slender/Squat">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <firstVideo
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        cls="video_item"
+                        layout="form"
+                        padding="5px"
+                        style="width:500px"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <label
+                                jcr:primaryType="cq:Widget"
+                                style="font-weight:bold;font-family:sans-serif;font-size:13px;"
+                                text="Video 1"
+                                xtype="label"/>
+                            <textDisplay
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Provide a short descriptive statement, which may include the video's title. (Max = 95 characters)"
+                                fieldLabel="Video Teaser"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./textDisplay"
+                                width="300"
+                                xtype="textfield"/>
+                            <videoURL
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Select video from the Digital Asset Manager (DAM) or paste URL from Youtube."
+                                fieldLabel="Video URL"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./videoURL"
+                                rootPath="/content/dam"
+                                validator="function() {return Medtronic.Authoring.VideoMini.videoURL.validateVideoURL(this);}"
+                                width="300"
+                                xtype="pathfield">
+                                <browseDialogCfg
+                                    jcr:primaryType="nt:unstructured"
+                                    height="316"/>
+                            </videoURL>
+                            <thumbnailImage
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldLabel="Thumbnail Image"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./thumbnailImage"
+                                rootPath="/content/dam"
+                                validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                width="300"
+                                xtype="pathfield">
+                                <browseDialogCfg
+                                    jcr:primaryType="nt:unstructured"
+                                    height="316"/>
+                            </thumbnailImage>
+                            <imageAltText
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                fieldLabel="Image Alt Text"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./imageAltText"
+                                width="300"
+                                xtype="textfield"/>
+                            <playButtonAltText
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                emptyText="Play Video"
+                                fieldLabel="Play Button Alt Text"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./playButtonAltText"
+                                width="300"
+                                xtype="textfield"/>
+                            <showYoutubeIcon
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Display Youtube Icon"
+                                labelStyle="width:130px;display:block;padding-left:50px;"
+                                name="./showYoutubeIcon"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoSlenderSquat.youtubeIcon.selectionChanged(field,value,isChecked);}"/>
+                            </showYoutubeIcon>
+                            <duration
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Display Video Duration"
+                                labelStyle="width:130px;display:block;position:absolute;padding-left:50px;"
+                                name="./duration"
+                                style="margin-left:48px;"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <transcript
+                                jcr:primaryType="cq:Widget"
+                                cls="panel_container"
+                                hideLabel="{Boolean}true"
+                                layout="form"
+                                style="padding-left:48px;"
+                                xtype="panel">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <showTranscript
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Display Transcript"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./showTranscript"
+                                        type="checkbox"
+                                        xtype="selection">
+                                        <listeners
+                                            jcr:primaryType="nt:unstructured"
+                                            loadcontent="function(cbox){Medtronic.Authoring.VideoSlenderSquat.checkBox.loadContent(cbox,'transcript');}"
+                                            selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoSlenderSquat.checkBox.selectionChanged(field,value,isChecked,&quot;transcript&quot;);}"/>
+                                    </showTranscript>
+                                    <transcriptText
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        emptyText="Display Transcript"
+                                        fieldLabel="Transcript"
+                                        key="transcriptText"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./transcriptText"
+                                        width="300"
+                                        xtype="textfield"/>
+                                    <transcriptURL
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        fieldDescription="Enter web address or locate the transcript page in the Digital Assets Manager (DAM)."
+                                        fieldLabel="Transcript URL"
+                                        key="transcriptURL"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./transcriptURL"
+                                        validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                        width="300"
+                                        xtype="pathfield">
+                                        <browseDialogCfg
+                                            jcr:primaryType="nt:unstructured"
+                                            height="316"/>
+                                    </transcriptURL>
+                                    <transcriptNewTab
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Open in a New Tab"
+                                        key="transcriptNewTab"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./transcriptNewTab"
+                                        type="checkbox"
+                                        xtype="selection"/>
+                                </items>
+                            </transcript>
+                            <cta
+                                jcr:primaryType="cq:Widget"
+                                cls="panel_container"
+                                hideLabel="{Boolean}true"
+                                key="cta"
+                                layout="form"
+                                style="margin-top:5px;padding-left:48px;"
+                                xtype="panel">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <showCta
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Add Call to Action Button"
+                                        key="ctaCbox"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./showCta"
+                                        type="checkbox"
+                                        xtype="selection">
+                                        <listeners
+                                            jcr:primaryType="nt:unstructured"
+                                            loadcontent="function(cbox){Medtronic.Authoring.VideoSlenderSquat.checkBox.loadContent(cbox,'cta');}"
+                                            selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoSlenderSquat.checkBox.selectionChanged(field,value,isChecked,&quot;cta&quot;);}"/>
+                                    </showCta>
+                                    <ctaText
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        emptyText="Example 'View Treatments'"
+                                        fieldDescription="Enter a call to action to display on the button."
+                                        fieldLabel="Link Text"
+                                        key="ctaText"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./ctaText"
+                                        width="300"
+                                        xtype="textfield"/>
+                                    <ctaURL
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        fieldDescription="Enter a web address or find the desired webpage."
+                                        fieldLabel="Link URL"
+                                        key="ctaURL"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./ctaURL"
+                                        validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                        width="300"
+                                        xtype="pathfield">
+                                        <browseDialogCfg
+                                            jcr:primaryType="nt:unstructured"
+                                            height="316"/>
+                                    </ctaURL>
+                                    <ctaNewTab
+                                        jcr:primaryType="cq:Widget"
+                                        fieldLabel="Open in a New Tab"
+                                        key="ctaNewTab"
+                                        labelStyle="width:130px;display:block;"
+                                        name="./ctaNewTab"
+                                        type="checkbox"
+                                        xtype="selection"/>
+                                </items>
+                            </cta>
+                        </items>
+                    </firstVideo>
+                    <videos
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        hideLabel="{Boolean}true"
+                        maxItems="{Long}3"
+                        minItems="{Long}2"
+                        name="./videos"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}true"
+                            cls="video_item"
+                            layout="form"
+                            padding="5px"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <label
+                                    jcr:primaryType="cq:Widget"
+                                    style="font-weight:bold;"
+                                    xtype="label"/>
+                                <textDisplay
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Provide a short descriptive statement, which may include the video's title. (Max = 95 characters)"
+                                    fieldLabel="Video Teaser"
+                                    key="textDisplay"
+                                    labelStyle="width:130px;display:block;padding-left:50px;"
+                                    width="300"
+                                    xtype="textfield"/>
+                                <videoURL
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Select video from the Digital Asset Manager (DAM) or paste URL from Youtube."
+                                    fieldLabel="Video URL"
+                                    key="videoURL"
+                                    labelStyle="width:130px;display:block;padding-left:50px;"
+                                    rootPath="/content/dam"
+                                    validator="function() {return Medtronic.Authoring.VideoMini.videoURL.validateVideoURL(this);}"
+                                    width="300"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </videoURL>
+                                <thumbnailImage
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Thumbnail Image"
+                                    key="thumbnailImage"
+                                    labelStyle="width:130px;display:block;padding-left:50px;"
+                                    rootPath="/content/dam"
+                                    validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                    width="300"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </thumbnailImage>
+                                <imageAltText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                    fieldLabel="Image Alt Text"
+                                    key="imageAltText"
+                                    labelStyle="width:130px;display:block;padding-left:50px;"
+                                    width="300"
+                                    xtype="textfield"/>
+                                <playButtonAltText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    emptyText="Play Video"
+                                    fieldLabel="Play Button Alt Text"
+                                    key="playButtonAltText"
+                                    labelStyle="width:130px;display:block;padding-left:50px;"
+                                    width="300"
+                                    xtype="textfield"/>
+                                <duration
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Display Video Duration"
+                                    key="_DNT_duration"
+                                    labelStyle="width:130px;display:block;padding-left:50px;position:absolute;"
+                                    style="margin-left:183px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                                <transcript
+                                    jcr:primaryType="cq:Widget"
+                                    cls="panel_container"
+                                    hideLabel="{Boolean}true"
+                                    key="transcript"
+                                    layout="form"
+                                    style="padding-left:50px;"
+                                    xtype="mdtmultifieldpanel">
+                                    <items jcr:primaryType="cq:WidgetCollection">
+                                        <showTranscript
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Display Transcript"
+                                            key="_DNT_showTranscript"
+                                            labelStyle="width:130px;display:block;position:absolute;"
+                                            style="margin-left:133px;"
+                                            type="checkbox"
+                                            xtype="selection">
+                                            <listeners
+                                                jcr:primaryType="nt:unstructured"
+                                                afterrender="function(cbox){Medtronic.Authoring.VideoSlenderSquat.checkBox.afterRender(cbox);}"
+                                                selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoSlenderSquat.checkBox.selectionChanged(field,value,isChecked,&quot;transcript&quot;);}"/>
+                                        </showTranscript>
+                                        <transcriptText
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="{Boolean}false"
+                                            emptyText="View Transcript"
+                                            fieldLabel="Transcript"
+                                            key="transcriptText"
+                                            labelStyle="width:130px;display:block;"
+                                            width="300"
+                                            xtype="textfield"/>
+                                        <transcriptURL
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="{Boolean}false"
+                                            fieldDescription="Enter web address or locate the transcript page in the Digital Assets Manager (DAM)."
+                                            fieldLabel="Transcript URL"
+                                            key="transcriptURL"
+                                            labelStyle="width:130px;display:block;"
+                                            validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                            width="300"
+                                            xtype="pathfield">
+                                            <browseDialogCfg
+                                                jcr:primaryType="nt:unstructured"
+                                                height="316"/>
+                                        </transcriptURL>
+                                        <transcriptNewTab
+                                            jcr:primaryType="cq:Widget"
+                                            fieldLabel="Open in a New Tab"
+                                            key="_DNT_transcriptNewTab"
+                                            labelStyle="width:130px;display:block;position:absolute;"
+                                            style="margin-left:133px;"
+                                            type="checkbox"
+                                            xtype="selection"/>
+                                    </items>
+                                </transcript>
+                            </items>
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                added="function(panel,container,index){Medtronic.Authoring.VideoSlenderSquat.multifield.added(panel,index);}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            removeditem="function(field){Medtronic.Authoring.VideoSlenderSquat.multifield.removedItem(field);}"/>
+                    </videos>
+                </items>
+            </video-slender-squat>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforehide="function(dialog){Medtronic.Authoring.TitleTextList.dialog.resetValue();}"
+        loadcontent="function(dialog) { return  Medtronic.Authoring.addMinimumMultifieldItems(dialog);   }"/>
+</jcr:root>

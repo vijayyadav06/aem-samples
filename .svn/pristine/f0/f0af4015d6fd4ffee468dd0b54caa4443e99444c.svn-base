@@ -1,0 +1,111 @@
+package com.medtronic.com.app;
+
+import com.adobe.cq.sightly.WCMUse;
+import com.medtronic.com.constants.SocialMediaConstants;
+import com.medtronic.com.services.SocialMediaService;
+import org.apache.commons.lang3.StringUtils;
+import org.codehaus.jackson.JsonNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by ryanmccullough on 2016-01-09.
+ *
+ * The SocialMedia Object is intended to be instantiated within Sightly
+ * using the WCMUse class.  It expects an array of account names, and
+ * (optionally) the type of account.  If the account type is not specified,
+ * the type specific getters must be invoked.  Otherwise, the account type is
+ * needed to determine how to parse the result.
+ *
+ * It uses the passed in account names and type to utilize the SocialMediaService
+ * to retrieve the associated posts. The posts associated with each account are put into
+ * a list.  That list contains a list of posts for each inputted account.
+ */
+public class SocialMedia extends WCMUse {
+
+    private String accountName;
+    private String accountType;
+
+    //the account name is passed in using the below parameter upon initialization.
+    private static final String ACCOUNT_NAME_PARAM = "accountName";
+
+    //Optional - configure an account type and invoke "getPost" on the configured type.
+    private static final String ACCOUNT_TYPE_PARAM = "accountType";
+
+    private static final Logger LOG = LoggerFactory.getLogger(SocialMedia.class);
+
+    public SocialMedia(){
+        super();
+    }
+
+    public List<SocialMediaPost> getFacebookPosts() {
+        accountType = SocialMediaConstants.ACCOUNT_TYPE_FACEBOOK;
+        return getPosts();
+    }
+
+    public List<SocialMediaPost> getLinkedInPosts(){
+        accountType = SocialMediaConstants.ACCOUNT_TYPE_LINKEDIN;
+        return getPosts();
+    }
+
+    public List<SocialMediaPost> getTwitterPosts(){
+        accountType = SocialMediaConstants.ACCOUNT_TYPE_TWITTER;
+        return getPosts();
+    }
+
+    public List<SocialMediaPost> getPosts(){
+        List<SocialMediaPost> accountPosts = new ArrayList<>();
+        if(StringUtils.isNotEmpty(accountType)){
+            LOG.debug("Getting account posts for account: {}", accountName);
+            JsonNode accountPostsJson = SocialMediaService.getPostsJson(accountName, accountType);
+            accountPosts = getPostListFromAccountJSON(accountPostsJson, accountType);
+        }else{
+            LOG.warn("Account Type not provided.  Either initialize {} class with an account type or use the getters for that specific account.", SocialMedia.class);
+        }
+        return accountPosts;
+    }
+    
+    public String getAccountName(){
+        return accountName.toLowerCase().replace(" ", "");
+    }
+    private List<SocialMediaPost> getPostListFromAccountJSON(JsonNode accountJson, String accountType){
+        List<SocialMediaPost> responsePosts = new ArrayList<>();
+        JsonNode postArray = null;
+        if( accountType.equals(SocialMediaConstants.ACCOUNT_TYPE_FACEBOOK) ){
+            postArray = accountJson.path(SocialMediaConstants.FB_ROOT_NODE);
+        }else if ( accountType.equals(SocialMediaConstants.ACCOUNT_TYPE_LINKEDIN) ){
+            postArray = accountJson.path(SocialMediaConstants.LI_BASE_NODE);
+        }else if( accountType.equals(SocialMediaConstants.ACCOUNT_TYPE_TWITTER) ){
+            if(accountJson.path(SocialMediaConstants.TWITTER_ERROR_NODE).isMissingNode()) {
+                postArray = accountJson;
+            }else{
+                LOG.warn("Invalid Twitter account specified for social media connection.  The response returned was an error.  Check the account name spelling and try again.");
+            }
+        }else{
+            LOG.warn("Account type does not match supported types: {}",accountType);
+        }
+        if( postArray != null && !postArray.isMissingNode()){
+            for(JsonNode postJson : postArray){
+                SocialMediaPost post = SocialMediaPost.createPostFromJSON( postJson, accountType );
+                if( post != null ){
+                    responsePosts.add(post);
+                }
+            }
+        }
+        return responsePosts;
+    }
+
+    public void activate(){
+        accountName = get(ACCOUNT_NAME_PARAM,String.class);
+        
+        accountType = get(ACCOUNT_TYPE_PARAM, String.class);
+        if( accountName == null){
+            LOG.warn("SocialMedia class has been activated without required parameters.  "+
+                    "The following parameter is required in order to retrieve a feed:[{}]", ACCOUNT_NAME_PARAM);
+        }
+    }
+
+}

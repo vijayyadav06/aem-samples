@@ -1,0 +1,44 @@
+<div data-sly-test="${!properties.videoURL && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Video - Mini</div>
+<sly data-sly-test="${properties.videoURL}"
+     data-sly-use.video="video-mini.js"
+     data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+    data-sly-use.dataLinkId="data-link-id.js">
+    <div data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}" class="video-component video-component__single ${properties.youtubeIcon ? 'video-component__youtube-feed' : ''}">
+        <div class="one-by-one">
+            <div class="content">
+                <div class="video-component__main">
+		            <a class="video__trigger" href="${properties.videoURL}" data-target="#${video.uuid}">
+		                <span class="video__trigger--play-button">
+		                    <sly data-sly-call="${icons.iconWithFallback @ icon=icons.arrowNext, fallbackText=properties.playButtonAltText}" />
+		                </span>
+		    	        <img class="video__poster" src="${properties.thumbnailImage}" alt="${properties.imageAltText}">
+		            </a>
+		            <div class="pad">
+		                <h3 class="video__title">
+	    			       ${properties.textDisplay}
+		                </h3>
+		                <p data-sly-test="${!properties.youtubeIcon}" class="video__details">
+		                   <span data-sly-test="${properties.duration}" class="video__details--duration">(00:00)</span>
+		                   <a data-sly-test="${properties.transcriptCbox}" href="${video.transcriptURL}" target="${properties.transcriptNewTab ? '_blank' : '_self'}" class="video__details--transcript-link">${properties.transcriptLink}</a>
+		                </p>
+					    <div class="video__cta-wrap">
+						    <sly data-sly-test="${properties.youtubeIcon}" data-sly-call="${icons.youtube}"></sly>
+							<a target="${properties.ctaNewTab ? '_blank' : '_self'}" class="video__cta" href="${video.ctaURL}">
+								<sly data-sly-test="${properties.ctaCbox}">
+									${properties.ctaLink}
+									<sly data-sly-call="${icons.chevronRight}"></sly>
+								</sly>
+							</a>
+						</div>
+		            </div>
+		      </div>
+	      </div>
+	  </div>
+    </div>
+    <sly data-sly-test="${video.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+	    <sly data-sly-call="${template.flowplayervideo @ id=video.uuid, text=properties.textDisplay, url=properties.videoURL, type=video.type}"></sly>
+	</sly>
+	<sly data-sly-test="${!video.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+		<sly data-sly-call="${template.youtubevideo @ id=video.uuid, text=properties.textDisplay, videoId=video.videoId}"></sly>
+	</sly>
+</sly>

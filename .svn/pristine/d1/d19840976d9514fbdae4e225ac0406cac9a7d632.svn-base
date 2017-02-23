@@ -1,0 +1,19 @@
+$(document).ready(function() {
+  customSelect();
+});
+
+function customSelect() {
+  $('#headerLanguage').select2({
+    minimumResultsForSearch: -1,
+    dropdownAutoWidth : true,
+    dropdownCssClass: 'select2-dropdown--language'
+  });
+
+  $('#headerCountry').select2({
+    minimumResultsForSearch: -1,
+    dropdownAutoWidth : true,
+    dropdownCssClass: 'select2-dropdown--country'
+  });
+
+  $('.header__select').css('visibility', 'visible');
+}

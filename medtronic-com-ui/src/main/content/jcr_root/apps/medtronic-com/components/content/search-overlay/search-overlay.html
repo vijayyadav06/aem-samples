@@ -1,0 +1,24 @@
+<form data-sly-use.searchAuthoring="/apps/medtronic-com/components/common/SearchAuthoring.js" id="search-overlay__form" action="${searchAuthoring.searchResultsPage}" method="get">
+  <div class="form-group display-table col-lg-12">
+    <div class="search-field-div display-table-cell">
+      <input type="search" name="q" class="search-overlay__search-field" placeholder="${inheritedPageProperties.globalHeader_search_placeholderText}" autocomplete="off"> 
+      <input type="hidden" name="p" value="1">
+      <input data-sly-use.languageUtil="/apps/medtronic-com/components/common/LanguageUtil.js" type="hidden" name="l" value="${languageUtil.getPageLanguage.getLanguage}">
+      <input type="hidden" name="t" value="list">
+      <input type="hidden" name="c" value="us-en">
+      <input type="hidden" name="s" value="us-en">
+      <div class="search__dropdown hidden">
+        <div class="search__dropdown-content">
+          <div class="predictive"></div>
+          <div class="suggestive"></div>
+        </div>
+      </div>
+    </div>
+    <div class="display-table-cell">
+      <button type="submit" class="search-overlay__btn">${inheritedPageProperties.globalHeader_search_buttonText}</button>
+    </div>
+  </div>
+  <div class="search__advanced-search">
+    <a href="${searchAuthoring.advancedLinkUrl}" target="_blank">${searchAuthoring.advancedLinkText}</a>
+  </div>
+</form>

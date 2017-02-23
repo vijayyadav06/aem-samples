@@ -1,0 +1,11 @@
+<sly data-sly-test="${wcmmode.disabled}"
+  data-sly-use="authorable-page.js" />
+
+<sly data-sly-test="${!wcmmode.disabled}">
+  <section>
+    <div
+      data-sly-resource="${'content-par' @ resourceType='wcm/foundation/components/parsys'}"
+      data-sly-unwrap="${wcmmode.disabled}"></div>
+  </section>
+</sly>
+

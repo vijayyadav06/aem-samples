@@ -1,0 +1,45 @@
+<header class="header"
+data-sly-use.header="header.js">
+    <!-- Skip to Main Content -->
+    <a class="sr-only sr-only-focusable" href="#header-skip" aria-label="Skip to main content" tabindex="1">Skip to main content</a>
+
+    <div class="container-fluid">
+
+        <!-- Country / Language Select -->
+        <ul class="unstyled header__select list-inline" data-sly-use.countrySelector="com.medtronic.com.util.LanguageUseUtil"
+            data-sly-test.countrySelectList="${countrySelector.countrySelectList}"
+            data-sly-test.languageSelectList="${countrySelector.languageSelectList}">
+            <!-- Language -->
+            <li class="select-language">
+                <select style="width: 100%;" name="language" id="headerLanguage" tabindex="3"
+                  data-sly-list.languages="${languageSelectList}"
+                  data-sly-test="${countrySelector.languageSelectList.size > 1}"
+                  data-sly-attribute.disabled="${ pageProperties.pageLevel == 'L1' ? '':'disabled' }">
+                  <option value="${languages.locale.toString}" selected="${languages.selected}">${languages.language}</option>
+                </select>
+                <div data-sly-list.language="${languageSelectList}" class="hidden">
+                    <a href="${language.url}" class="hidden" data-locale="${country.locale.toString}"></a>
+                </div>
+            </li>
+
+            <!-- Country -->
+            <li class="select-country" >
+                <select style="width: 100%;" name="country" id="headerCountry" tabindex="4"
+                    data-sly-list.countries="${countrySelectList}"
+                    data-sly-attribute.disabled="${ pageProperties.pageLevel == 'L1' ? '':'disabled' }">
+                    <option value="${countries.locale.toString}" selected="${countries.selected}">
+                        ${countries.country}<sly data-sly-test="${countries.numLanguages > 1}"> - ${countries.language}</sly></option>
+                </select>
+            </li>
+            <div data-sly-list.country="${countrySelectList}" class="hidden">
+                <a href="${country.url}" class="hidden" data-locale="${country.locale.toString}"></a>
+            </div>
+        </ul>
+
+        <!-- Header - Medtronic Blue -->
+        <a class="header__logo" href="${header.logoUrl}" tabindex="2">
+            <img src="${inheritedPageProperties.globalHeader_headerLogo}" alt="${inheritedPageProperties.globalHeader_imageAltText}">
+        </a>
+    </div>
+</header>
+<sly data-sly-include="search.html"/>

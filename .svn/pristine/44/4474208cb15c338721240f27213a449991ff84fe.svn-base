@@ -1,0 +1,11 @@
+<div data-sly-test="${pageProperties.showMichelsonSeal == 'true' || pageProperties.michelsonURL}" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-8">
+            <sly data-sly-use.michelsonSeal="michelson-seal.js">
+                <a href="${michelsonSeal.michelsonURL}" target="_blank">
+                    <img class="michelson-logo" src="/etc/designs/medtronic-com/images/michelson_logo.gif" alt="Michelson Technology at Work">
+                </a>
+            </sly>
+        </div>
+    </div>
+</div>

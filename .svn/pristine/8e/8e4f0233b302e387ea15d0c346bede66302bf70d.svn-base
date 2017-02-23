@@ -1,0 +1,84 @@
+<div class="cq-placeholder" data-sly-test="${!properties.productName && !wcmmode.disabled}">Placeholder for Product Detail</div>
+<!-- Product Overview -->
+
+<section data-sly-test="${properties.productName}" class="product__overview"
+  data-sly-use.productDetail="com.medtronic.com.app.ProductDetail"
+  data-sly-use.dataLayer="${'data-layer-product.js' @ productDetail=productDetail}">
+
+  <div class="flex-container">
+    <!-- Detailed product information -->
+    <div class="row product__detail">
+      <div class="tta tta__product tta--gradient">
+        <div class="col-sm-6 one-by-one bg-navy-blue">
+          <div class="content">
+            <!-- Component start -->
+            <div class="tta tta__headline">
+              <p class="type">${productDetail.audienceType}</p>
+              <h1>${productDetail.productName @context='html'}</h1>
+              <p>${productDetail.productSubTitle}</p>
+              <p data-sly-test="${productDetail.modelSku!='none' && productDetail.modelSku}">
+                ${productDetail.modelSku} #: ${productDetail.number}</p>
+            </div>
+            <!-- Component end -->
+          </div>
+        </div>
+        <div class="col-sm-6 one-by-one">
+          <div class="content">
+            <!-- Component start -->
+            <div id="carousel--product-overview" class="carousel">
+              <ul class="carousel__list unstyled"
+                data-sly-list.productImage="${productDetail.images}">
+                <li class="carousel__item"><img
+                  src="${productImage.path}"
+                  alt="${productImage.altText}" /></li>
+              </ul>
+            </div>
+            <div class="carousel__pagination"
+              data-jcarouselpagination="true"></div>
+            <!-- Component end -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Important Safety Information -->
+
+    <sly data-sly-test="${productDetail.iswGraphic!='none' && productDetail.iswGraphic}">
+
+        <div data-sly-test="${productDetail.iswGraphic !='alternateText'}">
+          <div class="safety-info-wrap pad">
+            <div>
+              <a class="safety-info" target="${productDetail.newtab ? '_blank' : ''}" href="${productDetail.iswURL || '#'}"> <sly
+                  data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+                  data-sly-call="${icons.iconWithFallback @ icon=icons.warning, fallbackText='Alert'}" />
+                Important Safety Information
+              </a>
+            </div>
+          </div>
+        </div>
+        <div data-sly-test="${productDetail.iswGraphic=='alternateText'}">
+          <div class="safety-info-wrap pad">
+            <div>
+              <a class="safety-info" target="${productDetail.newtab ? '_blank' : ''}" href="${productDetail.iswURL || '#'}"> <sly
+                  data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+                  data-sly-call="${icons.iconWithFallback @ icon=icons.warning, fallbackText='Alert'}" />
+                ${productDetail.iswText || 'Important Safety
+                Information'}
+              </a>
+            </div>
+          </div>
+        </div>
+
+    </sly>
+  </div>
+  
+  <!-- Product description -->
+  <div class="product__description">
+    <div class="pad">
+      <h2 data-sly-test="${productDetail.title}">${productDetail.title}</h2>
+      ${productDetail.overviewText @context='html'}
+    </div>
+  </div>
+
+</section>

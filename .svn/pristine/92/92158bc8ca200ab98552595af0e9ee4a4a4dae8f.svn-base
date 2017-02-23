@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Menu Landing Page - Migration Only (L2 Template) for the Medtronic.com site."
+    jcr:primaryType="cq:Template"
+    jcr:title="Medtronic.com Menu Landing Page"
+    allowedPaths="[/content/medtronic-com(/[^/]+)+]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="medtronic-com/components/pages/menu-landing-page"
+        pageLevel="L2">
+        <menu-hero-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/parsys">
+            <hero
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/apps/medtronic-com/components/content/hero"/>
+        </menu-hero-par>
+        <menu-content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <responsive-table
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/responsive-table"/>
+        </menu-content-par>
+    
+    </jcr:content>
+</jcr:root>

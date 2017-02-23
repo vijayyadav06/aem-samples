@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Outdated Browser">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            defaultValue="Your browser is out of date"
+            fieldLabel="Headline"
+            name="./outdatedBrowser_title"
+            xtype="textfield"/>
+        <error-message
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            defaultValue="With an updated browser, you will have a better Medtronic web site experience."
+            fieldLabel="Body Text"
+            name="./outdatedBrowser_errorMessage"
+            xtype="textfield"/>
+        <buttontext
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            defaultValue="Update my browser now."
+            fieldLabel="Link Text"
+            name="./outdatedBrowser_buttonText"
+            xtype="textfield"/>
+        <buttonurl
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            fieldLabel="Link URL"
+            defaultValue="http://www.outdatedbrowser.com"
+            name="./outdatedBrowser_buttonUrl"
+            validator="function() {return Medtronic.Authoring.validateEManualUrl(this);}"
+            xtype="pathfield"/>
+        <newtab
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Open in a New Tab"
+            name="./outdatedBrowser_newTab"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

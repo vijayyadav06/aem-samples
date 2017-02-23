@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <video-mini
+                jcr:primaryType="cq:Panel"
+                title="Video - Mini">
+                <items
+                    jcr:primaryType="cq:WidgetCollection"
+                    xtype="textfield">
+                    <textDisplay
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        emptyText="Enter Text Display"
+                        fieldDescription="Provide a short descriptive statement, which may include the video's title. (Max = 95 characters)"
+                        fieldLabel="Video Teaser"
+                        name="./textDisplay"
+                        xtype="textfield"/>
+                    <videoURL
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Select video from the Digital Asset Manager (DAM) or paste URL from Youtube."
+                        fieldLabel="Video URL"
+                        name="./videoURL"
+                        rootPath="/content/dam"
+                        validator="function() {return Medtronic.Authoring.VideoMini.videoURL.validateVideoURL(this);}"
+                        xtype="pathfield">
+                        <browseDialogCfg
+                            jcr:primaryType="nt:unstructured"
+                            height="316"/>
+                    </videoURL>
+                    <thumbnailImage
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Thumbnail Image"
+                        name="./thumbnailImage"
+                        rootPath="/content/dam"
+                        validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                        xtype="pathfield">
+                        <browseDialogCfg
+                            jcr:primaryType="nt:unstructured"
+                            height="316"/>
+                    </thumbnailImage>
+                    <imageAltText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                        fieldLabel="Image Alt Text"
+                        name="./imageAltText"
+                        xtype="textfield"/>
+                    <playButtonAltText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        emptyText="Play Video"
+                        fieldLabel="Play Button Alt Text"
+                        name="./playButtonAltText"
+                        xtype="textfield"/>
+                    <youtubeIcon
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Play Video"
+                        fieldLabel="Display Youtube Icon"
+                        name="./youtubeIcon"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoMini.youtubeIcon.selectionChanged(field,value,isChecked);}"/>
+                    </youtubeIcon>
+                    <duration
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Display Video Duration"
+                        name="./duration"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <transcript
+                        jcr:primaryType="cq:Widget"
+                        cls="panel_container"
+                        hideLabel="{Boolean}true"
+                        layout="form"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <transcriptCbox
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Display Transcript"
+                                name="./transcriptCbox"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(field){Medtronic.Authoring.VideoMini.checkBox.loadContent(field,&quot;transcript&quot;);}"
+                                    selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoMini.checkBox.selectionChanged(field,value,isChecked,&quot;transcript&quot;);}"/>
+                            </transcriptCbox>
+                            <transcriptLink
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                emptyText="Display Transcript"
+                                fieldDescription=""
+                                fieldLabel="Transcript"
+                                name="./transcriptLink"
+                                width="300"
+                                xtype="textfield"/>
+                            <transcriptURL
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter web address or locate the transcript page in the Digital Assets Manager (DAM)."
+                                fieldLabel="Transcript URL"
+                                name="./transcriptURL"
+                                validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                width="300"
+                                xtype="pathfield">
+                                <browseDialogCfg
+                                    jcr:primaryType="nt:unstructured"
+                                    height="316"/>
+                            </transcriptURL>
+                            <transcriptNewTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Open in a New Tab"
+                                name="./transcriptNewTab"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </transcript>
+                    <cta
+                        jcr:primaryType="cq:Widget"
+                        cls="panel_container"
+                        hideLabel="{Boolean}true"
+                        layout="form"
+                        style="margin-top:5px;"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <ctaCbox
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Add Call to Action Button"
+                                name="./ctaCbox"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    loadcontent="function(field){Medtronic.Authoring.VideoMini.checkBox.loadContent(field,&quot;cta&quot;);}"
+                                    selectionchanged="function(field,value,isChecked){Medtronic.Authoring.VideoMini.checkBox.selectionChanged(field,value,isChecked,&quot;cta&quot;);}"/>
+                            </ctaCbox>
+                            <ctaLink
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                emptyText="Example 'View Treatments'"
+                                fieldDescription="Enter a call to action to display on the button."
+                                fieldLabel="Link Text"
+                                name="./ctaLink"
+                                width="300"
+                                xtype="textfield"/>
+                            <ctaURL
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter a web address or find the desired webpage."
+                                fieldLabel="Link URL"
+                                name="./ctaURL"
+                                validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                width="300"
+                                xtype="pathfield">
+                                <browseDialogCfg
+                                    jcr:primaryType="nt:unstructured"
+                                    height="316"/>
+                            </ctaURL>
+                            <ctaNewTab
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Open in a New Tab"
+                                name="./ctaNewTab"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </cta>
+                </items>
+            </video-mini>
+        </items>
+    </items>
+</jcr:root>

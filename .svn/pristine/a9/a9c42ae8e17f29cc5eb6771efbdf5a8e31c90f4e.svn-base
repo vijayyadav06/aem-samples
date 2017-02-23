@@ -1,0 +1,36 @@
+<!--/*
+  Copyright [TODO]
+  
+  <body> tag content for the base-page.
+*/-->
+<!--/* Modal container */-->
+<div id="notification-container">
+    <!--/* Cookie Warning Modal */-->
+    <sly data-sly-test="${wcmmode.disabled}" data-sly-resource="${'cookie-logic' @ resourceType='/apps/medtronic-com/components/content/cookie-logic'}"/>
+    <!--/* Outdated Browser Modal */-->
+    <sly data-sly-resource="${'outdated-browser' @ resourceType='/apps/medtronic-com/components/content/outdated-browser'}"/>
+    <!--/* Acknowledgement Modal */-->
+    <sly data-sly-test="${inheritedPageProperties.authentication_type == 'acknowledgement' && wcmmode.disabled}" data-sly-resource="${'acknowledgement' @ resourceType='/apps/medtronic-com/components/content/acknowledgement'}"/>
+    <!--/* Warn On Leave Modal */-->
+    <sly data-sly-test="${inheritedPageProperties.warnOnLeave_enabled && wcmmode.disabled}" data-sly-include="warn-on-leave.html"/>
+</div>
+<div class="global-wrap" data-sly-use.redirect="redirect.js">
+    <sly data-sly-include="header.html" />
+    <div class="container-fluid content-wrap" role="main">
+        <div id="header-skip"></div>
+        <sly data-sly-test="${!redirect.redirectTarget}" data-sly-include="content.html" />
+        <sly data-sly-test="${redirect.redirectTarget}" data-sly-include="content-redirect.html" />
+        <sly data-sly-include="share.html" />
+    </div>
+</div>
+<!--/* Michelson Seal Component */-->
+<sly data-sly-resource="${'michelson-seal' @ resourceType='/apps/medtronic-com/components/content/michelson-seal'}"/>
+<sly data-sly-include="footer.html" />
+<sly data-sly-include="customfooterlibs.html" />
+<script data-sly-test="${inheritedPageProperties.authentication_type == 'acknowledgement'}" data-sly-use.acknowledgement="/apps/medtronic-com/components/content/acknowledgement/init.js">
+        var acknowledgement_urls = ${acknowledgement.urls @ context='unsafe'}
+</script>
+<script id="data-layer" data-sly-use.dataLayerJson="data-layer-json.js">
+var dataLayer = ${ dataLayerJson @ context='unsafe'};
+</script>
+<sly data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>

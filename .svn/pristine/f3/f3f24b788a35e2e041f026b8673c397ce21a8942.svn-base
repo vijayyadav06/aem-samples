@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    bodyCssClass="hero-dialog"
+    height="{Long}550"
+    title="Hero"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <main
+                jcr:primaryType="cq:Widget"
+                title="Main"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <heroType
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        boxMaxWidth="150"
+                        defaultValue="single-image"
+                        fieldDescription="Select a text and image combination."
+                        fieldLabel="Style"
+                        name="./heroType"
+                        type="select"
+                        value="single-image"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <singleImage
+                                jcr:primaryType="nt:unstructured"
+                                text="Single Image"
+                                value="single-image"/>
+                            <imageText
+                                jcr:primaryType="nt:unstructured"
+                                text="Image With Text"
+                                value="image-with-text"/>
+                            <twoImages
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Images"
+                                value="two-images"/>
+                            <textOnly
+                                jcr:primaryType="nt:unstructured"
+                                text="Text Only"
+                                value="text-only"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){                               Medtronic.Authoring.Hero.heroType.selectionChanged(box,value);                             }"/>
+                    </heroType>
+                    <textBackgroundColor
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Select a Background Color"
+                        fieldDescription="This selection will also determine button, link and font colors."
+                        fieldLabel="Background Color"
+                        name="./textBackgroundColor"
+                        type="select"
+                        value=""
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <navy-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Navy Blue"
+                                value="bg-navy-blue"/>
+                            <medtronic-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Medtronic Blue"
+                                value="bg-medtronic-blue"/>
+                            <sky-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Sky Blue"
+                                value="bg-sky-blue"/>
+                            <light-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Blue"
+                                value="bg-light-blue"/>
+                            <light-gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Gray"
+                                value="bg-light-gray"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="bg-white"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){                               Medtronic.Authoring.Hero.backgroundColor.selectionChanged(box,value);                             }"/>
+                    </textBackgroundColor>
+                    <frameType
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="no-frame"
+                        fieldDescription="Include a colored brand element on top of the banner."
+                        fieldLabel="Brand Element"
+                        name="./frameType"
+                        type="select"
+                        value="no-frame"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <noFrame
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="no-frame"/>
+                            <brandFrame
+                                jcr:primaryType="nt:unstructured"
+                                text="Brand Frame"
+                                value="brand-frame"/>
+                            <brandPlus
+                                jcr:primaryType="nt:unstructured"
+                                text="Brand Plus"
+                                value="brand-plus"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){                               Medtronic.Authoring.Hero.frameType.selectionChanged(box,value);                             }"/>
+                    </frameType>
+                    <frameColor
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Select a color"
+                        fieldLabel="Color of Brand Element"
+                        name="./frameColor"
+                        type="select"
+                        value=""
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <navy-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Navy Blue"
+                                value="navy-blue"/>
+                            <medtronic-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Medtronic Blue"
+                                value="medtronic-blue"/>
+                            <cobalt-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Cobalt Blue"
+                                value="cobalt-blue"/>
+                            <medium-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Medium Blue"
+                                value="medium-blue"/>
+                            <sky-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Sky Blue"
+                                value="sky-blue"/>
+                            <light-blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Blue"
+                                value="light-blue"/>
+                            <blue-gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue Gray"
+                                value="blue-gray"/>
+                            <light-gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Gray"
+                                value="light-gray"/>
+                            <dark-gray
+                                jcr:primaryType="nt:unstructured"
+                                text="Dark Gray"
+                                value="dark-gray"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="white"/>
+                        </options>
+                    </frameColor>
+                    <imageOneFieldSet
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        heroElement="{Boolean}true"
+                        image-with-text="{Boolean}true"
+                        single-image="{Boolean}true"
+                        two-images="{Boolean}true"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Image"
+                                heroElementField="{Boolean}true"
+                                name="./imageOneUrl"
+                                rootPath="/content/dam"
+                                xtype="pathfield"/>
+                            <alttext
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                fieldLabel="Image Alt Text"
+                                heroElementField="{Boolean}true"
+                                name="./imageOneAltText"
+                                xtype="textfield"/>
+                        </items>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            disable="function(box) {                               Medtronic.Authoring.Hero.imageOneFieldSet.disable(box);                             }"
+                            enable="function(box) {                               Medtronic.Authoring.Hero.imageOneFieldSet.enable(box);                             }"/>
+                    </imageOneFieldSet>
+                    <textLocationFieldSet
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        heroElement="{Boolean}true"
+                        image-with-text="{Boolean}true"
+                        itemId="textLocationFieldSet"
+                        maskDisabled="{Boolean}false"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <textLocation
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Place text on the right or the left of the image."
+                                fieldLabel="Text location"
+                                heroElementField="{Boolean}true"
+                                name="./textLocation"
+                                type="radio"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="left"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="right"/>
+                                </options>
+                            </textLocation>
+                        </items>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            disable="function(box) {                               Medtronic.Authoring.Hero.textLocationFieldSet.disable(box);                             }"
+                            enable="function(box) {                               Medtronic.Authoring.Hero.textLocationFieldSet.enable(box);                             }"/>
+                    </textLocationFieldSet>
+                    <textFieldSet
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        heroElement="{Boolean}true"
+                        image-with-text="{Boolean}true"
+                        text-only="{Boolean}true"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <headings
+                                jcr:primaryType="cq:Widget"
+                                border="{Boolean}true"
+                                fieldLabel="Headline"
+                                heroElementField="{Boolean}true"
+                                maxItems="{Long}3"
+                                minItems="{Long}1"
+                                name="./headings"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    xtype="mdtmultifieldpanel">
+                                    <items jcr:primaryType="cq:WidgetCollection">
+                                        <headingText
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="{Boolean}false"
+                                            itemCls="hero-heading-text"
+                                            key="text"
+                                            width="100%"
+                                            xtype="textfield"/>
+                                        <textColor
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="{Boolean}false"
+                                            defaultValue="Select a font color"
+                                            fieldLabel="Font Color"
+                                            key="_DNT_textColor"
+                                            type="select"
+                                            width="380"
+                                            xtype="mdtselection">
+                                            <options jcr:primaryType="cq:WidgetCollection">
+                                                <navy-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Navy Blue"
+                                                    value="navy-blue"/>
+                                                <medtronic-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Medtronic Blue"
+                                                    value="medtronic-blue"/>
+                                                <cobalt-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Cobalt Blue"
+                                                    value="cobalt-blue"/>
+                                                <medium-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Medium Blue"
+                                                    value="medium-blue"/>
+                                                <sky-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Sky Blue"
+                                                    value="sky-blue"/>
+                                                <light-blue
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Light Blue"
+                                                    value="light-blue"/>
+                                                <blue-gray
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Blue Gray"
+                                                    value="blue-gray"/>
+                                                <dark-gray
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Dark Gray"
+                                                    value="dark-gray"/>
+                                                <light-gray
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Light Gray"
+                                                    value="light-gray"/>
+                                                <white
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="White"
+                                                    value="white"/>
+                                                <yellow
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Yellow"
+                                                    value="yellow"/>
+                                                <light-orange
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Light Orange"
+                                                    value="light-orange"/>
+                                                <orange
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Orange"
+                                                    value="orange"/>
+                                                <green
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Green"
+                                                    value="green"/>
+                                                <turquoise
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Turquoise"
+                                                    value="turquoise"/>
+                                                <purple
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Purple"
+                                                    value="purple"/>
+                                            </options>
+                                        </textColor>
+                                        <fontWeight
+                                            jcr:primaryType="cq:Widget"
+                                            allowBlank="{Boolean}false"
+                                            defaultValue="Select a font weight"
+                                            fieldLabel="Font Weight"
+                                            key="_DNT_textWeight"
+                                            type="select"
+                                            width="380"
+                                            xtype="mdtselection">
+                                            <options jcr:primaryType="cq:WidgetCollection">
+                                                <regular
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Regular"
+                                                    value="normal-weight"/>
+                                                <bold
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Bold"
+                                                    value="bold"/>
+                                                <light
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Light"
+                                                    value="thin"/>
+                                            </options>
+                                        </fontWeight>
+                                    </items>
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        added="function(panel){Medtronic.Authoring.Hero.headings.added(panel);}"/>
+                                </fieldConfig>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    add="function(container, component, index){                                       Medtronic.Authoring.Hero.headings.add(container, component, index);                                     }"
+                                    removedItem="function(field){Medtronic.Authoring.Hero.headings.removedItem(field);}"/>
+                            </headings>
+                            <description
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldLabel="Body Text"
+                                heroElementField="{Boolean}true"
+                                name="./textDescription"
+                                xtype="textarea"/>
+                            <showCta
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Add Call to Action Button"
+                                heroElementField="{Boolean}true"
+                                name="./showCta"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionchanged="function(box, value, isChecked) {                                       Medtronic.Authoring.Hero.showCta.selectionChanged(box, isChecked);                                     }"/>
+                            </showCta>
+                            <ctaDetails
+                                jcr:primaryType="cq:Widget"
+                                border="{Boolean}false"
+                                collapsed="{Boolean}false"
+                                collapsible="{Boolean}false"
+                                heroElementField="{Boolean}true"
+                                itemId="ctaDetails"
+                                maskDisabled="{Boolean}false"
+                                xtype="dialogfieldset">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <buttonText
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        ctaField="{Boolean}true"
+                                        emptyText="Example 'View treatments'"
+                                        fieldDescription="Enter a call-to-action to display on the button."
+                                        fieldLabel="Link Text"
+                                        name="./ctaText"
+                                        width="300"
+                                        xtype="textfield"/>
+                                    <buttonUrl
+                                        jcr:primaryType="cq:Widget"
+                                        allowBlank="{Boolean}false"
+                                        ctaField="{Boolean}true"
+                                        fieldDescription="Enter a web address or find the desired webpage."
+                                        fieldLabel="Link URL"
+                                        name="./ctaUrl"
+                                        validator="function() {                                           return Medtronic.Authoring.validateEManualUrl(this);                                         }"
+                                        width="300"
+                                        xtype="pathfield"/>
+                                    <newTab
+                                        jcr:primaryType="cq:Widget"
+                                        ctaField="{Boolean}true"
+                                        fieldLabel="Open in a New Tab"
+                                        name="./ctaOpenInNewTab"
+                                        type="checkbox"
+                                        xtype="selection"/>
+                                </items>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    disable="function(box) {                                       Medtronic.Authoring.Hero.ctaDetails.disable(box);                                     }"
+                                    enable="function(box) {                                       Medtronic.Authoring.Hero.ctaDetails.enable(box);                                     }"/>
+                            </ctaDetails>
+                        </items>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            disable="function(box) {                               Medtronic.Authoring.Hero.textFieldSet.disable(box);                             }"
+                            enable="function(box) {                               Medtronic.Authoring.Hero.textFieldSet.enable(box);                             }"/>
+                    </textFieldSet>
+                    <imageTwoFieldSet
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        heroElement="{Boolean}true"
+                        two-images="{Boolean}true"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <image
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Image"
+                                heroElementField="{Boolean}true"
+                                name="./imageTwoUrl"
+                                rootPath="/content/dam"
+                                xtype="pathfield"/>
+                            <alttext
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                fieldLabel="Image Alt Text"
+                                heroElementField="{Boolean}true"
+                                name="./imageTwoAltText"
+                                xtype="textfield"/>
+                        </items>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            disable="function(box) {                               Medtronic.Authoring.Hero.imageTwoFieldSet.disable(box);                             }"
+                            enable="function(box) {                               Medtronic.Authoring.Hero.imageTwoFieldSet.enable(box);                             }"/>
+                    </imageTwoFieldSet>
+                </items>
+            </main>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) {           Medtronic.Authoring.Hero.dialog.loadContent(dialog);         }"/>
+</jcr:root>

@@ -1,0 +1,32 @@
+<div data-sly-test="${!properties.title && !properties.titleFilter && !properties.location && !properties.numberYears && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Archived Press Releases</div>
+
+<div data-sly-test="${properties.location}" data-sly-use.pressReleaseArchive="com.medtronic.com.app.PressReleaseArchive">
+    <h2 data-sly-test="${properties.title}">${pressReleaseArchive.selectedYear} ${properties.title}</h2>
+    <h2 data-sly-test="${!properties.title}">${pressReleaseArchive.selectedYear}</h2>
+    <div data-sly-test="${properties.titleFilter}">${properties.titleFilter}</div>
+
+    <select id="category-filter" data-sly-list.releaseCategory="${pressReleaseArchive.allReleaseCategories}">
+        <option data-sly-test="${releaseCategoryList.first}" value="ALL">All Press Releases</option>
+        <option value="${releaseCategory}">${releaseCategory}</option>
+    </select>
+
+    <br/>
+    <table>
+        <tr>
+            <div data-sly-list.year="${pressReleaseArchive.archiveYears}">
+                <td class="${pressReleaseArchive.selectedYear == year ? 'active' : ''}"><a href="${currentPage.path}.html?year=${year}">${year}</a></td>
+            </div>
+        </tr>
+    </table>
+
+    <br/>
+    <div id="press-release-container" data-sly-list.pressRelease="${pressReleaseArchive.pressReleaseObjects}">
+        <li data-categories="${pressRelease.categories}">${pressRelease.displayDate}&nbsp;&nbsp;&nbsp;<a href="${pressRelease.href}">${pressRelease.title}</a></li>
+    </div>
+
+</div>
+
+
+<!--/* Including the js */-->
+<sly data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+     data-sly-call="${libraries.includeLibrary @ categories='medtronic-com.press-release-archive', mode='js', collection='footer'}"/>

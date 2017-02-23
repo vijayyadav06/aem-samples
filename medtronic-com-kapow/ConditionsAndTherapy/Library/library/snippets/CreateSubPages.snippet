@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.5.4</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="outfile"/>
+    </referenced-types>
+    <referenced-snippets>
+      <snippet name="SubPages"/>
+    </referenced-snippets>
+    <typed-variables>
+      <typed-variable name="outputfile" type-name="outfile"/>
+    </typed-variables>
+    <global-variables>
+      <variable name="outputfile"/>
+    </global-variables>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">outputfile</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">outfile</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">link</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">fileName</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">fileLocation</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">c:\temp\</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="1"/>
+    <steps class="ArrayList">
+      <object class="SnippetStep" id="2">
+        <name>
+          <null/>
+        </name>
+        <snippetName class="String">SubPages</snippetName>
+        <snippetStepComment>
+          <null/>
+        </snippetStepComment>
+      </object>
+      <object class="Transition" serializationversion="0" id="3">
+        <property name="name" class="String">Execute Command Line</property>
+        <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
+          <property name="commandLineExpression" class="Expression" serializationversion="1">
+            <property name="text" class="String">"move" + "  "+"c:/META-INF" + " " + " c:/temp" </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="4">false</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="5">
+        <property name="name" class="String">Execute Command Line</property>
+        <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
+          <property name="commandLineExpression" class="Expression" serializationversion="1">
+            <property name="text" class="String">"(c: &amp; cd" + "  " +dirName+" " +"&amp;"+" " +"jar"+ " " +"-cf"+" " +"temp"+".zip"+" .&amp;" + " move" + "  temp"+".zip"  + " "+"c:/"+")"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="6">
+        <property name="name" class="String">Execute Command Line</property>
+        <property name="stepAction" class="ExecuteCommandLine" serializationversion="0">
+          <property name="commandLineExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String"> curl -u admin:admin -F file=@"c:\temp.zip" -F name="c:\temp.zip\jcr_root\content\medtronic-com\us-en"  -F force=true -F install=true http://localhost:4502/crx/packmgr/service.jsp</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="4"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="7"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="2"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+    </edges>
+  </body>
+</object>

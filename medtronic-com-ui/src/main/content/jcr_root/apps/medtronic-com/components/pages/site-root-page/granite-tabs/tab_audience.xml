@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:rep="internal"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Audience Labels"
+    cq:showOnCreate="{Boolean}false"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <healthCareProfessionals
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Healthcare Professionals"
+                    cq-msm-lockable="audienceLabel_healthCareProfessionals"
+                    name="./audienceLabel_healthCareProfessionals"
+                    emptyText="Ex. &quot;Healthcare Professionals&quot;"
+                    value="Healthcare Professionals"
+                    required="{Boolean}true"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield" />
+                <healthCareAdministrator
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Healthcare Administrators"
+                    emptyText="Ex. &quot;Healthcare Administrator&quot;"
+                    value="Healthcare Administrators"
+                    name="./audienceLabel_healthCareAdministrators"
+                    cq-msm-lockable="audienceLabel_healthCareAdministrators"
+                    required="{Boolean}true"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield" />
+                <patients
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Patients"
+                    emptyText="Ex. &quot;Patients&quot;"
+                    value="Patients"
+                    cq-msm-lockable="audienceLabel_patients"
+                    name="./audienceLabel_patients"
+                    required="{Boolean}true"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield" />
+            </items>
+        </column>
+    </items>
+</jcr:root>

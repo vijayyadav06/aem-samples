@@ -1,0 +1,28 @@
+<div data-sly-test="${!properties.imagePosition && !wcmmode.disabled}"
+	class="cq-placeholder">Placeholder for Headline, Text, Image.</div>
+<div data-sly-test="${properties.imagePosition=='left'}" class="row"
+	data-sly-use.templates="tta-templates.html" data-sly-use.cta="com.medtronic.com.app.HeadlineWithISI">
+	<div class="col-sm-6 one-by-one">
+		<sly
+			data-sly-call="${templates.ttaImage @ image=properties.image, altText=properties.altText}" />
+	</div>
+	<div class="col-sm-6 one-by-one">
+		<sly
+			data-sly-call="${templates.ttaHeadline @ headline=properties.headline, rte=properties.rte,showCta=properties.showCta, ctaUrl=cta.ctaURL, newTab=properties.newTab, ctaText=properties.ctaText}" />
+	</div>
+</div>
+<div data-sly-test="${properties.imagePosition=='top'}" class="row"
+	data-sly-use.templates="tta-templates.html" data-sly-use.cta="com.medtronic.com.app.HeadlineWithISI">
+	<div class="col-xs-12">
+		<div class="row tta__vertical">
+			<div class="col-xs-12 one-by-one">
+				<sly
+					data-sly-call="${templates.ttaImage @ image=properties.image, altText=properties.altText}" />
+			</div>
+			<div class="col-xs-12 one-by-one">
+				<sly
+					data-sly-call="${templates.ttaHeadline @ headline=properties.headline, rte=properties.rte,showCta=properties.showCta, ctaUrl=cta.ctaURL, newTab=properties.newTab, ctaText=properties.ctaText}" />
+			</div>
+		</div>
+	</div>
+</div>

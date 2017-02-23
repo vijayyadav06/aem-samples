@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Column Component Responsive"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Column Header"
+                        name="./title"
+                        xtype="textfield"/>
+                    <disableSort
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Disable Sort"
+                        name="./disableSort"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <resourceType
+                        jcr:primaryType="cq:Widget"
+                        name="./sling:resourceType"
+                        defaultValue="medtronic-com/components/content/responsive-table/table-header"
+                        xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

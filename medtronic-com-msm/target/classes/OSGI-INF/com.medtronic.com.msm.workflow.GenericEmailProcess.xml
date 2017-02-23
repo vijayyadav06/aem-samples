@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" name="com.medtronic.com.msm.workflow.GenericEmailProcess">
+    <implementation class="com.medtronic.com.msm.workflow.GenericEmailProcess"/>
+    <service servicefactory="false">
+        <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
+    </service>
+    <property name="service.description" value="Process that will send an email to initiator that workflow has been rejected and reason for it"/>
+    <property name="service.vendor" value="Medtronic"/>
+    <property name="process.label" value="Medtronic Generic Email Workflow Process"/>
+    <property name="service.pid" value="com.medtronic.com.msm.workflow.GenericEmailProcess"/>
+    <reference name="emailService" interface="com.adobe.acs.commons.email.EmailService" cardinality="1..1" policy="static" bind="bindEmailService" unbind="unbindEmailService"/>
+    <reference name="msmUserService" interface="com.medtronic.com.msm.service.MSMUserService" cardinality="1..1" policy="static" bind="bindMsmUserService" unbind="unbindMsmUserService"/>
+</scr:component>

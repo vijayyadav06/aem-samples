@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Medtronic Com Config</comment>
+<entry key="createdBy">sunny.sima</entry>
+<entry key="name">medtronic-com-config</entry>
+<entry key="created">2016-04-12T13:10:09.126+0800</entry>
+<entry key="groupId">com.medtronic.com</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="requiresRoot">true</entry>
+<entry key="group">Medtronic Com</entry>
+<entry key="description">Medtronic-com Parent POM</entry>
+<entry key="artifactId">medtronic-com-config</entry>
+<entry key="path">/etc/packages/Medtronic Com/medtronic-com-config.zip</entry>
+</properties>

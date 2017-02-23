@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.medtronic.com</groupId>
+  <artifactId>medtronic-com-design</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Medtronic Com Design</name>
+  <packaging>content-package</packaging>
+
+  <parent>
+      <groupId>com.medtronic.com.parent</groupId>
+      <artifactId>medtronic-com-parent</artifactId>
+	  <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+    <!-- Generic Project Properties useful for plugins configuration -->
+    <properties>
+		<sonar.language>web</sonar.language>
+	    <sonar.web.sourceDirectory>src/main/content/jcr_root/</sonar.web.sourceDirectory>
+    </properties>
+    <build>
+		<resources>
+			<!-- exclude .vlt control files and tests -->
+			<resource>
+				<directory>${basedir}/src/main/content/jcr_root</directory>
+				<excludes>
+                    <exclude>apps/system/**</exclude>
+                    <exclude>var/**</exclude>
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+			<plugin>
+				<groupId>com.day.jcr.vault</groupId>
+				<artifactId>content-package-maven-plugin</artifactId>
+                <version>0.0.20</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
+					<verbose>true</verbose>
+					<failOnError>true</failOnError>
+					<group>${project.parent.name}</group>
+					<requiresRoot>true</requiresRoot>
+					<userId>${aem.user}</userId>
+					<password>${aem.pass}</password>
+					<useProxy>false</useProxy>
+					<targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+					<version>${project.version}</version>
+				</configuration>
+			</plugin>
+		   <plugin>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>maven-sling-plugin</artifactId>
+				<version>2.1.0</version>
+		   </plugin>
+		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											net.alchim31.maven
+										</groupId>
+										<artifactId>
+											yuicompressor-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.1,)
+										</versionRange>
+										<goals>
+											<goal>compress</goal>
+											<goal>jslint</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+
+		</pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>autoInstallPackage</id>
+      <activation></activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>install-package</id>
+                <goals>
+                  <goal>install</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+	<!-- ====================================================================== -->
+	<!-- D E P E N D E N C I E S                                                -->
+	<!-- ====================================================================== -->
+
+	 <dependencies>
+		<dependency>
+            <groupId>${project.groupId}</groupId>
+			<artifactId>medtronic-com-services</artifactId>
+			<version>${project.version}</version>
+        </dependency>
+	</dependencies>
+</project>

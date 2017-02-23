@@ -1,0 +1,14 @@
+<div data-sly-test="${!properties.image && !wcmmode.disabled}" class="cq-placeholder">
+ 	Placeholder for Text Wrapped Image
+</div>
+<div class="textclearfloat" data-sly-test="${properties.image}">
+<h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+<figure class="${properties.imageAlignment}">
+  <img src="${properties.image}" alt="${properties.imageAltText}">
+      <figcaption>
+        <p class="caption__head" data-sly-test="${properties.imageCaptionText}"><strong>${properties.imageCaptionText}</strong></p>
+        <div data-sly-test="${properties.imageCaptionText2}">${properties.imageCaptionText2 @ context='html'}</div>
+      </figcaption>
+</figure>
+${properties.bodyText @context='html'}
+</div>

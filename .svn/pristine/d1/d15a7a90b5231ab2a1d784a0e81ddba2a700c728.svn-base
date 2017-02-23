@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="iso8859-1"?>
+<GSP VER="3.2">
+   <TM>0.112304</TM>
+   <Q>diabetes</Q>
+   <PARAM name="q" original_value="diabetes" value="diabetes"/>
+   <PARAM name="access" original_value="p" value="p"/>
+   <PARAM name="client" original_value="us-en" value="us-en"/>
+   <PARAM name="output" original_value="xml_no_dtd" value="xml_no_dtd"/>
+   <PARAM name="proxystylesheet" original_value="docPreview" value="docPreview"/>
+   <PARAM name="sort" original_value="date:D:L:d1" value="date:D:L:d1"/>
+   <PARAM name="wc" original_value="200" value="200"/>
+   <PARAM name="wc_mc" original_value="1" value="1"/>
+   <PARAM name="oe" original_value="UTF-8" value="UTF-8"/>
+   <PARAM name="ie" original_value="UTF-8" value="UTF-8"/>
+   <PARAM name="ud" original_value="1" value="1"/>
+   <PARAM name="exclude_apps" original_value="1" value="1"/>
+   <PARAM name="site" original_value="default_collection" value="default_collection"/>
+   <PARAM name="ulang" original_value="en" value="en"/>
+   <PARAM name="ip" original_value="10.49.228.16" value="10.49.228.16"/>
+   <PARAM name="entqr" original_value="3" value="3"/>
+   <PARAM name="entqrm" original_value="0" value="0"/>
+   <PARAM name="entsp" original_value="a__us_en_policy" value="a__us_en_policy"/>
+   <PARAM name="getfields" original_value="description" value="description"/>
+   <PARAM name="rc" original_value="1" value="1"/>
+   <PARAM name="filter" original_value="0" value="0"/>
+   <PARAM name="start" original_value="0" value="0"/>
+   <PARAM name="num" original_value="10" value="10"/>
+   <GM>
+      <GL>http://www.medtronicdiabetes.com/home</GL>
+      <GD>Medtronic Diabetes Home 2</GD>
+   </GM>
+   <GM>
+      <GL>http://www.medtronicdiabetes.com/home</GL>
+      <GD>Medtronic Diabetes Home 5</GD>
+   </GM>
+   <GM>
+      <GL>http://www.medtronicdiabetes.com/home</GL>
+      <GD>Medtronic Diabetes Home 6</GD>
+   </GM>
+   <Synonyms>
+      <OneSynonym q="type+1+diabetes">type 1 diabetes</OneSynonym>
+      <OneSynonym q="type+2+diabetes">type 2 diabetes</OneSynonym>
+   </Synonyms>
+   <RES EN="10" SN="1">
+      <M>2721</M>
+      <NB>
+         <NU>/search?q=diabetes&amp;site=default_collection&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;output=xml_no_dtd&amp;client=us-en&amp;access=p&amp;sort=date:D:L:d1&amp;getfields=description&amp;start=10&amp;sa=N&amp;filter=0</NU>
+      </NB>
+
+      <R N="1">
+         <U>http://www-test.medtronic.com/de-de/presse-6/minimed.html</U>
+         <UE>http://www-test.medtronic.com/de-de/presse-6/minimed.html</UE>
+         <UD>http://www-test.medtronic.com/de-de/presse-6/minimed.html</UD>
+         <T>Medtronic bringt MiniMed 640G ...</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-29"/>
+         <MT N="description" V=""/>
+         <SCOREBIAS NAME="PatternScorer" VALUE="3"/>
+         <S>&lt;b&gt;...&lt;/b&gt; Neuartige Insulinpumpe mit SmartGuard&#8482; Technologie&lt;br&gt; für erweiterten Hypoglykämieschutz ab sofort für Menschen&lt;br&gt; mit &lt;b&gt;Diabetes&lt;/b&gt; in Deutschland erhältlich. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>de</LANG>
+         <HAS>
+            <L/>
+            <C CID="aQR5BYoJchwJ" ENC="UTF-8" SZ="39k"/>
+         </HAS>
+      </R>
+      <R N="2">
+         <U>http://www-test.medtronic.com/de-de/presse-6/ich-bin-ich.html</U>
+         <UE>http://www-test.medtronic.com/de-de/presse-6/ich-bin-ich.html</UE>
+         <UD>http://www-test.medtronic.com/de-de/presse-6/ich-bin-ich.html</UD>
+         <T>Medtronic bringt MiniMed 640G ...</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-29"/>
+         <MT N="description" V=""/>
+         <SCOREBIAS NAME="PatternScorer" VALUE="3"/>
+         <S>&lt;b&gt;...&lt;/b&gt;&lt;b&gt; Diabetes&lt;/b&gt; ist nichts, wofür man sich schämen müsste!&#8220; Warum sich die&lt;br&gt; Powerfrau so engagiert für das Thema? &#8222;Ich will zeigen, dass &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>de</LANG>
+         <HAS>
+            <L/>
+            <C CID="xKFgUjrtIlwJ" ENC="UTF-8" SZ="34k"/>
+         </HAS>
+      </R>
+      <R N="3">
+         <U>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/minimed.html</U>
+         <UE>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/minimed.html</UE>
+         <UD>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/minimed.html</UD>
+         <T>Medtronic bringt MiniMed 640G ...</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-29"/>
+         <MT N="description" V=""/>
+         <SCOREBIAS NAME="PatternScorer" VALUE="3"/>
+         <S>&lt;b&gt;...&lt;/b&gt; Neuartige Insulinpumpe mit SmartGuard&#8482; Technologie&lt;br&gt; für erweiterten Hypoglykämieschutz ab sofort für Menschen&lt;br&gt; mit &lt;b&gt;Diabetes&lt;/b&gt; in Deutschland erhältlich. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>de</LANG>
+         <HAS>
+            <L/>
+            <C CID="GAW8o0A4TuoJ" ENC="UTF-8" SZ="39k"/>
+         </HAS>
+      </R>
+      <R N="4">
+         <U>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/ich-bin-ich.html</U>
+         <UE>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/ich-bin-ich.html</UE>
+         <UD>http://www-test.medtronic.com/content/medtronic/de-de/presse-6/ich-bin-ich.html</UD>
+         <T>Medtronic bringt MiniMed 640G ...</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-29"/>
+         <MT N="description" V=""/>
+         <SCOREBIAS NAME="PatternScorer" VALUE="3"/>
+         <S>&lt;b&gt;...&lt;/b&gt;&lt;b&gt; Diabetes&lt;/b&gt; ist nichts, wofür man sich schämen müsste!&#8220; Warum sich die&lt;br&gt; Powerfrau so engagiert für das Thema? &#8222;Ich will zeigen, dass &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>de</LANG>
+         <HAS>
+            <L/>
+            <C CID="6cLgPKdo0eAJ" ENC="UTF-8" SZ="34k"/>
+         </HAS>
+      </R>
+      <R N="5">
+         <U>http://www-test.medtronic.com/de-de/uber-medtronic-3/globalisierung.html</U>
+         <UE>http://www-test.medtronic.com/de-de/uber-medtronic-3/globalisierung.html</UE>
+         <UD>http://www-test.medtronic.com/de-de/uber-medtronic-3/globalisierung.html</UD>
+         <T>Beseitigung von Hindernissen für den Zugang zur &lt;b&gt;...&lt;/b&gt;</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-29"/>
+         <MT N="description"
+             V="Medtronic arbeitet mit Gesundheitssystemen auf der ganzen Welt zusammen, um Barrieren für eine bezahlbare Behandlung von chronischen Krankheiten zu beseitigen. Weitere Informationen."/>
+         <SCOREBIAS NAME="PatternScorer" VALUE="3"/>
+         <S>&lt;b&gt;...&lt;/b&gt; In China wurde eine wachsende &lt;b&gt;Diabetes&lt;/b&gt;-Epidemie eine&lt;br&gt; &#8222;Katastrophe&#8220; genannt, nachdem ein Bericht aufdeckte, dass&lt;br&gt; 114 Millionen Menschen in dem Land an &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>de</LANG>
+         <HAS>
+            <L/>
+            <C CID="VuubBS0LNOoJ" ENC="UTF-8" SZ="52k"/>
+         </HAS>
+      </R>
+      <R N="6">
+         <U>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes-pro/index.htm</U>
+         <UE>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes-pro/index.htm</UE>
+         <UD>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes-pro/index.htm</UD>
+         <T>&lt;b&gt;Diabetes&lt;/b&gt; Management | &lt;b&gt;Diabetes&lt;/b&gt; Therapy Products from &lt;b&gt;...&lt;/b&gt;</T>
+         <RK>10</RK>
+         <CRAWLDATE>31 Jan 2016</CRAWLDATE>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE=""/>
+         <MT N="description"
+             V="Glucose monitors and insulin pumps for diabetes therapy. Medtronic continuous glucose monitoring and insulin therapy products for effective diabetes management."/>
+         <S>Glucose monitors and insulin pumps for &lt;b&gt;diabetes&lt;/b&gt; therapy. &lt;b&gt;...&lt;/b&gt;&lt;b&gt; Diabetes&lt;/b&gt;&lt;br&gt; Management Software (CareLink), &#8211;. Product and Packaging Disposition. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>en</LANG>
+         <HAS>
+            <L/>
+            <C CID="pEUAKGPhEyYJ" ENC="ISO-8859-1" SZ="78k"/>
+         </HAS>
+      </R>
+      <R N="7">
+         <U>http://www-test.medtronic.com/ca-en/newsroom-6/insulin-pump.html</U>
+         <UE>http://www-test.medtronic.com/ca-en/newsroom-6/insulin-pump.html</UE>
+         <UD>http://www-test.medtronic.com/ca-en/newsroom-6/insulin-pump.html</UD>
+         <T>Outcomes With Insulin Pumps - Type 2 &lt;b&gt;Diabetes&lt;/b&gt; | Medtronic</T>
+         <RK>10</RK>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE="2016-01-28"/>
+         <MT N="description"
+             V="People with Type 2 Diabetes Achieve Superior Outcomes with Insulin Pumps vs. Multiple Daily Injections. Read the Results of the OpT2mise Trial."/>
+         <S>People with Type 2 &lt;b&gt;Diabetes&lt;/b&gt; Achieve Superior Outcomes&lt;br&gt; with Insulin Pumps vs. &lt;b&gt;...&lt;/b&gt; People with Type 2 &lt;b&gt;Diabetes&lt;/b&gt; Achieve&lt;br&gt; Superior Outcomes with Insulin Pumps vs. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>en</LANG>
+         <HAS>
+            <L/>
+            <C CID="BLzzChcV8PUJ" ENC="UTF-8" SZ="29k"/>
+         </HAS>
+      </R>
+      <R N="8">
+         <U>http://www-test.medtronic.com/corporate-governance/principles-and-ethics/medtronic-charitable-donations-registry/donation-request-forms/diabetes/index.htm</U>
+         <UE>http://www-test.medtronic.com/corporate-governance/principles-and-ethics/medtronic-charitable-donations-registry/donation-request-forms/diabetes/index.htm</UE>
+         <UD>http://www-test.medtronic.com/corporate-governance/principles-and-ethics/medtronic-charitable-donations-registry/donation-request-forms/diabetes/index.htm</UD>
+         <T>&lt;b&gt;Diabetes&lt;/b&gt;</T>
+         <RK>10</RK>
+         <CRAWLDATE>31 Jan 2016</CRAWLDATE>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE=""/>
+         <MT N="description" V=""/>
+         <S>Skip to main content; Skip to section navigation; Access Keys. Return to the&lt;br&gt; Medtronic.com home page. Loading. Innovation; Corporate &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>en</LANG>
+         <HAS>
+            <L/>
+            <C CID="OEr9kzI9yOwJ" ENC="UTF-8" SZ="36k"/>
+         </HAS>
+      </R>
+      <R N="9">
+         <U>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/diabetes-management-software/index.htm</U>
+         <UE>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/diabetes-management-software/index.htm</UE>
+         <UD>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/diabetes-management-software/index.htm</UD>
+         <T>&lt;b&gt;Diabetes&lt;/b&gt; Therapy Management Software |Medtronic CareLink &lt;b&gt;...&lt;/b&gt;</T>
+         <RK>10</RK>
+         <CRAWLDATE>31 Jan 2016</CRAWLDATE>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE=""/>
+         <MT N="description"
+             V="Diabetes management with CareLink Pro software from Medtronic. CareLink Pro is the most advanced therapy management software available."/>
+         <S>&lt;b&gt;Diabetes&lt;/b&gt; management with CareLink Pro software from Medtronic. &lt;b&gt;...&lt;/b&gt; Name, Quick&lt;br&gt; Facts. CareLink_pro-ath, CareLink Pro &lt;b&gt;Diabetes&lt;/b&gt; Therapy Management Software. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>en</LANG>
+         <HAS>
+            <L/>
+            <C CID="wa5nHLLtycMJ" ENC="ISO-8859-1" SZ="86k"/>
+         </HAS>
+      </R>
+      <R N="10">
+         <U>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/index.htm</U>
+         <UE>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/index.htm</UE>
+         <UD>http://www-test.medtronic.com/for-healthcare-professionals/products-therapies/diabetes/index.htm</UD>
+         <T>&lt;b&gt;Diabetes&lt;/b&gt; Management | &lt;b&gt;Diabetes&lt;/b&gt; Therapy Products from &lt;b&gt;...&lt;/b&gt;</T>
+         <RK>10</RK>
+         <CRAWLDATE>31 Jan 2016</CRAWLDATE>
+         <ENT_SOURCE>T5-B7R6T5TZWM2VR</ENT_SOURCE>
+         <FS NAME="date" VALUE=""/>
+         <MT N="description"
+             V="Glucose monitors and insulin pumps for diabetes therapy. Medtronic continuous glucose monitoring and insulin therapy products for effective diabetes management."/>
+         <S>Glucose monitors and insulin pumps for &lt;b&gt;diabetes&lt;/b&gt; therapy. &lt;b&gt;...&lt;/b&gt;&lt;b&gt; Diabetes&lt;/b&gt;&lt;br&gt; Management Software (CareLink), &#8211;. Product and Packaging Disposition. &lt;b&gt;...&lt;/b&gt;  </S>
+         <LANG>en</LANG>
+         <HAS>
+            <L/>
+            <C CID="DV-DQr49t7IJ" ENC="ISO-8859-1" SZ="79k"/>
+         </HAS>
+      </R>
+      <PARM>
+         <PC>0</PC>
+         <PMT DN="Narrow your search " IR="0" NM="gsaentity_nav-us-en" T="0">
+            <PV C="68" H="" L="" V="Patients"/>
+            <PV C="9" H="" L="" V="Newsroom"/>
+            <PV C="2" H="" L="" V="Healthcare Professionals"/>
+            <PV C="1" H="" L="" V="Newsroom - US"/>
+         </PMT>
+         <PMT DN="Source" IR="0" NM="gsaentity_Source" T="0">
+            <PV C="177" H="" L="" V="AEM"/>
+            <PV C="142" H="" L="" V="Oracle WCM"/>
+         </PMT>
+         <PMT DN="County" IR="0" NM="gsaentity_Country" T="0">
+            <PV C="2514" H="" L="" V="United States"/>
+            <PV C="115" H="" L="" V="France"/>
+            <PV C="93" H="" L="" V="India"/>
+            <PV C="70" H="" L="" V="Canada"/>
+            <PV C="51" H="" L="" V="United Kingdom"/>
+            <PV C="47" H="" L="" V="China"/>
+            <PV C="40" H="" L="" V="Netherlands"/>
+            <PV C="37" H="" L="" V="Brazil"/>
+            <PV C="35" H="" L="" V="Germany"/>
+            <PV C="34" H="" L="" V="Mexico"/>
+            <PV C="34" H="" L="" V="Sweden"/>
+            <PV C="30" H="" L="" V="Australia"/>
+            <PV C="23" H="" L="" V="New Zealand"/>
+            <PV C="22" H="" L="" V="Ireland"/>
+            <PV C="22" H="" L="" V="South Africa"/>
+            <PV C="20" H="" L="" V="Japan"/>
+            <PV C="18" H="" L="" V="Switzerland"/>
+            <PV C="17" H="" L="" V="Israel"/>
+            <PV C="17" H="" L="" V="Vietnam"/>
+            <PV C="16" H="" L="" V="Colombia"/>
+            <PV C="15" H="" L="" V="Bangladesh"/>
+            <PV C="13" H="" L="" V="Belgium"/>
+            <PV C="13" H="" L="" V="Italy"/>
+            <PV C="12" H="" L="" V="Georgia"/>
+            <PV C="10" H="" L="" V="Portugal"/>
+            <PV C="9" H="" L="" V="Singapore"/>
+            <PV C="7" H="" L="" V="Spain"/>
+            <PV C="6" H="" L="" V="Malaysia"/>
+            <PV C="6" H="" L="" V="Norway"/>
+            <PV C="5" H="" L="" V="Croatia"/>
+            <PV C="5" H="" L="" V="Czech Republic"/>
+            <PV C="5" H="" L="" V="Finland"/>
+            <PV C="5" H="" L="" V="Luxembourg"/>
+            <PV C="5" H="" L="" V="Montenegro"/>
+            <PV C="5" H="" L="" V="Poland"/>
+            <PV C="5" H="" L="" V="Samoa"/>
+            <PV C="5" H="" L="" V="Serbia"/>
+            <PV C="5" H="" L="" V="Slovakia"/>
+            <PV C="5" H="" L="" V="Turkey"/>
+            <PV C="4" H="" L="" V="Albania"/>
+            <PV C="4" H="" L="" V="Argentina"/>
+            <PV C="4" H="" L="" V="Austria"/>
+            <PV C="4" H="" L="" V="Bahamas"/>
+            <PV C="4" H="" L="" V="Bosnia and Herzegovina"/>
+            <PV C="4" H="" L="" V="Cyprus"/>
+            <PV C="4" H="" L="" V="Denmark"/>
+            <PV C="4" H="" L="" V="Ecuador"/>
+            <PV C="4" H="" L="" V="Hungary"/>
+            <PV C="4" H="" L="" V="Korea"/>
+            <PV C="4" H="" L="" V="Lebanon"/>
+            <PV C="4" H="" L="" V="Malta"/>
+            <PV C="4" H="" L="" V="Slovenia"/>
+            <PV C="3" H="" L="" V="Congo"/>
+            <PV C="3" H="" L="" V="Cuba"/>
+            <PV C="3" H="" L="" V="Dominican Republic"/>
+            <PV C="3" H="" L="" V="Greece"/>
+            <PV C="3" H="" L="" V="Haiti"/>
+            <PV C="3" H="" L="" V="Peru"/>
+            <PV C="3" H="" L="" V="Thailand"/>
+            <PV C="2" H="" L="" V="Afghanistan"/>
+            <PV C="2" H="" L="" V="Algeria"/>
+            <PV C="2" H="" L="" V="Andorra"/>
+            <PV C="2" H="" L="" V="Antigua and Barbuda"/>
+            <PV C="2" H="" L="" V="Armenia"/>
+            <PV C="2" H="" L="" V="Azerbaijan"/>
+            <PV C="2" H="" L="" V="Bahrain"/>
+            <PV C="2" H="" L="" V="Barbados"/>
+            <PV C="2" H="" L="" V="Belarus"/>
+            <PV C="2" H="" L="" V="Belize"/>
+            <PV C="2" H="" L="" V="Bolivia"/>
+            <PV C="2" H="" L="" V="Botswana"/>
+            <PV C="2" H="" L="" V="Brunei"/>
+            <PV C="2" H="" L="" V="Bulgaria"/>
+            <PV C="2" H="" L="" V="Burkina"/>
+            <PV C="2" H="" L="" V="Burundi"/>
+            <PV C="2" H="" L="" V="Cambodia"/>
+            <PV C="2" H="" L="" V="Cameroon"/>
+            <PV C="2" H="" L="" V="Cape Verde"/>
+            <PV C="2" H="" L="" V="Central African Republic"/>
+            <PV C="2" H="" L="" V="Chad"/>
+            <PV C="2" H="" L="" V="Chile"/>
+            <PV C="2" H="" L="" V="Comoros"/>
+            <PV C="2" H="" L="" V="Costa Rica"/>
+            <PV C="2" H="" L="" V="East Timor"/>
+            <PV C="2" H="" L="" V="Egypt"/>
+            <PV C="2" H="" L="" V="El Salvador"/>
+            <PV C="2" H="" L="" V="Equatorial Guinea"/>
+            <PV C="2" H="" L="" V="Eritrea"/>
+            <PV C="2" H="" L="" V="Estonia"/>
+            <PV C="2" H="" L="" V="Iceland"/>
+            <PV C="2" H="" L="" V="Kenya"/>
+            <PV C="2" H="" L="" V="Latvia"/>
+            <PV C="2" H="" L="" V="Lithuania"/>
+            <PV C="2" H="" L="" V="Macedonia"/>
+            <PV C="2" H="" L="" V="Marshall Islands"/>
+            <PV C="2" H="" L="" V="Palau"/>
+            <PV C="2" H="" L="" V="Philippines"/>
+            <PV C="2" H="" L="" V="Russian Federation"/>
+            <PV C="2" H="" L="" V="United Arab Emirates"/>
+            <PV C="1" H="" L="" V="Ghana"/>
+            <PV C="1" H="" L="" V="Honduras"/>
+            <PV C="1" H="" L="" V="Kazakhstan"/>
+            <PV C="1" H="" L="" V="Myanmar"/>
+            <PV C="1" H="" L="" V="Rwanda"/>
+            <PV C="1" H="" L="" V="Sri Lanka"/>
+            <PV C="1" H="" L="" V="Uganda"/>
+         </PMT>
+         <PMT DN="Keywords" IR="0" NM="keywords" T="0">
+            <PV C="20" H="" L="" V="ENT instruments, ENT surgery"/>
+            <PV C="16" H="" L=""
+                V="cardiac resynchronization therapy, cardiac resynchronization, heart failure management"/>
+            <PV C="14" H="" L="" V="Coding, coverage, reimbursement"/>
+            <PV C="14" H="" L="" V="Image guided surgery"/>
+            <PV C="12" H="" L=""
+                V="ICD defibrillator leads, ICD defibrillators, tachycardia therapy"/>
+            <PV C="12" H="" L="" V="Inferior turbinate, turbinoplasty"/>
+            <PV C="12" H="" L="" V="Midas Rex, nucleus removal"/>
+            <PV C="12" H="" L="" V="Surgical navigation"/>
+            <PV C="12" H="" L="" V="healthcare education and training"/>
+            <PV C="10" H="" L="" V="Head and neck surgery"/>
+            <PV C="8" H="" L="" V="Continuous glucose monitor, diabetes management"/>
+            <PV C="8" H="" L=""
+                V="Medtronic, SpineLine, coding and reimbursement, coverage and payment questions"/>
+            <PV C="8" H="" L="" V="Nerve monitoring, ENT surgeries"/>
+            <PV C="8" H="" L="" V="Pillar procedure, snoring treatment"/>
+            <PV C="8" H="" L=""
+                V="Remote web-based monitoring, Medtronic CareLink Network, ICD defibrillators"/>
+            <PV C="8" H="" L="" V="Sinus surgery"/>
+            <PV C="8" H="" L="" V="Skull base"/>
+            <PV C="8" H="" L="" V="ablation, cryoablation, argon"/>
+            <PV C="8" H="" L="" V="sinusitis treatment, sinus irrigation"/>
+            <PV C="6" H="" L="" V="Continuous glucose monitor"/>
+            <PV C="6" H="" L="" V="Continuous glucose monitoring"/>
+            <PV C="6" H="" L="" V="Heart valve, repair, annuloplasty"/>
+            <PV C="6" H="" L="" V="ICD Defibrillator Leads, healthcare education"/>
+            <PV C="6" H="" L="" V="Insulin pump therapy, diabetes management"/>
+            <PV C="6" H="" L="" V="Meniett, Ménière&#8217;s Disease"/>
+            <PV C="6" H="" L="" V="Midas Rex, pneumatic drill"/>
+            <PV C="6" H="" L="" V="Midas Rex, surgical drill"/>
+            <PV C="6" H="" L="" V="Obstructive sleep apnea, Repose"/>
+            <PV C="6" H="" L="" V="Sinus surgery, sinus instrument"/>
+            <PV C="6" H="" L="" V="Sleep apnea, tonsil and adenoid, inferior turbinate"/>
+            <PV C="4" H="" L="" V="Annuloplasty, mitral valve"/>
+            <PV C="4" H="" L="" V="Annuloplasty, mitral valve, tricuspid valve"/>
+            <PV C="4" H="" L=""
+                V="Bradycardia Therapy, Bradyarrhythmia Management, Reduced Ventricular Pacing"/>
+            <PV C="4" H="" L="" V="Cardiac Catheter, Ablation, SVT, AVNRT"/>
+            <PV C="4" H="" L="" V="Cardiac ablation, cardioblate system"/>
+            <PV C="4" H="" L="" V="Cardiac, Catheter, Ablation, SVT"/>
+            <PV C="4" H="" L="" V="CardioVascular, Endeavor, Sprint, Zotarolimus"/>
+            <PV C="4" H="" L=""
+                V="Clinical outcomes, ICD defibrillators, ventricular tachycardia"/>
+            <PV C="4" H="" L="" V="Diabetes management"/>
+            <PV C="4" H="" L="" V="Diabetes reimbursement"/>
+            <PV C="4" H="" L="" V="ENT instruments, ENT surgery, otologic"/>
+            <PV C="4" H="" L="" V="Heart disease, coronary artery disease, clogged arteries"/>
+            <PV C="4" H="" L="" V="Heart positioner"/>
+            <PV C="4" H="" L="" V="Image guided neurosurgery"/>
+            <PV C="4" H="" L="" V="Image-guided surgery"/>
+            <PV C="4" H="" L="" V="Image-guided surgery, ENT surgery"/>
+            <PV C="4" H="" L="" V="Laryngeal surgery, airway procedures"/>
+            <PV C="4" H="" L="" V="Medical education"/>
+            <PV C="4" H="" L="" V="Medtronic, Cardiac, Catheter, Ablation"/>
+            <PV C="4" H="" L="" V="Medtronic, CardioVascular,  Driver, Coronary"/>
+            <PV C="4" H="" L="" V="Medtronic, CardioVascular, Launcher, coronary"/>
+            <PV C="4" H="" L="" V="Meniett, Ménière's Disease"/>
+            <PV C="4" H="" L="" V="Midas Rex, Legend"/>
+            <PV C="4" H="" L="" V="Midas Rex, training"/>
+            <PV C="4" H="" L="" V="Otology, neurotology, skull base"/>
+            <PV C="4" H="" L="" V="PEAK PlasmaBlade, tonsillectomy, adenoidectomy"/>
+            <PV C="4" H="" L="" V="Posterior approach, posted screw, occipitocervical"/>
+            <PV C="4" H="" L=""
+                V="Remote Cardiac Telemetry, Medtronic CareLink® Network, ICD defibrillators"/>
+            <PV C="4" H="" L=""
+                V="Remote cardiac telemetry, Medtronic CareLink® Network, Medtronic pacemakers."/>
+            <PV C="4" H="" L=""
+                V="Remote web-based monitoring, Medtronic CareLink Network, CRT-D devices"/>
+            <PV C="4" H="" L=""
+                V="Remote web-based monitoring, Medtronic CareLink Network, CRT-P pacemakers"/>
+            <PV C="4" H="" L="" V="Sinusitis treatment, sinus irrigation"/>
+            <PV C="4" H="" L="" V="Skull base instrument"/>
+            <PV C="4" H="" L="" V="Skull base, pituitary instrument"/>
+            <PV C="4" H="" L="" V="Spinal fusion, autograft replacement, Infuse Bone Graft"/>
+            <PV C="4" H="" L="" V="Surgical Imaging Navigation Education"/>
+            <PV C="4" H="" L=""
+                V="Thoracic surgery, hemostatic sealing, EndoFB3.0, Transcollation technology"/>
+            <PV C="4" H="" L=""
+                V="cardiac resynchronization therapy, left-heart leads, CRT, CRT implant procedure"/>
+            <PV C="4" H="" L="" V="cardioblate, cardiac ablation, surgical ablation system"/>
+            <PV C="4" H="" L=""
+                V="clinical outcomes, managed ventricular pacing, atrial fibrillation, heart failure"/>
+            <PV C="4" H="" L="" V="coverage and reimbursement, medical billing and coding"/>
+            <PV C="4" H="" L=""
+                V="diabetes management, continuous glucose monitoring, insulin pump"/>
+            <PV C="4" H="" L="" V="image guided neurosurgery"/>
+            <PV C="4" H="" L="" V="insulin pump therapy, diabetes management"/>
+            <PV C="4" H="" L="" V="insulin pump therapy, diabetes management, A1C"/>
+            <PV C="4" H="" L="" V="remote cardiac telemetry"/>
+            <PV C="4" H="" L="" V="remote cardiac telemetry, Medtronic CareLink Network"/>
+            <PV C="4" H="" L=""
+                V="remote cardiac telemetry, Medtronic CareLink Network, ICD defibrillators"/>
+            <PV C="4" H="" L=""
+                V="transcatheter valve, non-surgical heart valve replacement, pulmonary valve"/>
+            <PV C="2" H="" L=""
+                V="AVNRT, cardiac ablation, supraventricular tachycardia ablation"/>
+            <PV C="2" H="" L=""
+                V="AVNRT, cardiac ablation, supraventricular tachycardia ablation, cryoablation"/>
+            <PV C="2" H="" L=""
+                V="Abdominal aortic aneurysm, endovascular aneurysm repair, EVAR, vascular surgery"/>
+            <PV C="2" H="" L=""
+                V="Adjustable pressure valve, adjustable pressure shunt, brain hydrocephalus, neurosurgery"/>
+            <PV C="2" H="" L=""
+                V="Adjustable pressure valve, shunt,  hydrocephalus, neurosurgery"/>
+            <PV C="2" H="" L="" V="Adjustable, pressure, valve, shunt, hydrocephalus"/>
+            <PV C="2" H="" L=""
+                V="Adult hydrocephalus, normal pressure hydrocephalus, pediatric hydrocephalus"/>
+            <PV C="2" H="" L=""
+                V="Anterior cervical fusion, cervical disc disease, interbody stand alone device"/>
+            <PV C="2" H="" L=""
+                V="Aortic Valved Graft (AVG) &#8211; Medtronic Open Pivot&#8482; valved conduits"/>
+            <PV C="2" H="" L=""
+                V="Aortic bioprosthetic, porcine valve, stented bioprosthesis, mitral bioprosthesis"/>
+            <PV C="2" H="" L=""
+                V="Aortic valve bioprosthetic, aortic root replacement, tissue valve"/>
+            <PV C="2" H="" L="" V="Aquamantys"/>
+            <PV C="2" H="" L="" V="Aquamantys System, Clinical Outcomes, Orthopaedic surgery"/>
+            <PV C="2" H="" L=""
+                V="Aquamantys System, Transcollation Technology, hemostatic sealing,"/>
+            <PV C="2" H="" L=""
+                V="Aquamantys System, Transcollation Technology, hemostatic sealing, PEAK Plasmablade"/>
+            <PV C="2" H="" L=""
+                V="Aquamantys System, Transcollation technology, hemostatic sealing, PEAK Plasmablade"/>
+            <PV C="2" H="" L=""
+                V="Aquamantys, Transcollation, Midas Rex, orthopaedic surgery, surgical drills"/>
+            <PV C="2" H="" L=""
+                V="Aquamantys, Transcollation, Midas Rex, spine surgery, surgical drills"/>
+            <PV C="2" H="" L="" V="Aquamantys, Transcollation, Thoracic surgery"/>
+            <PV C="2" H="" L="" V="Aquamantys, Transcollation, surgical oncology"/>
+            <PV C="2" H="" L="" V="Aquamantys, spine surgery"/>
+            <PV C="2" H="" L="" V="Aquamantys, spine surgery video, epidural vein sealer"/>
+            <PV C="2" H="" L="" V="Artificial disc surgery, Prestige Cervical Disc"/>
+            <PV C="2" H="" L=""
+                V="Artificial disc surgery, Prestige Cervical Disc, myelopathy, radiculopathy"/>
+            <PV C="2" H="" L=""
+                V="Artificial disc surgery, artificial disc, Prestige Cervical Disc, cervical discectomy"/>
+            <PV C="2" H="" L="" V="Artificial disc surgery, cervical artificial disc"/>
+            <PV C="2" H="" L=""
+                V="Atrial fibrillation, catheter ablation, treat(ment for) atrial fibrillation"/>
+            <PV C="2" H="" L=""
+                V="Bradyarrhythmia Management, Bradycardia Therapy, Medtronic pacemakers, pacemaker leads"/>
+            <PV C="2" H="" L="" V="Cardiac Catheter Ablation, SVT, AVNRT ablation"/>
+            <PV C="2" H="" L="" V="Cardiac Catheter Ablation, ablation, SVT AVNRT,"/>
+            <PV C="2" H="" L="" V="Cardiac Catheter Ablation, ablation, SVT, AVNRT"/>
+            <PV C="2" H="" L="" V="Cardiac Catheter, SVT ablation, AVNRT ablation"/>
+            <PV C="2" H="" L="" V="Cardiac rhythm diagnostics, surgical ablation"/>
+            <PV C="2" H="" L="" V="Cardiac, Ablation, Medtronic, catheter ablations"/>
+            <PV C="2" H="" L="" V="Cardiac, Catheter, Ablation, SVT, AVNRT"/>
+            <PV C="2" H="" L="" V="Cardiac, catheter, ablation, SVT, AVNRT"/>
+            <PV C="2" H="" L=""
+                V="CardioVascular, Endeavor, Sprint, Zotarolimus, drug eluting stent"/>
+            <PV C="2" H="" L="" V="CardioVascular, Input, Introducer, Sheaths"/>
+            <PV C="2" H="" L=""
+                V="CardioVascular, NC Stormer, OTW Noncompliant, Balloon Dilatation Catheter"/>
+            <PV C="2" H="" L="" V="CardioVascular, SiteSeer, Angiographic, Catheter"/>
+            <PV C="2" H="" L="" V="CardioVascular, Sprinter, Balloon Dilatation, Catheter"/>
+            <PV C="2" H="" L="" V="CardioVascular, Sprinter, OTW, Semicompliant"/>
+            <PV C="2" H="" L="" V="Cardioblate Detect"/>
+            <PV C="2" H="" L="" V="Cardioblate generator"/>
+            <PV C="2" H="" L="" V="Cardioblate pen"/>
+            <PV C="2" H="" L="" V="Cardioblate system"/>
+            <PV C="2" H="" L="" V="Cardioblate system, cardioblate pen"/>
+            <PV C="2" H="" L=""
+                V="Cardioverter Shocks, ICD Defibrillator, biventricular device"/>
+            <PV C="2" H="" L=""
+                V="Cardioverter Shocks, ICD Defibrillators, antitachycardia pacing, atrial fibrillation"/>
+            <PV C="2" H="" L=""
+                V="Cartilage cutter, tympanoplasty, ossicular chain reconstruction"/>
+            <PV C="2" H="" L=""
+                V="Cervical arthroplasty, artificial disc, Prestige Cervical Disc reimbursement"/>
+            <PV C="2" H="" L="" V="Cervical artificial discs, artificial disc surgery"/>
+            <PV C="2" H="" L=""
+                V="Clinical Guidelines and Indications, ICD defibrillator, tachycardia therapy"/>
+            <PV C="2" H="" L=""
+                V="Clinical Outcomes, MRI safety, worst-case MRI scan, MRI-induced, MRI"/>
+            <PV C="2" H="" L=""
+                V="Clinical outcomes, Diagnosing, atrial fibrillation, arrhythmias"/>
+            <PV C="2" H="" L="" V="Clinical trial reimbursement, cardiac rhythm disease"/>
+            <PV C="2" H="" L="" V="Coding, coverage, reimbursement, CRT devices"/>
+            <PV C="2" H="" L="" V="Coding, coverage, reimbursement, CRT-P devices"/>
+            <PV C="2" H="" L=""
+                V="Conexus, Wireless Telemetry, CareAlert Notifications, Smart Radio"/>
+            <PV C="2" H="" L="" V="Continuous glucose monitor, diabetes management, A1C"/>
+            <PV C="2" H="" L="" V="Coronary artery disease, stent, heart"/>
+            <PV C="2" H="" L="" V="Coverage and Reimbursement, medical billing and coding"/>
+            <PV C="2" H="" L="" V="DRG codes, CPT codes, endovascuar reimbursement"/>
+            <PV C="2" H="" L=""
+                V="Duet, cerebrospinal fluid, ventriculostomy, external drainage and monitoring"/>
+            <PV C="2" H="" L="" V="ENT instruments"/>
+            <PV C="2" H="" L="" V="ENT instruments, ENT surgery, endoscopic"/>
+            <PV C="2" H="" L="" V="ENT instruments, ENT surgery, microdebrider"/>
+            <PV C="2" H="" L="" V="ENT instruments, ENT surgery, otologic, microdebrider"/>
+            <PV C="2" H="" L="" V="ENT instruments, ENT surgery, surgical drills"/>
+            <PV C="2" H="" L="" V="ENT instruments, education and training"/>
+            <PV C="2" H="" L="" V="ENT instruments, sinusitis treatment, inferior turbinate"/>
+            <PV C="2" H="" L="" V="ENT surgery, endoscopic, nasal packing"/>
+            <PV C="2" H="" L="" V="ENT surgery, microdebrider, endoscopic, nasal packing"/>
+            <PV C="2" H="" L="" V="ENT surgery, microdebrider, endoscopic, otologic"/>
+            <PV C="2" H="" L="" V="ENT surgery, microdebrider, otologic"/>
+            <PV C="2" H="" L=""
+                V="Endotracheal tube, thyroidectomy, otologic, nerve monitoring"/>
+            <PV C="2" H="" L="" V="Extracorporeal circulation, perfusion"/>
+            <PV C="2" H="" L=""
+                V="Fluid volume overload, congestion, worsening heart failure, acute decompensation"/>
+            <PV C="2" H="" L="" V="Frontal sinus instrument, sinus surgery"/>
+            <PV C="2" H="" L=""
+                V="Gastroparesis, stomach disorder, digestive system , chronic nausea, chronic vomiting"/>
+            <PV C="2" H="" L=""
+                V="Head and neck surgery products, thyroidectomy, nerve monitoring, thyroid surgery"/>
+            <PV C="2" H="" L="" V="Healthcare Education and Training, healthcare professionals"/>
+            <PV C="2" H="" L=""
+                V="Healthcare Resources, MRI Safety, Cardiac Devices, Medtronic"/>
+            <PV C="2" H="" L=""
+                V="Heart failure therapy, cardiac resynchronization therapy, implantable CRT-P pacemakers"/>
+            <PV C="2" H="" L="" V="Heart positioner, minimally invasive heart surgery"/>
+            <PV C="2" H="" L="" V="Historical ICD Defibrillators, Tachycardia Therapy"/>
+            <PV C="2" H="" L="" V="ICD Defibrillator Leads, Tachycardia Therapy"/>
+            <PV C="2" H="" L="" V="ICD defibrillator, tachycardia therapy"/>
+            <PV C="2" H="" L=""
+                V="ICD defibrillators, sudden cardiac arrest, ventricular tachycardia"/>
+            <PV C="2" H="" L="" V="INVISx Cranial Fixation"/>
+            <PV C="2" H="" L="" V="Image-guided surgery, sinus surgery"/>
+            <PV C="2" H="" L="" V="Image-guided surgery, skull base"/>
+            <PV C="2" H="" L=""
+                V="Indications, Safety, and Warnings for Mullins Introducer Sheaths."/>
+            <PV C="2" H="" L="" V="Inferior turbinate, turbinoplasty, turbinate reduction"/>
+            <PV C="2" H="" L="" V="Infusion set, insertion device, insulin pump"/>
+            <PV C="2" H="" L="" V="Insertable cardiac monitors, ECG, atrial fibrillation, AF"/>
+            <PV C="2" H="" L="" V="Insertable cardiac monitors, syncope, arrhythmia"/>
+            <PV C="2" H="" L=""
+                V="Instructions for use; Strata NSC LP; lumboperitoneal shunt; StrataVarius."/>
+            <PV C="2" H="" L="" V="Insulin pump"/>
+            <PV C="2" H="" L="" V="Interspinous spacer, lumbar spinal Stenosis, LSS"/>
+            <PV C="2" H="" L="" V="Invisx, cranial fixation, cranial flap, skull flap"/>
+            <PV C="2" H="" L="" V="Laminoplasty, cervical, upper thoracic, posterior"/>
+            <PV C="2" H="" L="" V="Laparoscopic Instruments"/>
+            <PV C="2" H="" L="" V="Laparoscopic instruments"/>
+            <PV C="2" H="" L="" V="Laryngeal surgery, laryngoscope"/>
+            <PV C="2" H="" L="" V="Laryngoscope, ENT instruments"/>
+            <PV C="2" H="" L="" V="Lateral skull base surgery, acoustic neuroma"/>
+            <PV C="2" H="" L="" V="Liver resection, Pancreatectomy, Partial Nephrectomy"/>
+            <PV C="2" H="" L="" V="MR Conditional, MRI Safety, MRI Scans, MRI pacemakers"/>
+            <PV C="2" H="" L="" V="MRI Safety, ICD, defibrillators"/>
+            <PV C="2" H="" L=""
+                V="MRI pacemaker, MRI pacing system, FDA-approved for MRI use, MRI safety"/>
+            <PV C="2" H="" L="" V="MRI pacemakers, MRI leads, MRI safety, MRI scans."/>
+            <PV C="2" H="" L="" V="MRI safety"/>
+            <PV C="2" H="" L="" V="MRI, MRI safety, MRI lead"/>
+            <PV C="2" H="" L=""
+                V="MRI, MRI safety, hazards and risks of MRI, MRI pacing system"/>
+            <PV C="2" H="" L="" V="MRI, clinical guidelines"/>
+            <PV C="2" H="" L="" V="Mechanical valves"/>
+            <PV C="2" H="" L=""
+                V="Medical Education, Transcollation technology, thoracic surgery"/>
+            <PV C="2" H="" L="" V="Medical Reimbursement, Medical Coding"/>
+            <PV C="2" H="" L=""
+                V="Medical education, Transcollation technology, thoracic surgery"/>
+            <PV C="2" H="" L="" V="Medicare coverage, private payer, cardiac rhythm disease"/>
+            <PV C="2" H="" L=""
+                V="Medtronic Everest, Medtronic Input, cardiovascular introducer sheaths"/>
+            <PV C="2" H="" L=""
+                V="Medtronic cardiovascular products, cardiovascular therapies, cardiovascular procedures"/>
+            <PV C="2" H="" L=""
+                V="Medtronic customer service, location, phone numbers, contact"/>
+            <PV C="2" H="" L=""
+                V="Medtronic pacemaker leads , bradycardia therapy, dual chamber pacemakers"/>
+            <PV C="2" H="" L="" V="Medtronic pacemakers, dual chamber pacemakers"/>
+            <PV C="2" H="" L="" V="Medtronic, Cardiac, Catheter, Ablation, SVT"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Cougar, guidewire"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Everest, Disposable"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Export, AP, aspiration, catheter"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, GuardWire, Temporary"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Pro-Flo, Angiographic"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Sherpa, NX"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Sherpa, NX, Active,"/>
+            <PV C="2" H="" L=""
+                V="Medtronic, CardioVascular, Sherpa, NX, Balanced, Coronary, Guide, Catheter"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Sprinter, Legend"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Thunder, Guidewire"/>
+            <PV C="2" H="" L="" V="Medtronic, CardioVascular, Zinger, Guidewire"/>
+            <PV C="2" H="" L=""
+                V="Medtronic, SpineLine, coding and reimbursement, Spine Academy"/>
+            <PV C="2" H="" L="" V="Meniett Ménière's Disease"/>
+            <PV C="2" H="" L="" V="Microlaryngeal surgery, laryngeal surgery"/>
+            <PV C="2" H="" L="" V="Midas Rex, ENT instruments"/>
+            <PV C="2" H="" L="" V="Minimally invasive heart surgery, retractor"/>
+            <PV C="2" H="" L="" V="Minimally invasive spine surgery"/>
+            <PV C="2" H="" L=""
+                V="Monopolar sealer, Transcollation technology, thoracic surgery"/>
+            <PV C="2" H="" L="" V="Ménière&#8217;s Disease, Meniett"/>
+            <PV C="2" H="" L="" V="Nerve monitoring"/>
+            <PV C="2" H="" L="" V="Nerve monitoring, education and training"/>
+            <PV C="2" H="" L="" V="Nerve monitoring, thyroidectomy"/>
+            <PV C="2" H="" L="" V="Neuronavigation"/>
+            <PV C="2" H="" L="" V="Neuronavigation, PoleStar"/>
+            <PV C="2" H="" L=""
+                V="Normal pressure hydrocephalus, shunt, pediatric hydrocephalus"/>
+            <PV C="2" H="" L="" V="O-arm Surgical Imaging"/>
+            <PV C="2" H="" L="" V="O-arm System"/>
+            <PV C="2" H="" L=""
+                V="O-arm System, O-arm Surgical Imaging System, Intra-operative imaging"/>
+            <PV C="2" H="" L="" V="O-arm surgical imaging system"/>
+            <PV C="2" H="" L="" V="O-arm system, O-arm surgical imaging"/>
+            <PV C="2" H="" L="" V="OPCAB"/>
+            <PV C="2" H="" L="" V="Obstructive sleep apnea, sleep disorders"/>
+            <PV C="2" H="" L="" V="Orbital decompression"/>
+            <PV C="2" H="" L=""
+                V="Orthopaedic, Hip, Knee, Transcollation technology, Aquamantys System"/>
+            <PV C="2" H="" L=""
+                V="Otology instruments, skull base instruments, acoustic neuroma"/>
+            <PV C="2" H="" L="" V="Otology procedures"/>
+            <PV C="2" H="" L="" V="Otology procedures, otology instrument"/>
+            <PV C="2" H="" L="" V="Otology procedures, tympanic membrane perforation"/>
+            <PV C="2" H="" L=""
+                V="Pacemaker leads, reduced ventricular pacing, bradycardia therapy"/>
+            <PV C="2" H="" L="" V="Parathyroid surgery"/>
+            <PV C="2" H="" L="" V="Pediatric ENT, ENT instruments"/>
+            <PV C="2" H="" L="" V="Phonosurgery, laryngeal surgery"/>
+            <PV C="2" H="" L=""
+                V="Physician resources, medical presentations, bradycardia therapy, Medtronic pacemakers"/>
+            <PV C="2" H="" L="" V="Pillar Procedure, soft palate"/>
+            <PV C="2" H="" L="" V="Pillar procedure, sleep apnea"/>
+            <PV C="2" H="" L="" V="Pillar procedure, snoring and sleep apnea"/>
+            <PV C="2" H="" L=""
+                V="PlasmaBlade, Transcollation technology, general surgery, tissue dissection"/>
+            <PV C="2" H="" L=""
+                V="PlasmaBlade, tissue dissection, Midas Rex, orthopaedic surgery, surgical drill"/>
+            <PV C="2" H="" L=""
+                V="PlasmaBlade, tissue dissection, Midas Rex, spine surgery, surgical drill"/>
+            <PV C="2" H="" L="" V="PoleStar Surgical MRI, iMRI, intra-operative imaging"/>
+            <PV C="2" H="" L=""
+                V="PoleStar® Surgical MRI System Coverage and Reimbursement Information"/>
+            <PV C="2" H="" L=""
+                V="Posterior approach, spinal instability, thoracic, occipitocervical"/>
+            <PV C="2" H="" L=""
+                V="Prestige Cervical Disc, artificial disc surgery, artificial disc"/>
+            <PV C="2" H="" L="" V="Prestige Cervical Disc, discectomy"/>
+            <PV C="2" H="" L="" V="Provided by Coverage &amp; Reimbursement Department"/>
+            <PV C="2" H="" L="" V="Provided by Education &amp; Training Department"/>
+            <PV C="2" H="" L="" V="Remote Cardiac Telemetry, Medtronic CareLink Network"/>
+            <PV C="2" H="" L="" V="Remote cardiac telemetry, Medtronic CareLink Network"/>
+            <PV C="2" H="" L="" V="Retractor system"/>
+            <PV C="2" H="" L="" V="Sinus instruments, sinus surgery"/>
+            <PV C="2" H="" L="" V="Sinus surgery, frontal sinus instrument"/>
+            <PV C="2" H="" L="" V="Sinus surgery, transnasal surgery"/>
+            <PV C="2" H="" L="" V="Sinus, Surgery"/>
+            <PV C="2" H="" L="" V="Skull base instruments, acoustic neuroma"/>
+            <PV C="2" H="" L="" V="Skull base, transnasal surgery"/>
+            <PV C="2" H="" L="" V="Spinal fusion, Infuse Bone Graft, autograft replacement"/>
+            <PV C="2" H="" L=""
+                V="Spinal fusion, degenerative disc disease, Infuse Bone Graft, autograft replacement"/>
+            <PV C="2" H="" L=""
+                V="Stand alone cervical interbody, cervical fusion, cervical disc disease"/>
+            <PV C="2" H="" L=""
+                V="Strata NSC LP; non-siphon control; lumboperitoneal shunt; lumboperitoneal valve."/>
+            <PV C="2" H="" L="" V="Strata, valve, adjustable, pressure"/>
+            <PV C="2" H="" L="" V="Stroke, ischemic stroke, severe spasticity, ITB"/>
+            <PV C="2" H="" L=""
+                V="Subdural hemorrhage; critical care, subdural hematoma; subdural intracerebral hemorrage"/>
+            <PV C="2" H="" L=""
+                V="Surgical drills, craniotomy, transnasal surgery, skull base surgery"/>
+            <PV C="2" H="" L="" V="Surgical imaging, surgical navigation"/>
+            <PV C="2" H="" L=""
+                V="Surgical navigation customer service, surgical imaging customer service"/>
+            <PV C="2" H="" L="" V="Surgical navigation systems"/>
+            <PV C="2" H="" L="" V="Symptoms of heart failure, heart failure"/>
+            <PV C="2" H="" L=""
+                V="Tachycardia therapy, ICD defibrillators, remote cardiac telemetry"/>
+            <PV C="2" H="" L="" V="Temporary myocardial pacing lead"/>
+            <PV C="2" H="" L="" V="Temporary sensing pacing leads"/>
+            <PV C="2" H="" L="" V="Thoracic Surgery"/>
+            <PV C="2" H="" L=""
+                V="Thoracic stent, aortic aneurysm, endovascular aneurysm repair, TEVAR"/>
+            <PV C="2" H="" L=""
+                V="Thoracic surgery, Cardiovascular surgery, Transcollation technology"/>
+            <PV C="2" H="" L="" V="Thyroidectomy"/>
+            <PV C="2" H="" L="" V="Thyroidectomy, head and neck surgery"/>
+            <PV C="2" H="" L="" V="Thyroidectomy, orbital decompression"/>
+            <PV C="2" H="" L="" V="Tissue dissector"/>
+            <PV C="2" H="" L="" V="Tissue stabilizer"/>
+            <PV C="2" H="" L=""
+                V="Transcatheter heart valves, melody heart valve, transcatheter pulmonary valve"/>
+            <PV C="2" H="" L="" V="Valved conduit, pulmonary valve conduit"/>
+            <PV C="2" H="" L="" V="Valved conduit, tissue valve conduit"/>
+            <PV C="2" H="" L=""
+                V="Ventriclear, EDMS Catheter, external ventricular drainage,  infection"/>
+            <PV C="2" H="" L="" V="annuloplasty, tissue valve, mechanical valve"/>
+            <PV C="2" H="" L=""
+                V="aortic stent grafts, abdominal aortic aneurysm, Talent stent graft"/>
+            <PV C="2" H="" L="" V="arrythmias, cardiac ablation, cryoablation"/>
+            <PV C="2" H="" L="" V="aspiration catheter, thrombus aspiration, catheter tip"/>
+            <PV C="2" H="" L=""
+                V="atrial fibrillation, biventricular pacing, cardiac resynchronization therapy"/>
+            <PV C="2" H="" L=""
+                V="balloon catheter, noncompliant balloon catheter, compliant balloon catheter"/>
+            <PV C="2" H="" L="" V="bioskills lab, education and training"/>
+            <PV C="2" H="" L="" V="bladder problems, bladder control, interstim"/>
+            <PV C="2" H="" L="" V="bone autograft, spinal fusion, bone graft"/>
+            <PV C="2" H="" L=""
+                V="bone graft alternatives, spinal fusion, cervical artificial discs"/>
+            <PV C="2" H="" L=""
+                V="bradycardia therapy, Managed Ventricular Pacing, pacemaker leads"/>
+            <PV C="2" H="" L=""
+                V="bradycardia therapy, managed ventricular pacing, pacemaker leads"/>
+            <PV C="2" H="" L=""
+                V="bradycardia therapy, pacemaker leads, Reduced Ventricular Pacing"/>
+            <PV C="2" H="" L=""
+                V="cardiac ablation, cryoablation, catheter ablation, radiofrequency ablation"/>
+            <PV C="2" H="" L=""
+                V="cardiac device data, EHR, arrhythmia information management, remote monitoring systems"/>
+            <PV C="2" H="" L=""
+                V="cardiac device data, EHR, cardiac remote monitoring, remote cardiac telemetry"/>
+            <PV C="2" H="" L="" V="cardiac device data, Mainspring Data Express, EHR, Paceart"/>
+            <PV C="2" H="" L=""
+                V="cardiac monitor, reveal cardiac monitor, medtronic cardiac monitors"/>
+            <PV C="2" H="" L=""
+                V="cardiac resynchronization therapy, delivery system, CRT, CRT implant procedure"/>
+            <PV C="2" H="" L="" V="cardiac rhythm disease, reimbursement"/>
+            <PV C="2" H="" L="" V="cardiac, catheter, ablation, SVT, AVNRT"/>
+            <PV C="2" H="" L=""
+                V="cardiovascular guide wires, interventional guidewires, medtronic cardiovascular guidewires"/>
+            <PV C="2" H="" L=""
+                V="cervical radiculopathy, cervical artificial disc, artificial cervical disc"/>
+            <PV C="2" H="" L=""
+                V="clinical guidelines and indications, ICD defibrillators, sudden cardiac arrest"/>
+            <PV C="2" H="" L=""
+                V="clinical outcomes, atrial fibrillation, arrhythmias, insertable cardiac monitors"/>
+            <PV C="2" H="" L=""
+                V="clinical outcomes, dual chamber, VVI pacemaker, reduced ventricular pacing."/>
+            <PV C="2" H="" L=""
+                V="clinical outcomes, reduced ventricular pacing, atrial fibrillation, heart failure"/>
+            <PV C="2" H="" L="" V="clinical presentations, downloadable healthcare resources"/>
+            <PV C="2" H="" L=""
+                V="clinical presentations, downloadable healthcare resources, sudden cardiac arrest"/>
+            <PV C="2" H="" L="" V="coding, coverage, reimbursement"/>
+            <PV C="2" H="" L=""
+                V="coding, reimbursement, physician resources, cardiac rhythm disease"/>
+            <PV C="2" H="" L="" V="continuous glucose monitor, diabetes management"/>
+            <PV C="2" H="" L="" V="continuous glucose monitoring, diabetes management"/>
+            <PV C="2" H="" L=""
+                V="coronary guide catheters, guide catheters, launcher catheter"/>
+            <PV C="2" H="" L=""
+                V="coronary stent, eluting stent, zotarolimus-eluting coronary stent"/>
+            <PV C="2" H="" L="" V="coverage and reimbursement, medical coding and billing"/>
+            <PV C="2" H="" L="" V="defibrillators, pacemakers, cardiac rhythm management"/>
+            <PV C="2" H="" L="" V="diabetes management"/>
+            <PV C="2" H="" L=""
+                V="diabetes management software, diabetes therapy software, CareLink Pro"/>
+            <PV C="2" H="" L=""
+                V="diagnostic catheters, angiographic catheters, Pro-Flo angiographic catheter"/>
+            <PV C="2" H="" L="" V="dura mater, cranial repair, neurological products, durepair"/>
+            <PV C="2" H="" L="" V="dura, dural tear, dura repair, dural graft"/>
+            <PV C="2" H="" L="" V="education ad training"/>
+            <PV C="2" H="" L="" V="education and training"/>
+            <PV C="2" H="" L=""
+                V="embolic protection, medtronic guard wire, temporary occlusion protection"/>
+            <PV C="2" H="" L=""
+                V="endovascular stent grafts, thoracic aortic aneurysm, DRC codes, MDT codes"/>
+            <PV C="2" H="" L=""
+                V="endovascular stent grafts, thoracic aortic aneurysm, TAA, endovascular aneurysm repair"/>
+            <PV C="2" H="" L=""
+                V="ent instruments, ent surgery, head and neck surgery instruments"/>
+            <PV C="2" H="" L=""
+                V="ent instruments, sinus surgery instruments, otology instruments"/>
+            <PV C="2" H="" L=""
+                V="gastroenterological product, gastroenterological therapies, medtronic gastric neurostimulation"/>
+            <PV C="2" H="" L="" V="healthcare education and training, bradycardia therapy"/>
+            <PV C="2" H="" L="" V="healthcare education, training"/>
+            <PV C="2" H="" L="" V="healthcare professionals, healthcare education,"/>
+            <PV C="2" H="" L=""
+                V="heart  failure, cardiac resynchronization therapy, CRT therapy, sudden cardiac death"/>
+            <PV C="2" H="" L=""
+                V="heart failure reports, OptiVol Fluid Status Monitoring, CardioSight"/>
+            <PV C="2" H="" L=""
+                V="heart failure, cardiac resynchronization therapy, CRT therapy, sudden cardiac death"/>
+            <PV C="2" H="" L=""
+                V="hospital inpatient, coding, reimbursement, cardiac rhythm disease"/>
+            <PV C="2" H="" L="" V="hydrocephalus shunting"/>
+            <PV C="2" H="" L=""
+                V="hydrocephalus, hydrocephalus shunt, shunt surgery, hydrocephalus treatment"/>
+            <PV C="2" H="" L=""
+                V="image guided ent surgery products, medtronic fusion, ent navigation system"/>
+            <PV C="2" H="" L=""
+                V="implantable cardioverter defibrillators, tachyarrhythmia management, arrhythmia management"/>
+            <PV C="2" H="" L="" V="insertable cardiac monitors, ECG, atrial fibrillation, AF"/>
+            <PV C="2" H="" L="" V="insertable cardiac monitors, syncope, arrhythmia"/>
+            <PV C="2" H="" L="" V="insulin pump therapy"/>
+            <PV C="2" H="" L="" V="insulin pump, continuous glucose monitor"/>
+            <PV C="2" H="" L="" V="insulin pump, minimed, insulin therapy"/>
+            <PV C="2" H="" L=""
+                V="interstim, sacral nerve stimulators, sacral nerve neurostimulator"/>
+            <PV C="2" H="" L="" V="job search, job listings, Medtronic career"/>
+            <PV C="2" H="" L="" V="medical billing and coding, coverage and reimbursement"/>
+            <PV C="2" H="" L="" V="medical billing, coding and reimbursement"/>
+            <PV C="2" H="" L=""
+                V="medtronic pacemakers, bradyarrhythmia management, pacing system"/>
+            <PV C="2" H="" L=""
+                V="menieres disease treatment, menieres symptoms, menieres vertigo, meniett device"/>
+            <PV C="2" H="" L="" V="nerve compression, lumbar spinal stenosis, x-stop spacer"/>
+            <PV C="2" H="" L="" V="nerve monitoring products, nerve monitors, nerve damage"/>
+            <PV C="2" H="" L="" V="neurosurgery imaging,  neuronavigation"/>
+            <PV C="2" H="" L="" V="neurosurgery imaging, surgical navigation, surgical imaging"/>
+            <PV C="2" H="" L=""
+                V="nim nerve monitors, nim endotracheal tubes, nim nerve monitoring systems"/>
+            <PV C="2" H="" L=""
+                V="pillar procedure, snoring treatment products, sleep apnea surgical products"/>
+            <PV C="2" H="" L="" V="presentations, podcasts, cardiac rhythm disease"/>
+            <PV C="2" H="" L=""
+                V="programmer, wireless telemetry, remote cardiac telemetry, Conexus"/>
+            <PV C="2" H="" L="" V="reimbursement resources, Medicare, RAC"/>
+            <PV C="2" H="" L="" V="remote cardiac monitoring, carelink remote, paceart system"/>
+            <PV C="2" H="" L="" V="remote cardiac telemetry, Medtronic CareLink® Network"/>
+            <PV C="2" H="" L="" V="revascularization, tissue stabilizer, heart positioner"/>
+            <PV C="2" H="" L="" V="rf ablation, cardiac ablation, cryoablation"/>
+            <PV C="2" H="" L="" V="skull base instrument, skull base surgery"/>
+            <PV C="2" H="" L="" V="spine shaver, nucleus removal, midas rex"/>
+            <PV C="2" H="" L="" V="subdural, hematoma"/>
+            <PV C="2" H="" L=""
+                V="surgical drill, midas rex drill, hands on medical training, midas rex institute"/>
+            <PV C="2" H="" L="" V="surgical drill, otologic drill"/>
+            <PV C="2" H="" L="" V="surgical drills, high speed otologic drill, microdebrider"/>
+            <PV C="2" H="" L="" V="surgical drills, surgical tools, midas rex"/>
+            <PV C="2" H="" L="" V="surgical navigation"/>
+            <PV C="2" H="" L=""
+                V="surgical navigation, stealthstation, Medtronic stealth station"/>
+            <PV C="2" H="" L=""
+                V="surgical procedures and techniques, insertable cardiac monitor"/>
+            <PV C="2" H="" L=""
+                V="thyroid surgery products, thyroidectomy instruments, parathyroid surgery products"/>
+            <PV C="2" H="" L=""
+                V="tonsil removal products, adenoid removal products, TnA device"/>
+            <PV C="2" H="" L="" V="urological products, urological therapies, rf ablation"/>
+            <PV C="2" H="" L=""
+                V="vertebral compression fracture, kyphoplasty, balloon kyphoplasty"/>
+            <PV C="2" H="" L=""
+                V="wireless telemetry, remote cardiac telemetry, Conexus, CareLink programmer"/>
+         </PMT>
+      </PARM>
+   </RES>
+   <SECURITY_TOKEN>_LsKV4pDwys_sGtd3xGJbE6nAco:1454278021168</SECURITY_TOKEN>
+</GSP>

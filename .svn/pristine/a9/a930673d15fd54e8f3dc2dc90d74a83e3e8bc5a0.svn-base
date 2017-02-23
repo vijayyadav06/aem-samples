@@ -1,0 +1,32 @@
+<div class="pad">
+    <h1 data-sly-test="${properties.title}">${properties.title}</h1>
+    <div data-sly-test="${!properties.title && !wcmmode.disabled}" class="cq-placeholder">
+        Placeholder for Responsive Table
+    </div>
+    <p data-sly-test="${properties.showDescription}">${properties.description}</p>
+</div>
+<table
+    data-sly-use.table="com.medtronic.com.app.ResponsiveTable"
+    data-tablesaw-mode="${table.display}"
+    data-sly-attribute.summary="${table.description}"
+    data-tablesaw-minimap
+    data-tablesaw-sortable
+    data-sly-attribute.data-tablesaw-sortable-switch="${table.showSort}"
+    data-sly-attribute.data-tablesaw-mode-switch="${table.showMode}">
+    <thead data-sly-test="${!table.hideHeaders}">
+        <tr data-sly-list.headerName="${table.headers}">
+            <th data-sly-resource="${headerName @ resourceType='medtronic-com/components/content/responsive-table/table-header'}"
+                data-sly-unwrap="${ !wcmmode.edit }"/>
+        </tr>
+    </thead>
+    <tbody data-sly-list.row="${table.rows}">
+        <tr data-sly-list.cell="${row}">
+            <td data-sly-element="${ cellList.index == 0 ? table.firstColElement : table.tdElement }"
+                data-sly-resource="${ cell @ resourceType='medtronic-com/components/content/responsive-table/table-cell' }"/>
+        </tr>
+    </tbody>
+</table>
+<!--/* Do not include tablesaw js in edit mode. */-->
+<sly data-sly-test="${!wcmmode.edit}"
+     data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+     data-sly-call="${libraries.includeLibrary @ categories='medtronic.common.tablesaw-2.0.1', mode='js', collection='footer'}"/>

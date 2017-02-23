@@ -1,0 +1,97 @@
+<div data-sly-test="${!properties.copyright && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Global Footer Component</div>
+<footer data-sly-test="${properties.copyright}" class="option1" data-sly-use.footer="com.medtronic.com.app.Footer">
+    <!-- Footer Navigation -->
+    <section class="footer__nav">
+        <div class="container-fluid column-control">
+            <div class="accordion accordion--mobile row">
+                <sly data-sly-call="${footerColumn @ columnHeader=properties.columnHeader1, linkColumns=footer.linkColumns1}" />
+                <sly data-sly-call="${footerColumn @ columnHeader=properties.columnHeader2, linkColumns=footer.linkColumns2}" />
+                <sly data-sly-call="${footerColumn @ columnHeader=properties.columnHeader3, linkColumns=footer.linkColumns3}" />
+                <sly data-sly-call="${footerColumn @ columnHeader=properties.columnHeader4, linkColumns=footer.linkColumns4}" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Proper -->
+    <section class="footer__content">
+        <div class="container-fluid" data-sly-use.icons="/apps/medtronic-com/components/common/icons.html">
+            <!-- Social Links -->
+            <div class="footer__social-links" data-sly-list.socialChannels="${footer.socialChannels}">
+                <a data-sly-test="${socialChannels.text != 'Select a Social Channel'}" href="${socialChannels.url || '#'}" 
+                    class="icon-fallback-text" target="${socialChannels.newTab ? '_blank' : ''}">
+                    <sly data-sly-test="${socialChannels.text == 'facebook'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.facebook, fallbackText='Facebook'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'blog'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.medblog, fallbackText='Blog'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'instagram'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.instagram, fallbackText='Instagram'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'linkedin'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.linkedin, fallbackText='LinkedIn'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'pinterest'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.pinterest, fallbackText='Pinterest'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'qq'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.qqlive, fallbackText='QQ'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'twitter'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.twitter, fallbackText='Twitter'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'weibo'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.weibo, fallbackText='Weibo'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'youku'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.youku, fallbackText='Youku'}" />
+                    </sly>
+                    <sly data-sly-test="${socialChannels.text == 'youtube'}">
+                        <sly data-sly-call="${icons.iconWithFallback @ icon=icons.youtube, fallbackText='Youtube'}" />
+                    </sly>
+                </a>
+            </div>
+
+            <div class="row footer__copy">
+                <!-- Legal Links -->
+                <nav class="footer__legal-links">
+                    <ul class="unstyled" data-sly-list.footerLinks="${footer.footerLinks}">
+                        <li>
+                            <a href="${footerLinks.url || '#'}" target="${footerLinks.newTab ? '_blank' : ''}">${footerLinks.text}</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Legal Copy -->
+                <p>${properties.additionalText}</p>
+                <p>© ${footer.copyright}</p>
+            </div>
+
+            <!-- QR Code -->
+            <div class="footer__qr-code"
+                data-sly-test="${properties.codePath}">
+                <p>${properties.codeText}</p>
+                <img src="${properties.codePath}" alt="${properties.altText}" />
+            </div>
+
+        </div>
+    </section>
+
+</footer>
+
+<template data-sly-template.footerColumn="${ @ columnHeader, linkColumns}">
+    <div class="accordion__item column-control__col-4">
+        <h3 class="accordion__label">
+            <a>${columnHeader}<span class="accordion__icon"></span></a>
+        </h3>
+        <div class="accordion__content">
+            <ul class="unstyled thin"
+                data-sly-list.linkColumns="${linkColumns}">
+                <li data-sly-test="${linkColumns.text}" class="${linkColumns.fontWeight}">
+                    <a href="${linkColumns.url || '#'}" 
+                        target="${linkColumns.newTab ? '_blank' : ''}">${linkColumns.text @context='html'}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>

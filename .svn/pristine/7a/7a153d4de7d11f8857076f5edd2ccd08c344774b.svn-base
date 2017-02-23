@@ -1,0 +1,24 @@
+<div class="row four-column sub-layout-4t"
+  data-sly-use.subtemplateSlot="../subtemplate-slot.html"
+  data-sly-use.sequence="../subtemplate-sequence.js">
+  <div class="col-xs-12 col-md-6 block-one">
+    <div class="row">
+      <div class="col-xs-12 two-by-one">
+        <sly
+          data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate2-slot2/par-squat', color='bg-sky-blue'}" />
+      </div>
+      <div class="col-xs-12 two-by-one">
+        <sly
+          data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate2-slot3/par-squat', color='bg-medtronic-blue'}" />
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3 one-by-two block-two">
+    <sly
+      data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate2-slot3/par-slender', color='bg-light-blue'}" />
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3 one-by-two block-three">
+    <sly
+      data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate2-slot4/par-slender', color='bg-white'}" />
+  </div>
+</div>

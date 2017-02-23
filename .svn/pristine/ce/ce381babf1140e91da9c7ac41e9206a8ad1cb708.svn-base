@@ -1,0 +1,51 @@
+<form data-sly-use.search="search.js" data-sly-use="${'data-layer-search.js' @ search=search}"
+  id="search-results-form" action="${search.searchAuthoring.searchResultsPage}" method="get">
+  <div class="search-results hidden">
+    <div id="search-results__filter" class="col-lg-3 col-md-3"></div>
+    <div class="search-results__section pad col-lg-9 col-md-9">
+        <div id="search-results__search"></div>
+        <div class="row top-border results-pagination">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 search-results-total">
+                <div id="search-results__total"></div>
+            </div>
+            <div class="col-md-12 col-lg-8 pull-right">
+                <div id="search-results__pagination-top"></div>
+            </div>
+        </div>
+        <div class="row">
+          <div id="search-results__container"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div id="search-results__pagination-bottom"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="search-results__no-results hidden"></div>
+</form>
+<script type="text/javascript">
+var searchFilters = ${search.filters @ context='unsafe'};
+
+var SEARCH_STATIC_TEXT = {
+    searchButtonText: "${properties.searchButtonText @ context='scriptString'}",
+    showingText: "${properties.showingResultsText @ context='scriptString'}",
+    searchText: "${properties.searchInsteadText @ context='scriptString'}",
+    resultsText: "${properties.totalResultsText @ context='scriptString'}",
+    prevText: "${properties.prevLinkText @ context='scriptString'}",
+    nextText: "${properties.nextLinkText @ context='scriptString'}",
+    keyMatchesText: "${properties.keyMatchesText @ context='scriptString'}",
+    searchPlaceholder: "${properties.searchPlaceholderText @ context='scriptString'}",
+    filterTitle: "${properties.filterTitleText @ context='scriptString'}",
+    applyButton: "${properties.applyButtonText @ context='scriptString'}",
+    clearLink: "${properties.clearLinkText @ context='scriptString'}",
+    advancedSearchText: "${search.searchAuthoring.advancedLinkText @ context='scriptString'}",
+    advancedSearchLink: "${search.searchAuthoring.advancedLinkUrl @ context='scriptString'}",
+    noSearchResultText1: "${properties.noSearchResultText1 @ context='scriptString'}",
+    noSearchResultText2: "${properties.noSearchResultText2 @ context='scriptString'}",
+    disclaimer: "${properties.disclaimerText @ context='scriptString'}",
+    language: "${search.language @ context='scriptString'}"
+};
+
+var searchResults = ${search.results @ context='unsafe'};
+</script>

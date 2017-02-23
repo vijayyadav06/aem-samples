@@ -1,0 +1,88 @@
+package com.medtronic.com.app;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.medtronic.com.util.LinkUtil;
+import com.adobe.acs.commons.widgets.MultiFieldPanelFunctions;
+import com.adobe.cq.sightly.WCMUse;
+
+/**
+ * @author madhu.gupta RightRailContactUs Class for use with AEM
+ *         right-rail-contact-us Component path for component
+ *         /apps/medtronic-com/components/content/right-rail-contact-us
+ * 
+ */
+
+public class RightRailContactUs extends WCMUse {
+
+	private static final Logger log = LoggerFactory
+			.getLogger(RightRailContactUs.class);
+
+	/*
+	 * Dialog Properties
+	 */
+	public static final String HEADLINE_PROPERTY = "headline";
+	public static final String DESCTIPTIVE_TEXT_PROPERTY = "descriptiveText";
+	public static final String CONTACTUS_PROPERTY = "contact";
+	public static final String CONTACT_URL_PROPERTY = "url";
+	public static final String CONTACT_INCLUDECTA_PROPERTY = "_DNT_includeCta";
+    public static final String CONTACT_NEWTAB_PROPERTY = "_DNT_newTab";
+	
+
+	private String headline;
+	private String descriptiveText;
+	private List<Map<String, String>> contact = null;
+
+	@Override
+	public void activate() throws Exception {
+		headline = getProperties().get(HEADLINE_PROPERTY, String.class);
+		descriptiveText = getProperties().get(DESCTIPTIVE_TEXT_PROPERTY,
+				String.class);
+		contact = MultiFieldPanelFunctions.getMultiFieldPanelValues(
+				getResource(), CONTACTUS_PROPERTY);
+		initializeContactMap();
+	}
+
+	public void initializeContactMap() {
+		for (Map<String, String> contactMap : this.contact) {
+			String url = contactMap.get(CONTACT_URL_PROPERTY);
+			if (StringUtils.isNotEmpty(url)) {
+				url = LinkUtil.getPathfieldURL(url);
+			}
+			contactMap.put(CONTACT_URL_PROPERTY, url);
+
+			String includeCta = contactMap.get(CONTACT_INCLUDECTA_PROPERTY);
+			if (includeCta == null || includeCta.contains("[]")) {
+				includeCta = "false";
+			} else {
+				includeCta = "true";
+			}
+			contactMap.put(CONTACT_INCLUDECTA_PROPERTY, includeCta);
+			String newtab = contactMap.get(CONTACT_NEWTAB_PROPERTY);
+			if (newtab == null || newtab.contains("[]")) {
+				newtab = "";
+			} else {
+				newtab = "_blank";
+			}
+			contactMap.put(CONTACT_NEWTAB_PROPERTY, newtab);
+		}
+	}
+
+	public List<Map<String, String>> getContact() {
+		return contact;
+	}
+
+	public String getHeadline() {
+		return headline;
+	}
+
+	public String getDescriptiveText() {
+		return descriptiveText;
+	}
+
+}

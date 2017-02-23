@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.5.4</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="product_detail_related_link"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="related_link" type-name="product_detail_related_link"/>
+    </typed-variables>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">Video_LI_ID</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">7</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">LinkText</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="1">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">cssClass</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="2">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">relatedLink</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">RelatedLinkTitle</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">RelatedLinks</property>
+      <property name="global" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="1"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">relatedLinkCount</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">related_link</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">product_detail_related_link</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="3"/>
+    <steps class="ArrayList">
+      <object class="BranchPoint" id="4"/>
+      <object class="Transition" serializationversion="0" id="5">
+        <property name="name" class="String">IF SWF</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">cssClass</property>
+              </property>
+              <property name="binaryPredicate" class="kapow.robot.plugin.common.support.predicate.binary.ContainsBinaryPredicate"/>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">swf</property>
+              </property>
+              <property name="ignoreCase" class="Boolean">true</property>
+            </object>
+          </property>
+          <property name="generateErrorWhenStopping" class="Boolean">false</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="6">true</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="7">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"
+                        &lt;!-- Each video link --&gt;
+                        &lt;li&gt;
+							&lt;div class=\"video-component__list-item video-container \"&gt;
+                                &lt;div class=\"col-xs-12 video-component__list-item--thumb\"&gt;
+                                    &lt;a class=\"video__trigger\" data-target=\"#migrated_video_"+ Video_LI_ID +"\"&gt;
+                                        &lt;div class=\"col-xs-7 video-component__list-item--details\"&gt;
+                                            &lt;h3 class=\"video__title\"&gt;"+ RelatedLinkTitle +"&lt;/h3&gt;
+										&lt;/div&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class=\"modal fade modal__video first_load\" id=\"migrated_video_"+ Video_LI_ID+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"title_of_video\"&gt;
+                                    &lt;div class=\"modal-dialog\" role=\"document\"&gt;
+                                        &lt;div class=\"modal-content\"&gt;
+                                            &lt;div class=\"modal-header bg-white\"&gt;
+                                                &lt;a href=\"#\" data-dismiss=\"modal\"&gt;
+                                                    &lt;i class=\"icon shape-mdt-close\" aria-hidden=\"true\"&gt;
+														&lt;svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 30 30\"&gt;
+															&lt;path fill=\"#004B87\" d=\"M9.5 22.3l5.8-5.8 5.8 5.8 1-1-5.8-5.8 5.8-5.8-1-1-5.8 5.8-5.8-6-1 1 5.8 5.8-5.8 5.8 1 1.2zM0 0v30h30V0H0zm27.9 27.9H2.1V2.1h25.8v25.8z\"/&gt;
+														&lt;/svg&gt;
+													&lt;/i&gt;
+                                                &lt;/a&gt;
+                                            &lt;h4 class=\"modal-title\" id=\"title_of_video\"&gt;"+RelatedLinkTitle+"&lt;/h4&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=\"modal-body\"&gt;
+                                                &lt;div class=\"flowplayer\"&gt;
+                                                    &lt;video&gt;
+                                                        &lt;source src= \""+ replaceText(relatedLink,"&amp;","&amp;amp;") +"\" type=\"video/mp4\"&gt;
+                                                    &lt;/video&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+						&lt;/li&gt;"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LinkText</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="8">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">RelatedLinks+LinkText</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">RelatedLinks</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="9">
+        <property name="name" class="String">IF Youtube</property>
+        <property name="stepAction" class="TestVariables" serializationversion="0">
+          <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterCondition">
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">cssClass</property>
+              </property>
+              <property name="binaryPredicate" class="kapow.robot.plugin.common.support.predicate.binary.ContainsBinaryPredicate"/>
+              <property name="expression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                <property name="value" class="String">youtube</property>
+              </property>
+              <property name="ignoreCase" class="Boolean">true</property>
+            </object>
+          </property>
+          <property name="generateErrorWhenStopping" class="Boolean">false</property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="10">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">"                         &lt;li&gt;
+                            &lt;div class=\"video-component__list-item video-container \"&gt;
+                                &lt;div class=\"col-xs-12 video-component__list-item--thumb\"&gt;
+                                    &lt;a class=\"video__trigger\" data-target=\"#migrated_video_"+ Video_LI_ID +"\"&gt;
+                                        &lt;div class=\"col-xs-7 video-component__list-item--details\"&gt;
+                                            &lt;h3 class=\"video__title\"&gt;"+RelatedLinkTitle +"&lt;/h3&gt;
+                                        &lt;/div&gt;
+
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+
+                                &lt;!-- put video modal markup here --&gt;
+                                &lt;!-- id is a unique id, similar to above, recommend \"migrated_video_[sequence]\" --&gt;
+                                &lt;!-- text is the video link text, same as above --&gt;
+                                &lt;!-- videoId is the youtube video id --&gt;
+                                &lt;div class=\"modal fade modal__video\" id=\"migrated_video_"+ Video_LI_ID +"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"title_of_video2\" style=\"display: none;\"&gt;
+                                    &lt;div class=\"modal-dialog\" role=\"document\"&gt;
+                                        &lt;div class=\"modal-content\"&gt;
+                                            &lt;div class=\"modal-header bg-white\"&gt;
+                                                &lt;a href=\"#\" data-dismiss=\"modal\"&gt;
+                                                    &lt;i class=\"icon shape-mdt-close\" aria-hidden=\"true\"&gt;
+                                                    &lt;svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 30 30\"&gt;
+                                                        &lt;path fill=\"#004B87\" d=\"M9.5 22.3l5.8-5.8 5.8 5.8 1-1-5.8-5.8 5.8-5.8-1-1-5.8 5.8-5.8-6-1 1 5.8 5.8-5.8 5.8 1 1.2zM0 0v30h30V0H0zm27.9 27.9H2.1V2.1h25.8v25.8z\" /&gt;
+                                                    &lt;/svg&gt;
+                                                    &lt;/i&gt;
+                                                &lt;/a&gt;
+                                                &lt;h4 class=\"modal-title\" id=\"title_of_video2\"&gt;"+ RelatedLinkTitle +"&lt;/h4&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=\"embed-container\"&gt;
+                                                &lt;iframe id=\"iframe_migrated_video_2\" src=\""+ relatedLink +"\" frameborder=\"0\" allowfullscreen=\"\"&gt;&lt;/iframe&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+                        &lt;/li&gt;"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">LinkText</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="11">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">RelatedLinks+LinkText</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">RelatedLinks</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="12"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+    </edges>
+  </body>
+</object>

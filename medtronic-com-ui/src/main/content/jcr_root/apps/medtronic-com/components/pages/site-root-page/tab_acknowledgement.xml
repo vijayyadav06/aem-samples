@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Acknowledgement">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <authenticationType
+            jcr:primaryType="nt:unstructured"
+            defaultValue="true"
+            fieldLabel="Authentication Type"
+            id="authenticationType"
+            name="./authentication_type"
+            type="select"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(box) { Medtronic.Authoring.Acknowledgement.loadContent(box);}"
+                selectionchanged="function(field, value, isChecked) { Medtronic.Authoring.Acknowledgement.authTypeChanged(field, value);}"
+            />
+            <options jcr:primaryType="cq:WidgetCollection">
+                <none jcr:primaryType="nt:unstructured"
+                    text="None"
+                    value="none"/>
+                <acknowledgement jcr:primaryType="nt:unstructured"
+                    text="Acknowledgement Only"
+                    value="acknowledgement"/>
+            </options>
+        </authenticationType>
+        <acknowledgementDetails
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}false"
+            itemId="acknowledgementDetails"
+            layout="form"
+            padding="5px 5px 5px 5px"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <headline
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    disabled="{Boolean}true"
+                    emptyText="Enter a value for the 'Acknowledgement' title"
+                    fieldLabel="Headline"
+                    name="./acknowledgement_headline"
+                    width="280"
+                    xtype="textfield"/>
+                <bodyText
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="false"
+                    disabled="{Boolean}true"
+                    fieldLabel="Descriptive Text"
+                    name="./acknowledgement_text"
+                    validator="function() { return Medtronic.Authoring.validateEManualUrl(this); }"
+                    width="280"
+                    xtype="richtext">
+                    <rtePlugins jcr:primaryType="nt:unstructured"
+                        path="/apps/medtronic-com/components/common/richtext-configurations/linksFormatOnly/rtePlugins.infinity.json"
+                        xtype="cqinclude">
+                    </rtePlugins>
+                </bodyText>
+                <rejectButton
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    disabled="{Boolean}true"
+                    emptyText="Reject"
+                    fieldLabel="Reject Button Text"
+                    name="./acknowledgement_reject_button"
+                    width="280"
+                    xtype="textfield"/>
+                <acceptButton
+                    jcr:primaryType="nt:unstructured"
+                    allowBlank="{Boolean}false"
+                    disabled="{Boolean}true"
+                    fieldLabel="Accept Button Text"
+                    emptyText="Accept"
+                    name="./acknowledgement_accept_button"
+                    width="280"
+                    xtype="textfield"/>
+                <urls
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Warn On Leave Whitelist"
+                    name="./acknowledgement_urls"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        layout="form"
+                        xtype="pathfield">
+                    </fieldConfig>
+                </urls>
+            </items>
+        </acknowledgementDetails>
+    </items>
+</jcr:root>

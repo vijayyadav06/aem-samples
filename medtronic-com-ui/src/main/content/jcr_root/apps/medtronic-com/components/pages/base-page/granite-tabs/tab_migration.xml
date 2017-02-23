@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:showOnCreate="{Boolean}true"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Migrated Content"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <migrated
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    disabled="{Boolean}true"
+                    name="./migrationproperties_migrated"
+                    text="Migrated"/>
+                <migrationId
+                    sling:resourceType="granite/ui/components/foundation/form/hidden"
+                    jcr:primaryType="nt:unstructured"
+                    name="./migrationLegacyID"/>
+                <radioGroup
+                    cq:showOnCreate="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                    cq-msm-lockable="migrationProperties"
+                    name="./migrationProperties">
+                    <items jcr:primaryType="nt:unstructured">
+                        <revise
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/radio"
+                            value="revise"
+                            text="Revise"/>
+                        <retain
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/radio"
+                            value="retain"
+                            text="Retain"/>
+                        <assess
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/radio"
+                            value="assess"
+                            text="Assess"/>
+                        <revisionComplete
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/radio"
+                            value="revisionComplete"
+                            text="Revision Complete"/>
+                      </items>
+               </radioGroup>
+            </items>
+        </column>
+    </items>
+</jcr:root>

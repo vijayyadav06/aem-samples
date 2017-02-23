@@ -1,0 +1,10 @@
+<div class="cq-placeholder" data-sly-test="${!properties.navigationText && !wcmmode.disabled}">Placeholder for Tertiary</div>
+<sly data-sly-test = "${properties.navigationText}">
+<a class="nav-items__level-3--link"
+  data-sly-use.nav= "/apps/medtronic-com/components/content/nav/navigation-link.js"
+  data-sly-use.dataNavId= "${'/apps/medtronic-com/components/content/nav/data-nav-id.js' @ type='tertiary'}"
+  data-nav-id="${dataNavId}"
+  href="${nav.navigationUrl}">
+  ${properties.navigationText}
+</a>
+</sly>

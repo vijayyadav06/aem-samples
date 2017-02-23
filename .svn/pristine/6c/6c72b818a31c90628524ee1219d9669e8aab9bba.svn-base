@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:description="A side rail component, which allows a subtemplate slot component to display properly in the side rail"
+    jcr:primaryType="cq:Component"
+    jcr:title="Right Rail Subtemplate"
+    componentGroup="Medtronic-com - Subtemplate" />

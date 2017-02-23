@@ -1,0 +1,15 @@
+<!--/*
+  Copyright [TODO]
+  
+  Base page component, based on /libs/wcm/foundation/components/page
+  with the body.js & css class addition removed.
+*/-->
+<!doctype html>
+<html data-sly-use.redirect="redirect.js"
+      data-sly-use.basePage="base-page.js"
+      data-sly-use="data-layer-init.js"
+      data-sly-use.acknowledgement="/apps/medtronic-com/components/content/acknowledgement/init.js"
+      dir="${basePage.textDirection}" lang="${basePage.locale.language}">
+  <head data-sly-include="head.html"></head>
+  <body data-sly-include="body.html" data-sly-attribute.class='${acknowledgement.bodyClass}'></body>
+</html>

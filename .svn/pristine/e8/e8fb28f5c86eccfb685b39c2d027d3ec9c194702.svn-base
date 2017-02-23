@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    gsaHostUrl="http://gprimary-test.medtronic.com/"
+    connectionTimeout="7000"
+    readTimeout="7000"/>

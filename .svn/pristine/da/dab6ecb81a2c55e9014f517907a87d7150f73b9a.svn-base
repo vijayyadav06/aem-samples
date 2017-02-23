@@ -1,0 +1,18 @@
+<template data-sly-template.ctaButton="${ @ url, openInNewTab, text}">
+    <a href="${url}" title="${text}" class="btn"
+       data-sly-attribute.target="${openInNewTab ? '_blank' : ''}">
+        ${text}
+    </a>
+</template>
+
+<template data-sly-template.label="${ @ url, openInNewTab, text, dataLinkId}">
+    <a class="label" href="${url}" title="${text}"
+        data-link-id="${dataLinkId.id}"
+        data-position-id="${dataLinkId.position}"
+        data-sly-attribute.target="${openInNewTab ? '_blank' : ''}">
+        ${text}
+        <sly data-sly-test="${text}"
+            data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+            data-sly-call="${icons.chevronRight}" />
+    </a>
+</template>

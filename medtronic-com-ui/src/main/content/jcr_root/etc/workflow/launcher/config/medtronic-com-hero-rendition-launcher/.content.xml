@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:WorkflowLauncher"
+    condition=""
+    description=""
+    enabled="{Boolean}true"
+    eventType="{Long}1"
+    excludeList=""
+    glob="/content/dam/medtronic-com/([a-zA-Z]{2}-[a-zA-Z]{2})/[lL]1-[lL]2-hero(/.*/)renditions/original"
+    nodetype="nt:file"
+    runModes="author,publish"
+    workflow="/etc/workflow/models/medtronic-com/dam-workflows/hero-renditions/jcr:content/model"/>

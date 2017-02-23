@@ -1,0 +1,77 @@
+<project name="medtronic-com">
+    <record name="build.log" loglevel="verbose" action="start" />
+
+    <property file="../local.build.properties" />
+    <property file="unix.build.properties" />
+
+    <property file="application.properties" />
+
+    <target name="init">
+        <property name="BUILD_NUMBER" value="1.1.1"/>
+        <property name="build.dir" value="../build"/>
+
+        <echo message="BUILD_NUMBER=${BUILD_NUMBER}"/>
+        <echo message="JAVA_HOME=${JAVA_HOME}"/>
+        <echo message="MAVEN_HOME=${MAVEN_HOME}"/>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete>
+            <fileset dir="." includes="*.war"/>
+        </delete>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="autoinstallpackage">
+        <property name="AUTO_INSTALL_PACKAGE" value="-PautoInstallPackage"/>
+    </target>
+
+    <target name="setupBuildDirectory" depends="init">
+        <mkdir dir="${build.dir}"/>
+
+        <copy todir="${build.dir}">
+            <fileset dir="." includes="${ant.project.name}-config/**"/>
+            <fileset dir="." includes="${ant.project.name}-design/**"/>
+            <fileset dir="." includes="${ant.project.name}-services/**"/>
+            <fileset dir="." includes="${ant.project.name}-msm/**"/>
+            <fileset dir="." includes="${ant.project.name}-taglib/**"/>
+            <fileset dir="." includes="${ant.project.name}-ui/**"/>
+            <fileset dir="." includes="pom.xml"/>
+        </copy>
+    </target>
+
+    <target name="mvn">
+        <exec dir="${build.dir}" executable="sh" failonerror="true">
+            <env key="JAVA_HOME" value="${JAVA_HOME}" />
+            <arg line="-c '${MAVEN_HOME}/bin/mvn versions:set -DnewVersion=${BUILD_NUMBER} -DgenerateBackupPoms=false'" />
+        </exec>
+
+        <exec dir="${build.dir}" executable="sh" failonerror="true">
+            <env key="JAVA_HOME" value="${JAVA_HOME}" />
+            <arg line="-c '${MAVEN_HOME}/bin/mvn clean install ${AUTO_INSTALL_PACKAGE}'" />
+        </exec>
+    </target>
+
+    <target name="war" depends="init,setupBuildDirectory,mvn">
+        <jar jarfile="${ant.project.name}.war" update="true">
+            <fileset dir="${build.dir}/${ant.project.name}-config/target"     includes="**/*.zip"/>
+            <fileset dir="${build.dir}/${ant.project.name}-design/target"     includes="**/*.zip"/>
+            <fileset dir="${build.dir}/${ant.project.name}-ui/target"         includes="**/*.zip"/>
+            <manifest>
+                <attribute name="Weblogic-Application-Version" value="${BUILD_NUMBER}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="install" depends="autoinstallpackage, war"/>
+
+    <target name="deploy">
+        <tstamp />
+        <echo message="${TODAY}, ${TSTAMP}"/>
+    </target>
+
+    <target name="pre-build" depends="clean"/>
+
+    <target name="post-build"/>
+
+</project>

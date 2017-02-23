@@ -1,0 +1,21 @@
+<!--/*
+  Copyright [TODO]
+  
+  Custom js clientlibs
+*/-->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"/>
+<!--[if gt IE 8]><!-->
+  <sly data-sly-call="${clientLib.js @ categories='medtronic-com.main'}"/>
+  <!-- async load addthis so we can trigger initialization only when cookies are allowed. -->
+  <script src="//s7.addthis.com/js/300/addthis_widget.js?async=1"></script>
+  <script src="//releases.flowplayer.org/6.0.3/flowplayer.min.js"></script>
+  <!-- For smoother HLS playback in modern browsers we load the hlsjs plugin: -->
+  <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
+  <sly data-sly-call="${clientLib.js @ categories='medtronic-com.extensions'}"/>
+  <sly data-sly-test="${!wcmmode.disabled}" data-sly-call="${clientLib.js @ categories='medtronic-com.author-fixes'}"/>
+  <!--/* Include all the deferred libraries here */-->
+  <sly data-sly-call="${libraries.render @ collection='footer'}" />
+<!--<![endif]-->
+<!--/* Since this is an IE < IE9 only library, we use a special include for it */-->
+<sly data-sly-call="${libraries.renderIEConditionalLibrary @ categories='medtronic-com.main-ie', mode='js', ieCondition='lte IE 8'}" />

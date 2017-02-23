@@ -1,0 +1,23 @@
+<!-- Modal Center Positioned -->
+<div class="modal" id="modalAcknowledge" tabindex="-1" role="dialog" aria-labelledby="">
+    <!--/* Including the Acknowledgement js */-->
+    <sly data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"
+         data-sly-call="${libraries.includeLibrary @ categories='medtronic-com.acknowledgement', mode='js', collection='footer'}"/>
+
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <h3 class="modal-title yellow" id="modalHeading">${inheritedPageProperties.acknowledgement_headline}</h3>
+            </div>
+            <div class="modal-body">
+                ${inheritedPageProperties.acknowledgement_text @ context='html'}
+            </div>
+            <div class="modal-footer">
+                <div class="btn-row">
+                    <button class="btn btn-nope" type="button">${inheritedPageProperties.acknowledgement_reject_button}</button>
+                    <button class="btn btn-yep" type="button">${inheritedPageProperties.acknowledgement_accept_button}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

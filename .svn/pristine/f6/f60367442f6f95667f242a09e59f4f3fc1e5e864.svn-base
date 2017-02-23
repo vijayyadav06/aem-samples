@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="#"
+    title="L2 Subtemplates"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <main
+            jcr:primaryType="cq:Widget"
+            title="General"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <type
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Subtemplate Type"
+                    allowBlank="{Boolean}false"
+                    name="./type"
+                    type="select"
+                    xtype="mdtselection"
+                    fieldDescription="Add subtemplates in sequential order (1-6)"
+                    defaultValue="Select a subtemplate">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <subtemplate1
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 1"
+                            value="subtemplate-1"/>
+                        <subtemplate2
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 2"
+                            value="subtemplate-2"/>
+                        <subtemplate3
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 3"
+                            value="subtemplate-3"/>
+                        <subtemplate4
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 4"
+                            value="subtemplate-4"/>
+                        <subtemplate5
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 5"
+                            value="subtemplate-5"/>
+                        <subtemplate6
+                            jcr:primaryType="nt:unstructured"
+                            text="Subtemplate 6"
+                            value="subtemplate-6"/>
+                    </options>
+                </type>
+            </items>
+        </main>
+    </items>
+</jcr:root>

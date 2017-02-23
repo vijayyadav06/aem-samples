@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Migrated Content">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <migrated
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Migrated"
+            name="./migrationproperties_migrated"
+            type="checkbox"
+            disabled="{Boolean}true"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function() {  return Medtronic.Authoring.migrationFlagSettings(this);    }"/>
+         </migrated>
+         <migrationId
+                xtype="hidden"
+                jcr:primaryType="nt:unstructured"
+                name="./migrationLegacyID"/>
+         <migrationRadio
+            jcr:primaryType="cq:Widget"
+            heroElementField="{Boolean}true"
+            name="./migrationProperties"
+            type="radio"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <revise
+                    jcr:primaryType="nt:unstructured"
+                    text="Revise"
+                    value="revise" />
+                <retain
+                    jcr:primaryType="nt:unstructured"
+                    text="Retain"
+                    value="retain" />
+                <assess
+                    jcr:primaryType="nt:unstructured"
+                    text="Assess"
+                    value="assess" />
+                <revisionComplete
+                    jcr:primaryType="nt:unstructured"
+                    text="Revision Complete"
+                    value="revisionComplete" />
+            </options>
+         </migrationRadio>
+    </items>
+</jcr:root>

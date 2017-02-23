@@ -1,0 +1,85 @@
+package com.medtronic.com.msm.workflow;
+
+
+import com.adobe.granite.workflow.PayloadMap;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.Workflow;
+import com.adobe.granite.workflow.exec.WorkflowData;
+import com.adobe.granite.workflow.model.WorkflowModel;
+import com.claytablet.cq5.ctctranslation.Events.*;
+import com.claytablet.cq5.ctctranslation.service.ctcdata.TranslatedItem;
+import com.claytablet.cq5.ctctranslation.service.ctcdata.TranslationItem;
+import com.medtronic.com.msm.service.MSMUserService;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.felix.scr.annotations.*;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.event.EventUtil;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventConstants;
+import org.osgi.service.event.EventHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+
+@Component(metatype = false, immediate = true)
+@Service(value = EventHandler.class)
+@Properties({
+        @Property(name = EventConstants.EVENT_TOPIC, propertyPrivate = true, value = {TranslationEvent.EVENT_TOPIC})
+})
+public class TranslationEventListener implements EventHandler {
+    private static final Logger log = LoggerFactory.getLogger(TranslationEventListener.class);
+    private static final String WORKFLOW_MODEL = "/etc/workflow/models/medtronic-com/mdt-content-translation-review/jcr:content/model";
+    private static final String RESOURCE_PREFIX = "/content/medtronic-com/";
+
+    @Reference
+    MSMUserService msmUserService;
+
+    @Override
+    public void handleEvent(final Event event) {
+        if (EventUtil.isLocal(event) ) {
+            try {
+                TranslationEvent translationEvent = TranslationEvent.fromEvent(event);
+                if (translationEvent != null) {
+
+                    EventDetailType eventType = translationEvent.getEventDetailType();
+                    PageTranslationInfo pageTranslationInfo = translationEvent.getPageTranslationInfo();
+                    if (pageTranslationInfo == null) {
+                        log.error("Error handling translation event: got PageTranslationInfo object as NULL.");
+                    }
+                    if (eventType == EventDetailType.CompletedTranslationProcess) {
+                        TranslationItemDetails  translationItemDetails = translationEvent.getTranslationItemDetails();
+                        if (translationItemDetails == null)
+                            log.error("Error handling translation event: got TranslationItemDetails object as NULL.");
+                        else {
+                            TranslationItem translationItem = translationItemDetails.getTranslationItem();
+                            if (translationItem == null ){
+                                log.error("Error handling translation event: got TranslationItem object as NULL.");
+                            }
+                            else {
+                            	String itemTargetPath = translationItem.getItemTargetPath();
+                            	// if starts with "/content/medtronic-com/"
+                            	if(StringUtils.startsWithIgnoreCase(itemTargetPath, RESOURCE_PREFIX)){
+                            		ResourceResolver resourceResolver = msmUserService.getResourceResolver();
+                                    if (resourceResolver != null) {
+                                    	WorkflowSession wfSession = resourceResolver.adaptTo(WorkflowSession.class);
+                                        if (wfSession != null) {
+                                        	WorkflowModel wfModel = wfSession.getModel(WORKFLOW_MODEL);
+                                            WorkflowData wfData = wfSession.newWorkflowData(PayloadMap.TYPE_JCR_PATH, itemTargetPath);
+                                            Workflow newWorkflow = wfSession.startWorkflow(wfModel, wfData, new HashMap<String, Object>());
+                                        }
+                                     } 
+                                 }
+                            }
+                        }
+                    }
+                }
+
+            }
+            catch (Exception te) {
+                log.error("Error handling translation event {}", te);
+            }
+        }
+    }
+}

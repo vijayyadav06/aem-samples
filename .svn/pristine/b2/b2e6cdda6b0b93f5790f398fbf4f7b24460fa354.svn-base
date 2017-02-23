@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Outdated Browser Notification"
+    cq:showOnCreate="{Boolean}false"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="Headline"
+                    cq-msm-lockable="outdatedBrowser_title"
+                    name="./outdatedBrowser_title"
+                    required="{Boolean}true"
+                    value="Your browser is out of date"/>
+                <errorMessage
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="Body Message"
+                    cq-msm-lockable="outdatedBrowser_errorMessage"
+                    name="./outdatedBrowser_errorMessage"
+                    required="{Boolean}true"
+                    value="With an updated browser, you will have a better Medtronic web site experience."/>
+                <ctaDetails
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Call To Action Button"
+                    sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                        <buttonText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="Link Text"
+                            cq-msm-lockable="outdatedBrowser_buttonText"
+                            name="./outdatedBrowser_buttonText"
+                            value="Update my browser now."
+                            required="{Boolean}true"/>
+                        <buttonUrl
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                            fieldLabel="Link URL"
+                            cq-msm-lockable="outdatedBrowser_buttonUrl"
+                            name="./outdatedBrowser_buttonUrl"
+                            required="{Boolean}true"
+                            rootPath="/content"
+                            value="http://www.outdatedbrowser.com"
+                            validation="Medtronic.Granite.Validation.ValidateEManualUrl"/>
+                        <newTab
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                            cq-msm-lockable="outdatedBrowser_newTab"
+                            name="./outdatedBrowser_newTab"
+                            text="Open in a New Tab"
+                            value="true"/>
+                    </items>
+                </ctaDetails>
+            </items>
+        </column>
+    </items>
+</jcr:root>

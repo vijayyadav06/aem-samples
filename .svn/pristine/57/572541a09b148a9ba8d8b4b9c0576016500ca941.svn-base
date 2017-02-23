@@ -1,0 +1,178 @@
+import com.adobe.granite.asset.api.*
+import org.apache.poi.xssf.usermodel.*
+import org.apache.commons.lang3.*
+import javax.jcr.query.Query
+
+//where to read the xlsx file.
+spreadsheetPath = "/content/dam/medtronic-com/DoNotTranslate.xlsx"
+//toggle on whether to inherit from the previous row's column if blank. (if false, empty string is used instead.)
+inheritOnNull = true
+searchRoot = "/content/medtronic-com/"
+saveChanges = false
+//show the debug log (list of all affected paths)
+logChanges = true
+//Map is the useful one, table is for display.
+propertyMap = [:]
+propertyTable = []
+//for display, header names
+headers = []
+//num columns to use
+MIN_COLUMNS = 4
+//table column header index's
+COMP_TYPE_INDEX = 0
+MULTIFIELD_NAME = 1
+OLD_KEY = 2
+NEW_KEY = 3
+
+
+getAsset(spreadsheetPath)?.getStream()?.withStream { stream ->
+    def workbook = new XSSFWorkbook(stream)
+    def sheet = workbook.getSheetAt(0)
+    convertSheetToTable(sheet)
+    findReplaceValues()
+    doSave()
+    return table {
+        columns(headers)
+        rows(propertyTable)
+    }
+}
+
+def getAsset(assetPath) {
+    def assetManager = resourceResolver.adaptTo(AssetManager)
+    def asset = assetManager.getAsset(assetPath)
+    asset?.getRendition("original")
+}
+def doSave(){
+    if( saveChanges ){
+        resourceResolver.commit()
+    }else{
+        resourceResolver.revert()
+    }
+}
+def findReplaceValues(){
+    propertyMap.each { componentName,multifields ->
+        multifields.each { multifieldName,propertyKey ->
+            def translations = [:]
+            propertyKey.each { rowProps ->
+                translations["${rowProps.get(OLD_KEY)}"] = rowProps.get(NEW_KEY)
+            }
+            doReplacementQuery(componentName,multifieldName,translations)
+        }
+    }
+}
+
+def doReplacementQuery(componentName,multifieldName,translations){
+    def query = "SELECT * FROM [nt:unstructured] AS s WHERE ISDESCENDANTNODE([${searchRoot}]) AND s.[sling:resourceType] LIKE '${componentName}' AND ("
+    translations.eachWithIndex { oldProp, newProp, i ->
+        //make sure to surround the old prop in quotes.
+        query += " s.[${multifieldName}] LIKE '%\"${oldProp}\"%' "
+        if( i != translations.size() - 1){
+            query += " OR"
+        }
+    }
+    query += ")"
+    def resourcePaths = resourceResolver.findResources(query, Query.JCR_SQL2).collect { resource ->
+        resource.path
+    } as Set
+
+    resourcePaths.each { resourcePath ->
+        doLog "On path ${resourcePath} in multifield ${multifieldName}"
+        doLog "-------------------------------------------------------"
+        def valueMap = resourceResolver.getResource(resourcePath).adaptTo(ModifiableValueMap.class)
+        def multifieldValues = valueMap.get(multifieldName,String[].class)
+        def changed = false
+        multifieldValues.eachWithIndex {origValue, index ->
+            def newValue = origValue
+            translations.each { oldProp, newProp ->
+                newValue = newValue.replaceAll("\"${oldProp}\"","\"${newProp}\"")
+            }
+            multifieldValues[index] = newValue
+            if( !newValue.equals(origValue) ){
+                changed = true
+                doLog "Replaced ${origValue} with ${newValue}"
+            }
+        }
+        if( changed ){
+            valueMap.remove(multifieldName)
+            valueMap.put(multifieldName,(String[])multifieldValues)
+        }
+        doLog "\n"
+    }
+}
+
+def doLog (string){
+    if(logChanges){
+        println string
+    }
+}
+
+def getInheritedProperty(columnNum){
+    return getInheritedProperty(columnNum,null)
+}
+
+def getInheritedProperty(columnNum,index){
+    def inherited = null
+    if( index == null) index = propertyTable.size() - 1
+    if (index > 0){
+        def lastCell = propertyTable.get(index)
+        if( StringUtils.isNotEmpty(lastCell[columnNum]) ){
+            inherited = lastCell[columnNum]
+        }else{
+            //shouldn't ever need this as we're filling in as we go..
+            inherited = getInheritedProperty(columnNum,index - 1)
+        }
+    }
+    return inherited
+}
+
+def handleRow(row) {
+    def lastColumn = MIN_COLUMNS
+    def rowProps = []
+    def rowNum = row.getRowNum()
+    //iterate over all cells, including null/blank
+    for (def colNum = 0; colNum < lastColumn; colNum++) {
+        def cell = row.getCell(colNum, org.apache.poi.ss.usermodel.Row.RETURN_BLANK_AS_NULL);
+        if( cell == null){
+            if( StringUtils.isBlank(headers[colNum]) ){
+                //if its null, and there is no existing header value, skiiiip
+                continue
+            }else{
+                //it is null and there is a header.
+                rowProps[colNum] = inheritOnNull ? getInheritedProperty(colNum):""
+            }
+        } else {
+            if( rowNum == 0 ){
+                //the cell has a value and we're in first row, set the column headers
+                headers[colNum] = cell.getStringCellValue()
+            }else if( StringUtils.isNotBlank(cell.getStringCellValue()) ){
+                //the cell has a value and the header also does, wicked, lets use it!
+                rowProps[colNum] = cell.getStringCellValue();
+            }
+        }
+    }
+    if( rowProps.size() > 0 ){
+        updateTableVars(rowProps)
+    }
+}
+
+def updateTableVars(rowProps){
+    //adding to display array.
+    propertyTable.add(rowProps);
+    //and adding to the query map, stored by {component-name --> {multifield_name --> {replacement variables ...}... }... }
+    if( propertyMap[rowProps.get(COMP_TYPE_INDEX)] == null){
+        propertyMap[rowProps.get(COMP_TYPE_INDEX)] = [:]
+        propertyMap[rowProps.get(COMP_TYPE_INDEX)][rowProps.get(MULTIFIELD_NAME)] = [rowProps]
+    }else if ( propertyMap[rowProps.get(COMP_TYPE_INDEX)][rowProps.get(MULTIFIELD_NAME)] == null ){
+        propertyMap[rowProps.get(COMP_TYPE_INDEX)][rowProps.get(MULTIFIELD_NAME)] = [rowProps]
+    }else{
+        propertyMap[rowProps.get(COMP_TYPE_INDEX)][rowProps.get(MULTIFIELD_NAME)] << rowProps
+    }
+}
+
+def convertSheetToTable(sheet) {
+    def rowIterator = sheet.rowIterator()
+    //note, this skips empty rows.
+    rowIterator.each { row ->
+        handleRow(row)
+    }
+}

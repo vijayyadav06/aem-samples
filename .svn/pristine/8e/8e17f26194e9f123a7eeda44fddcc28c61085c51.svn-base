@@ -1,0 +1,10 @@
+<!--/*
+  Copyright [TODO]
+  
+  Content parsys include.
+*/-->
+<section>
+  <div
+    data-sly-resource="${'search' @ resourceType='medtronic-com/components/content/search'}"
+    data-sly-unwrap="${wcmmode.disabled}"></div>
+</section>

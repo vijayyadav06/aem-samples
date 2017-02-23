@@ -1,0 +1,52 @@
+div.helpText div.x-form-item-description {
+    padding-left: 130px !important;
+}
+
+div.accordion-section-title div.x-form-item-description {
+    padding-left: 185px !important;
+}
+div.reference-footnote-data div.x-form-invalid,div.title-text div.x-form-invalid{
+	background-color:red !important;
+}
+.reference-footnote-container label.x-form-item-label>span.cq-asterisk{
+	display: none !important;
+}
+#CQ .hero-dialog .x-fieldset {
+  padding: 0;
+}
+
+/* fix a multifield issue in IE */
+.ie11_multifield_hidden{
+	width:0px !important;
+}
+.ie11_multifield_hidden .x-form-element{
+	position: absolute !important;
+    top: -20px !important;
+}
+.ie11_multifield_hidden input{
+	border: none !important;
+}
+
+/* make the fields in panel_container in a light grey box video dialogs */
+.panel_container>div>.x-panel-body{
+	border-color: #B1B3B3 !important;
+}
+.panel_container>div>.x-panel-body-noheader{
+	border-top-color: #B1B3B3 !important;
+}
+/* make the video_item separate more clearly in video-slender/squat dialog */
+div.video_item{
+	margin-bottom: 10px !important;
+}
+/* as the label width becomes wider, make the help text field near to the right */
+div.video_item div.x-form-item-description {
+    padding-left: 185px !important;
+}
+div.video_item .panel_container div.x-form-item-description{
+	padding-left: 135px !important;
+}
+
+/* Social Media - Slender/Squat dialog*/
+.social_media_slender_squat_dialog_account2 div.x-form-item-description {
+    padding-left: 155px !important;
+}

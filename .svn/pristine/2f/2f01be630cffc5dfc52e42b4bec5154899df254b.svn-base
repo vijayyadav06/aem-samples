@@ -1,0 +1,8 @@
+#base=js
+Medtronic.js
+Medtronic.Widgets.MultifieldPanel.js
+Medtronic.Widgets.Selection.js
+Medtronic.Authoring.js
+Medtronic.Widgets.MultiField.js
+Medtronic.Authoring.I18n.js
+Medtronic.Authoring.Label.js

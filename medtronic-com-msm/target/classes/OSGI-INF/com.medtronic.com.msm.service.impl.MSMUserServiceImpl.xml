@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" immediate="false" name="com.medtronic.com.msm.service.impl.MSMUserServiceImpl">
+    <implementation class="com.medtronic.com.msm.service.impl.MSMUserServiceImpl"/>
+    <service servicefactory="false">
+        <provide interface="com.medtronic.com.msm.service.MSMUserService"/>
+    </service>
+    <property name="service.pid" value="com.medtronic.com.msm.service.impl.MSMUserServiceImpl"/>
+    <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory"/>
+</scr:component>

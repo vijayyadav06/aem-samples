@@ -1,0 +1,285 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.medtronic.com</groupId>
+    <artifactId>medtronic-com-ui</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Medtronic Com UI</name>
+    <packaging>content-package</packaging>
+
+    <parent>
+      <groupId>com.medtronic.com.parent</groupId>
+      <artifactId>medtronic-com-parent</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <medtronic.appdir>/apps/medtronic-com</medtronic.appdir>
+        <sonar.language>web</sonar.language>
+        <sonar.web.sourceDirectory>src/main/content/jcr_root/</sonar.web.sourceDirectory>
+    </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/content/jcr_root</directory>
+                <excludes>
+                    <exclude>libs/**</exclude>
+                    <exclude>apps/system/**</exclude>
+                    <exclude>var/**</exclude>
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <!-- For JSP Compilation -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/jsps-to-compile</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/content/jcr_root</directory>
+                                    <includes>
+                                        <include>apps/**</include>
+                                        <include>libs/**</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-jspc-plugin</artifactId>
+                <version>2.0.6</version>
+                <executions>
+<!--                     <execution> -->
+<!--                         <id>compile-jsp</id> -->
+<!--                         <goals> -->
+<!--                             <goal>jspc</goal> -->
+<!--                         </goals> -->
+<!--                         <configuration> -->
+<!-- 			    <sourceVersion>1.8</sourceVersion> -->
+<!-- 			    <targetVersion>1.8</targetVersion> -->
+<!--                             <jasperClassDebugInfo>false</jasperClassDebugInfo> -->
+<!--                             <sourceDirectory>${project.build.directory}/jsps-to-compile</sourceDirectory> -->
+<!--                             <outputDirectory>${project.build.directory}/ignoredjspc</outputDirectory> -->
+<!--                         </configuration> -->
+<!--                     </execution> -->
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>remove-compiled-jsps</id>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <phase>process-classes</phase>
+                        <configuration>
+                            <excludeDefaultDirectories>true</excludeDefaultDirectories>
+                            <filesets>
+                                <fileset>
+                                    <directory>${project.build.directory}/jsps-to-compile</directory>
+                                    <directory>${project.build.directory}/ignoredjspc</directory>
+                                </fileset>
+                            </filesets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Package Installation -->
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <version>0.0.20</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
+                    <verbose>true</verbose>
+                    <failOnError>true</failOnError>
+                    <group>${project.parent.name}</group>
+                    <requiresRoot>true</requiresRoot>
+                    <userId>${aem.user}</userId>
+                    <password>${aem.pass}</password>
+                    <useProxy>false</useProxy>
+                    <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                    <version>${project.version}</version>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.medtronic.com</groupId>
+                            <artifactId>medtronic-com-services</artifactId>
+                            <target>${medtronic.appdir}/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.medtronic.com</groupId>
+                            <artifactId>medtronic-com-taglib</artifactId>
+                            <target>${medtronic.appdir}/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.medtronic.com</groupId>
+                            <artifactId>medtronic-com-msm</artifactId>
+                            <target>${medtronic.appdir}/install</target>
+                        </embedded>
+                    </embeddeds>
+                </configuration>
+            </plugin>
+           <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-sling-plugin</artifactId>
+                <version>2.1.0</version>
+           </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+        </extensions>
+        <pluginManagement>
+            <plugins>
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            net.alchim31.maven
+                                        </groupId>
+                                        <artifactId>
+                                            yuicompressor-maven-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.1,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>compress</goal>
+                                            <goal>jslint</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+          <id>autoInstallPackage</id>
+          <build>
+            <plugins>
+              <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <executions>
+                  <execution>
+                    <id>install-package</id>
+                    <goals>
+                      <goal>install</goal>
+                    </goals>
+                  </execution>
+                </executions>
+              </plugin>
+            </plugins>
+          </build>
+        </profile>
+    </profiles>
+    <!-- ====================================================================== -->
+    <!-- D E P E N D E N C I E S                                                -->
+    <!-- ====================================================================== -->
+
+     <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>medtronic-com-services</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>medtronic-com-msm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>medtronic-com-taglib</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+         <!-- For JSP Compilation -->
+
+         <dependency>
+             <groupId>org.apache.sling</groupId>
+             <artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
+             <version>2.0.0</version>
+         </dependency>
+         <dependency>
+             <groupId>org.apache.sling</groupId>
+             <artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+             <version>2.1.8</version>
+         </dependency>
+         <dependency>
+             <groupId>com.adobe.granite</groupId>
+             <artifactId>com.adobe.granite.xssprotection</artifactId>
+             <version>5.5.24</version>
+         </dependency>
+         <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-api</artifactId>
+             <version>1.5.2</version>
+         </dependency>
+         <dependency>
+             <groupId>com.day.cq</groupId>
+             <artifactId>cq-commons</artifactId>
+             <version>5.6.4</version>
+         </dependency>
+         <dependency>
+             <groupId>com.day.cq.wcm</groupId>
+             <artifactId>cq-wcm-commons</artifactId>
+             <version>5.6.4</version>
+         </dependency>
+         <dependency>
+             <groupId>com.day.cq.wcm</groupId>
+             <artifactId>cq-wcm-taglib</artifactId>
+             <version>5.6.4</version>
+             <scope>provided</scope>
+         </dependency>
+         <dependency>
+             <groupId>com.day.commons</groupId>
+             <artifactId>day-commons-jstl</artifactId>
+             <version>1.1.4</version>
+             <scope>provided</scope>
+         </dependency>
+
+     </dependencies>
+</project>

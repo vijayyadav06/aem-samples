@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Similar Content Component"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Provide a title for the entire collection of image and text groupings present in this component."
+                        fieldLabel="Headline"
+                        name="./title"
+                        xtype="textfield"/>
+                    <imageText
+                        jcr:primaryType="cq:Widget"
+                        border="false"
+                        fieldLabel="Image / Text Pairings"
+                        fieldSubLabel="Minimum = 3 pairings"
+                        name="./imageText"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <image
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    key="image"
+                                    fieldLabel="Image"
+                                    rootPath="/content/dam"
+                                    width="280"
+                                    xtype="pathfield"/>
+                                <text
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    key="text"
+                                    fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                                    fieldLabel="Image Alt Text"
+                                    width="280"
+                                    xtype="textfield"/>
+                                <name
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    key="name"
+                                    fieldDescription="Enter the text that appears below the image."
+                                    fieldLabel="Link Text"
+                                    width="280"
+                                    xtype="textfield"/>
+                                <link
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    key="link"
+                                    fieldDescription="Enter a web address or find the desired webpage."
+                                    fieldLabel="Link URL"
+                                    validator="function() {                                       return Medtronic.Authoring.validateEManualUrl(this);                                     }"
+                                    width="280"
+                                    xtype="pathfield"/>
+                            </items>
+                        </fieldConfig>
+                    </imageText>
+                    <newTab
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in a New Tab"
+                        labelStyle="margin-left:450px;"
+                        name="./newTab"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){return validateSimailarURL(dialog);}"
+        loadcontent="function(dialog){displayContentDefault(dialog);}"/>
+</jcr:root>

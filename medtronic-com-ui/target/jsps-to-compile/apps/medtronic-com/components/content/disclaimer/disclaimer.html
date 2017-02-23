@@ -1,0 +1,10 @@
+<div data-sly-test="${!properties.disclaimerType && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Disclaimer</div>
+<div data-sly-test="${properties.disclaimerType}" class="pad">
+	<!-- Disclaimer -->
+	<section class="disclaimer-text">
+		<sly data-sly-use.runModes="/apps/medtronic-com/components/common/RunModes.js" />
+		<div data-sly-test="${runModes.author}">${properties.disclaimerType}</div>
+		<hr>
+		${properties.disclaimerText @context='html'}
+	</section>
+</div>

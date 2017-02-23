@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Social Media Elements">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <label
+            jcr:primaryType="cq:Widget"
+            name="./og_tab_label"
+            text="OpenGraph elements appear when a link to the page is added to an email or shared via social media (Facebook, LinkedIn, etc.)."
+            xtype="label"/>
+        <pageTitle
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            fieldLabel="OpenGraph Page Title"
+            fieldDescription="Input a headline to promote the page when shared in social media or by email. (Maximum=85 characters)"
+            name="./og_title"
+            xtype="textfield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            fieldLabel="OpenGraph Description"
+            fieldDescription="Use 200 characters or fewer to entice readers to view the full post."
+            name="./og_description"
+            xtype="textfield"/>
+        <image
+            jcr:primaryType="cq:Widget"
+            fieldLabel="OpenGraph Image"
+            allowBlank="{Boolean}false"
+            fieldDescription="Select the content’s designated social share image from the Digital Assets Manager (DAM)."
+            name="./og_image"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,10 @@
+{
+	"text": "Twitter comment message",
+	"id_str":"Tweet ID 1234",
+    "favorite_count":10,
+    "retweet_count":2,
+	"user":{
+				"name":"X user"	
+         	},
+    "created_at":"12 feb 10 am"
+} 

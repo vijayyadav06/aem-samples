@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Two column General Detail page (L3 template) for the Medtronic.com site."
+    jcr:primaryType="cq:Template"
+    jcr:title="Medtronic.com General Detail Page"
+    allowedPaths="[/content/medtronic-com(/[^/]+)+]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="medtronic-com/components/pages/two-column-general-detail"
+        pageLevel="L3"/>
+</jcr:root>

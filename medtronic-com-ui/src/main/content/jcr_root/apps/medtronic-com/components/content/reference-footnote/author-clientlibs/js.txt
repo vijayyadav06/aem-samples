@@ -1,0 +1,2 @@
+#base=js
+Medtronic.Authoring.ReferenceFootnote.js

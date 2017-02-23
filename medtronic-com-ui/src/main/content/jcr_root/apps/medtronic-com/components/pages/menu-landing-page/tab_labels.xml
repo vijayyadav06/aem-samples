@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Labels">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <pagesL1
+            jcr:primaryType="cq:Widget"
+            defaultValue="Select a label to display on L1 pages"
+            fieldLabel="L1 Pages"
+            name="./pagesL1"
+            rootPath="/etc/tags/medtronic-com/labels"
+            xtype="pathfield">
+            <browserDialogCfg
+                jcr:primaryType="nt:unstructured"
+                height="316"
+                title="Select a label"/>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                dialogselect="function(field,path){Medtronic.Authoring.Label.page.dialogSelect(field,path);}"
+                loadcontent="function(field){Medtronic.Authoring.Label.page.loadContent(field);}"/>
+        </pagesL1>
+        <pagesL2L3
+            jcr:primaryType="cq:Widget"
+            defaultValue="Select a label to display on L2/L3 pages"
+            fieldLabel="L2/L3 Pages"
+            name="./pagesL2L3"
+            rootPath="/etc/tags/medtronic-com/labels"
+            xtype="pathfield">
+            <browserDialogCfg
+                jcr:primaryType="nt:unstructured"
+                height="316"
+                title="Select a label"/>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                dialogselect="function(field,path){Medtronic.Authoring.Label.page.dialogSelect(field,path);}"
+                loadcontent="function(field){Medtronic.Authoring.Label.page.loadContent(field);}"/>
+        </pagesL2L3>
+    </items>
+</jcr:root>

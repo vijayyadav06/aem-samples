@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Accordion Authoring"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                border="false"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <hidden
+                        jcr:primaryType="cq:Widget"
+                        itemCls="ie11_multifield_hidden"
+                        xtype="textfield"/>
+                    <sections
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        hideLabel="{Boolean}true"
+                        name="./sections"
+                        minItems="{Long}2"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}false"
+                            layout="form"
+                            padding="5px 5px 5px 5px"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    key="title"
+                                    fieldLabel="Accordion Headline"
+                                    itemCls="accordion-section-title"
+                                    labelStyle="display:block;width:180px;"
+                                    minLength="{Long}1"
+                                    width="60%"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        added="function(field,owner,index) {Medtronic.Authoring.Accordion.displayFieldLabel(field);}"/>
+                                </title>
+                                <anchor
+                                    jcr:primaryType="cq:Widget"
+                                    key="anchor"
+                                    fieldLabel="Anchor ID"
+                                    labelStyle="display:block;width:180px;"
+                                    width="60%"
+                                    xtype="textfield"
+                                    fieldDescription="The anchor should contain only letters, numbers, and dashes. It should not contain spaces or other special characters."/>
+                                <columns
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="one"
+                                    key="_DNT_columns"
+                                    fieldLabel="Column Style"
+                                    labelStyle="display:block;width:180px;"
+                                    style="float:left;"
+                                    type="select"
+                                    value="one"
+                                    width="200"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <one
+                                            jcr:primaryType="nt:unstructured"
+                                            text="1 column - 100%"
+                                            value="one"/>
+                                        <two
+                                            jcr:primaryType="nt:unstructured"
+                                            text="2 columns - 50/50"
+                                            value="two"/>
+                                    </options>
+                                </columns>
+                                <path
+                                    jcr:primaryType="cq:Widget"
+                                    key="sectionPath"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        added="function(field,owner,index) {Medtronic.Authoring.Accordion.sectionPathAdded(field);}"/>
+                                </path>
+                            </items>
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                removed="function(field,owner,index) {Medtronic.Authoring.Accordion.sectionRemoved(field,owner);}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            remove="function(field){Medtronic.Authoring.Accordion.removeItem(field);}"/>
+                    </sections>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){Medtronic.Authoring.Accordion.loadcontent(dialog);}"
+        beforehide="function(dialog){Medtronic.Authoring.Accordion.resetValueAcc();}"/>
+</jcr:root>

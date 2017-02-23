@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Defines which repository items are generally included -->
+<workspaceFilter vesion="1.0">
+    <filter root="/apps/medtronic-com">
+        <exclude pattern="/apps/medtronic-com/install" />
+        <exclude pattern="/apps/medtronic-com/runmodes" />
+        <exclude pattern="/apps/medtronic-com/i18n" />
+    </filter>
+    <filter root="/etc/workflow/launcher/config">
+        <!-- include all files that start with "medtronic-com" under /etc/workflow/launcher/config -->
+        <include pattern="/etc/workflow/launcher/config/medtronic-com(.*)?" />
+    </filter>
+    <filter root="/etc/workflow/models/medtronic-com" />
+    <filter root="/etc/notification/email/medtronic" />
+
+</workspaceFilter>

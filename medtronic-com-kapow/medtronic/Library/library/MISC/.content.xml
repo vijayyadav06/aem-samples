@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com/"
+        cq:lastModified="{Date}2016-01-25T00:08:13.075-06:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2016-01-05T17:28:39.747-06:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/medtronic-com/templates/product-detail-page"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AIRvance System"
+        jcr:uuid="83f9fe8a-5118-4255-a902-901830b99bac"
+        sling:resourceType="medtronic-com/components/pages/product-detail-page"
+		migrationKeywords="Cardiac resynchronization therapy, CRT-D device, heart failure therapies, proven shock reduction, SmartShock technology, OptiVol 2.0 Fluid Status Monitoring, Complete Capture Management"
+		migrationDescription="ABC"
+        migrationLanguage="en"
+        migrationLegacyId="WCM_PROD065936"
+        migrationStatus="assess"
+        migrationRevision="3"
+        migrationUCNumber=""
+		migrationLastUpdate="01 Feb 2014"
+        pageAudience="audienceLabel_healthCareProfessionals"
+        showMichelsonSeal="false">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <product_detail
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/product-detail"
+                audienceType="Healthcare Professionals"
+                image="\{&quot;path&quot;:&quot;/content/dam/medtronic-com-m/mdt/ent/images/wcm_prod051967.jpg&quot;,&quot;altText&quot;:&quot;airvance-system&quot;}"
+                iswGraphic="alternateText"
+                iswURL="/content/medtronic-com/en-US/products/airvance-system/airvance-system/indications-safety-and-warnings.htm"
+                iswText="Indications, Safety, and Warnings"
+				modelSku="none"
+                overviewText="The AIRvance™ System enables surgical treatment of tongue- and hyoid-based obstructive sleep apnea.."
+                productName="AIRvance System"
+                productSubTitle="For Obstructive Sleep Apnea"
+                title="AIRvance System"
+                title1="Overview"/>
+            <title_text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/title-text"
+                groups="\{&quot;title&quot;:&quot;SHOCK REDUCTION&quot;,&quot;text&quot;:&quot;&lt;h2>&lt;p>Importance of Shock Reduction&lt;/p>\\n&lt;/h2>\\n\\n\\t\\t\\t\\t&lt;p>Data from published studies reveal that up to 21% of ICD patients receive inappropriate shocks.&lt;sup>1-4&lt;/sup>&lt;/p>}"/>
+            <migration_content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/migration-content"
+                html="&lt;div id=&quot;tab1&quot; class=&quot;tabs-container&quot; style=&quot;&quot;>&#xa;                        &#x9;&#x9;&#x9;&#x9;&#xa;                        &#xa;      &#xa;    &lt;h2 class=&quot;first&quot;>&#xa;                              &#xa;          &#xa;      &lt;p>&#xa;                                    AIRvance System for Obstructive Sleep Apnea&#xa;                                  &#xa;            &#xa;      &lt;/p>&#xa;                            &#xa;        &#xa;    &lt;/h2>&#xa;                        &#x9;&#x9;&#x9;&#x9;&#xa;                        &#xa;      &#xa;    &lt;div class=&quot;pull-right&quot;>&#xa;                              &lt;img alt=&quot;ent-repose_postop&quot; src=&quot;/content/dam/medtronic-com-m/mdt/ent/images/ent-repose_postop.jpg.jpg&quot;> &#xa;                    &#xa;    &#xa;      &lt;p>&#xa;                                    To treat obstructive sleep apnea, the AIRvance Tongue Suspension helps prevent the tongue from falling back and blocking the airway while the patient is asleep.&#xa;                                  &#xa;            &#xa;      &lt;/p>&#xa;                            &#xa;        &#xa;    &lt;/div>&#xa;                        &#xa;      &#xa;    &lt;p>&#xa;                              The AIRvance Bone Screw System&amp;nbsp;enables surgical treatment&amp;nbsp;of tongue- and hyoid-based obstructive sleep apnea. Sleep disorders affect approximately 70 million Americans&lt;sup>1,2&lt;/sup> and have a significant impact on an individual&amp;rsquo;s health and quality of life,&lt;sup>1,3-6&lt;/sup> as well as his or her bed partner.&lt;sup>7&lt;/sup>                  &#xa;  &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;p class=&quot;no-space&quot;>&#xa;                              For treating obstructive sleep apnea, there are two surgical procedures that may be performed with the AIRvance System (see below).&amp;nbsp;The tongue suspension procedure can be done with or without the adjunct hyoid suspension procedure. Advantages of the AIRvance procedures include:&#xa;                            &#xa;        &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;ul class=&quot;last&quot;>&#xa;                              &#xa;          &#xa;      &lt;li>&#xa;                                    Quick&amp;nbsp;(about 30 minutes for each procedure)&#xa;                                  &#xa;            &#xa;      &lt;/li>&#xa;                              &#xa;          &#xa;      &lt;li>&#xa;                                    Low technical complexity&#xa;                                  &#xa;            &#xa;      &lt;/li>&#xa;                              &#xa;          &#xa;      &lt;li>&#xa;                                    Effective&lt;sup>8&lt;/sup>                    &#xa;    &#xa;      &lt;/li>&#xa;                              &#xa;          &#xa;      &lt;li>&#xa;                                    Reversible&#xa;                                  &#xa;            &#xa;      &lt;/li>&#xa;                            &#xa;        &#xa;    &lt;/ul>&#xa;                        &#xa;      &#xa;    &lt;h3 class=&quot;first&quot;>&#xa;                              AIRvance Tongue Suspension&#xa;                            &#xa;        &#xa;    &lt;/h3>&#xa;                        &#xa;      &#xa;    &lt;p>&#xa;                              The AIRvance Tongue Suspension Procedure is indicated for the treatment of obstructive sleep apnea and/or snoring. The tongue suspension procedure can be performed with or without the adjunct hyoid suspension procedure.&#xa;                            &#xa;        &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;p>&#xa;                              The objective of this procedure is to advance and stabilize the genioglossus muscle to help prevent it from falling back and occluding the airway when the patient is supine and asleep. A small titanium screw with attached sutures is implanted in the lower mandible, then the sutures are looped through the tongue to form a hammock that suspends it.&#xa;                            &#xa;        &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;div class=&quot;pull-right&quot;>&#xa;                              &lt;img alt=&quot;ent-repose_hyoid&quot; src=&quot;/content/dam/medtronic-com-m/mdt/ent/images/wcm_prod051970.jpg&quot;> &#xa;                    &#xa;    &#xa;      &lt;p>&#xa;                                    To treat obstructive sleep apnea, the AIRvance Hyoid Suspension procedure suspends the hyoid bone to help maintain an open airway while the patient is asleep.&#xa;                                  &#xa;            &#xa;      &lt;/p>&#xa;                            &#xa;        &#xa;    &lt;/div>&#xa;                        &#xa;      &#xa;    &lt;h3>&#xa;                              AIRvance Hyoid Suspension&#xa;                            &#xa;        &#xa;    &lt;/h3>&#xa;                        &#xa;      &#xa;    &lt;p>&#xa;                              The AIRvance Hyoid Suspension procedure is indicated for the treatment of obstructive sleep apnea (OSA) and/or snoring. It serves as an adjunct to the AIRvance Tongue Suspension procedure.&#xa;                            &#xa;        &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;p>&#xa;                              The goal of this procedure is to help improve airway patency by providing anterior/posterior and lateral support of the lower airway, as well as lateral support of the base of the tongue. This is accomplished by advancing and suspending the hyoid bone and associated musculature. Two small titanium screws with attached sutures are implanted in the lower mandible, and the sutures are looped around the hyoid bone to suspend it.&#xa;                            &#xa;        &#xa;    &lt;/p>&#xa;                        &#xa;      &#xa;    &lt;p class=&quot;hanging-indent&quot;>&#xa;                              &lt;em>*As of August 2011 the Repose&lt;sup>&amp;reg;&lt;/sup> brand was changed to AIRvance.&lt;/em>                  &#xa;  &#xa;    &lt;/p>&#xa;                                          &#x9;&#x9;&#x9;&#xa;                    &#xa;  &lt;/div>"/>
+            <accordion
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/accordion"
+                sections="[{&quot;title&quot;:&quot;SMARTSHOCK TECH&quot;\,&quot;columns&quot;:&quot;one&quot;\,&quot;sectionPath&quot;:&quot;sectionPath0&quot;},{&quot;title&quot;:&quot;OPTIVOL&quot;\,&quot;columns&quot;:&quot;one&quot;\,&quot;sectionPath&quot;:&quot;sectionPath1&quot;},{&quot;title&quot;:&quot;SPECS&quot;\,&quot;columns&quot;:&quot;one&quot;\,&quot;sectionPath&quot;:&quot;sectionPath2&quot;}]"/>
+        </content-par>
+        <right-rail
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <manual_related_links
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/manual-related-links"
+                componentHeading="Related Links"
+                section="\{&quot;sectionHeading&quot;:&quot; &quot;,&quot;sectionLinks&quot;:[&quot;{\\&quot;linkText\\&quot;:\\&quot;Related Products for Sleep Disorders\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;/content/medtronic-com/en-US/products/airvance-system/airvance-system_related-products-for-sleep-disorders\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;,&quot;{\\&quot;linkText\\&quot;:\\&quot;Procedures and Techniques\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;/content/medtronic-com/en-US/products/airvance-system/airvance-system_procedures-techniques\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;,&quot;{\\&quot;linkText\\&quot;:\\&quot;Coverage and Reimbursement\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;/content/medtronic-com/en-US/products/airvance-system/airvance-system_coverage-reimbursement\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;,&quot;{\\&quot;linkText\\&quot;:\\&quot;Education and Training\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;/content/medtronic-com/en-US/products/airvance-system/airvance-system_education-training\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;,&quot;{\\&quot;linkText\\&quot;:\\&quot;Clinical Outcomes\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;/content/medtronic-com/en-US/products/airvance-system/airvance-system_clinical-outcomes\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;]}"/>
+            <manual_related_links_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/manual-related-links"
+                componentHeading="ENT Product Catalog"
+                section="\{&quot;sectionHeading&quot;:&quot;Medtronic offers more than 5000 products and instruments for ENT specialists.&quot;,&quot;sectionLinks&quot;:[&quot;{\\&quot;linkText\\&quot;:\\&quot;View\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;http://www.medtronic.comhttp://assets.medtronic.com/ent/flipbook-us/\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;]}"/>
+            <manual_related_links_4
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/manual-related-links"
+                componentHeading="Medtronic ENT"
+                section="\{&quot;sectionHeading&quot;:&quot;Quick access to ENT products, therapies, reimbursement, and other resources.&quot;,&quot;sectionLinks&quot;:[&quot;{\\&quot;linkText\\&quot;:\\&quot;More\\&quot;,\\&quot;linkURL\\&quot;:\\&quot;http://www.medtronic.com/for-healthcare-professionals/business-unit-landing-Page/ent/index.htm\\&quot;,\\&quot;newTab\\&quot;:[]}&quot;]}"/>
+            <contact_us_ca
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/contact-us-cta"
+                contact="\{&quot;name&quot;:&quot;&quot;,&quot;phone&quot;:&quot;(800) 874-5797&quot;,&quot;address1&quot;:&quot;&quot;,&quot;address2&quot;:&quot;&quot;,&quot;address3&quot;:&quot;&quot;,&quot;address4&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;newtab&quot;:[]}"
+                headline="Contact Your Medtronic ENT Rep"/>
+        </right-rail>
+
+        <content-par2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <reference_footnote
+                jcr:lastModified="{Date}2016-01-25T00:08:13.073-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/reference-footnote"
+                data="[{&quot;content&quot;:&quot;&lt;p>&lt;i>Brain Facts\, A Primer on the Brain and Nervous System&lt;/i>. Society for Neuroscience\, 2008.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>&lt;a href=\\&quot;http://my.clevelandclinic.org/disorders/sleep_apnea/hic_common_sleep_disorders.aspx\\&quot;>Cleveland Clinic. Health Information: Sleep Disorders&lt;/a>. Accessed February 10\, 2010.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>&lt;a href=\\&quot;http://www.nhlbi.nih.gov/health/dci/Diseases/SleepApnea/SleepApnea_All.html\\&quot;>National Heart\, Lung\, and Blood Institute. Diseases and Conditions – Sleep Apnea&lt;/a>. Accessed February 10\, 2010.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>Sleep Apnea. &lt;i>Am Fam Phys&lt;/i> 2005; 72(7):1319-20.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>&lt;a href=\\&quot;http://www.sleepfoundation.org/article/how-sleep-works/abcs-zzzzs-when-you-cant-sleep\\&quot;>National Sleep Foundation: ABCs of ZZZZs&lt;/a>. Accessed February 10\, 2010.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>&lt;a href=\\&quot;http://www.nhlbi.nih.gov/health/prof/sleep/pslp_pat.htm\\&quot;>National Heart\, Lung\, and Blood Institute. Sleep Disorders Information: Problem Sleepiness in Your Patient&lt;/a>. Accessed February 10\, 2010.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>&lt;a href=\\&quot;http://www.nhlbi.nih.gov/health/prof/sleep/pslp_pat.htm\\&quot;>National Heart\, Lung\, and Blood Institute. Sleep Disorders Information: Problem Sleepiness in Your Patient&lt;/a>. Accessed February 10\, 2010.&lt;/p>\\n&quot;},{&quot;content&quot;:&quot;&lt;p>Thomas A\, Chavoya M\, Terris D. Preliminary findings from a prospective\, randomized trial of two tongue-base surgeries for sleep-disordered breathing. &lt;i>Otolaryngol Head Neck Surg&lt;/i> 2003;129(5):539-546.&lt;/p>\\n&quot;}]"
+                displayType="references"/>
+        </content-par2>
+    </jcr:content>
+    <airvance-system_clinical-outcomes/>
+    <airvance-system_coverage-reimbursement/>
+    <airvance-system_education-training/>
+    <airvance-system_procedures-techniques/>
+    <airvance-system_related-products-for-sleep-disorders/>
+</jcr:root>

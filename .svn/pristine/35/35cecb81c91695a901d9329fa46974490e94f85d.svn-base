@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <es_ar
+        jcr:primaryType="nt:unstructured"
+        country="Argentina"
+        language="Español"/>
+    <fr_be
+        jcr:primaryType="nt:unstructured"
+        country="Belgium"
+        language="Français"/>
+    <nl_be
+        jcr:primaryType="nt:unstructured"
+        country="Belgium"
+        language="Nederlands"/>
+    <es_mx
+        jcr:primaryType="nt:unstructured"
+        country="México (Mexico)"
+        language="Español"/>
+    <pt_br
+        jcr:primaryType="nt:unstructured"
+        country="Brasil (Brazil)"
+        language="Portuguese"/>
+    <en_ca
+        jcr:primaryType="nt:unstructured"
+        country="Canada"
+        language="English"/>
+    <fr_ca
+        jcr:primaryType="nt:unstructured"
+        country="Canada"
+        language="Français"/>
+    <es_cl
+        jcr:primaryType="nt:unstructured"
+        country="Chile"
+        language="Español"/>
+    <cs_cz
+        jcr:primaryType="nt:unstructured"
+        country="Česká republika (Czech Republic)"
+        defaultCountry="cs_cz"
+        language="Czech"/>
+    <zh_cn
+        jcr:primaryType="nt:unstructured"
+        country="中华人民共和国 (China)"
+        language="Chinese (Simplified)"/>
+    <es_co
+        jcr:primaryType="nt:unstructured"
+        country="Colombia"
+        language="Español"/>
+    <da_dk
+        jcr:primaryType="nt:unstructured"
+        country="Danmark (Denmark)"
+        language="Danish"/>
+    <de_de
+        jcr:primaryType="nt:unstructured"
+        country="Deutschland (Germany)"
+        language="Deutsch"/>
+    <es_es
+        jcr:primaryType="nt:unstructured"
+        country="España (Spain)"
+        language="Español"/>
+    <fr_fr
+        jcr:primaryType="nt:unstructured"
+        country="France"
+        language="Français"/>
+    <el_gr
+        jcr:primaryType="nt:unstructured"
+        country="Ελλάδα (Greece)"
+        language="Ελληνικά"/>
+    <zh_hk
+        jcr:primaryType="nt:unstructured"
+        country="香港 (Hong Kong)"
+        language="Chinese (Traditional)"/>
+    <en_in
+        jcr:primaryType="nt:unstructured"
+        country="Bhārat Ganarājya (India)"
+        language="English"/>
+    <en_ie
+        jcr:primaryType="nt:unstructured"
+        country="Ireland"
+        language="English"/>
+    <he_il
+        jcr:primaryType="nt:unstructured"
+        country="Israel  ישראל"
+        language="Hebrew  עברית"/>
+
+    <it_it
+        jcr:primaryType="nt:unstructured"
+        country="Italia (Italy)"
+        language="Italiano"/>
+    <ja_jp
+        jcr:primaryType="nt:unstructured"
+        country="日本 (Japan)"
+        language="日本語"/>
+
+    <hu_hu
+        jcr:primaryType="nt:unstructured"
+        country="Magyarország (Hungary)"
+        language="Magyar"/>
+    <nl_nl
+        jcr:primaryType="nt:unstructured"
+        country="Nederland (Netherlands)"
+        language="Nederlands"/>
+
+    <nn_no
+        jcr:primaryType="nt:unstructured"
+        country="Norge (Norway)"
+        language="Nynorsk"/>
+    <es_py
+        jcr:primaryType="nt:unstructured"
+        country="Paraguay"
+        language="Español"/>
+
+    <es_pe
+        jcr:primaryType="nt:unstructured"
+        country="Perú (Peru)"
+        language="Español"/>
+    <pl_pl
+        jcr:primaryType="nt:unstructured"
+        country="Polska (Poland)"
+        language="Polski"/>
+    <pt_pt
+        jcr:primaryType="nt:unstructured"
+        country="Portugal"
+        language="Português"/>
+    <de_at
+        jcr:primaryType="nt:unstructured"
+        country="Österreich (Austria)"
+        language="Deutsch"/>
+    <ru_ru
+        jcr:primaryType="nt:unstructured"
+        country="Российская Федерация (Russia)"
+        language="русский"/>
+    <sr_rs
+        jcr:primaryType="nt:unstructured"
+        country="Србија (Serbia)"
+        language="српски"/>
+    <sl_si
+        jcr:primaryType="nt:unstructured"
+        country="Slovenija (Slovenia)"
+        language="Slovenščina"/>
+    <sk_sk
+        jcr:primaryType="nt:unstructured"
+        country="Slovenská Republika (Slovak Republic)"
+        language="Slovenčina"/>
+    <en_za
+        jcr:primaryType="nt:unstructured"
+        country="South Africa"
+        language="English"/>
+    <ko_kr
+        jcr:primaryType="nt:unstructured"
+        country="대한민국 (South Korea)"
+        language="한국어"/>
+    <sv_fi
+        jcr:primaryType="nt:unstructured"
+        country="Suomi (Finland)"
+        language="Svenska"/>
+    <sv_se
+        jcr:primaryType="nt:unstructured"
+        country="Sverige (Sweden)"
+        language="Svenska"/>
+    <de_ch
+        jcr:primaryType="nt:unstructured"
+        country="Schweiz (Switzerland)"
+        language="Deutsch"/>
+    <fr_ch
+        jcr:primaryType="nt:unstructured"
+        country="Suisse (Switzerland)"
+        language="Français"/>
+    <zh_tw
+        jcr:primaryType="nt:unstructured"
+        country="中華民國 (Taiwan)"
+        language="Chinese (Traditional)"/>
+    <en_gb
+        jcr:primaryType="nt:unstructured"
+        country="United Kingdom"
+        language="English"/>
+    <en_us
+        jcr:primaryType="nt:unstructured"
+        country="United States"
+        language="English"/>
+    <es_uy
+        jcr:primaryType="nt:unstructured"
+        country="Uruguay"
+        language="Español"/>
+    <es_ve
+        jcr:primaryType="nt:unstructured"
+        country="Venezuela"
+        language="Español"/>
+    <en_au
+        jcr:primaryType="nt:unstructured"
+        country="Australia"
+        language="English"/>
+    <en_nz
+        jcr:primaryType="nt:unstructured"
+        country="New Zealand"
+        language="English"/>
+    <es_ec
+        jcr:primaryType="nt:unstructured"
+        country="Ecuador"
+        language="Español"/>
+    <es_pr
+        jcr:primaryType="nt:unstructured"
+        country="Puerto Rico"
+        language="Español"/>
+    <ru_ua
+        jcr:primaryType="nt:unstructured"
+        country="Україна (Ukraine)"
+        language="русский"/>
+    <tr_tr
+        jcr:primaryType="nt:unstructured"
+        country="Türkiye (Turkey)"
+        language="Türkçe"/>
+    <es_bo
+        jcr:primaryType="nt:unstructured"
+        country="Bolivia"
+        language="Español"/>
+    <!-- Adriatic, using private use region subtag -->
+    <en_xa
+        jcr:primaryType="nt:unstructured"
+        country="Adriatic"
+        language="English"/>
+    <!-- Australia And New Zealand, using private use region subtag -->
+    <en_xb
+        jcr:primaryType="nt:unstructured"
+        country="Australia and New Zealand"
+        language="English"/>
+    <!-- Central America and the Carribean, using private use region subtag -->
+    <en_xc
+        jcr:primaryType="nt:unstructured"
+        country="Central America and the Caribbean"
+        language="English"/>
+    <!-- Europe, using private use region subtag -->
+    <en_xd
+        jcr:primaryType="nt:unstructured"
+        country="Europe"
+        language="English"/>
+    <!-- Latin America, using private use region subtag -->
+    <en_xe
+        jcr:primaryType="nt:unstructured"
+        country="Latin America"
+        language="English"/>
+    <!-- Middle East, using private use region subtag -->
+    <en_xf
+        jcr:primaryType="nt:unstructured"
+        country="Middle East"
+        language="English"/>
+</jcr:root>

@@ -1,0 +1,6 @@
+<sly data-sly-use.dataLinkId="data-link-id.js" data-sly-use.image="decorative.js" class="tta tta__graphic tta--decorative">
+  <figure data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+    <img src="${image.src}" data-image-cover>
+    <figcaption data-sly-test="${!image.src && wcmmode && !wcmmode.disabled}" class="cq-placeholder">Please select an image to display as a decorative image.</figcaption>
+  </figure>
+</sly>

@@ -1,0 +1,306 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.medtronic.com.parent</groupId>
+    <artifactId>medtronic-com-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Medtronic Com</name>
+    <description>Medtronic-com Parent POM</description>
+
+    <properties>
+        <aem.host>localhost</aem.host>
+        <aem.port>4502</aem.port>
+        <aem.user>admin</aem.user>
+        <aem.pass>admin</aem.pass>
+        <cq.version>6.0</cq.version>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>1.8.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-core-asl</artifactId>
+                <version>1.8.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.7.0-rc1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.7.0-rc1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.7.0-rc1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>2.7.0-rc1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <version>2.7.0-rc1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.woodstox</groupId>
+                <artifactId>stax2-api</artifactId>
+                <version>3.1.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Common Dependencies For All Projects -->
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-api</artifactId>
+            <version>6.0.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.api</artifactId>
+            <version>2.8.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-bundle</artifactId>
+            <version>1.10.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Repository Configuration -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>https://subversion.corp.medtronic.com/frameworks/mdt-ivy-repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <!-- <repository> <id>adobe-cq</id> <name>Adobe CQ Repository</name> 
+            <url>http://repo.adobe.com/archiva/repository/day-central/</url> <releases> 
+            <enabled>true</enabled> </releases> <snapshots> <enabled>true</enabled> </snapshots> 
+            </repository> <repository> <id>spring-maven-milestone</id> <name>Springframework 
+            Maven Repository</name> <url>http://maven.springframework.org/milestone</url> 
+            </repository> <repository> <id>spring-maven-snapshot</id> <snapshots> <enabled>true</enabled> 
+            </snapshots> <name>Springframework Maven SNAPSHOT Repository</name> <url>http://maven.springframework.org/snapshot</url> 
+            </repository> <repository> <id>spring-ext</id> <name>Spring External Dependencies 
+            Repository</name> <url>http://springframework.svn.sourceforge.net/svnroot/springframework/repos/repo-ext/ 
+            </url> </repository> <repository> <id>com.springsource.repository.bundles.external</id> 
+            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name> 
+            <url>http://repository.springsource.com/maven/bundles/external</url> </repository> 
+            <repository> <id>spring-osgified-artifacts</id> <snapshots> <enabled>true</enabled> 
+            </snapshots> <name>Springframework Maven OSGified Artifacts Repository</name> 
+            <url>http://maven.springframework.org/osgi</url> </repository> <repository> 
+            <id>releases</id> <name>Releases</name> <url>https://oss.sonatype.org/content/repositories/releases</url> 
+            </repository> <repository> <id>adobe-public-releases</id> <name>Adobe Basel 
+            Public Repository</name> <url>http://repo.adobe.com/nexus/content/groups/public</url> 
+            <releases> <enabled>true</enabled> <updatePolicy>never</updatePolicy> </releases> 
+            <snapshots> <enabled>false</enabled> </snapshots> </repository> -->
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://subversion.corp.medtronic.com/frameworks/mdt-ivy-repo</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <!-- <pluginRepository> <id>adobe-public-releases</id> <name>Adobe 
+            Basel Public Repository</name> <url>http://repo.adobe.com/nexus/content/groups/public</url> 
+            <releases> <enabled>true</enabled> <updatePolicy>never</updatePolicy> </releases> 
+            <snapshots> <enabled>false</enabled> </snapshots> </pluginRepository> -->
+        <!--<pluginRepository>
+            <id>central2</id>
+            <name>Maven Repository Switchboard2</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository> -->
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+                <version>1.21.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <!--This plugin's configuration is used to store Eclipse 
+                    m2e settings only. It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            org.apache.sling
+                                        </groupId>
+                                        <artifactId>
+                                            maven-jspc-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [2.0.6,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>jspc</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            org.apache.maven.plugins
+                                        </groupId>
+                                        <artifactId>
+                                            maven-clean-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [2.5,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>clean</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>medtronic-com-config</module>
+                <module>medtronic-com-design</module>
+                <module>medtronic-com-services</module>
+                <module>medtronic-com-msm</module>
+                <module>medtronic-com-taglib</module>
+                <module>medtronic-com-ui</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>fastPathDesign</id>
+            <modules>
+                <module>medtronic-com-design</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>fastPathConfig</id>
+            <modules>
+                <module>medtronic-com-config</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

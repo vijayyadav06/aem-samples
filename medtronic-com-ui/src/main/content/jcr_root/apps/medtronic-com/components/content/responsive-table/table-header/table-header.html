@@ -1,0 +1,13 @@
+<!--/*
+    you will see an odd data-sly-element below, it's intended to fix the authoring overlay as this component
+    is only used within the responsive-table component.  When we include it in publish (as all the required data attributes
+    are set here, we use data-sly-unwrap.  However, as data-sly-unwrap also changes the overlay, for author we instead make
+    the component use a div, and don't unwrap the resource include.  This way the publish and author views work.
+*/-->
+<th data-sly-use.header="com.medtronic.com.app.ResponsiveTableHeader"
+    data-sly-element="${header.element}"
+    data-tablesaw-sortable-col="${header.isSortable}"
+    data-tablesaw-priority="${header.priority}"
+    class="tablesaw-priority-${header.priority} tablesaw-sortable-head"
+>${header.title}</th>
+

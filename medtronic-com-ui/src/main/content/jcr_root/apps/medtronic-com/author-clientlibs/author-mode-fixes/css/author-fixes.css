@@ -1,0 +1,31 @@
+/* this is to fix the jumping of the bottom of the page in touch-ui edit mode */
+[class*='aem-AuthorLayer-'] .global-wrap { margin-bottom: 0; min-height: 0; }
+
+/* this fixes placeholder styles for our components */
+[class*='aem-AuthorLayer-'] .cq-placeholder { height: auto; padding: 5px 0; }
+
+/* these are to fix the block components in the two column side rail */
+aside.two-column-sidebar > [class*='one-by-'] > [class*='one-by-'] {
+  position: static;
+}
+
+.subtemplate .new.section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.subtemplate .new.section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+/* this fixes placeholder styles for OOTB Reference Component */
+[class*='aem-AuthorLayer-'] .cq-placeholder[data-emptytext='Reference'] { height: 30px;}
+
+.social-media-feed-mini { height: 100%; }

@@ -1,0 +1,20 @@
+From: ${from}
+Subject: ${subject}
+
+-------------------------------------------------------------------------------------
+Time: ${timestamp}
+After Step: ${stepname}
+User: ${username} (${userid})
+Workflow: ${workflowtitle}
+
+-------------------------------------------------------------------------------------
+
+Content: ${host}${payload}.html
+
+comment: ${comment}
+-------------------------------------------------------------------------------------
+
+View the overview in your ${host}/inbox\n \
+-------------------------------------------------------------------------------------
+
+This is an automatically generated message. Please do not reply.

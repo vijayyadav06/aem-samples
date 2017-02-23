@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <featuredImage
+                jcr:primaryType="cq:Panel"
+                title="Featured Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        enableKeyEvents="{Boolean}true"
+                        fieldLabel="Image"
+                        name="./image"
+                        rootPath="/content/dam"
+                        xtype="pathfield">
+                        <browseDialogCfg
+                            jcr:primaryType="nt:unstructured"
+                            height="316"/>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            dialogselect="function(field,path){Medtronic.Authoring.TestimonialHero.image.dialogselect(field,path);}"
+                            keyup="function(field,e){Medtronic.Authoring.TestimonialHero.image.keyUp(field);}"
+                            loadcontent="function(field){Medtronic.Authoring.TestimonialHero.image.loadContent(field);}"/>
+                    </image>
+                    <alttext
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title.'"
+                        fieldLabel="Image Alt Text"
+                        itemCls="alt-text"
+                        name="./alttext"
+                        xtype="textfield"/>
+                </items>
+            </featuredImage>
+            <quote
+                jcr:primaryType="cq:Panel"
+                border="false"
+                title="Quote">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Input a quote. Do not include quotation marks around the quote text."
+                        fieldLabel="Quotation"
+                        name="./text"
+                        xtype="textarea"/>
+                    <attribution
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the source of the quote."
+                        fieldLabel="Attribution"
+                        name="./attribution"
+                        xtype="textfield"/>
+                    <additional1
+                        jcr:primaryType="cq:Widget"
+                        emptyText="Example &quot;From an Interview&quot;"
+                        fieldLabel="Additional Info"
+                        name="./additionalInfo1"
+                        xtype="textfield"/>
+                    <additional2
+                        jcr:primaryType="cq:Widget"
+                        emptyText="Example &quot;From an Interview&quot;"
+                        fieldLabel="Additional Info"
+                        name="./additionalInfo2"
+                        xtype="textfield"/>
+                    <date
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Date of publication, as applicable."
+                        fieldLabel="Date"
+                        format="Y-m-d"
+                        name="./date"
+                        xtype="datefield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            render="function(box) {                               Medtronic.Authoring.Quote.date.render(box);                             }"/>
+                    </date>
+                </items>
+            </quote>
+        </items>
+    </items>
+</jcr:root>

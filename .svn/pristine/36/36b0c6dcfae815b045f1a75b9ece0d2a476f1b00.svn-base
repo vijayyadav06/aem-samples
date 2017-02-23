@@ -1,0 +1,64 @@
+<!--/*
+  Copyright [TODO]
+  
+  <head> tag content for the base-page.
+*/-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"
+  data-sly-use.head="head.js"
+  data-sly-use.headlibRenderer="headlibs.html"
+  data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+  data-sly-use.runModes="/apps/medtronic-com/components/common/RunModes.js"
+  data-sly-use.basePage="base-page.js">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="${head.keywords}">
+<meta name="description" content="${head.description}">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="content-language" content="${basePage.locale}">
+<meta name="author" content="Medtronic">
+<meta name="robots" content="${basePage.robots}">
+<sly data-sly-use.multifieldUse="${'com.medtronic.com.util.ACSMultiFieldUseUtil' @ property='metatags'}"/>
+<sly data-sly-list.metaTag="${multifieldUse.multifieldValues}">
+    <meta name="${metaTag.name}" content="${metaTag.content}"/>
+</sly>
+<sly data-sly-use.link="${'com.medtronic.com.app.LinkTransformer'}"/>
+<meta property="og:title" content="${pageProperties.og_title}"/>
+<meta property="og:description" content="${pageProperties.og_description}"/>
+<meta property="og:image" content="${pageProperties.og_image}"/>
+<meta property="og:url" content="${link.currentPageURL}"/>
+<meta property="og:type" content="website"/>
+<meta data-sly-test="${!basePage.isRegion}" property="og:locale" content="${basePage.locale}"/>
+
+<!--/* DTM satellite JS */-->
+<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />
+<!--/* We will be using the cloud configuration of the DTM JS, not the hardcoded version */-->
+<!--/* <script data-sly-test="runModes.production && runModes.publish" src="//assets.adobedtm.com/ce8746a9125c5b45bcf05e12f84658c0c6ff5b9a/satelliteLib-ac578fadd117fd9de0670ce7d976e965f3d949c9.js"></script> */-->
+<!--/* <script data-sly-test="!runModes.production || runModes.author" src="//assets.adobedtm.com/ce8746a9125c5b45bcf05e12f84658c0c6ff5b9a/satelliteLib-ac578fadd117fd9de0670ce7d976e965f3d949c9-staging.js"></script> */-->
+<script type="text/javascript">if (typeof _satellite !== "undefined") { _satellite.setCookie("sat_track", "false"); }</script>
+<script type="text/javascript">var SITEPATH = "${head.sitePath @ context='scriptString'}";</script>
+<sly data-sly-call="${headlibRenderer.headlibs @ designPath=head.designPath}" />
+<sly data-sly-include="author.html" />
+<!--/* Commented out client context related functionality, as it currently is not in use. */-->
+<!--/* <sly data-sly-resource="${@ path='client-context', resourceType='/libs/cq/personalization/components/clientcontext'}"/> */-->
+<!--/* <sly data-sly-resource="${@ path='contexthub', resourceType='granite/contexthub/components/contexthub'}"/> */-->
+<sly data-sly-include="customheaderlibs.html" />
+
+<sly data-sly-test="${runModes.publish}">
+  <style id="antiClickjack">body{display:none !important;}</style>
+  <script type="text/javascript">
+     if (self === top) {
+         var antiClickjack = document.getElementById("antiClickjack");
+         antiClickjack.parentNode.removeChild(antiClickjack);
+     } else {
+         top.location = self.location;
+     }
+  </script>
+</sly>
+
+<!-- <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png"> -->
+<link rel="canonical" href="${link.currentPageURL}" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="/content/medtronic-com/favicon.ico">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/content/medtronic-com/favicon.ico">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="${basePage.sitemapURL}">
+<title>${pageProperties.pageTitle || head.title}</title>

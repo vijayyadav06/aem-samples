@@ -1,0 +1,41 @@
+<div data-sly-test="${!properties.headline && !wcmmode.disabled}"
+    class="cq-placeholder">Placeholder for Right Rail Contact Us</div>
+
+<div class="row">
+    <div class="col-sm-12 one-by-one height-variable">
+        <div class="content bg-medtronic-blue">
+            <div data-sly-test="${properties.headline}"
+                class="contact-us"
+                data-sly-use.rightRailcontactUs="com.medtronic.com.app.RightRailContactUs">
+                <h4>${rightRailcontactUs.headline}</h4>
+                <p>${rightRailcontactUs.descriptiveText}</p>
+                <sly data-sly-list.contactUs="${rightRailcontactUs.contact}">
+                <section>
+                    <p>
+                        <strong>${contactUs.name}</strong>
+                    </p>
+                    <address>
+                        <sly data-sly-test="${contactUs.phone}">
+                            <a class="link__telephone" rel="nofollow" href="tel:${contactUs.phone}">${contactUs.phone}</a><br>
+                        </sly>
+                        <sly data-sly-test="${contactUs.address1}">
+                            ${contactUs.address1}<br>
+                        </sly>
+                        <sly data-sly-test="${contactUs.address2}">
+                            ${contactUs.address2}<br>
+                        </sly>
+                        <sly data-sly-test="${contactUs.address3}">
+                            ${contactUs.address3}<br>
+                        </sly>
+                            ${contactUs.address4}
+                    </address>
+                    <a href="mailto:${contactUs.email}">${contactUs.email}</a>
+                    <sly data-sly-test="${contactUs._DNT_includeCta}">
+                        <a href="${contactUs.url}" target="${contactUs._DNT_newTab}">${contactUs.linktext}</a>
+                    </sly>
+                </section>
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>

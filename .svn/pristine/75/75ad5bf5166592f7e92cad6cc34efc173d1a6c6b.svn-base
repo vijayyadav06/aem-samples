@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Share">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <details
+            jcr:primaryType="cq:Widget"
+            border="{Boolean}false"
+            fieldDescription="Select up to 6 social media outlets to display in Share component."
+            fieldLabel="Select Social Media Channels to Display"
+            layout="form"
+            padding="5px 5px 5px 5px"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <facebook
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Facebook"
+                    labelStyle="width:140px;"
+                    name="./showFacebook"
+                    type="checkbox"
+                    xtype="selection"/>
+                <twitter
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Twitter"
+                    labelStyle="width:140px;"
+                    name="./showTwitter"
+                    type="checkbox"
+                    xtype="selection"/>
+                <linkedin
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="LinkedIn"
+                    labelStyle="width:140px;"
+                    name="./showLinkedin"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </details>
+    </items>
+</jcr:root>

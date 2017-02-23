@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudserviceconfigs="[[]]"
+        cq:designPath="/etc/designs/medtronic-com"
+        cq:lastModified="{Date}2016-01-19T14:13:09.974-06:00"
+        cq:lastModifiedBy="iamte3"
+        cq:template="/apps/medtronic-com/templates/site-root-page"
+        jcr:lastModified="{Date}2016-01-19T14:13:09.956-06:00"
+        jcr:lastModifiedBy="iamte3"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="English_US"
+        sling:resourceType="medtronic-com/components/pages/site-root-page"
+        audienceLabel_healthCareAdministrators="Healthcare Administrators"
+        audienceLabel_healthCareProfessionals="Healthcare Professionals"
+        audienceLabel_patients="Patients"
+        cookieWarning_button1="Reject"
+        cookieWarning_button2="Accept"
+        cookieWarning_explicit_description="&lt;p>THIS SITE USES COOKIES&lt;/p>                            &lt;p>Medtronic uses Google Analytics and Adobe Analytics,                            online statistics services that use cookies to analyze the behavior of visitors to its website.                            Google and Adobe Analytics do not include or report any personal data that may be associated with an                            IP address of an individual user.&lt;/p>                            &lt;p>For more information, see our &lt;a href='#'>policy on the use of cookies&lt;/a>&lt;/p>                            &lt;p>Indicate whether you want to accept or reject cookies.&lt;/p>"
+        cookieWarning_implicit_description="&lt;p>This site uses cookies to store information on your computer.                             Some are essential to make our site work; others help us improve the user experience.                             By using the site, you consent to the placement of these cookies.                             You may at any time change the settings regarding cookies.                             &lt;/a>Read our privacy statement to &lt;a target='_blank' href='#'>learn more.&lt;/a>&lt;/p>"
+        cookieWarning_title="Cookie Statement"
+        cookieWarning_type="none"
+        globalHeader_headerLogo="/content/dam/medtronic-com/mdt_logo_white.png"
+        globalHeader_imageAltText="alt"
+        globalHeader_logoUrl="www.medtronic.com"
+        globalHeader_menu_collapsedText="Menu"
+        globalHeader_menu_expandedText="Close"
+        globalHeader_search_buttonText="Go"
+        globalHeader_search_collapsedText="Search"
+        globalHeader_search_expandedText="Close"
+        globalHeader_search_fieldText="Search"
+        healthCareAdministrators="Healthcare Administrators"
+        healthCareProfessionals="Healthcare Professionals"
+        michelsonURL="http://www.medtronic.com/michelson/index.htm"
+        outdatedBrowser_buttonText="Update my browser now."
+        outdatedBrowser_buttonUrl="http://www.outdatedbrowser.com"
+        outdatedBrowser_errorMessage="With an updated browser, you will have a better Medtronic web site experience."
+        outdatedBrowser_title="Your browser is out of date"
+        patients="Patients"
+        showFacebook="true"
+        showLinkedin="true"
+        showTwitter="true"
+        warnOnLeave_button1="Continue"
+        warnOnLeave_button2="Cancel"
+        warnOnLeave_description="&lt;p>You just clicked a link to go to another website. If you continue, you will leave this site and go to a site run by someone else.&lt;/p>                            &lt;p>Medtronic does not review or control the content on the other website, and we are not responsible for any business dealings or transactions you have there. Your use of the other site is subject to the terms of use and privacy statement on that site. &lt;/p>                            &lt;p>It is possible that some of the products on the other site are not approved in the &amp;lt;COUNTRY&amp;gt;.&lt;/p>"
+        warnOnLeave_enabled="true"
+        warnOnLeave_title="You Are Leaving the Medtronic &lt;COUNTRY> Site">
+        <header-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/header"/>
+        </header-par>
+        <footer-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/footer"/>
+        </footer-par>
+        <home-content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <hero
+                jcr:created="{Date}2015-11-13T11:46:30.647+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-13T11:47:36.205+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/hero"
+                contentType="imagetext"
+                styleOption="brandframe"/>
+            <level_1_subtemplate
+                jcr:created="{Date}2015-11-13T11:46:43.696+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-13T11:46:43.696+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/subtemplates/level-1-subtemplate"/>
+        </home-content-par>
+        <image
+            jcr:lastModified="{Date}2016-01-19T14:13:09.956-06:00"
+            jcr:lastModifiedBy="iamte3"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+    <rep:policy/>
+    <homepage/>
+    <general-detail-page/>
+    <product-detail-page/>
+    <biotest/>
+</jcr:root>

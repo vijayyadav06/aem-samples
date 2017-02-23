@@ -1,0 +1,37 @@
+
+<div class="cq-placeholder"
+      data-sly-test="${!properties.downloads && !wcmmode.disabled}">
+      Placeholder for Download File
+</div>
+<sly data-sly-test="${properties.downloads}"
+      data-sly-use.downloads="com.medtronic.com.app.Download"> 
+  <sly data-sly-list.attachment="${downloads.attachments}">
+    <div class="download-attachment" data-download-name="${attachment.title}">
+      <a href="${attachment.url}"
+          target="${attachment._DNT_newTab ? '_blank':'_self'}"> 
+        <span class="icon-fallback-text"> 
+          <sly
+            data-sly-use.icons="/apps/medtronic-com/components/common/icons.html">
+            <sly data-sly-test="${attachment.fileType == 'ARCHIVE'}" 
+                  data-sly-call="${icons.downloadArchive}" /> 
+            <sly data-sly-test="${attachment.fileType == 'MEDIA'}" 
+                  data-sly-call="${icons.downloadMedia}" /> 
+            <sly data-sly-test="${attachment.fileType == 'IMAGE'}" 
+                  data-sly-call="${icons.downloadImage}" /> 
+            <sly data-sly-test="${attachment.fileType == 'DOCUMENT'}" 
+                  data-sly-call="${icons.downloadDocument}" />            
+          </sly> 
+          <span class="text">${attachment.extension}</span>
+        </span> 
+        <span class="link--title">${attachment.title}</span>&nbsp;<span class="link--format">(.${attachment.extension})</span> 
+      </a>
+      <p class="description">${attachment.description}</p>
+      <p class="details">
+        <sly data-sly-test=${attachment._DNT_displayDate}> 
+          <span class="date">${attachment.date}</span> | 
+        </sly>
+        <span class="filesize">${attachment.size}</span>
+      </p>
+    </div>
+  </sly> 
+</sly>

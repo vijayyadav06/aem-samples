@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Headline,Text  Component"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <hidden
+                        jcr:primaryType="cq:Widget"
+                        itemCls="ie11_multifield_hidden"
+                        xtype="textfield"/>
+                    <groups
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        hideLabel="{Boolean}true"
+                        minItems="{Long}1"
+                        name="./groups"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}false"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Headline (H2)"
+                                    key="title"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="300"
+                                    xtype="textfield"/>
+                                <text
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="false"
+                                    ctCls="title-text"
+                                    fieldLabel="Body Text"
+                                    key="text"
+                                    labelStyle="display:block;margin:5px;"
+                                    validator="function() {                                       return Medtronic.Authoring.validateEManualUrl(this);                                     }"
+                                    xtype="richtext">
+                                    <rtePlugins jcr:primaryType="nt:unstructured"
+                                    path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                                    xtype="cqinclude">
+                                    </rtePlugins>
+                                </text>
+                            </items>
+                        </fieldConfig>
+                    </groups>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){Medtronic.Authoring.addMinimumMultifieldItems(dialog);}"/>
+</jcr:root>

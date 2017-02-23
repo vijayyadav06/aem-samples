@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This is Authorable Text - Headline (with ISI)."
+    jcr:primaryType="cq:Component"
+    jcr:title="Authorable Text - Headline (with ISI)"
+    componentGroup="Medtronic-com - Subtemplate Slot">
+    <cq:htmlTag jcr:primaryType="nt:unstructured"
+        class="tta tta__headline"
+        cq:tagName="div"/>
+</jcr:root>

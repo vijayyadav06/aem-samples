@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Text Wrapped Image Component"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <heading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Headline"
+                        name="./heading"
+                        xtype="textfield"/>
+                    <bodyText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Body Text"
+                        name="./bodyText"
+                        validator="function() {return Medtronic.Authoring.validateEManualUrl(this);}"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </bodyText>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Image"
+                        name="./image"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <imageAltText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                        fieldLabel="Image Alt Text"
+                        name="./imageAltText"
+                        xtype="textfield"/>
+                    <imageAlignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="pull-right"
+                        fieldLabel="Image Alignment"
+                        layout="hbox"
+                        name="./imageAlignment"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="pull-left"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="pull-right"/>
+                        </options>
+                        <optionsConfig
+                            jcr:primaryType="nt:unstructured"
+                            width="50"/>
+                    </imageAlignment>
+                    <imageCaptionText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Caption Line 1"
+                        name="./imageCaptionText"
+                        xtype="textfield"/>
+                    <imageCaptionText2
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Caption Line 2"
+                        name="./imageCaptionText2"
+                        validator="function() {return Medtronic.Authoring.validateEManualUrl(this);}"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </imageCaptionText2>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

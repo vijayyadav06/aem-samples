@@ -1,0 +1,6 @@
+<section data-sly-use.redirect="redirect.js">
+  <p>${'This page will redirect when published'}</p>
+  <p>Redirect target: <strong>${redirect.redirectTarget}</strong></p>
+  <p><a href="${redirect.redirectTarget}">${'Click here to go to the redirect target' @ i18n}</a></p>
+  <p><a href="${currentPage.path}.html?wcmmode=disabled" target="_blank">Test the redirect</a></p>
+</section>

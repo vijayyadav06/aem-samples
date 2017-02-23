@@ -1,0 +1,4 @@
+<div data-sly-test="${!properties.richText && !wcmmode.disabled}" class="cq-placeholder">
+ 	Placeholder for Text Editor
+</div>
+${properties.richText @context='html'}

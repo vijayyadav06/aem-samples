@@ -1,0 +1,48 @@
+<div data-sly-test="${!properties.sections && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Accordion</div>
+<div class="product__tabbed-detail" data-sly-use.accordion="com.medtronic.com.app.Accordion">
+	<a href="#" data-sly-test="${accordion.sectionList}" class="accordion__expand-all">
+		<span class="accordion__expand">${'Expand All' @ i18n, locale=inheritedPageProperties['jcr:language']}</span>
+		<span class="accordion__collapse hidden">${'Collapse All' @ i18n, locale=inheritedPageProperties['jcr:language']}</span>
+  </a>
+	<!-- Accordion -->
+	<div class="accordion" data-sly-list.section="${accordion.sectionList}">
+		<sly data-sly-test="${sectionList.count==1}">
+			<div class="accordion__item open">
+				<h3 data-sly-attribute.id="${section.anchor}" class="accordion__label">
+					<a href="#">${section.title}<span class="accordion__icon"></span></a>
+				</h3>
+				<div class="accordion__content row" style="display: block;">
+					<div data-sly-test="${section._DNT_columns!='two'}" data-sly-list.path="${section.path}">
+						<div class="col-xs-12">
+							<sly data-sly-resource="${@ path=path, resourceType='foundation/components/parsys'}" />
+						</div>
+					</div>
+					<sly data-sly-test="${section._DNT_columns=='two'}" data-sly-list.path="${section.path}">
+					<div class="col-xs-6">
+						<sly data-sly-resource="${@ path= path, resourceType='foundation/components/parsys'}" />
+					</div>
+					</sly>
+				</div>
+			</div>
+		</sly>
+		<sly data-sly-test="${sectionList.count>1}">
+			<div class="accordion__item">
+				<h3 data-sly-attribute.id="${section.anchor}" class="accordion__label">
+					<a href="#">${section.title}<span class="accordion__icon"></span></a>
+				</h3>
+				<div class="accordion__content row" style="display: none;">
+					<sly data-sly-test="${section._DNT_columns!='two'}" data-sly-list.path="${section.path}">
+						<div class="col-xs-12">
+							<sly data-sly-resource="${@ path=path, resourceType='foundation/components/parsys'}" />
+						</div>
+					</sly>
+					<sly data-sly-test="${section._DNT_columns=='two'}" data-sly-list.path="${section.path}">
+						<div class="col-xs-6">
+							<sly data-sly-resource="${@ path= path, resourceType='foundation/components/parsys'}" />
+						</div>
+					</sly>
+				</div>
+			</div>
+		</sly>
+	</div>
+</div>

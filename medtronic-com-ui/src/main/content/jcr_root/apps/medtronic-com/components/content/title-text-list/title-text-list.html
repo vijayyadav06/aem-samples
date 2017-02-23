@@ -1,0 +1,11 @@
+<div data-sly-test="${!properties.title && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Headline,Text, List.</div>
+<div data-sly-test="${properties.title}" data-sly-use.titleTextList="title-text-list.js">
+  <h2 data-sly-test="${titleTextList.title}">${titleTextList.title}</h2>
+  <p data-sly-test="${titleTextList.descriptiveText}">${properties.descriptiveText}</p>
+  <ul data-sly-list.listItem="${titleTextList.list}">
+    <li data-sly-test="${listItem.text && listItem.linkUrl}" >
+      <a href="${listItem.linkUrl}" target="${listItem._DNT_newTab ? '_blank' : ''}">${listItem.text}</a>
+    </li>
+    <li data-sly-test="${listItem.text && !listItem.linkUrl}">${listItem.text}</li>
+   </ul>
+</div>

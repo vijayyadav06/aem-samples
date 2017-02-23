@@ -1,0 +1,47 @@
+<div data-sly-test="${!wcmmode.disabled}" class="cq-placeholder">Click here to edit the subtemplate configuration</div>
+<div data-sly-use.sideRailSubtemplate="side-rail-subtemplate.js" class="row ${sideRailSubtemplate.wrapperSize} subtemplate"
+    data-sly-use.subtemplateSlot="../subtemplate-slot.html"
+    data-sly-use.sequence="../subtemplate-sequence.js">
+    
+    <sly data-sly-test.authored="${sideRailSubtemplate.parName}">
+        <sly data-sly-test="${!sideRailSubtemplate.decorativeOnly}">
+            <!--/* The parsys will display when this is authored, is not decorative only */-->
+            <sly
+                data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='side-rail', name=sideRailSubtemplate.parName, color=sideRailSubtemplate.backgroundColor}" />
+            <sly data-sly-test="${!sideRailSubtemplate.hasContent && !wcmmode.disabled}">
+                <!--/* The empty content will display when this is authored, is not decorative only, has no content, is not disabled mode */-->
+                <div class="content ${sideRailSubtemplate.backgroundColor}">
+                    <div class="tta tta__headline cq-placeholder" style="height: 125px"></div>
+                </div>
+            </sly>
+        </sly>
+        <sly data-sly-test="${sideRailSubtemplate.decorativeOnly}">
+            <!--/* The color background will display when this is authored, is decorative only */-->
+            <div class="content ${sideRailSubtemplate.backgroundColor}">
+                <sly data-sly-test="${!wcmmode.disabled}">
+                <!--/* The placeholder will display when this is authored, is decorative only, is not disabled mode */-->
+                    <div class="tta tta__headline cq-placeholder">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <p>This will display as an empty color block. Edit this component to change size/add a parsys. This text will not display on the published page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </sly>
+            </div>
+        </sly>
+    </sly>
+    <sly data-sly-test="${!authored && !wcmmode.disabled}">
+        <!--/* The placeholder will display when this is not authored, is not disabled mode */-->
+        <div class="content ${sideRailSubtemplate.backgroundColor}">
+            <div class="tta tta__headline cq-placeholder">
+                <div class="display-table">
+                    <div class="display-table-cell">
+                        <p>Placeholder for Right Rail Subtemplate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sly>
+</div>
+<div data-sly-test="${!wcmmode.disabled}" class="clearfix"></div>

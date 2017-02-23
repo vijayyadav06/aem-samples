@@ -1,0 +1,6 @@
+<div data-sly-test="${!properties.groups && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Headline,Text</div>
+<div data-sly-test="${properties.groups}" data-sly-use.titleText="com.medtronic.com.app.TitleText"
+	data-sly-list.group="${titleText.groups}">
+	<h2 data-sly-test="${group.title}">${group.title}</h2>
+	${group.text @context='html'}
+</div>

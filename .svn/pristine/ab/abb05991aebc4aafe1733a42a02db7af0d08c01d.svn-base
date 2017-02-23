@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2015-11-24T12:16:01.666-06:00"
+        cq:lastModifiedBy="krulir1"
+        cq:lastReplicated="{Date}2016-01-13T00:40:40.140-06:00"
+        cq:lastReplicatedBy="hongv1"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Medtronic-com"
+        jcr:uuid="58f5dccb-4fc5-4004-af9d-1027059076d0"
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="{Long}302"
+        sling:resourceType="foundation/components/redirect"
+        redirectTarget="/content/medtronic-com/en2">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+    </jcr:content>
+    <fr-fr/>
+    <en/>
+    <au-en/>
+    <ca-en/>
+    <in-en/>
+    <ir-en/>
+    <rep:policy/>
+    <uk-en/>
+    <us-en/>
+    <developer-tester-root/>
+    <saryu-root-page3/>
+    <jonroot/>
+    <KarasSiteRootPage/>
+    <Madan-rootpage/>
+    <ch-en/>
+    <sunny-s-application-root-page/>
+    <victoria-s-root-page/>
+    <TemporaryTestingPage/>
+</jcr:root>

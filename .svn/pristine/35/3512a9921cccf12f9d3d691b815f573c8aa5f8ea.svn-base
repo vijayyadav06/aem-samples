@@ -1,0 +1,69 @@
+/*
+    Granite Authoring Fixes
+*/
+
+/* Required select field error icon location */
+span.coral-Select span.js-coral-validation-error.coral-Icon.coral-Icon--alert.coral-Icon--sizeS {
+    color:#e14132;
+    position:relative;
+    float:right;
+    right:-1.7rem;
+    top:-1.7rem;
+}
+/* Making the overall column size of page properties bigger */
+.coral-FixedColumn-column {
+    width: 60rem;
+}
+/* Making the overall column size 70*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+.coral-FixedColumn-column {
+    width: 90%;
+}
+}
+
+.cq-siteadmin-admin-properties-tabs > .coral-TabPanel-content { 
+	min-height: 24rem;
+}
+
+.customErrorInfoText { 
+	clip: auto;
+	overflow: visible;
+}
+
+/* Adding multifield required field error icon position, similar to required select field */
+div.coral-Multifield span.js-coral-validation-error.coral-Icon.coral-Icon--alert.coral-Icon--sizeS {
+    position: relative;
+    color: #e14132;
+    top: -1.7rem;
+    left: -1.7rem;
+}
+
+section.social-media-font-description.coral-Form-fieldset h3.coral-Form-fieldset-legend{
+	font-size: 14px;
+    font-weight: normal;
+}
+
+/* page-properties : label tab */
+.page-properties-label>.coral-InputGroup--block>.js-coral-pathbrowser-input{
+	display: none;
+}
+.page-properties-label>.coral-InputGroup--block .js-coral-pathbrowser-button{
+	width: 100%;
+	font-weight: normal;
+	text-align: left;
+	font-size: .8125rem;
+}
+.page-properties-label>.coral-InputGroup--block .js-coral-pathbrowser-button>.coral-Icon{
+    float: right;
+}
+a[data-value*='/etc/tags/medtronic-com'] .coral-Icon:before{
+	content: "\f2e6";
+}
+@-moz-document url-prefix() {
+    .page-properties-label>.coral-InputGroup--block .js-coral-pathbrowser-button>.coral-Icon{
+		top: -15px;
+	}
+}

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Footer"
+    width="{Long}600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Section One">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <cloumnHeader1
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Column Header"
+                        name="./columnHeader1"
+                        xtype="textfield"/>
+                    <linkColumn1
+                        jcr:primaryType="cq:Widget"
+                        name="./linkColumns1"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        change="function(field, newVal, oldVal){Medtronic.Authoring.Footer.linkText.change(field);}"
+                                        loadcontent="function(field,record,path){Medtronic.Authoring.Footer.linkText.loadContent(this);}"/>
+                                </linkText>
+                                <fontWeight
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="normal-weight"
+                                    fieldLabel="Font Weight"
+                                    key="_DNT_fontWeight"
+                                    type="select"
+                                    value="normal-weight"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <regular
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Regular"
+                                            value="normal-weight"/>
+                                        <bold
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Bold"
+                                            value="bold"/>
+                                    </options>
+                                </fontWeight>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </linkURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </linkColumn1>
+                    <cloumnHeader2
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Column Header"
+                        name="./columnHeader2"
+                        xtype="textfield"/>
+                    <linkColumn2
+                        jcr:primaryType="cq:Widget"
+                        name="./linkColumns2"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        change="function(field, newVal, oldVal){Medtronic.Authoring.Footer.linkText.change(field);}"
+                                        loadcontent="function(field,record,path){Medtronic.Authoring.Footer.linkText.loadContent(this);}"/>
+                                </linkText>
+                                <fontWeight
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="normal-weight"
+                                    fieldLabel="Font Weight"
+                                    key="_DNT_fontWeight"
+                                    type="select"
+                                    value="normal-weight"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <regular
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Regular"
+                                            value="normal-weight"/>
+                                        <bold
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Bold"
+                                            value="bold"/>
+                                    </options>
+                                </fontWeight>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </linkURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </linkColumn2>
+                    <cloumnHeader3
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Column Header"
+                        name="./columnHeader3"
+                        xtype="textfield"/>
+                    <linkColumn3
+                        jcr:primaryType="cq:Widget"
+                        name="./linkColumns3"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        change="function(field, newVal, oldVal){Medtronic.Authoring.Footer.linkText.change(field);}"
+                                        loadcontent="function(field,record,path){Medtronic.Authoring.Footer.linkText.loadContent(this);}"/>
+                                </linkText>
+                                <fontWeight
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="normal-weight"
+                                    fieldLabel="Font Weight"
+                                    key="_DNT_fontWeight"
+                                    type="select"
+                                    value="normal-weight"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <regular
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Regular"
+                                            value="normal-weight"/>
+                                        <bold
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Bold"
+                                            value="bold"/>
+                                    </options>
+                                </fontWeight>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </linkURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </linkColumn3>
+                    <cloumnHeader4
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Column Header"
+                        name="./columnHeader4"
+                        xtype="textfield"/>
+                    <linkColumn4
+                        jcr:primaryType="cq:Widget"
+                        name="./linkColumns4"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    xtype="textfield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        change="function(field, newVal, oldVal){Medtronic.Authoring.Footer.linkText.change(field);}"
+                                        loadcontent="function(field,record,path){Medtronic.Authoring.Footer.linkText.loadContent(this);}"/>
+                                </linkText>
+                                <fontWeight
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="normal-weight"
+                                    fieldLabel="Font Weight"
+                                    key="_DNT_fontWeight"
+                                    type="select"
+                                    value="normal-weight"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <regular
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Regular"
+                                            value="normal-weight"/>
+                                        <bold
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Bold"
+                                            value="bold"/>
+                                    </options>
+                                </fontWeight>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </linkURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </linkColumn4>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Section Two">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <codeText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="QR Code Headline"
+                        name="./codeText"
+                        xtype="textfield"/>
+                    <codePath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="QR Code"
+                        name="./codePath"
+                        rootPath="/content/dam/medtronic-com/qr"
+                        xtype="pathfield">
+                        <browseDialogCfg
+                            jcr:primaryType="nt:unstructured"
+                            height="316"/>
+                    </codePath>
+                    <altText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter the subject of the image. If the image is a link, enter the link's page title."
+                        fieldLabel="Image Alt Text"
+                        name="./altText"
+                        xtype="textfield"/>
+                    <additionalText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Additional Text"
+                        name="./additionalText"
+                        xtype="textfield"/>
+                    <socialChannels
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Social Channels"
+                        maxItems="{Long}6"
+                        name="./socialChannels"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <channel
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="Select a Social Channel"
+                                    fieldLabel="Social Media Channel"
+                                    key="_DNT_linkText"
+                                    type="select"
+                                    value=""
+                                    width="{Long}150"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <blog
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Blog"
+                                            value="blog"/>
+                                        <facebook
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Facebook"
+                                            value="facebook"/>
+                                        <instagram
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Instagram"
+                                            value="instagram"/>
+                                        <linkedin
+                                            jcr:primaryType="nt:unstructured"
+                                            text="LinkedIn"
+                                            value="linkedin"/>
+                                        <pinterest
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Pinterest"
+                                            value="pinterest"/>
+                                        <qq
+                                            jcr:primaryType="nt:unstructured"
+                                            text="QQ"
+                                            value="qq"/>
+                                        <twitter
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Twitter"
+                                            value="twitter"/>
+                                        <weibo
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Weibo"
+                                            value="weibo"/>
+                                        <youku
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Youku"
+                                            value="youku"/>
+                                        <youtube
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Youtube"
+                                            value="youtube"/>
+                                    </options>
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        loadcontent="function(field,record,path){Medtronic.Authoring.Footer.channel.loadContent(field);}"
+                                        selectionchanged="function(field, value, isChecked){Medtronic.Authoring.Footer.channel.selectionChanged(field);}"/>
+                                </channel>
+                                <mediaURL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Social Media URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </mediaURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="true"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    value="true"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </socialChannels>
+                    <footerLinks
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Footer Hyperlinks*"
+                        maxItems="{Long}4"
+                        minItems="{Long}1"
+                        name="./footerLinks"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    xtype="textfield"/>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    width="{Long}180"
+                                    xtype="pathfield">
+                                    <browseDialogCfg
+                                        jcr:primaryType="nt:unstructured"
+                                        height="316"/>
+                                </linkURL>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="true"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:105px;"
+                                    type="checkbox"
+                                    value="true"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </footerLinks>
+                    <copyright
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Copyright Text"
+                        name="./copyright"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){return Medtronic.Authoring.Footer.dialog.beforeSubmit(dialog);}"
+        loadcontent="function(dialog){Medtronic.Authoring.Footer.dialog.loadContent(dialog);}"/>
+</jcr:root>

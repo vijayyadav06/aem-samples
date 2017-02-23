@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:rep="internal"
+    cq:showOnCreate="{Boolean}false"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Cookie Warning"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <warningType
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    cq:showOnCreate="{Boolean}true"
+                    id="cookieWarning_type"
+                    fieldLabel="Cookie Type"
+                    translateOptions="{Boolean}true"
+                    cq-msm-lockable="cookieWarning_type"
+                    name="./cookieWarning_type">
+                    <items jcr:primaryType="nt:unstructured">
+                        <none jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/option"
+                            text="None"
+                            value="none"/>
+                        <explicit jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/option"
+                            text="Explicit"
+                            value="explicit"/>
+                        <implicit jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/option"
+                            text="Implicit"
+                            value="implicit"/>
+                    </items>
+                </warningType>
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Headline"
+                    value="Cookie Statement"
+                    emptyText="Enter a value for the 'Warn on Leave' title"
+                    cq-msm-lockable="cookieWarning_title"
+                    name="./cookieWarning_title"/>
+                <explicitDescriptiveText
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Body Text"
+                    value="&lt;p&gt;THIS SITE USES COOKIES&lt;/p&gt;
+                           &lt;p&gt;Medtronic uses Google Analytics and Adobe Analytics,
+                           online statistics services that use cookies to analyze the behavior of visitors to its website.
+                           Google and Adobe Analytics do not include or report any personal data that may be associated with an
+                           IP address of an individual user.&lt;/p&gt;
+                           &lt;p&gt;For more information, see our &lt;a href='#'&gt;policy on the use of cookies&lt;/a&gt;&lt;/p&gt;
+                           &lt;p&gt;Indicate whether you want to accept or reject cookies.&lt;/p&gt;"
+                    cq-msm-lockable="cookieWarning_explicit_description"
+                    name="./cookieWarning_explicit_description"/>
+                <implicitDescriptiveText
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Body Text"
+                    value="&lt;p&gt;This site uses cookies to store information on your computer.
+                            Some are essential to make our site work; others help us improve the user experience.
+                            By using the site, you consent to the placement of these cookies.
+                            You may at any time change the settings regarding cookies.
+                            &lt;/a&gt;Read our privacy statement to &lt;a target='_blank' href='#'&gt;learn more.&lt;/a&gt;&lt;/p&gt;"
+                    cq-msm-lockable="cookieWarning_implicit_description"
+                    name="./cookieWarning_implicit_description"/>
+                <buttonOne
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Reject Button"
+                    cq-msm-lockable="cookieWarning_button1"
+                    name="./cookieWarning_button1"
+                    required="{Boolean}true"
+                    value="Reject"/>
+                <buttonTwo
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Accept Button"
+                    value="Accept"
+                    cq-msm-lockable="cookieWarning_button2"
+                    name="./cookieWarning_button2"/>
+            </items>
+        </column>
+    </items>
+</jcr:root>

@@ -1,0 +1,43 @@
+var dependencies = ["video-slender-squat.js", "/apps/medtronic-com/components/common/DataLayer.js",
+    "/apps/medtronic-com/components/common/data-layer-position-id.js",
+    "/apps/medtronic-com/components/common/JavaHelper.js"];
+
+use(dependencies, function(videoSlenderSquat, dataLayer, positionId, JavaHelper) {
+
+  var linkId = "";
+  linkId = properties.get("sling:resourceType");
+
+  // linkId = linkId + "|" + resource.getPath();
+    //adding an empty string for the non-existant label in 2nd spot
+  linkId = linkId + "||main-" + videoSlenderSquat.firstVideo.textDisplay;
+  linkId = linkId + "|main-" + videoSlenderSquat.firstVideo.transcriptText;
+  linkId = linkId + "|main-" + videoSlenderSquat.firstVideo.isFlowplayer ? "FlowPlayer" : "YouTube";
+  linkId = linkId + "|main-" + videoSlenderSquat.firstVideo.isFlowplayer ? videoSlenderSquat.firstVideo.videoURL
+          : videoSlenderSquat.firstVideo.videoId;
+  linkId = linkId + "|main-" + videoSlenderSquat.firstVideo.thumbnailImage;
+  linkId = linkId + "|main-" + videoSlenderSquat.firstVideo.imageAltText;
+
+  var restVideos = JavaHelper.toJSArray(videoSlenderSquat.restVideos);
+
+  restVideos.forEach(function(video, index) {
+    linkId = linkId + "|other-" + index + videoSlenderSquat.firstVideo.textDisplay;
+    linkId = linkId + "|other-" + index + video.transcriptText;
+    linkId = linkId + "|other-" + index + video.isFlowplayer ? "FlowPlayer" : "YouTube";
+    linkId = linkId + "|other-" + index + video.isFlowplayer ? video.videoURL : video.videoId;
+    linkId = linkId + "|other-" + index + video.thumbnailImage;
+    linkId = linkId + "|other-" + index + video.imageAltText;
+  });
+
+  var position = request.getAttribute(positionId.ATTR_POSITION_ID)
+  if (dataLayer && dataLayer.promos) {
+    dataLayer.promos.push({
+      "id": JavaHelper.toJSString(linkId),
+      "position": JavaHelper.toJSString(position)
+    });
+  }
+
+  return {
+    id: linkId,
+    position: position
+  };
+});

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/medtronic-com/us-en/condition_therapy">
+        <exclude pattern="/content/medtronic-com/us-en/condition_therapy/jcr:system"/>
+        <exclude pattern="/content/medtronic-com/us-en/condition_therapy/var/classes"/>
+        <exclude pattern="^.*/rep:accessControl"/>
+    </filter>
+</workspaceFilter>

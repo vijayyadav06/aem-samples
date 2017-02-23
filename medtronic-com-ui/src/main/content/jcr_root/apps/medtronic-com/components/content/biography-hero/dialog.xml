@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Biography Hero Component"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Image"
+                        name="./image"
+                        rootPath="/content/dam"
+                        validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                        xtype="pathfield"/>
+                    <imageAltText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Image Alt Text"
+                        name="./imageAltText"
+                        xtype="textfield"/>
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Name"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <subheading
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        emptyText="Title, Department and/or Location"
+                        fieldLabel="Role"
+                        name="./subheading"
+                        xtype="textfield"/>
+                    <additionalText
+                        jcr:primaryType="cq:Widget"
+                        ctCls="additionalText"
+                        fieldLabel="Additional Information"
+                        name="./additionalText"
+                        validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            name="rtePlugins"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/linksOnly/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </additionalText>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

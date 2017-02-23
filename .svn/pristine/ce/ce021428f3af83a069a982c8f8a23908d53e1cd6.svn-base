@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    cq:showOnCreate="{Boolean}false"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Authentication"
+    sling:resourceType="granite/ui/components/foundation/section">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+        margin="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+        <column
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <authenticationType
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    cq:showOnCreate="{Boolean}true"
+                    id="authentication_type"
+                    fieldLabel="Authentication Type"
+                    translateOptions="{Boolean}true"
+                    cq-msm-lockable="authentication_type"
+                    name="./authentication_type">
+                    <items jcr:primaryType="nt:unstructured">
+                        <none jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/foundation/form/option"
+                              text="None"
+                              value="none"/>
+                        <acknowledgement jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/foundation/form/option"
+                              text="Acknowledgement Only"
+                              value="acknowledgement"/>
+                    </items>
+                </authenticationType>
+                <headline
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="Headline"
+                    required="{Boolean}true"
+                    cq-msm-lockable="acknowledgement_headline"
+                    name="./acknowledgement_headline"/>
+                <bodyText
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                    cq:showOnCreate="{Boolean}true"
+                    fieldLabel="Body Text"
+                    required="{Boolean}true"
+                    cq-msm-lockable="acknowledgement_text"
+                    name="./acknowledgement_text"/>
+                <rejectButton
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    fieldLabel="Reject Button Text"
+                    emptyText="Reject"
+                    cq-msm-lockable="acknowledgement_reject_button"
+                    name="./acknowledgement_reject_button"
+                    required="{Boolean}true"
+                    value="Reject"/>
+                <acceptButton
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    required="{Boolean}true"
+                    fieldLabel="Accept Button Text"
+                    emptyText="Accept"
+                    cq-msm-lockable="acknowledgement_accept_button"
+                    name="./acknowledgement_accept_button"/>
+                <urls
+                    jcr:primaryType="nt:unstructured"
+                    cq:showOnCreate="{Boolean}true"
+                    mdt-multifield-min="{Long}1"
+                    cq-msm-lockable="acknowledgement_urls"
+                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                    fieldLabel="URLs">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        rootPath="/content/medtronic-com"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        name="./acknowledgement_urls"
+                        required="{Boolean}true"/>
+                </urls>
+            </items>
+        </column>
+    </items>
+</jcr:root>

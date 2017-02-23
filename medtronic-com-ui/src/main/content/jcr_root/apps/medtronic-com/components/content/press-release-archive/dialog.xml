@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Archived Press Releases Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        defaultValue="Press Releases"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <titleFilter
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        defaultValue="Select Business Unit"
+                        fieldLabel="Filter Title"
+                        name="./titleFilter"
+                        xtype="textfield"/>
+                    <location
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Location"
+                        fieldDescription="Location of press releases from which to display from."
+                        name="./location"
+                        xtype="pathfield"/>
+                    <numberYears
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="{Long}6"
+                        fieldLabel="Number of Years"
+                        fieldDescription="Number of years of archived press releases to display."
+                        name="./numberYears"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="{Long}1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="{Long}2"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="{Long}3"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="{Long}4"/>
+                            <five
+                                jcr:primaryType="nt:unstructured"
+                                text="5"
+                                value="{Long}5"/>
+                            <six
+                                jcr:primaryType="nt:unstructured"
+                                text="6"
+                                value="{Long}6"/>
+                        </options>
+                    </numberYears>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

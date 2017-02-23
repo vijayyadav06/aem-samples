@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Press Release List Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Latest Press Releases"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <location
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Location"
+                        fieldDescription="Location of press releases from which to display from."
+                        name="./location"
+                        xtype="pathfield"/>
+                    <number
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="{Long}4"
+                        fieldLabel="Number"
+                        fieldDescription="Number of press releases to display."
+                        name="./number"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="{Long}1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="{Long}2"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="{Long}3"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="{Long}4"/>
+                            <five
+                                jcr:primaryType="nt:unstructured"
+                                text="5"
+                                value="{Long}5"/>
+                            <six
+                                jcr:primaryType="nt:unstructured"
+                                text="6"
+                                value="{Long}6"/>
+                            <seven
+                                jcr:primaryType="nt:unstructured"
+                                text="7"
+                                value="{Long}7"/>
+                            <eight
+                                jcr:primaryType="nt:unstructured"
+                                text="8"
+                                value="{Long}8"/>
+                            <nine
+                                jcr:primaryType="nt:unstructured"
+                                text="9"
+                                value="{Long}9"/>
+                            <ten
+                                jcr:primaryType="nt:unstructured"
+                                text="10"
+                                value="{Long}10"/>
+                        </options>
+                    </number>
+                    <linkText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        defaultValue="Additional Press Releases"
+                        fieldLabel="Link Text"
+                        name="./linkText"
+                        xtype="textfield"/>
+                    <linkURL
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldLabel="Link URL"
+                        name="./linkURL"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

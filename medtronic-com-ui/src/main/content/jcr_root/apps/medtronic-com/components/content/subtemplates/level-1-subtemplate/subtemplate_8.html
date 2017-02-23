@@ -1,0 +1,29 @@
+<!--/* This one has sub-layout-4s for style purposes. It is actually sub-layout-4r */-->
+<div class="row four-column sub-layout-4r sub-layout-4s"
+  data-sly-use.subtemplateSlot="../subtemplate-slot.html"
+  data-sly-use.sequence="../subtemplate-sequence.js">
+  <div class="col-xs-12 col-md-6 two-by-two block-one">
+    <sly
+      data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate8-slot1/par-biggie', color='bg-light-blue'}" />
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3 block-two">
+    <div class="one-by-one">
+      <sly
+        data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate8-slot2/par-mini', color='bg-white'}" />
+    </div>
+    <div class="one-by-one">
+      <sly
+        data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate8-slot3/par-mini', color='bg-navy-blue'}" />
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3 block-three">
+    <div class="one-by-one">
+      <sly
+        data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate8-slot4/par-mini', color='bg-light-gray'}" />
+    </div>
+    <div class="one-by-one">
+      <sly
+        data-sly-call="${subtemplateSlot.slotInclude @ sequence=sequence, type='l1', name='subtemplate8-slot5/par-mini', color='bg-sky-blue'}" />
+    </div>
+  </div>
+</div>

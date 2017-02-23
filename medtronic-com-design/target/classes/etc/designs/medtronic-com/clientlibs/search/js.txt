@@ -1,0 +1,4 @@
+#base=js
+search-results.js
+templates.js
+toggle.js

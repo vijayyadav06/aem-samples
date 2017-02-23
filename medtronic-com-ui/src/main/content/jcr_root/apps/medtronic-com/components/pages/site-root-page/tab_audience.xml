@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Audience Types">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <healthCareProfessionals
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Healthcare Professionals Audience Label"
+            name="./audienceLabel_healthCareProfessionals"
+            allowBlank="{Boolean}false"
+            xtype="textfield" />
+        <healthCareAdministrator
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Healthcare Administrator Audience Label"
+            name="./audienceLabel_healthCareAdministrators"
+            allowBlank="{Boolean}false"
+            xtype="textfield" />
+        <patients
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Patients Audience Label"
+            name="./audienceLabel_patients"
+            allowBlank="{Boolean}false"
+            xtype="textfield" />
+    </items>
+</jcr:root>

@@ -1,0 +1,119 @@
+package com.medtronic.com.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import com.medtronic.com.util.LinkUtil;
+import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.commons.json.JSONException;
+import org.apache.sling.commons.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.cq.sightly.WCMUse;
+
+
+/**
+ * This is a HeadlineWithISI Java file that should be used for converting data to specific format.
+ * 
+ * @author sunny.sima
+ *
+ */
+public class HeadlineWithISI extends WCMUse {
+    
+    private static final Logger LOG = LoggerFactory.getLogger(HeadlineWithISI.class);
+    private String[] headlinesJson;
+    private String ctaUrl;
+    private String isiUrl;
+    private static final String CTA_URL = "ctaUrl";
+    private static final String ISI_URL = "isiUrl";
+    private static final String HEADLINE = "headline";
+    private static final String HEADING_TEXT = "headingText";
+    private static final String FONT_COLOR = "fontColor";
+    private static final String FONT_WEIGHT = "fontWeight";
+    private static final String COPYRIGHT = "©";
+    private static final String TRADEMARK = "™";
+    private static final String REGISTERED_TRADEMARK = "®";
+    
+    @Override
+    public void activate() throws Exception {
+        ValueMap properties = getProperties();
+        headlinesJson = properties.get(HEADLINE, new String[] {});
+        ctaUrl = properties.get(CTA_URL, String.class);
+        isiUrl = properties.get(ISI_URL, String.class);
+    }
+    
+    /**
+     * Convert data.
+     * 
+     * @return headline list
+     */
+    public List<HeadlineObject> getHeadlines(){
+        final List<HeadlineObject> headlines = new ArrayList<HeadlineObject>();
+        try {
+            for (String headline : headlinesJson) {
+                final JSONObject jsonObject = new JSONObject(headline);
+                String headingText = jsonObject.getString(HEADING_TEXT);
+                headingText = parseSpecialChar(headingText);
+                final String fontColor = jsonObject.getString(FONT_COLOR);
+                final String fontWeight = jsonObject.getString(FONT_WEIGHT);
+                final HeadlineObject headlineObject = new HeadlineObject(headingText, fontColor, fontWeight);
+                headlines.add(headlineObject);
+            }
+        } catch (JSONException e) {
+            LOG.error("Get Json Error", e);
+        }
+        return headlines;
+    }
+    
+    /**
+     * Parses the special character
+     * @param headingText - heading text
+     * @return text
+     */
+    private String parseSpecialChar(String headingText) {
+        headingText = replaceText(headingText, COPYRIGHT);
+        headingText = replaceText(headingText, TRADEMARK);
+        headingText = replaceText(headingText, REGISTERED_TRADEMARK);
+        return headingText;
+    }
+
+    /**
+     * Replaces special character with specific string
+     * @param headingText - heading text
+     * @param regex - regex string
+     * @return text
+     */
+    private String replaceText(String headingText, String regex) {
+        boolean contains = headingText.contains(regex);
+        if (contains) {
+            final String REPLACEMENT = "<span>" + regex + "</span>";
+            headingText = headingText.replaceAll(regex, REPLACEMENT);
+        }
+        return headingText;
+    }
+    /**
+     * Formats cta URL
+     * @return formatted cta URL
+     */
+    public String getCtaURL(){
+        String formattedURL = "";
+        if (StringUtils.isNotBlank(ctaUrl)) {
+            formattedURL = LinkUtil.getPathfieldURL(ctaUrl);
+        }
+        return formattedURL;
+    }
+
+    /**
+     * Formats isi URL
+     * @return formatted isi URL
+     */
+    public String getIsiURL(){
+        String formattedURL = "";
+        if (StringUtils.isNotBlank(isiUrl)) {
+            formattedURL = LinkUtil.getPathfieldURL(isiUrl);
+        }
+        return formattedURL;
+    }
+}

@@ -1,0 +1,27 @@
+<template data-sly-template.ttaImage="${ @ image, altText}">
+	<div class="content">
+			<div class="tta tta__graphic ">
+				<figure>
+					<img src="${image}" alt="${altText}"
+						data-image-cover="" style="width: 100%; margin-top: 0%;">
+				</figure>
+			</div>
+		</div>
+</template>
+
+<template data-sly-template.ttaHeadline="${ @ headline, rte,showCta, ctaUrl, newTab, ctaText}">
+	<div class="content">
+			<div class="tta tta--no-scale tta__headline">
+				<div class="display-table">
+					<div class="display-table-cell">
+						<h2 data-sly-test="${headline}">
+							<span class="bold">${headline}</span>
+						</h2>
+						${rte @context='html'} 
+						<sly data-sly-test="${showCta}" data-sly-use.button="/apps/medtronic-com/components/common/sightly-templates.html"
+                			data-sly-call="${button.ctaButton @ url=ctaUrl, openInNewTab=newTab, text=ctaText}" />
+					</div>
+				</div>
+			</div>
+		</div>
+</template>

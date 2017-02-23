@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Right Rail Subtemplate"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                border="false"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <wrapperSize
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Select a display size"
+                        fieldLabel="Component Size"
+                        name="./wrapperSize"
+                        type="select"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <oneByOne
+                                jcr:primaryType="nt:unstructured"
+                                text="Mini (1x1 square)"
+                                value="one-by-one"/>
+                            <oneByTwo
+                                jcr:primaryType="nt:unstructured"
+                                text="Slender (1x2 rectangle)"
+                                value="one-by-two"/>
+                            <heightVariable
+                                jcr:primaryType="nt:unstructured"
+                                text="Variable Height (fits to content size)"
+                                value="height-variable one-by-one"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){                               Medtronic.Authoring.SideRailSubtemplate.wrapperSize.selectionChanged(box,value);                             }"/>
+                    </wrapperSize>
+                    <decorativeOnly
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If selected, content cannot be added to this component."
+                        fieldLabel="Decorative Only"
+                        name="./decorativeOnly"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <backgroundColor
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Choose a component background color"
+                        fieldLabel="Background Color"
+                        name="./backgroundColor"
+                        type="select"
+                        xtype="mdtselection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <medtronicBlue
+                                jcr:primaryType="nt:unstructured"
+                                text="Medtronic Blue"
+                                value="bg-medtronic-blue"/>
+                            <navyBlue
+                                jcr:primaryType="nt:unstructured"
+                                text="Navy Blue"
+                                value="bg-navy-blue"/>
+                            <skyBlue
+                                jcr:primaryType="nt:unstructured"
+                                text="Sky Blue"
+                                value="bg-sky-blue"/>
+                            <lightBlue
+                                jcr:primaryType="nt:unstructured"
+                                text="Light Blue"
+                                value="bg-light-blue"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="bg-white"/>
+                        </options>
+                    </backgroundColor>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){           Medtronic.Authoring.SideRailSubtemplate.dialog.loadContent(dialog);         }"/>
+</jcr:root>

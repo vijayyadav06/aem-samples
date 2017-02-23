@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Download Attachment Component"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <hidden
+                        jcr:primaryType="cq:Widget"
+                        itemCls="ie11_multifield_hidden"
+                        xtype="textfield"/>
+                    <downloads
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        fieldLabel="Files"
+                        minItems="{Long}1"
+                        name="./downloads"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Link Text"
+                                    key="title"
+                                    minLength="{Long}1"
+                                    width="200"
+                                    xtype="textfield"/>
+                                <url
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Link URL"
+                                    key="url"
+                                    validator="function() {&#xa;                          return Medtronic.Authoring.Download.url.validate(this);&#xa;                        }"
+                                    width="200"
+                                    rootPath="/content/dam"
+                                    xtype="pathfield"/>
+                                <newtab
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                                <description
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="File Description"
+                                    key="description"
+                                    minLength="{Long}1"
+                                    width="200"
+                                    xtype="textarea"/>
+                                <displaydate
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Display Date"
+                                    key="_DNT_displayDate"
+                                    type="checkbox"
+                                    width="200"
+                                    xtype="selection">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        selectionchanged="function(box){Medtronic.Authoring.Download.displayDate.change(box);}"/>
+                                </displaydate>
+                                <date
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Publication Date"
+                                    fieldDescription="Date of publication or last update"
+                                    key="_DNT_publicationDate"
+                                    xtype="datefield">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        afterrender="function(box){Medtronic.Authoring.Download.date.afterrender(box);}"
+                                        render="function(box){Medtronic.Authoring.Download.date.render(box);}"/>
+                                </date>
+                            </items>
+                        </fieldConfig>
+                    </downloads>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){Medtronic.Authoring.Download.dialog.loadcontent(dialog);}"
+        beforesubmit="function(dialog){Medtronic.Authoring.Download.dialog.beforesubmit(dialog);}"/>
+</jcr:root>

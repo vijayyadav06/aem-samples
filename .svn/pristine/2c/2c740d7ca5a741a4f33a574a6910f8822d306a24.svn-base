@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Headline,Text, List Component"
+    width="680"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Example:&quot;Associated Treatments&quot;"
+                        fieldLabel="Headline"
+                        minLength="{Long}1"
+                        name="./title"
+                        xtype="textfield"/>
+                    <descriptiveText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Body Text"
+                        minLength="{Long}0"
+                        name="./descriptiveText"
+                        xtype="textarea"/>
+                    <listItems
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        fieldLabel="List Items*"
+                        fieldSubLabel="Minimum = 2 list items&#xa;Maximum = 8 list items"
+                        maxItems="{Long}8"
+                        minItems="{Long}2"
+                        name="./listItems1"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}false"
+                            layout="form"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <listItem
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="List item"
+                                    key="listItem"
+                                    labelStyle="display:block;"
+                                    minLength="{Long}1"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <hyperlink
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Enter a web address or find the desired webpage."
+                                    fieldLabel="Link URL"
+                                    key="hyperlink"
+                                    labelStyle="display:block;"
+                                    validator="function() {                                       return Medtronic.Authoring.validateEManualUrl(this);                                     }"
+                                    width="250"
+                                    xtype="pathfield"/>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    dName="newTab"
+                                    fieldLabel=" Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width: 120px; "
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </listItems>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) { return  Medtronic.Authoring.addMinimumMultifieldItems(dialog);   }"/>
+</jcr:root>

@@ -1,0 +1,3 @@
+<sly data-sly-test.implicit="${inheritedPageProperties.cookieWarning_type == 'implicit'}" data-sly-include="cookie-logic-implicit.html"/>
+<sly data-sly-test.explicit="${inheritedPageProperties.cookieWarning_type == 'explicit'}" data-sly-include="cookie-logic-explicit.html"/>
+<sly data-sly-test="${!implicit && !explicit}" data-sly-include="cookie-logic-none.html"/>

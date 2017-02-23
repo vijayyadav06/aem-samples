@@ -1,0 +1,9 @@
+<div data-sly-test="${!properties.platform && !wcmmode.disabled}" class="cq-placeholder">
+    Placeholder for Social Media Feed Component - Mini</div>
+<sly data-sly-test="${properties.platform}"
+  data-sly-use.template="/apps/medtronic-com/components/common/social-media-templates.html"
+  data-sly-use.dataLinkId="data-link-id.js">
+  <div class="social">
+	<sly data-sly-call="${template.feedDisplay @ platform=properties.platform, accountName=properties.accountName, count=1, newTab=properties.newTab, dataLinkId=dataLinkId}"></sly>
+  </div>
+</sly>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}550"
+    title="Authorable Text - Inspirational"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                border="false"
+                title="Authorable Text - Inspirational">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <label
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Show Category Label"
+                        name="./showLabel"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box) {   return Medtronic.Authoring.enableLabelFields(box)     }"/>
+                    </label>
+                    <labelHyperlink
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Label hyperlink"
+                        name="./labelHyperlink"
+                        validator="function() {  return Medtronic.Authoring.validateExternalLinks(this);    }"
+                        xtype="pathfield"/>
+                    <labelNewTab
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open in New Tab"
+                        name="./labelNewTab"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        fieldLabel="Headline"
+                        fieldSubLabel="Create a single headline, using one or multiple lines of styled text."
+                        maxItems="{Long}7"
+                        minItems="{Long}3"
+                        name="./headings"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <headingText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Heading Text"
+                                    itemCls="inspirational-headline"
+                                    key="text"
+                                    width="100%"
+                                    xtype="textfield"/>
+                                <textColor
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    defaultValue="Select a font color"
+                                    fieldLabel="Font Color"
+                                    key="_DNT_textColor"
+                                    type="select"
+                                    width="100%"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <medtronicblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Medtronic Blue"
+                                            value="medtronic-blue"/>
+                                        <lightblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Light Blue"
+                                            value="light-blue"/>
+                                        <mediumblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Medium Blue"
+                                            value="medium-blue"/>
+                                        <skyblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Sky Blue"
+                                            value="sky-blue"/>
+                                        <white
+                                            jcr:primaryType="nt:unstructured"
+                                            text="White"
+                                            value="white"/>
+                                        <navyblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Navy Blue"
+                                            value="navy-blue"/>
+                                        <cobaltblue
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Cobalt Blue"
+                                            value="cobalt-blue"/>
+                                        <bluegray
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Blue Gray"
+                                            value="blue-gray"/>
+                                    </options>
+                                </textColor>
+                                <fontWeight
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    defaultValue="Select a font weight"
+                                    fieldLabel="Font Weight"
+                                    key="_DNT_textWeight"
+                                    type="select"
+                                    width="100%"
+                                    xtype="mdtselection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <regular
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Regular"
+                                            value="normal-weight"/>
+                                        <bold
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Bold"
+                                            value="bold"/>
+                                        <light
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Light"
+                                            value="thin"/>
+                                    </options>
+                                </fontWeight>
+                            </items>
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                added="function(panel){Medtronic.Authoring.Inspirational.text.added(panel);}"/>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            removedItem="function(field){Medtronic.Authoring.Inspirational.text.removedItem(field);}"/>
+                    </text>
+                    <showCta
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Call to Action Button"
+                        name="./showCta"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(box) {                               Medtronic.Authoring.Inspirational.showCta.loadContent(box);                             }"
+                            selectionchanged="function(box, value, isChecked) {                               Medtronic.Authoring.Inspirational.showCta.selectionChanged(box, isChecked);                             }"/>
+                    </showCta>
+                    <ctaDetails
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        itemId="ctaDetails"
+                        layout="form"
+                        padding="5px 5px 5px 5px"
+                        xtype="panel">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <buttonText
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                disabled="{Boolean}true"
+                                emptyText="View Treatments"
+                                fieldDescription="Enter a call to action to display on the button."
+                                fieldLabel="Link Text"
+                                name="./ctaText"
+                                width="300"
+                                xtype="textfield"/>
+                            <buttonUrl
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                disabled="{Boolean}true"
+                                fieldDescription="Enter a web address or find the desired webpage."
+                                fieldLabel="Link URL"
+                                name="./ctaUrl"
+                                validator="function() {                                   return Medtronic.Authoring.validateEManualUrl(this);                                 }"
+                                width="300"
+                                xtype="pathfield"/>
+                            <newTab
+                                jcr:primaryType="cq:Widget"
+                                disabled="{Boolean}true"
+                                fieldLabel="Open in a New Tab"
+                                name="./ctaOpenInNewTab"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </ctaDetails>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog) {           return Medtronic.Authoring.Inspirational.dialog.loadContent(dialog);         }"/>
+</jcr:root>

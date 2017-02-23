@@ -1,0 +1,18 @@
+<!--/*
+  Copyright [TODO]
+  
+  Custom css clientlibs
+*/-->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.libraries="/apps/medtronic-com/components/common/libraries/libraries.html"/>
+<!--[if gt IE 8]><!-->
+  <style>.header__select { visibility: hidden; }</style>
+  <sly data-sly-use.textDirection="css-text-direction.js" data-sly-call="${clientLib.css @ categories=textDirection.clientlibCategory}" />
+  <sly data-sly-call="${clientLib.css @ categories='medtronic-com.extensions'}" />
+  <sly data-sly-call="${clientLib.css @ categories='medtronic-com.main'}"/>
+  <sly data-sly-test="${!wcmmode.disabled}" data-sly-call="${clientLib.css @ categories='medtronic-com.author-fixes'}"/>
+  <link rel="stylesheet" href="//releases.flowplayer.org/6.0.3/skin/functional.css">
+  <sly data-sly-call="${clientLib.js @ categories='medtronic.common.modernizr-2.8.3'}"/>
+<!--<![endif]-->
+<!--/* Since this is an IE < IE9 only library, we use a special include for it */-->
+<sly data-sly-call="${libraries.renderIEConditionalLibrary @ categories='medtronic-com.main-ie', mode='css', ieCondition='lte IE 8'}" />

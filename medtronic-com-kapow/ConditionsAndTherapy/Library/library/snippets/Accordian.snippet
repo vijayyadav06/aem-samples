@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>9.5.4</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="sectiontext"/>
+      <type name="xmlcontent"/>
+      <type name="condition_therapy_child_sub_tab"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="sectiontext" type-name="sectiontext"/>
+      <typed-variable name="xmlcontent" type-name="xmlcontent"/>
+      <typed-variable name="condition_therapy_child_sub_tab" type-name="condition_therapy_child_sub_tab"/>
+    </typed-variables>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">accordNumber</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">7</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">extension</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">.xml</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="1">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">path</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">d:\temp\output\.content</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">richtexteditor1</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="2">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">sectiontexts</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">sectiontext</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">sectiontext</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">TitleText</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="2"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">xmlcontent</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">xmlcontent</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">filenumber</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">4</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">1</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.DoubleAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">sectionpath</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">0</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">tab</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">condition_therapy_child_sub_tab</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">condition_therapy_child_sub_tab</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="3"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="0" id="4">
+        <property name="name" class="String">Load File</property>
+        <property name="stepAction" class="LoadFile">
+          <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
+            <property name="value" class="String">C:\Users\d.gaddam\Desktop\.content.xml</property>
+          </property>
+          <property name="output" class="kapow.robot.plugin.common.stateprocessor.rest.ToVariableOutputSpecification" serializationversion="1">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">outputfile.outfile</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="20">
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="5">true</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="6">
+        <property name="name" class="String">Open Variable</property>
+        <property name="stepAction" class="OpenVariable">
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">outputfile.outfile</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="7">
+        <property name="name" class="String">Query Database</property>
+        <property name="stepAction" class="QueryDatabase2" serializationversion="1">
+          <property name="databaseName" class="kapow.robot.plugin.common.support.expression.stringexpr.DBNameValueStringExpression">
+            <property name="value" class="kapow.util.db.DBName">
+              <property name="name" class="String">medtronic</property>
+            </property>
+          </property>
+          <property name="sql" class="String">"SELECT * FROM condition_therapy_child_sub_tab where url IN  (Select url from condition_therapy where url = overview_page) order by url,indexer asc"</property>
+          <property name="columnAttributeMappings" class="kapow.robot.plugin.common.support.database.ColumnAttributeMappings">
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">title</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">condition_therapy_child_sub_tab.title</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">parsys</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">condition_therapy_child_sub_tab.parsys</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">indexer</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">condition_therapy_child_sub_tab.indexer</property>
+              </property>
+            </object>
+            <object class="kapow.robot.plugin.common.support.database.ColumnAttributeMapping">
+              <property name="columnName" class="String">parsys_reference</property>
+              <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+                <property name="name" class="String">condition_therapy_child_sub_tab.parsys_reference</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="8">
+        <property name="name" class="String">Get Iteration</property>
+        <property name="stepAction" class="GetIteration">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">filenumber</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="9">
+        <property name="name" class="String">Convert Variables</property>
+        <property name="stepAction" class="ConvertVariables">
+          <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
+            <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
+              <property name="fromAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">condition_therapy_child_sub_tab.parsys</property>
+              </property>
+              <property name="dataConverters" class="DataConverters">
+                <element class="AdvancedExtract2">
+                  <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                    <property name="value" class="String">&lt;div id="(.*?)"(.*?)</property>
+                  </property>
+                  <property name="outputExpression" class="String">$1</property>
+                </element>
+              </property>
+              <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
+                <property name="name" class="String">tab</property>
+              </property>
+            </object>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="10">
+        <property name="name" class="String">Check Tab</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="11">
+        <property name="name" class="String">Test Tab</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">tab == "tab1"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Check Tab</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="12">
+        <property name="name" class="String">Assign Title and Parsys</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">" \\{&amp;quot; title &amp;quot; : &amp;quot;" + condition_therapy_child_sub_tab.title +"&amp;quot;,&amp;quot;text&amp;quot;:&amp;quot;"+condition_therapy_child_sub_tab.parsys+"&amp;quot;}"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">TitleText</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="13">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">sectiontext.sectiontext0 + "," + sectiontext.sectiontext1 +","+ sectiontext.sectiontext2</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectiontexts</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="14">
+        <property name="name" class="String">Load File</property>
+        <property name="stepAction" class="LoadFile">
+          <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
+            <property name="value" class="String">C:\Users\d.gaddam\Desktop\.content.xml</property>
+          </property>
+          <property name="output" class="kapow.robot.plugin.common.stateprocessor.rest.ToVariableOutputSpecification" serializationversion="1">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">xmlcontent.xmlcontent</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="20">
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="15">false</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="16">
+        <property name="name" class="String">Open Variable</property>
+        <property name="stepAction" class="OpenVariable">
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">outputfile.outfile</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="17">
+        <property name="name" class="String">Set Attribute groups</property>
+        <property name="stepAction" class="SetAttribute">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">groups</property>
+          </property>
+          <property name="value" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">TitleText</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.title_text</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="18">
+        <property name="name" class="String">Set Attribute Reference</property>
+        <property name="stepAction" class="SetAttribute">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">data</property>
+          </property>
+          <property name="value" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">condition_therapy_child_sub_tab.t_parsys_reference</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.reference_footnote</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="19">
+        <property name="name" class="String">Check Indexer</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="20">
+        <property name="name" class="String">Test Indexer</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">condition_therapy_child_sub_tab.indexer == 1</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Check Indexer</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="21">
+        <property name="name" class="String">Write File</property>
+        <property name="stepAction" class="WriteFile" serializationversion="0">
+          <property name="fileNameExpression" class="Expression" serializationversion="1">
+            <property name="text" class="String">path + filenumber + extension</property>
+          </property>
+          <property name="fileContentExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">xmlcontent.xmlcontent</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="15"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="22">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">filenumber - 1</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">accordNumber</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="23">
+        <property name="name" class="String">Insert Content</property>
+        <property name="stepAction" class="InsertContent">
+          <property name="content" class="kapow.robot.plugin.common.support.expression.stringexpr.MultilineValueStringExpression">
+            <property name="value" class="String">&lt;sectionPath1_row jcr:primaryType="nt:unstructured" sling:resourceType="foundation/components/parsys"&gt;
+  &lt;rich_text_editor jcr:primaryType="nt:unstructured" sling:resourceType="medtronic-com/components/content/rich-text-editor" richText="&amp;lt;h2&amp;gt;Specifications&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Evera MRI XT Single Chamber&amp;lt;/h3&amp;gt;"/&gt;
+  &lt;migration_content jcr:primaryType="nt:unstructured" sling:resourceType="medtronic-com/components/content/migration-content" html="&amp;lt;table class=&amp;quot;tablesaw&amp;quot; data-tablesaw-mode=&amp;quot;columntoggle&amp;quot; data-tablesaw-minimap data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-mode-switch&amp;gt;     &amp;lt;tbody&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th data-tablesaw-priority=1&amp;gt;FEATURE&amp;lt;/th&amp;gt;             &amp;lt;th data-tablesaw-priority=1&amp;gt;EVERA&amp;lt;/th&amp;gt;             &amp;lt;th data-tablesaw-priority=2&amp;gt;EVERA MRI&amp;lt;/th&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th width=&amp;quot;45%&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;SureScan� Technology&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Full Body MRI&amp;lt;/th&amp;gt;             &amp;lt;td width=&amp;quot;30%&amp;quot;&amp;gt;�&amp;lt;/td&amp;gt;             &amp;lt;td width=&amp;quot;20%&amp;quot; align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;SmartShock�&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Six Medtronic exclusive algorithms, proven by the PainFREE SST Study. 98% of patients are free of inappropriate shocks at one year.&amp;lt;sup&amp;gt;1&amp;lt;/sup&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;PhysioCurve�&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Designed for patient comfort. 30% less skin pressure versus conventional ICD shapes.&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;CareLink&amp;lt;sup&amp;gt;�&amp;lt;/sup&amp;gt; Network&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Remote monitoring capability for all cardiac devices&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;Longevity&amp;lt;/strong&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td&amp;gt;25% greater than Protecta&amp;lt;br /&amp;gt;             &amp;lt;br /&amp;gt;             10 year extended warranty (XT)&amp;lt;/td&amp;gt;             &amp;lt;td&amp;gt;Same as Evera&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;OptiVol&amp;lt;sup&amp;gt;�&amp;lt;/sup&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Fluid Status Monitoring&amp;lt;/th&amp;gt;             &amp;lt;td&amp;gt;XT Only&amp;lt;/td&amp;gt;             &amp;lt;td&amp;gt;XT Only&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;     &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;h3&amp;gt;Evera MRI XT Dual Chamber&amp;lt;/h3&amp;gt; &amp;lt;table class=&amp;quot;tablesaw&amp;quot; data-tablesaw-mode=&amp;quot;columntoggle&amp;quot; data-tablesaw-minimap data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-mode-switch&amp;gt;     &amp;lt;tbody&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th data-tablesaw-priority=1&amp;gt;FEATURE&amp;lt;/th&amp;gt;             &amp;lt;th data-tablesaw-priority=1&amp;gt;EVERA&amp;lt;/th&amp;gt;             &amp;lt;th data-tablesaw-priority=2&amp;gt;EVERA MRI&amp;lt;/th&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th width=&amp;quot;45%&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;SureScan� Technology&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Full Body MRI&amp;lt;/th&amp;gt;             &amp;lt;td width=&amp;quot;30%&amp;quot;&amp;gt;�&amp;lt;/td&amp;gt;             &amp;lt;td width=&amp;quot;20%&amp;quot; align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;SmartShock�&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Six Medtronic exclusive algorithms, proven by the PainFREE SST Study. 98% of patients are free of inappropriate shocks at one year.&amp;lt;sup&amp;gt;1&amp;lt;/sup&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;PhysioCurve�&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Designed for patient comfort. 30% less skin pressure versus conventional ICD shapes.&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;AF Diagnostics*&amp;lt;/strong&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;CareLink&amp;lt;sup&amp;gt;�&amp;lt;/sup&amp;gt; Network&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Remote monitoring capability for all cardiac devices&amp;lt;/th&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;             &amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;✓&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;Longevity&amp;lt;/strong&amp;gt;&amp;lt;/th&amp;gt;             &amp;lt;td&amp;gt;25% greater than Protecta&amp;lt;br /&amp;gt;             &amp;lt;br /&amp;gt;             8 year warranty (XT)&amp;lt;/td&amp;gt;             &amp;lt;td&amp;gt;Same as Evera&amp;lt;br /&amp;gt;             &amp;lt;br /&amp;gt;             8 year warranty (XT)&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;         &amp;lt;tr&amp;gt;             &amp;lt;th&amp;gt;&amp;lt;strong&amp;gt;OptiVol&amp;lt;sup&amp;gt;�&amp;lt;/sup&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;br /&amp;gt;             Fluid Status Monitoring&amp;lt;/th&amp;gt;             &amp;lt;td&amp;gt;XT Only&amp;lt;/td&amp;gt;             &amp;lt;td&amp;gt;XT Only&amp;lt;/td&amp;gt;         &amp;lt;/tr&amp;gt;     &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt;"/&gt;
+  &lt;reference_footnote jcr:primaryType="nt:unstructured" sling:resourceType="medtronic-com/components/content/reference-footnote" data="&amp;lt;p&amp;gt;Auricchio A, Schloss EJ, Kurita T, et al. Low inappropriate shock rates in patients with single- and dual/triple-chamber implantable cardioverter-defibrillators using a novel suite of detection algorithms: PainFree SST trial primary results. &amp;lt;em&amp;gt;Heart Rhythm.&amp;lt;/em&amp;gt; May 2015;12(5):926-936.&amp;lt;/p&amp;gt; , &amp;lt;p&amp;gt;Flo, Daniel. Device Shape Analysis. January 2013. Medtronic data on file.&amp;lt;/p&amp;gt;" displayType="references" title="Reference"/&gt;
+&lt;/sectionPath1_row&gt;
+</property>
+          </property>
+          <property name="tagInsertionMode" class="kapow.robot.plugin.common.stateprocessor.taginsertion2.AfterInputTagInsertionMode2"/>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="20">
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.sectionpath2_row</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="24">
+        <property name="name" class="String">Set Attribute sections</property>
+        <property name="stepAction" class="SetAttribute">
+          <property name="attributeName" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">sections</property>
+          </property>
+          <property name="value" class="Expression" serializationversion="1">
+            <property name="text" class="String">sectiontexts</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="Expression" serializationversion="1">
+              <property name="text" class="String">".*.sectionpath" + accordNumber +"_row"</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="25">
+        <property name="name" class="String">Check Tab</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="26">
+        <property name="name" class="String">Test Tab</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">tab == "tab2"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Check Tab</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="27">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String">sectionpath</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectionpath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="28">
+        <property name="name" class="String">Assign Title and Parsys</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String"> "{&amp;quot;title&amp;quot;:&amp;quot;"+ condition_therapy_child_sub_tab.title +"&amp;quot;,&amp;quot;columns&amp;quot;:&amp;quot;one&amp;quot;,&amp;quot;sectionPath&amp;quot;:&amp;quot;sectionPath"+sectionpath+"&amp;quot;}"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectiontext.sectiontext0</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="29">
+        <property name="name" class="String">Next</property>
+        <property name="stepAction" class="Next"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$IgnoreAndContinue"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="30">
+        <property name="name" class="String">Check Tab</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="31">
+        <property name="name" class="String">Test Tab</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">tab == "tab3"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Check Tab</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="32">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">1</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectionpath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="33">
+        <property name="name" class="String">Assign Title and Parsys</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String"> "{&amp;quot;title&amp;quot;:&amp;quot;"+ condition_therapy_child_sub_tab.title +"&amp;quot;,&amp;quot;columns&amp;quot;:&amp;quot;one&amp;quot;,&amp;quot;sectionPath&amp;quot;:&amp;quot;sectionPath"+sectionpath+"&amp;quot;}"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectiontext.sectiontext1</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="34">
+        <property name="name" class="String">Next</property>
+        <property name="stepAction" class="Next"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$IgnoreAndContinue"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Try" id="35">
+        <property name="name" class="String">Check Tab</property>
+      </object>
+      <object class="Transition" serializationversion="0" id="36">
+        <property name="name" class="String">Test Tab</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">tab == "tab4"</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative">
+            <property name="targetStepSelector" class="kapow.robot.robomaker.robot.ControlFlow$TargetStepSelector">
+              <property name="name" class="String">Check Tab</property>
+            </property>
+          </property>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="37">
+        <property name="name" class="String">Assign Variable</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+            <property name="value" class="String">2</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectionpath</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+      <object class="Transition" serializationversion="0" id="38">
+        <property name="name" class="String">Assign Title and Parsys</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="2">
+          <property name="stringExpr" class="Expression" serializationversion="1">
+            <property name="text" class="String"> "{&amp;quot;title&amp;quot;:&amp;quot;"+ condition_therapy_child_sub_tab.title +"&amp;quot;,&amp;quot;columns&amp;quot;:&amp;quot;one&amp;quot;,&amp;quot;sectionPath&amp;quot;:&amp;quot;sectionPath"+sectionpath+"&amp;quot;}"</property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">sectiontext.sectiontext2</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="5"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="39"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="25"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="12"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="13"/>
+        <to idref="14"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="14"/>
+        <to idref="16"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="16"/>
+        <to idref="17"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="17"/>
+        <to idref="18"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="18"/>
+        <to idref="19"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="19"/>
+        <to idref="20"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="19"/>
+        <to idref="22"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="20"/>
+        <to idref="21"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="21"/>
+        <to idref="39"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="22"/>
+        <to idref="23"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="23"/>
+        <to idref="24"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="24"/>
+        <to idref="21"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="25"/>
+        <to idref="26"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="25"/>
+        <to idref="30"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="26"/>
+        <to idref="27"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
+        <to idref="28"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="28"/>
+        <to idref="29"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="29"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="31"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="30"/>
+        <to idref="35"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="31"/>
+        <to idref="32"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="32"/>
+        <to idref="33"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="33"/>
+        <to idref="34"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="34"/>
+        <to idref="13"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="35"/>
+        <to idref="36"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="36"/>
+        <to idref="37"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="37"/>
+        <to idref="38"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="38"/>
+        <to idref="13"/>
+      </object>
+    </edges>
+  </body>
+</object>

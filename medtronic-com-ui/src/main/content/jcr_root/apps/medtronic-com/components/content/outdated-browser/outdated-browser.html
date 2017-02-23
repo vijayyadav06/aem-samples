@@ -1,0 +1,13 @@
+<div id="outdated" data-sly-use.outdatedBrowser="outdated-browser.js">
+<!--googleoff: all-->
+  <h6>${inheritedPageProperties.outdatedBrowser_title}</h6>
+  <p>
+    ${inheritedPageProperties.outdatedBrowser_errorMessage} <a
+      id="btnUpdateBrowser" href="${outdatedBrowser.buttonUrl}"
+      data-sly-attribute.target="${inheritedPageProperties.outdatedBrowser_newTab ? '_blank' : ''}">${inheritedPageProperties.outdatedBrowser_buttonText}</a>
+  </p>
+  <p class="last">
+    <a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a>
+  </p>
+<!--googleon: all-->
+</div>

@@ -1,0 +1,81 @@
+<div data-sly-test="${!properties.videos && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Video - Slender/Squat</div>
+<sly data-sly-test="${properties.videos}"
+    data-sly-use.videos="video-slender-squat.js"
+    data-sly-use.icons="/apps/medtronic-com/components/common/icons.html"
+    data-sly-use.dataLinkId="data-link-id.js">
+	<div data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}" class="video-component video-component__single-plus-list">
+		<div class="video-container">
+           	<div class="col-xs-12 col-sm-6 one-by-one">
+	            <div class="content">
+	                <div class="video-component__main ${videos.firstVideo.showYoutubeIcon ? 'video-component__youtube-feed' : ''}">
+	    				<a class="video__trigger" href="${videos.firstVideo.videoURL}"  data-target="#${videos.firstVideo.uuid}"> 
+	                        <span class="video__trigger--play-button">
+		          				<sly data-sly-call="${icons.iconWithFallback @ icon=icons.arrowNext, fallbackText=videos.firstVideo.playButtonAltText}" />
+		        			</span>
+	                        <img class="video__poster" src="${videos.firstVideo.thumbnailImage}" alt="${videos.firstVideo.imageAltText}">
+	                    </a>
+	                    <div class="pad">
+	                        <h3 class="video__title">${videos.firstVideo.textDisplay}</h3>
+	                        <p data-sly-test="${!videos.firstVideo.showYoutubeIcon}" class="video__details">
+		          				<span data-sly-test="${videos.firstVideo.duration}" class="video__details--duration">(00:00)</span>
+		          				<a data-sly-test="${videos.firstVideo.showTranscript}" href="${videos.firstVideo.transcriptURL}" target="${videos.firstVideo.transcriptNewTab ? '_blank' : '_self'}" class="video__details--transcript-link">${videos.firstVideo.transcriptText}</a>
+		        			</p>
+							<div class="video__cta-wrap">
+								<sly data-sly-test="${videos.firstVideo.showYoutubeIcon}" data-sly-call="${icons.youtube}"></sly>
+								<a target="${videos.firstVideo.ctaNewTab ? '_blank' : '_self'}" class="video__cta" href="${videos.firstVideo.ctaURL}">
+									<sly data-sly-test="${videos.firstVideo.showCta}">
+										${videos.firstVideo.ctaText}
+										<sly data-sly-call="${icons.chevronRight}"></sly>
+									</sly>
+								</a>
+							</div>
+	                    </div>
+	                  </div>
+                </div>
+			</div>
+		    <sly data-sly-test="${videos.firstVideo.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+                  <sly data-sly-call="${template.flowplayervideo @ id=videos.firstVideo.uuid, text=videos.firstVideo.textDisplay, url=videos.firstVideo.videoURL, type=videos.firstVideo.type}"></sly>
+            </sly>
+            <sly data-sly-test="${!videos.firstVideo.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+                 <sly data-sly-call="${template.youtubevideo @ id=videos.firstVideo.uuid, text=videos.firstVideo.textDisplay, videoId=videos.firstVideo.videoId}"></sly>
+            </sly>	
+        </div>
+		<div class="col-xs-12 col-sm-6 one-by-one">
+			<div class="content">
+				<div class="display-table">
+	        		<div class="display-table-cell">
+						<div class="video-component__list">
+							<ul data-sly-list.video="${videos.restVideos}"  class="unstyled pad" >
+								<li>
+									<div class="video-component__list-item video-container ">
+										<div class="col-xs-5 video-component__list-item--thumb">
+											<a class="video__trigger" href="${video.videoURL}" data-target="#${video.uuid}"> 
+			                        			<span class="video__trigger--play-button">
+				          							<sly data-sly-call="${icons.iconWithFallback @ icon=icons.arrowNext, fallbackText=video.playButtonAltText}" />
+				        						</span>
+			                        			<img class="video__poster" src="${video.thumbnailImage}" alt="${video.imageAltText}">
+			                    			</a>
+										</div>
+										<div class="col-xs-7 video-component__list-item--details">
+											<h3 class="video__title">${video.textDisplay}</h3>
+					                        <p class="video__details">
+						          				<span data-sly-test="${video._DNT_duration}" class="video__details--duration">(00:00)</span>
+						          				<a data-sly-test="${video._DNT_showTranscript}" href="${video.transcriptURL}" target="${video._DNT_transcriptNewTab ? '_blank' : '_self'}" class="video__details--transcript-link">${video.transcriptText}</a>
+						        			</p>
+					        			</div>
+					        			<sly data-sly-test="${video.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+											<sly data-sly-call="${template.flowplayervideo @ id=video.uuid, text=video.textDisplay, url=video.videoURL, type=video.type}"></sly>
+										</sly> 
+										<sly data-sly-test="${!video.isFlowplayer}" data-sly-use.template="/apps/medtronic-com/components/common/video-templates.html">
+											<sly data-sly-call="${template.youtubevideo @ id=video.uuid, text=video.textDisplay, videoId=video.videoId}"></sly>
+										</sly>
+									</div> 
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</sly>

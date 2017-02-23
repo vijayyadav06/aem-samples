@@ -1,0 +1,4 @@
+<div class="clearfix">
+  <div data-sly-test="${!wcmmode.disabled}" class="cq-placeholder">Click here to edit the migration content component.</div>
+  ${properties.html @ context='unsafe'}
+</div>

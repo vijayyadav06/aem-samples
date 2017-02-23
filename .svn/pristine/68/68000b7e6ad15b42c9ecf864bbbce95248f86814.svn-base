@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="RightRailContactUs Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Contact Information"
+                        fieldLabel="Headline"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <descriptiveText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Body Text"
+                        name="./descriptiveText"
+                        xtype="textfield"/>
+                    <contact
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}true"
+                        fieldLabel="Contact*"
+                        hideLabel="{Boolean}true"
+                        minItems="{Long}1"
+                        name="./contact"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <name
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Person, location or department name"
+                                    fieldLabel="Name"
+                                    key="name"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <phoneNumber
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="+1-763-514-4000"
+                                    fieldDescription="Include country code"
+                                    fieldLabel="Phone Number"
+                                    key="phone"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <address1
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="Building Number &amp; Street"
+                                    fieldLabel="Address Line 1"
+                                    key="address1"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <address2
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="Floor, Suite, ATTN, etc"
+                                    fieldLabel="Address Line 2"
+                                    key="address2"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <address3
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="City, State/Province, Postal Code"
+                                    fieldLabel="Address Line 3"
+                                    key="address3"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <address4
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="Country"
+                                    fieldLabel="Address Line 4"
+                                    key="address4"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <emailAddress
+                                    jcr:primaryType="cq:Widget"
+                                    emptyText="example@medtronic.com"
+                                    fieldLabel="Email Address"
+                                    fName="email"
+                                    key="email"
+                                    labelStyle="display:block;margin:5px;"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <includeCta
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Include Website"
+                                    key="includeCta"
+                                    labelStyle="display:block;margin:5px;"
+                                    name="./_DNT_includeCta"
+                                    type="checkbox"
+                                    xtype="selection">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        selectionchanged="function(box,value,isChecked){Medtronic.Authoring.RightRailContactUs.showCta.selectionChanged(box, isChecked);}"/>
+                                </includeCta>
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    disabled="{Boolean}true"
+                                    fieldLabel="Link Text"
+                                    key="linktext"
+                                    labelStyle="display:block;margin:5px;"
+                                    name="./linkText"
+                                    width="250"
+                                    xtype="textfield"/>
+                                <url
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    disabled="{Boolean}true"
+                                    fieldDescription="Enter a web address or find the desired webpage"
+                                    fieldLabel="Link URL"
+                                    key="url"
+                                    labelStyle="display:block;margin:5px;"
+                                    name="./url"
+                                    validator="function() {                           return Medtronic.Authoring.validateEManualUrl(this);                         }"
+                                    width="250"
+                                    xtype="pathfield"/>
+                                <newtab
+                                    jcr:primaryType="nt:unstructured"
+                                    defaultValue="{Boolean}false"
+                                    disabled="{Boolean}true"
+                                    fieldLabel="Open in New Tab"
+                                    key="newtab"
+                                    labelStyle="display:block;margin:5px;"
+                                    name="./_DNT_newTab"
+                                    type="checkbox"
+                                    width="250"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </contact>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){return Medtronic.Authoring.RightRailContactUs.dialog.validateEmail(dialog);}"
+        loadcontent="function(dialog){Medtronic.Authoring.RightRailContactUs.dialog.displayDefault(dialog);}"/>
+</jcr:root>

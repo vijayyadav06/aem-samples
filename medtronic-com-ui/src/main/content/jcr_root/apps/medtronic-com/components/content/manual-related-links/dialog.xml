@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Right Rail Related Links"
+    width="{Long}850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <component
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Headline"
+                        name="./componentHeading"
+                        xtype="textfield"/>
+                    <sectionHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Group Headline"
+                        name="./sectionHeading"
+                        xtype="textfield"/>
+                    <sectionLinks
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="List of Links*"
+                        name="./sectionLinks"
+                        minItems="{Long}1"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="mdtmultifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <linkText
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldLabel="Link Text"
+                                    key="linkText"
+                                    width="{Long}200"
+                                    xtype="textfield"/>
+                                <linkURL
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    fieldDescription="Enter a web address or find the desired webpage."
+                                    fieldLabel="Link URL"
+                                    key="linkURL"
+                                    validator="function() {return Medtronic.Authoring.validateEManualUrl(this);}"
+                                    xtype="pathfield"/>
+                                <newTab
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Open in a New Tab"
+                                    key="_DNT_newTab"
+                                    labelStyle="width:110px;"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                    </sectionLinks>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        loadcontent="function(dialog){Medtronic.Authoring.addMinimumMultifieldItems(dialog);}"/>
+</jcr:root>

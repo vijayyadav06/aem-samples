@@ -1,0 +1,15 @@
+<div class="cq-placeholder"
+  data-sly-use.featuredImage="featured-image.js"
+  data-sly-test="${!featuredImage.image && !wcmmode.disabled}">
+  Placeholder for Featured Image</div>
+<sly class="tta tta__graphic"
+  data-sly-use.templates="/apps/medtronic-com/components/common/sightly-templates.html"
+  data-sly-use.dataLinkId="data-link-id.js">
+  <sly data-sly-test="${featuredImage.showLabel}"
+    data-sly-use.label="${'/apps/medtronic-com/components/common/Labels.js' @ pageLevel=pageProperties.pageLevel, labelHyperlink= properties.labelHyperlink}"
+    data-sly-call="${templates.label @ url=featuredImage.labelHyperlink, openInNewTab=featuredImage.labelNewTab, text=label.labelText, dataLinkId=dataLinkId}" />
+  <figure data-link-id="${dataLinkId.id}" data-position-id="${dataLinkId.position}">
+    <img src="${featuredImage.image}" alt="${featuredImage.imageAltText}"
+      data-image-cover>
+  </figure>
+</sly>

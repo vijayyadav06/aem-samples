@@ -1,0 +1,30 @@
+<div data-sly-test="${!properties.text && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Testimonial Hero</div>
+<section data-sly-test="${properties.text}" class="article__header">
+	<div class='row hero ${properties.image ? "":"hero--full"}'>
+		<div data-sly-test="${properties.image}" class="col-sm-6 one-by-one hero--media">
+			<div class="content">
+				<figure>
+					<img src="${properties.image}" alt="${properties.alttext}" data-image-cover>
+				</figure>
+			</div>
+		</div>
+		<div class="${properties.image ? 'col-sm-6 one-by-one' : 'col-sm-12'} hero--text">
+			<div class="content" data-sly-use.quote="../subtemplate-slots/quote/quote.js">
+				<div class="tta tta__quote">
+					<div class="display-table">
+						<div class="display-table-cell">
+							<blockquote>
+								<p class="medtronic-blue">${quote.text}</p>
+								<cite class="medtronic-blue"> ${quote.attribution} 
+									<span>${quote.additionalInfo1}</span>
+									<span>${quote.additionalInfo2}</span> 
+									<span>${quote.date}</span>
+								</cite>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

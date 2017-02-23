@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}500"
+    title="Search Component"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<searchButtonText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter text for search button."
+                        fieldLabel="Search Button"
+                        name="./searchButtonText"
+                        xtype="textfield"
+                        defaultValue="Search Again"/>
+	                <showingResultsText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter text for search for."
+                        fieldLabel="Searched For Text"
+                        name="./showingResultsText"
+                        xtype="textfield"
+                        defaultValue="Showing results for"/>
+                    <searchInsteadText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for search instead for."
+	                    fieldLabel="Search Instead For Text"
+	                    name="./searchInsteadText"
+	                    xtype="textfield"
+	                    defaultValue="search instead for"/>
+	                <totalResultsText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter text for total results."
+                        fieldLabel="Results Text"
+                        name="./totalResultsText"
+                        xtype="textfield"
+                        defaultValue="results"/>
+                    <prevLinkText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for prev link."
+	                    fieldLabel="Previous Link Text"
+	                    name="./prevLinkText"
+	                    xtype="textfield"
+	                    defaultValue="PREV"/>
+	                <nextLinkText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter text for next Link."
+                        fieldLabel="Next Link Text"
+                        name="./nextLinkText"
+                        xtype="textfield"
+                        defaultValue="NEXT"/>
+                    <keyMatchesText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for featured results title."
+	                    fieldLabel="Featured Results Title"
+	                    name="./keyMatchesText"
+	                    xtype="textfield"
+	                    defaultValue="Featured Results"/>
+	                <searchPlaceholderText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for search field placeholder text."
+	                    fieldLabel="Search Field Text"
+	                    name="./searchPlaceholderText"
+	                    xtype="textfield"
+	                    defaultValue="Search"/>
+	                <filterTitleText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for filter title."
+	                    fieldLabel="Filters Title"
+	                    name="./filterTitleText"
+	                    xtype="textfield"
+	                    defaultValue="Refine Your Search"/>
+	                <applyButtonText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for apply filters button."
+	                    fieldLabel="Apply Button Text"
+	                    name="./applyButtonText"
+	                    xtype="textfield"
+	                    defaultValue="Apply"/>
+	                <clearLinkText
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="Enter text for clear filter link."
+	                    fieldLabel="Clear Link Text"
+	                    name="./clearLinkText"
+	                    xtype="textfield"
+	                    defaultValue="Clear"/>
+	                <noSearchResultText1
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}true"
+	                    fieldDescription="Enter text for first half of no matches text."
+	                    fieldLabel="No Matches Display Text1"
+	                    name="./noSearchResultText1"
+	                    xtype="textfield"
+	                    defaultValue="Your search for"/>
+	                <noSearchResultText2
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}true"
+	                    fieldDescription="Enter text for second half of no matches text."
+	                    fieldLabel="No Matches Display Text2"
+	                    name="./noSearchResultText2"
+	                    xtype="textfield"
+	                    defaultValue="did not return any matches."/>
+	                <disclaimerText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldDescription="Enter text for additional text."
+                        fieldLabel="Body Text"
+                        name="./disclaimerText"
+                        validator="function() {                           return Medtronic.Authoring.validateEManualUrl(this);                         }"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/medtronic-com/components/common/richtext-configurations/standardRte/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </disclaimerText>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Filters">
+                <items jcr:primaryType="cq:WidgetCollection">
+	                <filters
+			            jcr:primaryType="cq:Widget"
+			            border="{Boolean}true"
+			            name="./filters"
+			            xtype="multifield">
+			            <fieldConfig
+	                		jcr:primaryType="cq:Widget"
+	                		xtype="mdtmultifieldpanel">
+	                		<items jcr:primaryType="cq:WidgetCollection">
+	                			<primaryFilter
+	                    			jcr:primaryType="cq:Widget"
+				                    fieldLabel="Primary Filters"
+				                    key="primaryFilter"
+				                    rootPath="/etc/tags/medtronic-com"
+				                    xtype="pathfield"
+				                    allowBlank="{Boolean}false"
+				                    width="250"/>
+				                <secondaryFilters
+				                    jcr:primaryType="cq:Widget"
+				                    cls="cq-propsdialog-tags"
+				                    fieldLabel="Secondary Filters"
+				                    key="secondaryFilters"
+				                    xtype="tags"
+				                    namespaces="[medtronic-com]"/>
+	                		</items>
+	                	</fieldConfig>
+			        </filters>
+		        </items>                
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

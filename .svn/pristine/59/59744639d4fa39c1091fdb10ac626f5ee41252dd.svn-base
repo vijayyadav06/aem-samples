@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Home page(L1 Template) for the Medtronic.com site."
+    jcr:primaryType="cq:Template"
+    jcr:title="Medtronic.com Home Page"
+    allowedPaths="[/content/medtronic-com(/[^/]+)+]"
+    ranking="{Long}1">
+    <jcr:content
+        cq:designPath="/etc/designs/medtronic-com"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="medtronic-com/components/pages/home-page"
+        metatags="[{&quot;name&quot;:&quot;google-site-verification&quot;\,&quot;content&quot;:&quot;JDsFavsR05JA5dxC2WDENJ3sgS-sbPrc4wqHSlddqIs&quot;},{&quot;name&quot;:&quot;msvalidate.01&quot;\,&quot;content&quot;:&quot;49C2DE1D688856E4BF39ACBCFD639ED4&quot;}]"
+        pageLevel="L1">
+        <content-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <hero
+                jcr:lastModified="{Date}2015-11-12T20:39:53.738+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="medtronic-com/components/content/hero"
+                contentType="imagetext"
+                styleOption="brandframe"/>
+        </content-par>
+    </jcr:content>
+</jcr:root>

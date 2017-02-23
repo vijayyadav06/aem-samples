@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Column Component Responsive"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <presets
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="50-50-no-offset"
+                        fieldLabel="Column Style"
+                        name="./presets"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                defaultValue="50-50-no-offset"
+                                text="2 Columns - 50/50"
+                                value="50-50-no-offset"/>
+                        </options>
+                    </presets>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

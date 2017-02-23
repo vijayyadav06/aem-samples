@@ -1,0 +1,6 @@
+<div class="subtemplate">
+  <div data-sly-test="${!wcmmode.disabled}" class="cq-placeholder">Click here to edit the subtemplate layout</div>
+  <sly data-sly-test="${properties.type}" data-sly-include="${properties.type}.html" />
+</div>
+<!--/* fixes author mode for some subtemplates */-->
+<div data-sly-test="${!wcmmode.disabled}" class="clearfix"></div>

@@ -1,0 +1,13 @@
+<div data-sly-test="${!properties.location && !properties.number && !wcmmode.disabled}" class="cq-placeholder">Placeholder for Press Release List</div>
+
+<h2>${properties.title}</h2>
+<div data-sly-test="${properties.location}" data-sly-use.pressReleaseList="com.medtronic.com.app.PressReleaseList">
+    <div data-sly-list.pressRelease="${pressReleaseList.pressReleaseObjects}">
+        <li>${pressRelease.displayDate}&nbsp;&nbsp;&nbsp;<a href="${pressRelease.href}">${pressRelease.title}</a></li>
+    </div>
+</div>
+
+<br/>
+<div data-sly-test="${properties.linkText && properties.linkURL}">
+    <a href="${properties.linkURL}">${properties.linkText}</a>
+</div>
